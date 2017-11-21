@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\UHRI.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{8D2B2C70-2420-49A5-9679-91698C972BD4}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\UHRI.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\UHRIEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\UHRIServer.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{60F91715-4458-42DC-98FE-D9613D93F2FF}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\UHRI">
+			<UniqueIdentifier>{71053DA0-C055-42E7-B31A-449E517C254F}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\UHRI\UHRI.Build.cs">
+			<Filter>Source\UHRI</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\UHRI\UHRI.cpp">
+			<Filter>Source\UHRI</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\UHRI.h">
+			<Filter>Source\UHRI</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UHRI\UHRICharacter.cpp">
+			<Filter>Source\UHRI</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\UHRICharacter.h">
+			<Filter>Source\UHRI</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UHRI\UHRIGameInstance.cpp">
+			<Filter>Source\UHRI</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\UHRIGameInstance.h">
+			<Filter>Source\UHRI</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UHRI\UHRIGameMode.cpp">
+			<Filter>Source\UHRI</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\UHRIGameMode.h">
+			<Filter>Source\UHRI</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UHRI\UHRIHUD.cpp">
+			<Filter>Source\UHRI</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\UHRIHUD.h">
+			<Filter>Source\UHRI</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UHRI\UHRIProjectile.cpp">
+			<Filter>Source\UHRI</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\UHRIProjectile.h">
+			<Filter>Source\UHRI</Filter>
+		</ClInclude >
+		<Filter Include="Source\UHRI\MenuSystem">
+			<UniqueIdentifier>{1A491BBD-A9FF-406C-BF37-7ECB7180D3B3}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\UHRI\MenuSystem\InGameMenu.cpp">
+			<Filter>Source\UHRI\MenuSystem</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\MenuSystem\InGameMenu.h">
+			<Filter>Source\UHRI\MenuSystem</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UHRI\MenuSystem\MainMenu.cpp">
+			<Filter>Source\UHRI\MenuSystem</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\MenuSystem\MainMenu.h">
+			<Filter>Source\UHRI\MenuSystem</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UHRI\MenuSystem\MenuInterface.cpp">
+			<Filter>Source\UHRI\MenuSystem</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\MenuSystem\MenuInterface.h">
+			<Filter>Source\UHRI\MenuSystem</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UHRI\MenuSystem\MenuWidget.cpp">
+			<Filter>Source\UHRI\MenuSystem</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\MenuSystem\MenuWidget.h">
+			<Filter>Source\UHRI\MenuSystem</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\UHRI\MenuSystem\ServerRow.cpp">
+			<Filter>Source\UHRI\MenuSystem</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\MenuSystem\ServerRow.h">
+			<Filter>Source\UHRI\MenuSystem</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

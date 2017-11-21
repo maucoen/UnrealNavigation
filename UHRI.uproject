@@ -1,0 +1,37 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "{7131DCE9-4265-0538-7B74-A88783EBC126}",
+  "Category": "",
+  "Description": "",
+  "Modules": [
+    {
+      "Name": "UHRI",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "AdditionalDependencies": [
+        "Engine",
+          "UMG"
+      ]
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "UnrealCV",
+      "Enabled": true
+    },
+    {
+      "Name": "RunebergVRPlugin",
+      "Enabled": true,
+      "MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/4dfd0c5b4c97427c860bd2cf7c207136"
+
+    },
+    {
+      "Name": "OnlineSubsystemAmazon",
+      "Enabled": true
+    },
+    {
+      "Name": "OnlineSubsystem",
+      "Enabled": true
+    }
+  ]
+}
