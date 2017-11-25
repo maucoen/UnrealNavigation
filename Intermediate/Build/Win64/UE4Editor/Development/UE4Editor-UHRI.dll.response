@@ -71,6 +71,7 @@
 "D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoreUObject.lib"
 "D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InputCore.lib"
 "D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-HeadMountedDisplay.lib"
+"D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-SlateCore.lib"
 "D:\Epic\UnrealEngine-4.16.3\Engine\Plugins\Online\OnlineSubsystem\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-OnlineSubsystem.lib"
 "D:\Epic\UnrealEngine-4.16.3\Engine\Plugins\Online\OnlineSubsystemAmazon\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-OnlineSubsystemAmazon.lib"
 /OUT:"D:\Epic\Projects\UHRI\Binaries\Win64\UE4Editor-UHRI.dll"

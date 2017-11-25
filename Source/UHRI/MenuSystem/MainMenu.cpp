@@ -109,8 +109,7 @@ void UMainMenu::UpdateChildren()
 		if (Row != nullptr)
 		{
 			Row->Selected = (SelectedIndex.IsSet() && SelectedIndex.GetValue() == i); //check for validity with shortcircuit AND
-			UE_LOG(LogTemp, Warning, TEXT("Selected index %d"), SelectedIndex.GetValue());
-			UE_LOG(LogTemp, Warning, TEXT("is true"), SelectedIndex.GetValue());
+			Row->ResetColor();
 		}
 	}
 }

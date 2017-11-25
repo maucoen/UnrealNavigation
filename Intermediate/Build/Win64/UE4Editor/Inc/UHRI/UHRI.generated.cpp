@@ -57,6 +57,8 @@ void EmptyLinkFunctionForGeneratedCode1UHRI() {}
 	UHRI_API class UClass* Z_Construct_UClass_UMainMenu_NoRegister();
 	UHRI_API class UClass* Z_Construct_UClass_UMainMenu();
 	UHRI_API class UFunction* Z_Construct_UFunction_UServerRow_OnClicked();
+	UHRI_API class UFunction* Z_Construct_UFunction_UServerRow_OnHovered();
+	UHRI_API class UFunction* Z_Construct_UFunction_UServerRow_OnUnhovered();
 	UHRI_API class UClass* Z_Construct_UClass_UServerRow_NoRegister();
 	UHRI_API class UClass* Z_Construct_UClass_UServerRow();
 	UHRI_API class UClass* Z_Construct_UClass_AUHRICharacter_NoRegister();
@@ -489,8 +491,10 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		UClass* Class = UServerRow::StaticClass();
 		static const TNameNativePtrPair<ANSICHAR> AnsiFuncs[] = {
 			{ "OnClicked", (Native)&UServerRow::execOnClicked },
+			{ "OnHovered", (Native)&UServerRow::execOnHovered },
+			{ "OnUnhovered", (Native)&UServerRow::execOnUnhovered },
 		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, AnsiFuncs, 1);
+		FNativeFunctionRegistrar::RegisterFunctions(Class, AnsiFuncs, 3);
 	}
 	UFunction* Z_Construct_UFunction_UServerRow_OnClicked()
 	{
@@ -499,6 +503,38 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		if (!ReturnFunction)
 		{
 			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnClicked"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00040401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("MenuSystem/ServerRow.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_UServerRow_OnHovered()
+	{
+		UObject* Outer=Z_Construct_UClass_UServerRow();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnHovered"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00040401, 65535);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("MenuSystem/ServerRow.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_UServerRow_OnUnhovered()
+	{
+		UObject* Outer=Z_Construct_UClass_UServerRow();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("OnUnhovered"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x00040401, 65535);
 			ReturnFunction->Bind();
 			ReturnFunction->StaticLink();
 #if WITH_METADATA
@@ -526,6 +562,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->ClassFlags |= 0x20B01080;
 
 				OuterClass->LinkChild(Z_Construct_UFunction_UServerRow_OnClicked());
+				OuterClass->LinkChild(Z_Construct_UFunction_UServerRow_OnHovered());
+				OuterClass->LinkChild(Z_Construct_UFunction_UServerRow_OnUnhovered());
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_Parent = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Parent"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(Parent, UServerRow), 0x0040000000080008, Z_Construct_UClass_UMainMenu_NoRegister());
@@ -537,6 +575,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 				UProperty* NewProp_ServerName = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("ServerName"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(ServerName, UServerRow), 0x0010000000080008, Z_Construct_UClass_UTextBlock_NoRegister());
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UServerRow_OnClicked(), "OnClicked"); // 2506002327
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UServerRow_OnHovered(), "OnHovered"); // 2879996846
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UServerRow_OnUnhovered(), "OnUnhovered"); // 2884277147
 				static TCppClassTypeInfo<TCppClassTypeTraits<UServerRow> > StaticCppClassTypeInfo;
 				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
 				OuterClass->StaticLink();
@@ -566,7 +606,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UServerRow, 1817044137);
+	IMPLEMENT_CLASS(UServerRow, 3277081623);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UServerRow(Z_Construct_UClass_UServerRow, &UServerRow::StaticClass, TEXT("/Script/UHRI"), TEXT("UServerRow"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UServerRow);
 	void AUHRICharacter::StaticRegisterNativesAUHRICharacter()
@@ -990,8 +1030,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/UHRI")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x8BCCE085;
-			Guid.B = 0x1E53C507;
+			Guid.A = 0xB3A765BC;
+			Guid.B = 0xFEEE63C6;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

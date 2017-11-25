@@ -15,6 +15,22 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define UHRI_Source_UHRI_MenuSystem_ServerRow_h_15_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execOnUnhovered) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnUnhovered(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execOnHovered) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnHovered(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execOnClicked) \
 	{ \
 		P_FINISH; \
@@ -25,6 +41,22 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 
 #define UHRI_Source_UHRI_MenuSystem_ServerRow_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnUnhovered) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnUnhovered(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execOnHovered) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnHovered(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execOnClicked) \
 	{ \

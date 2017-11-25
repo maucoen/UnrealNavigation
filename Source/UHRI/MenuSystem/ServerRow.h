@@ -27,6 +27,7 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	bool Selected = true;
 
+	void ResetColor();
 
 	void Setup(class UMainMenu* Parent, uint32 Index); //it calls parent main menu and tells which index to set
 
@@ -42,5 +43,10 @@ private:
 	UFUNCTION()
 		void OnClicked();
 	
+	UFUNCTION()
+		void OnHovered();
+
+	UFUNCTION()
+		void OnUnhovered();
 	
 };
