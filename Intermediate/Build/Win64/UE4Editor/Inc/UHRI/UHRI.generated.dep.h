@@ -17,6 +17,9 @@
 #ifndef UHRI_MainMenu_generated_h
 	#include "MenuSystem/MainMenu.h"
 #endif
+#ifndef UHRI_Rover_generated_h
+	#include "Rover.h"
+#endif
 #ifndef UHRI_ServerRow_generated_h
 	#include "MenuSystem/ServerRow.h"
 #endif

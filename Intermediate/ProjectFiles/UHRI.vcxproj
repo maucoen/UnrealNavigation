@@ -1533,6 +1533,8 @@
 		<None Include="..\..\Config\DefaultEngine.ini" />
 		<None Include="..\..\Config\DefaultGame.ini" />
 		<None Include="..\..\Config\DefaultInput.ini" />
+		<ClCompile Include="..\..\Source\UHRI\Rover.cpp" />
+		<ClInclude Include="..\..\Source\UHRI\Rover.h" />
 		<None Include="..\..\Source\UHRI\UHRI.Build.cs" />
 		<ClCompile Include="..\..\Source\UHRI\UHRI.cpp" />
 		<ClInclude Include="..\..\Source\UHRI\UHRI.h" />

@@ -5,7 +5,7 @@
 		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealVersionSelector\UnrealVersionSelector.Target.cs" />
 		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealVersionSelector\UnrealVersionSelector.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{096D4AA9-BA92-4687-B03E-CAD100033011}</UniqueIdentifier>
+			<UniqueIdentifier>{09E7D5FA-8828-403B-BC31-95E46E05E25A}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealVersionSelector\Private\PlatformInstallation.cpp">
 			<Filter>Private</Filter>
@@ -20,7 +20,7 @@
 			<Filter>Private</Filter>
 		</ClInclude >
 		<Filter Include="Private\GenericPlatform">
-			<UniqueIdentifier>{085B6D84-CC95-4C25-8A7A-0A513D0CDE8F}</UniqueIdentifier>
+			<UniqueIdentifier>{FA0747B3-DA52-4463-986E-BDC1A37D5EA8}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealVersionSelector\Private\GenericPlatform\GenericPlatformInstallation.cpp">
 			<Filter>Private\GenericPlatform</Filter>
@@ -29,7 +29,7 @@
 			<Filter>Private\GenericPlatform</Filter>
 		</ClInclude >
 		<Filter Include="Private\Windows">
-			<UniqueIdentifier>{E1C4CF19-052B-4740-93B9-28AE04DC589E}</UniqueIdentifier>
+			<UniqueIdentifier>{9D668B9F-2002-4865-8B9E-DFADB6A4E79A}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealVersionSelector\Private\Windows\WindowsPlatformInstallation.cpp">
 			<Filter>Private\Windows</Filter>
@@ -38,7 +38,7 @@
 			<Filter>Private\Windows</Filter>
 		</ClInclude >
 		<Filter Include="Private\Windows\Resources">
-			<UniqueIdentifier>{8931ECCF-7C05-45D9-8FD3-8DDD941F3810}</UniqueIdentifier>
+			<UniqueIdentifier>{BE071047-4C2C-4C58-BB22-B4A573B89B50}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealVersionSelector\Private\Windows\Resources\Icon.ico">
 			<Filter>Private\Windows\Resources</Filter>

@@ -21,15 +21,16 @@ void EmptyLinkFunctionForGeneratedCode1UHRI() {}
 	UMG_API class UClass* Z_Construct_UClass_UEditableTextBox_NoRegister();
 	UMG_API class UClass* Z_Construct_UClass_UWidget_NoRegister();
 	UMG_API class UClass* Z_Construct_UClass_UWidgetSwitcher_NoRegister();
-	UMG_API class UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
+	ENGINE_API class UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
+	UMG_API class UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	COREUOBJECT_API class UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	HEADMOUNTEDDISPLAY_API class UClass* Z_Construct_UClass_UMotionControllerComponent_NoRegister();
-	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USceneComponent_NoRegister();
-	ENGINE_API class UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UGameInstance();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
 	ENGINE_API class UClass* Z_Construct_UClass_AHUD();
@@ -56,6 +57,8 @@ void EmptyLinkFunctionForGeneratedCode1UHRI() {}
 	UHRI_API class UFunction* Z_Construct_UFunction_UMainMenu_QuitPressed();
 	UHRI_API class UClass* Z_Construct_UClass_UMainMenu_NoRegister();
 	UHRI_API class UClass* Z_Construct_UClass_UMainMenu();
+	UHRI_API class UClass* Z_Construct_UClass_ARover_NoRegister();
+	UHRI_API class UClass* Z_Construct_UClass_ARover();
 	UHRI_API class UFunction* Z_Construct_UFunction_UServerRow_OnClicked();
 	UHRI_API class UFunction* Z_Construct_UFunction_UServerRow_OnHovered();
 	UHRI_API class UFunction* Z_Construct_UFunction_UServerRow_OnUnhovered();
@@ -486,6 +489,63 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	IMPLEMENT_CLASS(UMainMenu, 1134615107);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UMainMenu(Z_Construct_UClass_UMainMenu, &UMainMenu::StaticClass, TEXT("/Script/UHRI"), TEXT("UMainMenu"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UMainMenu);
+	void ARover::StaticRegisterNativesARover()
+	{
+	}
+	UClass* Z_Construct_UClass_ARover_NoRegister()
+	{
+		return ARover::StaticClass();
+	}
+	UClass* Z_Construct_UClass_ARover()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_ACharacter();
+			Z_Construct_UPackage__Script_UHRI();
+			OuterClass = ARover::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_RoverMesh = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("RoverMesh"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(RoverMesh, ARover), 0x00400000000b0009, Z_Construct_UClass_USkeletalMeshComponent_NoRegister());
+				UProperty* NewProp_RoverCamComponent = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("RoverCamComponent"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(RoverCamComponent, ARover), 0x00400000000a001d, Z_Construct_UClass_UCameraComponent_NoRegister());
+				UProperty* NewProp_BoxComponent = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("BoxComponent"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(BoxComponent, ARover), 0x00400000000a001d, Z_Construct_UClass_UBoxComponent_NoRegister());
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				static TCppClassTypeInfo<TCppClassTypeTraits<ARover> > StaticCppClassTypeInfo;
+				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Navigation"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("Rover.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Rover.h"));
+				MetaData->SetValue(NewProp_RoverMesh, TEXT("Category"), TEXT("Mesh"));
+				MetaData->SetValue(NewProp_RoverMesh, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_RoverMesh, TEXT("ModuleRelativePath"), TEXT("Rover.h"));
+				MetaData->SetValue(NewProp_RoverMesh, TEXT("ToolTip"), TEXT("Pawn mesh: 1st person view (arms; seen only by self)"));
+				MetaData->SetValue(NewProp_RoverCamComponent, TEXT("AllowPrivateAccess"), TEXT("true"));
+				MetaData->SetValue(NewProp_RoverCamComponent, TEXT("Category"), TEXT("Camera"));
+				MetaData->SetValue(NewProp_RoverCamComponent, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_RoverCamComponent, TEXT("ModuleRelativePath"), TEXT("Rover.h"));
+				MetaData->SetValue(NewProp_RoverCamComponent, TEXT("ToolTip"), TEXT("First person camera"));
+				MetaData->SetValue(NewProp_BoxComponent, TEXT("AllowPrivateAccess"), TEXT("true"));
+				MetaData->SetValue(NewProp_BoxComponent, TEXT("Category"), TEXT("Camera"));
+				MetaData->SetValue(NewProp_BoxComponent, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_BoxComponent, TEXT("ModuleRelativePath"), TEXT("Rover.h"));
+				MetaData->SetValue(NewProp_BoxComponent, TEXT("ToolTip"), TEXT("First person camera"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	IMPLEMENT_CLASS(ARover, 2852103416);
+	static FCompiledInDefer Z_CompiledInDefer_UClass_ARover(Z_Construct_UClass_ARover, &ARover::StaticClass, TEXT("/Script/UHRI"), TEXT("ARover"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(ARover);
 	void UServerRow::StaticRegisterNativesUServerRow()
 	{
 		UClass* Class = UServerRow::StaticClass();
@@ -1030,8 +1090,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/UHRI")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xB3A765BC;
-			Guid.B = 0xFEEE63C6;
+			Guid.A = 0x3A64A461;
+			Guid.B = 0x64553C74;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
