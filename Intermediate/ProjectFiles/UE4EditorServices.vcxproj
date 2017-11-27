@@ -52,7 +52,7 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
-		<ProjectGuid>{95AA726E-9F1B-4B2A-80D9-DDB5384B719F}</ProjectGuid>
+		<ProjectGuid>{90379AFF-D3AA-4ED8-BE82-0AEEF002CC27}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
 		<RootNamespace>UE4EditorServices</RootNamespace>
        <PlatformToolset>v140</PlatformToolset>

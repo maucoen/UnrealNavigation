@@ -26,12 +26,13 @@ ARover::ARover()
 	// Create a CameraComponent	
 	RoverCamComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("RoverCam"));
 	RoverCamComponent->SetupAttachment(RootComponent);
-	RoverCamComponent->RelativeLocation = FVector(-39.56f, 1.75f, 150.f); // Position the camera
+	RoverCamComponent->RelativeLocation = FVector(45.f, 0.f, 145.f); // Position the camera
 	RoverCamComponent->bUsePawnControlRotation = true;
 
 	BoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxCollision"));
 	BoxComponent->SetupAttachment(RoverCamComponent);
-	BoxComponent->RelativeLocation = FVector(10.f, 10.f, 10.f); // Position the camera
+	BoxComponent->RelativeLocation = FVector(-117.f, -46.f, -124.f); // Position the camera
+	//BoxComponent->SetRelativeScale3D(FVector::Set(5.f, 4.5f, 3.25f));
 
 	// Create a mesh component that will be used when being viewed from a '1st person' view (when controlling this pawn)
 	RoverMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("RoverMesh"));
@@ -39,9 +40,9 @@ ARover::ARover()
 	RoverMesh->bCastDynamicShadow = true;
 	RoverMesh->CastShadow = true;
 	RoverMesh->RelativeRotation = FRotator(0.f, 0.f, 270.f);
-	RoverMesh->RelativeLocation = FVector(-0.5f, -4.4f, -155.7f);
+	RoverMesh->RelativeLocation = FVector(-127.5f, -54.4f, -237.f);
 
-
+	
 }
 
 void ARover::BeginPlay()

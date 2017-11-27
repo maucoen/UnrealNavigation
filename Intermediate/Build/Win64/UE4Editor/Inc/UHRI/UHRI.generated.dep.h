@@ -5,6 +5,9 @@
 ===========================================================================*/
 
 #include "GeneratedCppIncludes.h"
+#ifndef UHRI_CameraDirector_generated_h
+	#include "CameraDirector.h"
+#endif
 #ifndef UHRI_MenuInterface_generated_h
 	#include "MenuSystem/MenuInterface.h"
 #endif

@@ -15,6 +15,8 @@ public:
 
 	AUHRIGameMode();
 
+	void AUHRIGameMode::SwitchCamera();
+
 	void PostLogin(APlayerController* NewPlayer) override;
 
 	void Logout(AController* Exiting) override;

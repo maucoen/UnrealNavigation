@@ -5,6 +5,7 @@
 #include "Engine/Engine.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Blueprint/UserWidget.h"
+#include "Kismet/GameplayStatics.h"
 #include "OnlineSubsystem.h"
 #include "OnlineSessionSettings.h"
 
@@ -34,6 +35,7 @@ void UUHRIGameInstance::Init()
 
 	IOnlineSubsystem* Subsystem = IOnlineSubsystem::Get();
 
+	
 	if (Subsystem != nullptr)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Found OSS %s"), *Subsystem->GetSubsystemName().ToString());
@@ -98,10 +100,7 @@ void UUHRIGameInstance::Host(FString ServerName)
 			UE_LOG(LogTemp, Warning, TEXT("About to create session"));
 			CreateSession();
 		}
-
-
 	}
-
 }
 
 void UUHRIGameInstance::OnCreateSessionComplete(FName SessionName, bool Success)
@@ -172,8 +171,6 @@ void UUHRIGameInstance::Join(uint32 Index)
 	}
 
 	SessionInterface->JoinSession(0, SESSION_NAME, SessionSearch->SearchResults[Index]);
-
-
 }
 
 void UUHRIGameInstance::StartSession()
@@ -190,50 +187,45 @@ void UUHRIGameInstance::OnJoinSessionComplete(FName SessionName, EOnJoinSessionC
 
 	switch (Result)
 	{
-	case EOnJoinSessionCompleteResult::Type::Success:
-	{
-		FString Address;
-		if (!SessionInterface->GetResolvedConnectString(SessionName, Address))
+		case EOnJoinSessionCompleteResult::Type::Success:
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Couldnt find connection string"));
+			FString Address;
+			if (!SessionInterface->GetResolvedConnectString(SessionName, Address))
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Couldnt find connection string"));
+			}
+
+			UEngine* Engine = GetEngine();
+			if (!ensure(Engine != nullptr)) return;
+
+			Engine->AddOnScreenDebugMessage(0, 5, FColor::Green, FString::Printf(TEXT("Joining %s"), *Address));
+
+			APlayerController* PlayerController = GetFirstLocalPlayerController();
+			if (!ensure(PlayerController != nullptr)) return;
+
+			PlayerController->ClientTravel(Address, ETravelType::TRAVEL_Absolute);
 		}
-
-		UEngine* Engine = GetEngine();
-		if (!ensure(Engine != nullptr)) return;
-
-		Engine->AddOnScreenDebugMessage(0, 5, FColor::Green, FString::Printf(TEXT("Joining %s"), *Address));
-
-		APlayerController* PlayerController = GetFirstLocalPlayerController();
-		if (!ensure(PlayerController != nullptr)) return;
-
-		PlayerController->ClientTravel(Address, ETravelType::TRAVEL_Absolute);
+		case EOnJoinSessionCompleteResult::Type::SessionIsFull:
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Session Full"));
+		}
+		case EOnJoinSessionCompleteResult::Type::UnknownError:
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Unkown Error"));
+		}
+		case EOnJoinSessionCompleteResult::Type::SessionDoesNotExist:
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Session does not exist"));
+		}
+		case EOnJoinSessionCompleteResult::Type::CouldNotRetrieveAddress:
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Couldnt retrieve address"));
+		}
+		case EOnJoinSessionCompleteResult::Type::AlreadyInSession:
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Already in Session!"));
+		}
 	}
-
-	case EOnJoinSessionCompleteResult::Type::SessionIsFull:
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Session Full"));
-	}
-	case EOnJoinSessionCompleteResult::Type::UnknownError:
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Unkown Error"));
-	}
-	case EOnJoinSessionCompleteResult::Type::SessionDoesNotExist:
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Session does not exist"));
-	}
-	case EOnJoinSessionCompleteResult::Type::CouldNotRetrieveAddress:
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Couldnt retrieve address"));
-	}
-	case EOnJoinSessionCompleteResult::Type::AlreadyInSession:
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Already in Session!"));
-	}
-	}
-
-
-
-
 }
 
 

@@ -316,7 +316,7 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
-		<ProjectGuid>{E4389BF7-7DF2-4D97-88C8-40BE096E487A}</ProjectGuid>
+		<ProjectGuid>{A62FAA04-647E-45C1-AF43-5E0A2DDDD8B3}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
 		<RootNamespace>UHRI</RootNamespace>
        <PlatformToolset>v140</PlatformToolset>
@@ -1533,6 +1533,8 @@
 		<None Include="..\..\Config\DefaultEngine.ini" />
 		<None Include="..\..\Config\DefaultGame.ini" />
 		<None Include="..\..\Config\DefaultInput.ini" />
+		<ClCompile Include="..\..\Source\UHRI\CameraDirector.cpp" />
+		<ClInclude Include="..\..\Source\UHRI\CameraDirector.h" />
 		<ClCompile Include="..\..\Source\UHRI\Rover.cpp" />
 		<ClInclude Include="..\..\Source\UHRI\Rover.h" />
 		<None Include="..\..\Source\UHRI\UHRI.Build.cs" />

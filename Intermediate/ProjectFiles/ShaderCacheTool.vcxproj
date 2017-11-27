@@ -52,7 +52,7 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
-		<ProjectGuid>{063AA73F-62E2-45A8-9D86-5253A20E546E}</ProjectGuid>
+		<ProjectGuid>{0AC2F3CE-218F-4140-9464-B72F9826F863}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
 		<RootNamespace>ShaderCacheTool</RootNamespace>
        <PlatformToolset>v140</PlatformToolset>

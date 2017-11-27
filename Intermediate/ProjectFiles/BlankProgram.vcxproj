@@ -52,7 +52,7 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
-		<ProjectGuid>{8A3F3014-4049-46FC-BCFA-66E8F5B6BA04}</ProjectGuid>
+		<ProjectGuid>{85DAEA93-A983-42FF-9418-86B8906F4C22}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
 		<RootNamespace>BlankProgram</RootNamespace>
        <PlatformToolset>v140</PlatformToolset>

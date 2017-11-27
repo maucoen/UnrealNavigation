@@ -27,6 +27,7 @@
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
 "D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\Epic\Projects\UHRI\Intermediate\Build\Win64\UE4Editor\Development\UHRI\CameraDirector.cpp.obj"
 "D:\Epic\Projects\UHRI\Intermediate\Build\Win64\UE4Editor\Development\UHRI\Rover.cpp.obj"
 "D:\Epic\Projects\UHRI\Intermediate\Build\Win64\UE4Editor\Development\UHRI\UHRI.cpp.obj"
 "D:\Epic\Projects\UHRI\Intermediate\Build\Win64\UE4Editor\Development\UHRI\UHRICharacter.cpp.obj"

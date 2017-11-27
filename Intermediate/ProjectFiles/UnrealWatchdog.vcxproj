@@ -76,7 +76,7 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
-		<ProjectGuid>{09517E5F-F27E-4A10-82F9-61E5A28EA1B9}</ProjectGuid>
+		<ProjectGuid>{5A1E7F87-5AB6-4731-B489-BD943E0621C1}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
 		<RootNamespace>UnrealWatchdog</RootNamespace>
        <PlatformToolset>v140</PlatformToolset>

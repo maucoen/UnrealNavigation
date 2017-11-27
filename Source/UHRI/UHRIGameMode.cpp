@@ -15,7 +15,21 @@ AUHRIGameMode::AUHRIGameMode()
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
+
+	//class UInputComponent* PlayerInputComponent;
+	//{
+	//	// set up gameplay key bindings
+	//	check(PlayerInputComponent);
+
+	//	PlayerInputComponent->BindAxis("MoveForward", this, &AUHRIGameMode::SwitchCamera);
+	//}
 }
+
+void AUHRIGameMode::SwitchCamera()
+{
+	
+}
+
 void AUHRIGameMode::PostLogin(APlayerController* NewPlayer)
 {
 	Super::PostLogin(NewPlayer);

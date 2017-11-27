@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\UHRI.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{FED53D8E-9655-412F-BB66-D448F96DBF66}</UniqueIdentifier>
+			<UniqueIdentifier>{0150705B-9154-4D24-9C7C-83261481E745}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\UHRI.Target.cs">
 			<Filter>Source</Filter>
@@ -16,7 +16,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{3DCD04BD-DEDE-4538-B8D8-67F1EA60A688}</UniqueIdentifier>
+			<UniqueIdentifier>{5D1E1839-2E88-4FC4-B2C1-D7263B423635}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -34,8 +34,14 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\UHRI">
-			<UniqueIdentifier>{F9125B31-3DF8-4FCC-9FF1-95ACEA5C8C51}</UniqueIdentifier>
+			<UniqueIdentifier>{7B8A893E-0DA1-438F-B1BC-EA4B9EEEC08D}</UniqueIdentifier>
 		</Filter>
+		<ClCompile Include="..\..\Source\UHRI\CameraDirector.cpp">
+			<Filter>Source\UHRI</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\UHRI\CameraDirector.h">
+			<Filter>Source\UHRI</Filter>
+		</ClInclude >
 		<ClCompile Include="..\..\Source\UHRI\Rover.cpp">
 			<Filter>Source\UHRI</Filter>
 		</ClCompile >
@@ -82,7 +88,7 @@
 			<Filter>Source\UHRI</Filter>
 		</ClInclude >
 		<Filter Include="Source\UHRI\MenuSystem">
-			<UniqueIdentifier>{9BAE7673-6B35-485C-B6F0-41843FD362CD}</UniqueIdentifier>
+			<UniqueIdentifier>{4EBC04B7-38B0-4612-AA27-472D24C998EE}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\UHRI\MenuSystem\InGameMenu.cpp">
 			<Filter>Source\UHRI\MenuSystem</Filter>

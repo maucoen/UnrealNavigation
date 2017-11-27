@@ -5,19 +5,19 @@
 		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Mac\DsymExporter\DsymExporter.Target.cs" />
 		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Mac\DsymExporter\DsymExporter.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{D666091E-8D96-4B50-A205-B209CBC984F8}</UniqueIdentifier>
+			<UniqueIdentifier>{CD81EF1A-4444-4AFD-8A26-68F79A87C4D7}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Mac\DsymExporter\Private\DsymExporterApp.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
 		<Filter Include="Private\Mac">
-			<UniqueIdentifier>{15BFE3F0-4863-4883-9516-1CD3E851501B}</UniqueIdentifier>
+			<UniqueIdentifier>{C4A7FD55-DCB1-424B-B0E9-B92FDB438209}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Mac\DsymExporter\Private\Mac\DsymExporterMainMac.cpp">
 			<Filter>Private\Mac</Filter>
 		</ClCompile >
 		<Filter Include="Public">
-			<UniqueIdentifier>{E0DE18A6-B08C-486F-9605-EB4190D0D024}</UniqueIdentifier>
+			<UniqueIdentifier>{16760490-F959-420A-BDE6-459982DA0C4F}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Mac\DsymExporter\Public\DsymExporterApp.h">
 			<Filter>Public</Filter>

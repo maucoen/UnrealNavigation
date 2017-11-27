@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
+#include "EngineUtils.h"
 #include "MenuSystem/MenuInterface.h"
 #include "OnlineSubsystem.h"
 #include "OnlineSessionInterface.h"
