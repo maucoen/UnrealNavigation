@@ -11,13 +11,13 @@ class UHRI_API ACameraDirector : public AActor
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere)
+		UPROPERTY(EditAnywhere)
 		TArray<AActor*> Cameras;
 
 	template<typename T>
-	void FindAllMovableActors(UWorld* World, TArray<T*>& Out);
+	void FindAllMovableCameraComponents(UWorld* World, TArray<T*>& Out);
 
-public:	
+public:
 	// Sets default values for this actor's properties
 	ACameraDirector();
 
@@ -25,14 +25,17 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	void SetCameraSwitchInput();
+
 	int32 CamIndex = 1;
 	APlayerController* Controller;
 	void SwitchCam();
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
-	
+
+
 };
+

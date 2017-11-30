@@ -8,6 +8,6 @@ public class UHRI : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "UMG", "SlateCore", "OnlineSubsystem", "OnlineSubsystemAmazon" }); //, "GameLiftServerSDK"
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "UMG", "SlateCore", "OnlineSubsystem", "OnlineSubsystemAmazon", "GameLiftServerSDK" }); //, "GameLiftServerSDK"
     }
 }

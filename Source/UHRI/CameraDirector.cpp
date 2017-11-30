@@ -2,13 +2,17 @@
 
 #include "CameraDirector.h"
 #include "Kismet/GameplayStatics.h"
+#include "Camera/CameraComponent.h"
 #include "EngineUtils.h"
+#include "Core.h"
+#include "ModuleManager.h"
+#include "IPluginManager.h"
 
 
 // Sets default values
 ACameraDirector::ACameraDirector()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	//PrimaryActorTick.bCanEverTick = true;
 }
 
@@ -17,18 +21,22 @@ void ACameraDirector::BeginPlay()
 {
 	Super::BeginPlay();
 
+	SetCameraSwitchInput();
+	FindAllMovableCameraComponents(GetWorld(), Cameras);
+}
+
+void ACameraDirector::SetCameraSwitchInput()
+{
 	// Find the actor that handles control for the local player.
 	Controller = UGameplayStatics::GetPlayerController(this, 0);
 
 	if (Controller)
 	{
-		InputComponent = ConstructObject<UInputComponent>(UInputComponent::StaticClass(), this, "Input Component");
+		InputComponent = NewObject<UInputComponent>(this, UInputComponent::StaticClass());
 		InputComponent->bBlockInput = bBlockInput;
 
 		if (InputComponent)
 		{
-			FindAllMovableActors(GetWorld(), Cameras);
-			
 			InputComponent->BindAction("SwitchCamera", IE_Pressed, this, &ACameraDirector::SwitchCam);
 			EnableInput(Controller);
 		}
@@ -56,16 +64,53 @@ void ACameraDirector::SwitchCam()
 }
 
 template<typename T>
-void ACameraDirector::FindAllMovableActors(UWorld* World, TArray<T*>& Out)
+void ACameraDirector::FindAllMovableCameraComponents(UWorld* World, TArray<T*>& Out)
 {
 	for (TActorIterator<AActor> It(World, T::StaticClass()); It; ++It)
 	{
 		T* Actor = Cast<T>(*It);
-		if (Actor->IsRootComponentMovable() && Actor && !Actor->IsPendingKill()) //
+		if (Actor->IsRootComponentMovable() && Actor && !Actor->IsPendingKill())
 		{
-			Out.Emplace(Actor);
-			UE_LOG(LogTemp, Warning, TEXT("Added Camera"));
+
+			// add only if it has a camera component
+			if (Actor->FindComponentByClass<UCameraComponent>() != NULL)
+			{
+				Out.Emplace(Actor);
+				UE_LOG(LogTemp, Warning, TEXT("Added %s"), *Actor->GetName());
+			}
 		}
 	}
+	//Remove last element from array, which seems to be a generic camera actor
+	UE_LOG(LogTemp, Warning, TEXT("popped %s"), *Out.Pop()->GetName());
+
+
+
+	//	//////////
+	//	void* GameLiftServerSDKLibraryHandle = nullptr;
+	//	
+	//	FString BaseDir = IPluginManager::Get().FindPlugin("GameLiftServerSDK")->GetBaseDir();
+	//	UE_LOG(LogTemp, Warning, TEXT("BaseDir %s"), *BaseDir);
+	//	
+	//	const FString SDKDir = FPaths::Combine(*BaseDir, TEXT("ThirdParty"), TEXT("GameLiftServerSDK"));
+	//	UE_LOG(LogTemp, Warning, TEXT("SDKDir %s"), *SDKDir);
+	//
+	//	const FString LibName = TEXT("aws-cpp-sdk-gamelift-server");
+	//	
+	//	const FString LibDir = FPaths::Combine(*SDKDir, TEXT("Win64"));
+	//	UE_LOG(LogTemp, Warning, TEXT("LibeDir %s"), *LibDir);
+	//	
+	//	//if (!LoadDependency(LibDir, LibName, GameLiftServerSDKLibraryHandle))
+	//	//{
+	//	//	FMessageDialog::Open(EAppMsgType::Ok, LOCTEXT(LOCTEXT_NAMESPACE, "Failed to load aws-cpp-sdk-gamelift-server library. Plug-in will not be functional."));
+	//	//}
+	//
+	//	FString Lib = LibName + TEXT(".") + FPlatformProcess::GetModuleExtension();
+	//	UE_LOG(LogTemp, Warning, TEXT("Lib %s"), *Lib);
+	//
+	//	FString Path = LibDir.IsEmpty() ? *Lib : FPaths::Combine(*LibDir, *Lib);
+	//	UE_LOG(LogTemp, Warning, TEXT("Path %s"), *Path);
+	//
+	//	GameLiftServerSDKLibraryHandle = FPlatformProcess::GetDllHandle(*Path);
+	//	//UE_LOG(LogTemp, Warning, TEXT("jandle %s"), GameLiftServerSDKLibraryHandle);
 }
 

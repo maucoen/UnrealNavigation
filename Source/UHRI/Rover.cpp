@@ -20,8 +20,6 @@ ARover::ARover()
 {
 	// Set size for collision capsule
 	//GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
-	
-	
 
 	// Create a CameraComponent	
 	RoverCamComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("RoverCam"));
@@ -32,9 +30,9 @@ ARover::ARover()
 	BoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxCollision"));
 	BoxComponent->SetupAttachment(RoverCamComponent);
 	BoxComponent->RelativeLocation = FVector(-117.f, -46.f, -124.f); // Position the camera
-	//BoxComponent->SetRelativeScale3D(FVector::Set(5.f, 4.5f, 3.25f));
+																	 //BoxComponent->SetRelativeScale3D(FVector::Set(5.f, 4.5f, 3.25f));
 
-	// Create a mesh component that will be used when being viewed from a '1st person' view (when controlling this pawn)
+																	 // Create a mesh component that will be used when being viewed from a '1st person' view (when controlling this pawn)
 	RoverMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("RoverMesh"));
 	RoverMesh->SetupAttachment(RoverCamComponent);
 	RoverMesh->bCastDynamicShadow = true;
@@ -42,13 +40,21 @@ ARover::ARover()
 	RoverMesh->RelativeRotation = FRotator(0.f, 0.f, 270.f);
 	RoverMesh->RelativeLocation = FVector(-127.5f, -54.4f, -237.f);
 
-	
+
 }
 
 void ARover::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+
+	if (HasAuthority()) {
+		SetReplicates(true);
+		SetReplicateMovement(true);
+	}
+
+	GlobalStartLocation = GetActorLocation();
+	GlobalTargetLocation = GetTransform().TransformPosition(TargetLocation);
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -85,3 +91,24 @@ void ARover::MoveRight(float Value)
 	}
 }
 
+void ARover::Tick(float DeltaTime)
+{
+	if (HasAuthority())
+	{
+		FVector Location = GetActorLocation();
+		float JourneyLength = (GlobalTargetLocation - GlobalStartLocation).Size();
+		float JourneyTravelled = (Location - GlobalStartLocation).Size();
+
+		if (JourneyTravelled >= JourneyLength)
+		{
+			FVector Swap = GlobalStartLocation;
+			GlobalStartLocation = GlobalTargetLocation;
+			GlobalTargetLocation = Swap;
+		}
+
+		FVector Direction = (GlobalTargetLocation - GlobalStartLocation).GetSafeNormal();
+		Location += Speed * DeltaTime * Direction;
+		SetActorLocation(Location);
+	}
+
+}

@@ -1,4 +1,4 @@
-# Visual Studio 2015 user specific files
+a# Visual Studio 2015 user specific files
 .vs/
 
 # Visual Studio 2015 database file
@@ -53,6 +53,9 @@ Binaries/*
 
 # Builds
 Build/*
+
+# Content folder for now
+Content/*
 
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
 !Build/*/
