@@ -34,11 +34,12 @@ void ACameraDirector::SetCameraSwitchInput()
 	if (Controller)
 	{
 		InputComponent = NewObject<UInputComponent>(this);
-		InputComponent->bBlockInput = bBlockInput;
+		//InputComponent->bBlockInput = bBlockInput;
 
 		if (InputComponent)
 		{
-			InputComponent->BindAction("SwitchCamera", IE_Pressed, this, &ACameraDirector::SwitchCam);
+			InputComponent->BindKey(EKeys::C, EInputEvent::IE_Pressed, this, &ACameraDirector::SwitchCam);
+			//InputComponent->BindAction("SwitchCamera", IE_Pressed, this, &ACameraDirector::SwitchCam);
 			EnableInput(Controller);
 		}
 	}
@@ -52,15 +53,15 @@ void ACameraDirector::Tick(float DeltaTime)
 
 void ACameraDirector::SwitchCam()
 {
-	if (Controller && Cameras.IsValidIndex(CamIndex) && (Cameras[CamIndex] != nullptr))
+	if (Controller && (CamIndex < ( Cameras.Num()-1)))
 	{
-		// Cut instantly to camera one.
-		Controller->SetViewTarget(Cameras[CamIndex]);
 		++CamIndex;
+		Controller->SetViewTarget(Cameras[CamIndex]);
 	}
 	else
 	{
 		CamIndex = 0;
+		Controller->SetViewTarget(Cameras[CamIndex]);
 	}
 }
 
@@ -72,46 +73,15 @@ void ACameraDirector::FindAllMovableCameraComponents(UWorld* World, TArray<T*>& 
 		T* Actor = Cast<T>(*It);
 		if (Actor->IsRootComponentMovable() && Actor && !Actor->IsPendingKill())
 		{
-
 			// add only if it has a camera component
 			if (Actor->FindComponentByClass<UCameraComponent>() != NULL)
 			{
 				Out.Emplace(Actor);
-				UE_LOG(LogTemp, Warning, TEXT("Camera Iterator: Added %s"), *Actor->GetName());
 			}
 		}
 	}
 	//Remove last element from array, which seems to be a generic camera actor
-	UE_LOG(LogTemp, Warning, TEXT("Camera Iterator: popped %s"), *Out.Pop()->GetName());
-
-
-
-	//	//////////
-	//	void* GameLiftServerSDKLibraryHandle = nullptr;
-	//	
-	//	FString BaseDir = IPluginManager::Get().FindPlugin("GameLiftServerSDK")->GetBaseDir();
-	//	UE_LOG(LogTemp, Warning, TEXT("BaseDir %s"), *BaseDir);
-	//	
-	//	const FString SDKDir = FPaths::Combine(*BaseDir, TEXT("ThirdParty"), TEXT("GameLiftServerSDK"));
-	//	UE_LOG(LogTemp, Warning, TEXT("SDKDir %s"), *SDKDir);
-	//
-	//	const FString LibName = TEXT("aws-cpp-sdk-gamelift-server");
-	//	
-	//	const FString LibDir = FPaths::Combine(*SDKDir, TEXT("Win64"));
-	//	UE_LOG(LogTemp, Warning, TEXT("LibeDir %s"), *LibDir);
-	//	
-	//	//if (!LoadDependency(LibDir, LibName, GameLiftServerSDKLibraryHandle))
-	//	//{
-	//	//	FMessageDialog::Open(EAppMsgType::Ok, LOCTEXT(LOCTEXT_NAMESPACE, "Failed to load aws-cpp-sdk-gamelift-server library. Plug-in will not be functional."));
-	//	//}
-	//
-	//	FString Lib = LibName + TEXT(".") + FPlatformProcess::GetModuleExtension();
-	//	UE_LOG(LogTemp, Warning, TEXT("Lib %s"), *Lib);
-	//
-	//	FString Path = LibDir.IsEmpty() ? *Lib : FPaths::Combine(*LibDir, *Lib);
-	//	UE_LOG(LogTemp, Warning, TEXT("Path %s"), *Path);
-	//
-	//	GameLiftServerSDKLibraryHandle = FPlatformProcess::GetDllHandle(*Path);
-	//	//UE_LOG(LogTemp, Warning, TEXT("jandle %s"), GameLiftServerSDKLibraryHandle);
+	FString Popped = Out.Pop()->GetName();
+	UE_LOG(LogTemp, Warning, TEXT("Camera Iterator: popped %s"), *Popped);
 }
 

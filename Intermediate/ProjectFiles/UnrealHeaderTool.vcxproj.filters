@@ -4,14 +4,14 @@
 	<ItemGroup>
 		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\UnrealHeaderTool.Target.cs" />
 		<Filter Include="Config">
-			<UniqueIdentifier>{5C23AD7B-CCC1-4DE8-9D88-515D79BFB60C}</UniqueIdentifier>
+			<UniqueIdentifier>{868B8688-F59D-4E0F-BB9A-7867989EDA91}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Programs\UnrealHeaderTool\Config\DefaultEngine.ini">
 			<Filter>Config</Filter>
 		</None >
 		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\UnrealHeaderTool.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{7268B1F9-B4AF-46A6-9F5B-4FA5A1BEF443}</UniqueIdentifier>
+			<UniqueIdentifier>{F09648D7-4332-4CC4-B2A1-A55229FD53EB}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\BaseParser.cpp">
 			<Filter>Private</Filter>
@@ -122,7 +122,7 @@
 			<Filter>Private</Filter>
 		</ClInclude >
 		<Filter Include="Private\Specifiers">
-			<UniqueIdentifier>{A439B808-F073-4B10-B7EB-1A9F20205E1A}</UniqueIdentifier>
+			<UniqueIdentifier>{4FAF086A-76C0-4A4B-9F06-09A432880B2C}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\CheckedMetadataSpecifiers.def">
 			<Filter>Private\Specifiers</Filter>
@@ -158,7 +158,7 @@
 			<Filter>Private\Specifiers</Filter>
 		</ClInclude >
 		<Filter Include="Private\UHTMakefile">
-			<UniqueIdentifier>{B12B82F3-840D-4603-8D73-817B1333B98F}</UniqueIdentifier>
+			<UniqueIdentifier>{064AC9AD-8073-4CF9-8817-684508C6F1D4}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ClassArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
@@ -344,13 +344,13 @@
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
 		<Filter Include="Public">
-			<UniqueIdentifier>{1A1D7F11-9808-4830-87E2-9A0B2E6F824A}</UniqueIdentifier>
+			<UniqueIdentifier>{8867B5E3-499A-453C-8736-24B41B6AE286}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Public\IScriptGeneratorPluginInterface.h">
 			<Filter>Public</Filter>
 		</ClInclude >
 		<Filter Include="Resources">
-			<UniqueIdentifier>{6EE052D7-620E-4DAA-A9DB-F5AAB809041C}</UniqueIdentifier>
+			<UniqueIdentifier>{C1B65B14-13D5-4050-AEE2-B3B7338EE8DA}</UniqueIdentifier>
 		</Filter>
 		<ResourceCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Resources\PCLaunch.rc">
 			<Filter>Resources</Filter>
@@ -359,7 +359,7 @@
 			<Filter>Resources</Filter>
 		</Manifest >
 		<Filter Include="Resources\UHTDebugging">
-			<UniqueIdentifier>{5C8D3257-70D7-4167-BBEF-176D505855F0}</UniqueIdentifier>
+			<UniqueIdentifier>{803C6016-A03A-4080-AC64-1C0081FB035B}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\EnumOnlyHeader.h">
 			<Filter>Resources\UHTDebugging</Filter>

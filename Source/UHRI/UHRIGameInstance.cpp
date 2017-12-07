@@ -20,12 +20,10 @@ UUHRIGameInstance::UUHRIGameInstance(const FObjectInitializer & ObjectInitialize
 {
 	ConstructorHelpers::FClassFinder<UUserWidget> MenuBPClass(TEXT("/Game/MenuSystem/WBP_MainMenu"));
 	if (!ensure(MenuBPClass.Class != nullptr)) return;
-
 	MenuClass = MenuBPClass.Class;
 
 	ConstructorHelpers::FClassFinder<UUserWidget> InGameMenuBPClass(TEXT("/Game/MenuSystem/WBP_InGameMenu"));
 	if (!ensure(InGameMenuBPClass.Class != nullptr)) return;
-
 	InGameMenuClass = InGameMenuBPClass.Class;
 }
 
@@ -33,8 +31,7 @@ void UUHRIGameInstance::Init()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Found class %s"), *MenuClass->GetName());
 
-	IOnlineSubsystem* Subsystem = IOnlineSubsystem::Get();
-
+	Subsystem = IOnlineSubsystem::Get();
 	
 	if (Subsystem != nullptr)
 	{
@@ -54,6 +51,7 @@ void UUHRIGameInstance::Init()
 		UE_LOG(LogTemp, Warning, TEXT("Found NO OSS"));
 	}
 }
+
 // Blueprint callable 
 void UUHRIGameInstance::LoadMenuWidget()
 {
@@ -77,6 +75,19 @@ void UUHRIGameInstance::InGameLoadMenu()
 	Menu->Setup();
 
 	Menu->SetMenuInterface(this);
+
+	if (Subsystem->IsServer())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("I am a server!"));
+	}
+	if (Subsystem->IsDedicated())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("I am dedicated!"));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("I am client!"));
+	}
 }
 
 

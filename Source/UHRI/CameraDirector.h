@@ -27,7 +27,7 @@ protected:
 
 	void SetCameraSwitchInput();
 
-	int32 CamIndex = 1;
+	int32 CamIndex = 0;
 	APlayerController* Controller;
 	void SwitchCam();
 

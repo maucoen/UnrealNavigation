@@ -7,14 +7,21 @@
 #include "MarsDTMLevel.generated.h"
 
 /**
- * 
- */
+*
+*/
 UCLASS()
 class UHRI_API AMarsDTMLevel : public ALevelScriptActor
 {
 	GENERATED_BODY()
+
+public:
+	//Actor interface override
+	void BeginPlay() override;
 	
+private:
+	class UGameInstance* Game;
 	
+	APlayerController* Controller;
 	
-	
+	void InLoadMenu();
 };
