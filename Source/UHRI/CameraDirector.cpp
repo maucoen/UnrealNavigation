@@ -23,6 +23,7 @@ void ACameraDirector::BeginPlay()
 
 	SetCameraSwitchInput();
 	FindAllMovableCameraComponents(GetWorld(), Cameras);
+	UE_LOG(LogTemp, Warning, TEXT("Begin Play Camera"));
 }
 
 void ACameraDirector::SetCameraSwitchInput()
@@ -32,7 +33,7 @@ void ACameraDirector::SetCameraSwitchInput()
 
 	if (Controller)
 	{
-		InputComponent = NewObject<UInputComponent>(this, UInputComponent::StaticClass());
+		InputComponent = NewObject<UInputComponent>(this);
 		InputComponent->bBlockInput = bBlockInput;
 
 		if (InputComponent)
@@ -76,12 +77,12 @@ void ACameraDirector::FindAllMovableCameraComponents(UWorld* World, TArray<T*>& 
 			if (Actor->FindComponentByClass<UCameraComponent>() != NULL)
 			{
 				Out.Emplace(Actor);
-				UE_LOG(LogTemp, Warning, TEXT("Added %s"), *Actor->GetName());
+				UE_LOG(LogTemp, Warning, TEXT("Camera Iterator: Added %s"), *Actor->GetName());
 			}
 		}
 	}
 	//Remove last element from array, which seems to be a generic camera actor
-	UE_LOG(LogTemp, Warning, TEXT("popped %s"), *Out.Pop()->GetName());
+	UE_LOG(LogTemp, Warning, TEXT("Camera Iterator: popped %s"), *Out.Pop()->GetName());
 
 
 

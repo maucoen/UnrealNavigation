@@ -17,7 +17,6 @@ struct FServerData
 	uint16 CurrentPlayers;
 	uint16 MaxPlayers;
 	
-
 };
 /**
  * 
@@ -29,7 +28,6 @@ class UHRI_API UMainMenu : public UMenuWidget
 
 public:
 	UMainMenu(const FObjectInitializer & ObjectInitializer);
-
 
 	void SetServerList(TArray<FServerData> ServerNames);
 

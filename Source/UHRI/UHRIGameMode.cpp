@@ -7,8 +7,6 @@
 #include "UObject/ConstructorHelpers.h"
 #include "GameLiftServerSDK.h"
 
-
-
 AUHRIGameMode::AUHRIGameMode()
 	: Super()
 {
@@ -23,11 +21,11 @@ AUHRIGameMode::AUHRIGameMode()
 
 	if (GameLiftSdkModule != nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("gamelift seen"));
+		UE_LOG(LogTemp, Warning, TEXT("GameMode: gamelift seen"));
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("gamelift NOT seen"));
+		UE_LOG(LogTemp, Warning, TEXT("GameMode: gamelift NOT seen"));
 	}
 	//InitSDK establishes a local connection with GameLift's agent to enable further communication.
 	GameLiftSdkModule->InitSDK();
@@ -69,14 +67,14 @@ AUHRIGameMode::AUHRIGameMode()
 	GameLiftSdkModule->ProcessReady(*params);
 #endif
 
-	// set default pawn class to our Blueprinted character
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/FirstPersonCPP/Blueprints/FirstPersonCharacter"));
+	// set default pawn class to spawn
+	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/Curiosity"));
 	if (PlayerPawnBPClass.Class != NULL)
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("added default pawn"));
+	UE_LOG(LogTemp, Warning, TEXT("GameMode: added default pawn"));
 }
 
 void AUHRIGameMode::PostLogin(APlayerController* NewPlayer)
@@ -84,7 +82,7 @@ void AUHRIGameMode::PostLogin(APlayerController* NewPlayer)
 	Super::PostLogin(NewPlayer);
 	++NumberOfPlayers;
 
-	UE_LOG(LogTemp, Warning, TEXT("Added player, %d"), NumberOfPlayers);
+	UE_LOG(LogTemp, Warning, TEXT("GameMode: Posted login for player %d"), NumberOfPlayers);
 
 	/*if (NumberOfPlayers >= 2)
 	{
@@ -102,7 +100,7 @@ void AUHRIGameMode::StartGame()
 	if (!ensure(World != nullptr)) return;
 
 	bUseSeamlessTravel = true;
-	World->ServerTravel("/Game/Maps/FirstPersonExampleMap?listen");
+	World->ServerTravel("/Game/Maps/MarsDTM?listen");
 
 }
 void AUHRIGameMode::Logout(AController* Exiting)

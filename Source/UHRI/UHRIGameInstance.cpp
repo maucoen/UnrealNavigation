@@ -54,7 +54,7 @@ void UUHRIGameInstance::Init()
 		UE_LOG(LogTemp, Warning, TEXT("Found NO OSS"));
 	}
 }
-
+// Blueprint callable 
 void UUHRIGameInstance::LoadMenuWidget()
 {
 	if (!ensure(MenuClass != nullptr)) return;
@@ -123,8 +123,7 @@ void UUHRIGameInstance::OnCreateSessionComplete(FName SessionName, bool Success)
 	UWorld* World = GetWorld();
 	if (!ensure(World != nullptr)) return;
 
-	//World->ServerTravel("/Game/ThirdPersonCPP/Maps/ThirdPersonExampleMap?listen");
-	World->ServerTravel("/Game/Maps/Lobby?listen");
+	World->ServerTravel("/Game/Maps/MarsDTM?listen");
 }
 
 void UUHRIGameInstance::OnDestroySessionComplete(FName SessionName, bool Success)

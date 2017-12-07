@@ -4485,6 +4485,18 @@
 			"Type" : "ImportLibrary"
 		},
 		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Binaries/Win64/UE4Editor-GameLiftServerSDK.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Binaries/Win64/UE4Editor-GameLiftServerSDK.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GameLiftServerSDK.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
 			"Path" : "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4698,6 +4710,10 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Binaries/Win64/HTML5/UE4Editor.modules",
+			"Type" : "RequiredResource"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		}
 	],
