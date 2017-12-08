@@ -3,6 +3,8 @@
 #include "CameraDirector.h"
 #include "Kismet/GameplayStatics.h"
 #include "Camera/CameraComponent.h"
+//#include "Runtime/CinematicCamera/Public/CineCameraComponent.h"
+//#include "Public/C"
 #include "EngineUtils.h"
 #include "Core.h"
 #include "ModuleManager.h"
@@ -23,7 +25,6 @@ void ACameraDirector::BeginPlay()
 
 	SetCameraSwitchInput();
 	FindAllMovableCameraComponents(GetWorld(), Cameras);
-	UE_LOG(LogTemp, Warning, TEXT("Begin Play Camera"));
 }
 
 void ACameraDirector::SetCameraSwitchInput()
@@ -41,6 +42,7 @@ void ACameraDirector::SetCameraSwitchInput()
 			InputComponent->BindKey(EKeys::C, EInputEvent::IE_Pressed, this, &ACameraDirector::SwitchCam);
 			//InputComponent->BindAction("SwitchCamera", IE_Pressed, this, &ACameraDirector::SwitchCam);
 			EnableInput(Controller);
+			InputComponent->BindKey(EKeys::MotionController_Left_Grip1, EInputEvent::IE_Pressed, this, &ACameraDirector::SwitchCam);
 		}
 	}
 }
@@ -71,13 +73,24 @@ void ACameraDirector::FindAllMovableCameraComponents(UWorld* World, TArray<T*>& 
 	for (TActorIterator<AActor> It(World, T::StaticClass()); It; ++It)
 	{
 		T* Actor = Cast<T>(*It);
-		if (Actor->IsRootComponentMovable() && Actor && !Actor->IsPendingKill())
+		if (Actor->IsRootComponentMovable() && Actor && !Actor->IsPendingKill() && Actor->FindComponentByClass<UCameraComponent>())
 		{
-			// add only if it has a camera component
-			if (Actor->FindComponentByClass<UCameraComponent>() != NULL)
-			{
+			//auto Cam = Actor->FindComponentByClass<UCameraComponent>();
+			//if (Cam != NULL)
+			//{
 				Out.Emplace(Actor);
-			}
+				UE_LOG(LogTemp, Warning, TEXT("Camera Iterator added: %s"), *Actor->GetName());
+			//}
+
+
+			//engine header for cinecam.h is corrupted!
+			/*auto CineCam = Actor->FindComponentByClass<UCineCameraComponent>();
+			if (CineCam != NULL)
+			{
+				Out.Emplace(CineCam);
+				UE_LOG(LogTemp, Warning, TEXT("Camera Iterator added: %s"), *CineCam->GetName());
+			}*/
+
 		}
 	}
 	//Remove last element from array, which seems to be a generic camera actor

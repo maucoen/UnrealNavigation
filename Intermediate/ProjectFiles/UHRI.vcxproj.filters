@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\UHRI.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{7FE888DA-F7F0-40D9-A161-910A821A9F1D}</UniqueIdentifier>
+			<UniqueIdentifier>{252496A9-D030-4FC5-AFE8-6333EBB87855}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\UHRI.Target.cs">
 			<Filter>Source</Filter>
@@ -16,7 +16,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{2EA9BFFA-A420-4CAE-BCAD-9DBD0EE25187}</UniqueIdentifier>
+			<UniqueIdentifier>{937E7712-5A33-4458-9A59-C4509558223E}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -34,22 +34,22 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Plugins">
-			<UniqueIdentifier>{56C52724-27F8-4029-A8B7-2057E1CB769E}</UniqueIdentifier>
+			<UniqueIdentifier>{CAF3D2ED-057B-4407-83E3-436EBB00C83A}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\GameLiftServerSDK">
-			<UniqueIdentifier>{27FB6EE7-8520-4E84-96B9-59AAD506418F}</UniqueIdentifier>
+			<UniqueIdentifier>{0BAEB5F7-FC86-45B0-85BA-1DA4FB6A9C94}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\GameLiftServerSDK\Source">
-			<UniqueIdentifier>{D77DCE38-426C-4C4C-9832-93F7A65AD8A9}</UniqueIdentifier>
+			<UniqueIdentifier>{25520D55-551F-45DE-82AE-1A5F68E8B9C4}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK">
-			<UniqueIdentifier>{E9A9C0EC-326E-4DC2-97DE-48CA667240FC}</UniqueIdentifier>
+			<UniqueIdentifier>{B9151F3A-A169-4640-940F-637810D13E57}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\GameLiftServerSDK.Build.cs">
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK</Filter>
 		</None >
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Private">
-			<UniqueIdentifier>{1A06E463-9CB6-40E5-A7E7-71CC6944568A}</UniqueIdentifier>
+			<UniqueIdentifier>{44C37F22-9382-4CFE-ACFC-CBAF43FB9304}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Private\GameLiftServerSDK.cpp">
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Private</Filter>
@@ -58,7 +58,7 @@
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Private</Filter>
 		</ClInclude >
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public">
-			<UniqueIdentifier>{FDB4B671-17D9-43D9-9FD1-8519C9611F7A}</UniqueIdentifier>
+			<UniqueIdentifier>{B218498F-5EE9-4B03-8BE4-1D003B771611}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\GameLiftServerSDK.h">
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public</Filter>
@@ -67,13 +67,13 @@
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public</Filter>
 		</ClInclude >
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws">
-			<UniqueIdentifier>{873B71A2-3696-49FE-B1AC-F3023C1BC7A4}</UniqueIdentifier>
+			<UniqueIdentifier>{8FE7D66A-AEE9-4336-92D2-8682B8B3E2E1}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift">
-			<UniqueIdentifier>{BEE864F8-4444-47F5-B7CC-CD527010F0C4}</UniqueIdentifier>
+			<UniqueIdentifier>{33B5011C-E176-4ED2-BE5D-95960AEF5D88}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\common">
-			<UniqueIdentifier>{A689811B-A2FF-455C-A6BC-18A1DD0D74AE}</UniqueIdentifier>
+			<UniqueIdentifier>{E309AF82-1542-4880-B914-EBE8869826AA}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\common\GameLiftErrors.h">
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\common</Filter>
@@ -85,7 +85,7 @@
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\common</Filter>
 		</ClInclude >
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal">
-			<UniqueIdentifier>{932167BC-5044-4B4A-BC3D-345B041FCB80}</UniqueIdentifier>
+			<UniqueIdentifier>{DF7C5536-21FD-41B1-8395-541EC4C9113B}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\GameLiftCommonState.h">
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal</Filter>
@@ -94,13 +94,13 @@
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal</Filter>
 		</ClInclude >
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\modelmapper">
-			<UniqueIdentifier>{6FBD7DE3-8C73-4F32-AAED-0186B767117C}</UniqueIdentifier>
+			<UniqueIdentifier>{F1F29A22-7781-4FEE-9839-1A84D37A0E48}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\modelmapper\DescribePlayerSessionsMapper.h">
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\modelmapper</Filter>
 		</ClInclude >
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\network">
-			<UniqueIdentifier>{D170D329-2610-4E5A-8FCC-396D97F9E344}</UniqueIdentifier>
+			<UniqueIdentifier>{1E3C8EBC-0118-4279-AD26-C416A369F262}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\network\AuxProxyMessageHandler.h">
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\network</Filter>
@@ -112,7 +112,7 @@
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\network</Filter>
 		</ClInclude >
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server">
-			<UniqueIdentifier>{4281937E-3BFE-4349-9AE5-2C5248C5D114}</UniqueIdentifier>
+			<UniqueIdentifier>{532E1264-8AFD-411E-B1A2-A16EAB51893B}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\GameLiftServerAPI.h">
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server</Filter>
@@ -124,7 +124,7 @@
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server</Filter>
 		</ClInclude >
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\model">
-			<UniqueIdentifier>{51A344E3-F8E3-44F9-A5FA-DC09014437CB}</UniqueIdentifier>
+			<UniqueIdentifier>{224709C4-153D-4B67-B116-5E5D818DAEB2}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\model\DescribePlayerSessionsRequest.h">
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\model</Filter>
@@ -151,7 +151,7 @@
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\model</Filter>
 		</ClInclude >
 		<Filter Include="Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\protocols">
-			<UniqueIdentifier>{ECB72074-B3B6-47A4-950E-C4F5BF92B3F2}</UniqueIdentifier>
+			<UniqueIdentifier>{432E4AA6-B48F-46CB-82E9-49A8522FBD4F}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\protocols\sdk.pb.h">
 			<Filter>Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\protocols</Filter>
@@ -160,13 +160,13 @@
 			<Filter>Plugins\GameLiftServerSDK</Filter>
 		</None >
 		<Filter Include="Plugins\GameLiftServerSDK\Resources">
-			<UniqueIdentifier>{5EA95BE9-117F-4529-9A3D-89F9272878C6}</UniqueIdentifier>
+			<UniqueIdentifier>{CFCDFE39-AFB8-4A58-8277-A67538C7641A}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\GameLiftServerSDK\Resources\Icon128.png">
 			<Filter>Plugins\GameLiftServerSDK\Resources</Filter>
 		</None >
 		<Filter Include="Source\UHRI">
-			<UniqueIdentifier>{E561D1BD-802B-432F-A58F-A533FDF622B6}</UniqueIdentifier>
+			<UniqueIdentifier>{F62D6D0F-E272-485F-8B85-35D8B2D8789A}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\UHRI\CameraDirector.cpp">
 			<Filter>Source\UHRI</Filter>
@@ -232,7 +232,7 @@
 			<Filter>Source\UHRI</Filter>
 		</ClInclude >
 		<Filter Include="Source\UHRI\MenuSystem">
-			<UniqueIdentifier>{4552780E-6749-44C5-9249-57CBEE0F7454}</UniqueIdentifier>
+			<UniqueIdentifier>{6E28B1C0-FFE5-4817-9C18-FD1B00D5E1EC}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\UHRI\MenuSystem\InGameMenu.cpp">
 			<Filter>Source\UHRI\MenuSystem</Filter>

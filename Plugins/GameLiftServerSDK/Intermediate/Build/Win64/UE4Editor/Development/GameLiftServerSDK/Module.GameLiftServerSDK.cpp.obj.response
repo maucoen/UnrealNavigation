@@ -22,54 +22,54 @@
 /wd4463
 /wd4838
 /w44668
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Private
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\common
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\modelmapper
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\network
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\model
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\protocols
-/I D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Internationalization
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Async
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Containers
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Delegates
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\GenericPlatform
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\HAL
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Logging
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Math
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Misc
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Modules
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Modules\Boilerplate
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\ProfilingDebugging
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Serialization
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Serialization\Csv
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Stats
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Templates
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\UObject
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Windows
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects\Public
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects\Public\Interfaces
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Dom
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Policies
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Serialization
-/I D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json
-/FI"D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\SharedPCH.Core.h"
-/Yu"D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\SharedPCH.Core.h"
-/Fp"D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\SharedPCH.Core.h.pch"
-"D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Intermediate\Build\Win64\UE4Editor\Development\GameLiftServerSDK\Module.GameLiftServerSDK.cpp"
-/FI"D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Intermediate\Build\Win64\UE4Editor\Development\GameLiftServerSDK\Definitions.GameLiftServerSDK.h"
-/Fo"D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Intermediate\Build\Win64\UE4Editor\Development\GameLiftServerSDK\Module.GameLiftServerSDK.cpp.obj"
+/I F:\UES\Engine\Source
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Private
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\common
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\modelmapper
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\internal\network
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\model
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\Public\aws\gamelift\server\protocols
+/I F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK
+/I F:\UES\Engine\Source\Runtime\Core\Public
+/I F:\UES\Engine\Source\Runtime\Core\Public\Internationalization
+/I F:\UES\Engine\Source\Runtime\Core\Public\Async
+/I F:\UES\Engine\Source\Runtime\Core\Public\Containers
+/I F:\UES\Engine\Source\Runtime\Core\Public\Delegates
+/I F:\UES\Engine\Source\Runtime\Core\Public\GenericPlatform
+/I F:\UES\Engine\Source\Runtime\Core\Public\HAL
+/I F:\UES\Engine\Source\Runtime\Core\Public\Logging
+/I F:\UES\Engine\Source\Runtime\Core\Public\Math
+/I F:\UES\Engine\Source\Runtime\Core\Public\Misc
+/I F:\UES\Engine\Source\Runtime\Core\Public\Modules
+/I F:\UES\Engine\Source\Runtime\Core\Public\Modules\Boilerplate
+/I F:\UES\Engine\Source\Runtime\Core\Public\ProfilingDebugging
+/I F:\UES\Engine\Source\Runtime\Core\Public\Serialization
+/I F:\UES\Engine\Source\Runtime\Core\Public\Serialization\Csv
+/I F:\UES\Engine\Source\Runtime\Core\Public\Stats
+/I F:\UES\Engine\Source\Runtime\Core\Public\Templates
+/I F:\UES\Engine\Source\Runtime\Core\Public\UObject
+/I F:\UES\Engine\Source\Runtime\Core\Public\Windows
+/I F:\UES\Engine\Source\Runtime\Core
+/I F:\UES\Engine\Source\Runtime\Projects\Public
+/I F:\UES\Engine\Source\Runtime\Projects\Public\Interfaces
+/I F:\UES\Engine\Source\Runtime\Projects
+/I F:\UES\Engine\Source\Runtime\Json\Public
+/I F:\UES\Engine\Source\Runtime\Json\Public\Dom
+/I F:\UES\Engine\Source\Runtime\Json\Public\Policies
+/I F:\UES\Engine\Source\Runtime\Json\Public\Serialization
+/I F:\UES\Engine\Source\Runtime\Json
+/FI"F:\UES\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\SharedPCH.Core.h"
+/Yu"F:\UES\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\SharedPCH.Core.h"
+/Fp"F:\UES\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\SharedPCH.Core.h.pch"
+"F:\MAU\UHRI\Plugins\GameLiftServerSDK\Intermediate\Build\Win64\UE4Editor\Development\GameLiftServerSDK\Module.GameLiftServerSDK.cpp"
+/FI"F:\MAU\UHRI\Plugins\GameLiftServerSDK\Intermediate\Build\Win64\UE4Editor\Development\GameLiftServerSDK\Definitions.GameLiftServerSDK.h"
+/Fo"F:\MAU\UHRI\Plugins\GameLiftServerSDK\Intermediate\Build\Win64\UE4Editor\Development\GameLiftServerSDK\Module.GameLiftServerSDK.cpp.obj"
 /TP
 /GR-
 /W4

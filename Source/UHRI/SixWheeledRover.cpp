@@ -5,8 +5,12 @@
 #include "UObject/ConstructorHelpers.h"
 #include "Engine/CollisionProfile.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "EngineUtils.h"
 #include "Regex.h"
+#include "Camera/CameraComponent.h"
+//#include "F:\UES\Engine\Source\Runtime\CinematicCamera\Public\CineCameraComponent.h"
+//#include "Camera/CameraComponent.h" F:\UES\Engine\Source\Runtime\Engine\Classes\GameFramework\SpringArmComponent.h F:\UES\Engine\Source\Runtime\CinematicCamera\Public\CineCameraComponent.h
 #include "SimpleWheeledVehicleMovementComponent.h"
 
 FName SixWheelMoveComp = AWheeledVehicle::VehicleMovementComponentName;
@@ -27,6 +31,28 @@ ASixWheeledRover::ASixWheeledRover(const FObjectInitializer& ObjectInitializer)
 	SixWheelMesh->bGenerateOverlapEvents = true;
 	SixWheelMesh->SetCanEverAffectNavigation(false);
 	RootComponent = SixWheelMesh;
+
+	// Create a CameraComponent	
+	MastCam = CreateDefaultSubobject<UCameraComponent>(TEXT("MastCam"));
+	MastCam->SetupAttachment(SixWheelMesh);
+	MastCam->RelativeLocation = FVector(-53.000084, 110.999878, 241.000000); // Position the camera
+	MastCam->RelativeRotation = FRotator(0, 80, 0);
+
+	// Create a Spring Arm
+	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
+	SpringArm->SetupAttachment(SixWheelMesh);
+	//SpringArm->SetupAttachment(SixWheelMesh);
+	//SpringArm->RelativeLocation = FVector(-53.000084, 110.999878, 241.000000); // Position the camera
+	//SpringArm->RelativeRotation = FRotator(0, 80, 0);
+
+	//// Create a Cine Cam
+	//CineCam = CreateDefaultSubobject<UCineCameraComponent>(TEXT("CineCam"));
+	//..CineCam->SetupAttachment(SpringArm);
+	//CineCam->RelativeLocation = FVector(-53.000084, 110.999878, 241.000000); // Position the camera
+	//CineCam->RelativeRotation = FRotator(0, 80, 0);
+
+
+
 }
 
 // Called when the game starts or when spawned
@@ -50,7 +76,7 @@ void ASixWheeledRover::SetBoneArrays()
 	for (auto& Str : WheelBones)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Detected the following wheel: %s"), *Str.ToString());
-		SixWheelMesh->SetPhysicsMaxAngularVelocity(300, false, Str);
+		SixWheelMesh->SetPhysicsMaxAngularVelocity(100, false, Str);
 	}
 
 	FrontBogeyBones = FindControlStructures(TEXT("Bogey.+(_F|_R)$"));
@@ -73,8 +99,62 @@ void ASixWheeledRover::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &ASixWheeledRover::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ASixWheeledRover::MoveRight);
-	PlayerInputComponent->BindAxis("LookUp");
-	PlayerInputComponent->BindAxis("LookRight");
+	PlayerInputComponent->BindAxis("LeftTouchpadY", this, &ASixWheeledRover::MoveForward);
+	PlayerInputComponent->BindAxis("LookUp", this, &ASixWheeledRover::ViewUp);
+	PlayerInputComponent->BindAxis("Turn", this, &ASixWheeledRover::ViewRight);
+	PlayerInputComponent->BindAxis("ZoomIn", this, &ASixWheeledRover::ZoomIn);
+}
+
+void ASixWheeledRover::OnToggleCamera()
+{
+	//ChangeCam(!bMastCamActive, true);
+}
+
+void ASixWheeledRover::ChangeCam(const bool bState, const bool bForce)
+{
+	/*if ((bState != bMastCamActive) || (bForce == true))
+	{
+		bMastCamActive = bState;
+
+		if (bState == true)
+		{
+			MastCam->Deactivate();
+			CineCam->Activate();
+		}
+		else
+		{
+			CineCam->Deactivate();
+			MastCam->Activate();
+		}*/
+
+
+		//TODO: HUD stuff
+		/*InCarSpeed->SetVisibility(bInCarCameraActive);
+		InCarGear->SetVisibility(bInCarCameraActive);*/
+	//}
+}
+
+void ASixWheeledRover::ViewRight(float Val)
+{
+	if (Val != 0)
+	{ 
+		Val = Val * GetWorld()->GetDeltaSeconds() * 45;
+		MastCam->RelativeRotation.Yaw += Val;
+	}
+}
+
+void ASixWheeledRover::ViewUp(float Val)
+{
+	if (Val != 0)
+	{
+		Val = Val * GetWorld()->GetDeltaSeconds() * -45;
+		MastCam->RelativeRotation.Pitch += Val;
+	}
+}
+
+void ASixWheeledRover::ZoomIn(float Val)
+{
+	MastCam->SetFieldOfView(MastCam->FieldOfView - Val);
 }
 
 void ASixWheeledRover::MoveForward(float Val)
@@ -85,7 +165,7 @@ void ASixWheeledRover::MoveForward(float Val)
 
 		for (auto& Bone : WheelBones)
 		{
-			SixWheelMesh->AddTorque(Torque, Bone, false);
+			SixWheelMesh->AddTorque(Torque, Bone, true);
 		}
 	}
 	FQuat Loc = SixWheelMesh->GetBoneQuaternion("Bogey_L_F", EBoneSpaces::ComponentSpace);
@@ -96,7 +176,7 @@ void ASixWheeledRover::MoveRight(float Val)
 	FVector Torque = GetActorUpVector() * Val * BogeyMotorTorque;
 	FVector TorqueF = -GetActorForwardVector() * Val * WheelMotorTorque;
 
-	if (SixWheelMesh->GetPhysicsLinearVelocity().Size() < 50) //stationary, rotate in place
+	if (SixWheelMesh->GetPhysicsLinearVelocity().Size() < 30) //stationary, rotate in place
 	{
 		int i = 0;
 		float powWheel;

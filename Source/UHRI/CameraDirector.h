@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Camera/CameraComponent.h"
 #include "CameraDirector.generated.h"
 
 UCLASS()
@@ -29,6 +30,8 @@ protected:
 
 	int32 CamIndex = 0;
 	APlayerController* Controller;
+
+	UFUNCTION()
 	void SwitchCam();
 
 public:

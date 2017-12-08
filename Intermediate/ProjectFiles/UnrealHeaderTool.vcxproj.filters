@@ -2,381 +2,381 @@
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\UnrealHeaderTool.Target.cs" />
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\UnrealHeaderTool.Target.cs" />
 		<Filter Include="Config">
-			<UniqueIdentifier>{868B8688-F59D-4E0F-BB9A-7867989EDA91}</UniqueIdentifier>
+			<UniqueIdentifier>{855DEE33-28DD-478E-B86C-56EE3B400639}</UniqueIdentifier>
 		</Filter>
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Programs\UnrealHeaderTool\Config\DefaultEngine.ini">
+		<None Include="..\..\..\..\UES\Engine\Programs\UnrealHeaderTool\Config\DefaultEngine.ini">
 			<Filter>Config</Filter>
 		</None >
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\UnrealHeaderTool.Build.cs" />
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\UnrealHeaderTool.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{F09648D7-4332-4CC4-B2A1-A55229FD53EB}</UniqueIdentifier>
+			<UniqueIdentifier>{98B70882-41CD-4D40-B371-D509B37FEFB9}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\BaseParser.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\BaseParser.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\BaseParser.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\BaseParser.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\ClassDeclarationMetaData.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\ClassDeclarationMetaData.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\ClassDeclarationMetaData.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\ClassDeclarationMetaData.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Classes.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Classes.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Classes.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Classes.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\ClassMaps.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\ClassMaps.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\ClassMaps.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\ClassMaps.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\CodeGenerator.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\CodeGenerator.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\FileLineException.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\FileLineException.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\FileLineException.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\FileLineException.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\GeneratedCodeVersion.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\GeneratedCodeVersion.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\HeaderParser.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\HeaderParser.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\HeaderParser.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\HeaderParser.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\HeaderProvider.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\HeaderProvider.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\HeaderProvider.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\HeaderProvider.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\IScriptGeneratorPluginInterface.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\IScriptGeneratorPluginInterface.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Manifest.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Manifest.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Manifest.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Manifest.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\NativeClassExporter.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\NativeClassExporter.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\ParserClass.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\ParserClass.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\ParserClass.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\ParserClass.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\ParserHelper.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\ParserHelper.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\ParserHelper.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\ParserHelper.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Scope.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Scope.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Scope.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Scope.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\SimplifiedParsingClassInfo.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\SimplifiedParsingClassInfo.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\StringUtils.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\StringUtils.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\StringUtils.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\StringUtils.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UnderlyingEnumType.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UnderlyingEnumType.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealHeaderTool.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealHeaderTool.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealHeaderToolGlobals.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealHeaderToolGlobals.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealHeaderToolMain.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealHeaderToolMain.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealSourceFile.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealSourceFile.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealSourceFile.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealSourceFile.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealTypeDefinitionInfo.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UnrealTypeDefinitionInfo.h">
 			<Filter>Private</Filter>
 		</ClInclude >
 		<Filter Include="Private\Specifiers">
-			<UniqueIdentifier>{4FAF086A-76C0-4A4B-9F06-09A432880B2C}</UniqueIdentifier>
+			<UniqueIdentifier>{4FCE41A0-C9D5-43A7-8253-E51FCCE8F08F}</UniqueIdentifier>
 		</Filter>
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\CheckedMetadataSpecifiers.def">
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\CheckedMetadataSpecifiers.def">
 			<Filter>Private\Specifiers</Filter>
 		</None >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\CheckedMetadataSpecifiers.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\CheckedMetadataSpecifiers.h">
 			<Filter>Private\Specifiers</Filter>
 		</ClInclude >
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\FunctionSpecifiers.def">
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\FunctionSpecifiers.def">
 			<Filter>Private\Specifiers</Filter>
 		</None >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\FunctionSpecifiers.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\FunctionSpecifiers.h">
 			<Filter>Private\Specifiers</Filter>
 		</ClInclude >
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\InterfaceSpecifiers.def">
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\InterfaceSpecifiers.def">
 			<Filter>Private\Specifiers</Filter>
 		</None >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\InterfaceSpecifiers.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\InterfaceSpecifiers.h">
 			<Filter>Private\Specifiers</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\SpecifierArrays.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\SpecifierArrays.cpp">
 			<Filter>Private\Specifiers</Filter>
 		</ClCompile >
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\StructSpecifiers.def">
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\StructSpecifiers.def">
 			<Filter>Private\Specifiers</Filter>
 		</None >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\StructSpecifiers.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\StructSpecifiers.h">
 			<Filter>Private\Specifiers</Filter>
 		</ClInclude >
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\VariableSpecifiers.def">
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\VariableSpecifiers.def">
 			<Filter>Private\Specifiers</Filter>
 		</None >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\VariableSpecifiers.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\Specifiers\VariableSpecifiers.h">
 			<Filter>Private\Specifiers</Filter>
 		</ClInclude >
 		<Filter Include="Private\UHTMakefile">
-			<UniqueIdentifier>{064AC9AD-8073-4CF9-8817-684508C6F1D4}</UniqueIdentifier>
+			<UniqueIdentifier>{DDA0B73A-C720-4759-84CF-8953981E7138}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ClassArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ClassArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ClassArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ClassArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ClassMetaDataArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ClassMetaDataArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ClassMetaDataArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ClassMetaDataArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\CompilerMetadataManagerArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\CompilerMetadataManagerArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\CompilerMetadataManagerArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\CompilerMetadataManagerArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\EnumArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\EnumArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\EnumArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\EnumArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FieldArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FieldArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FieldArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FieldArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FileScopeArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FileScopeArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FileScopeArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FileScopeArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FunctionArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FunctionArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FunctionArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\FunctionArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\HeaderProviderArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\HeaderProviderArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\HeaderProviderArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\HeaderProviderArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ImplementedInterfaceArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ImplementedInterfaceArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ImplementedInterfaceArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ImplementedInterfaceArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\MakefileHelpers.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\MakefileHelpers.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\MetadataArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\MetadataArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\MetadataArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\MetadataArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\MultipleInheritanceBaseClassArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\MultipleInheritanceBaseClassArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\MultipleInheritanceBaseClassArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\MultipleInheritanceBaseClassArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\NameArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\NameArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\NameArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\NameArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ObjectBaseArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ObjectBaseArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ObjectBaseArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ObjectBaseArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PackageArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PackageArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PackageArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PackageArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyBaseArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyBaseArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyBaseArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyBaseArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyDataArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyDataArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyDataArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\PropertyDataArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\RepRecordArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\RepRecordArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\RepRecordArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\RepRecordArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ScopeArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ScopeArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ScopeArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ScopeArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ScriptStructArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ScriptStructArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ScriptStructArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\ScriptStructArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructDataArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructDataArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructDataArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructDataArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructScopeArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructScopeArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructScopeArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\StructScopeArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TokenArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TokenArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TokenArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TokenArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TokenDataArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TokenDataArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TokenDataArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TokenDataArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TypeDefinitionInfoMapArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TypeDefinitionInfoMapArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TypeDefinitionInfoMapArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\TypeDefinitionInfoMapArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefile.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefile.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefile.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefile.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefileHeaderDescriptor.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefileHeaderDescriptor.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefileHeaderDescriptor.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefileHeaderDescriptor.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefileModuleDescriptor.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefileModuleDescriptor.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefileModuleDescriptor.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UHTMakefileModuleDescriptor.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UnrealSourceFileArchiveProxy.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UnrealSourceFileArchiveProxy.cpp">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UnrealSourceFileArchiveProxy.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Private\UHTMakefile\UnrealSourceFileArchiveProxy.h">
 			<Filter>Private\UHTMakefile</Filter>
 		</ClInclude >
 		<Filter Include="Public">
-			<UniqueIdentifier>{8867B5E3-499A-453C-8736-24B41B6AE286}</UniqueIdentifier>
+			<UniqueIdentifier>{3FB0CFAF-837C-4B3E-A24E-5617D5FE7C98}</UniqueIdentifier>
 		</Filter>
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Public\IScriptGeneratorPluginInterface.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Public\IScriptGeneratorPluginInterface.h">
 			<Filter>Public</Filter>
 		</ClInclude >
 		<Filter Include="Resources">
-			<UniqueIdentifier>{C1B65B14-13D5-4050-AEE2-B3B7338EE8DA}</UniqueIdentifier>
+			<UniqueIdentifier>{1EC43C63-E2E7-4C07-AAA8-E3A368107773}</UniqueIdentifier>
 		</Filter>
-		<ResourceCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Resources\PCLaunch.rc">
+		<ResourceCompile Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Resources\PCLaunch.rc">
 			<Filter>Resources</Filter>
 		</ResourceCompile >
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging.manifest">
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging.manifest">
 			<Filter>Resources</Filter>
 		</Manifest >
 		<Filter Include="Resources\UHTDebugging">
-			<UniqueIdentifier>{803C6016-A03A-4080-AC64-1C0081FB035B}</UniqueIdentifier>
+			<UniqueIdentifier>{CF6A7635-00E8-4860-97DF-06A87359B1C5}</UniqueIdentifier>
 		</Filter>
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\EnumOnlyHeader.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\EnumOnlyHeader.h">
 			<Filter>Resources\UHTDebugging</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\StructOnlyHeader.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\StructOnlyHeader.h">
 			<Filter>Resources\UHTDebugging</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\TestDeprecatedObject.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\TestDeprecatedObject.h">
 			<Filter>Resources\UHTDebugging</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\TestInterface.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\TestInterface.h">
 			<Filter>Resources\UHTDebugging</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\TestInterfaceObject.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\TestInterfaceObject.h">
 			<Filter>Resources\UHTDebugging</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\TestObject.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\UnrealHeaderTool\Resources\UHTDebugging\TestObject.h">
 			<Filter>Resources\UHTDebugging</Filter>
 		</ClInclude >
 	</ItemGroup>

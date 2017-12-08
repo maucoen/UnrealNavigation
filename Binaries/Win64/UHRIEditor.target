@@ -2,7 +2,7 @@
 	"TargetName" : "UHRIEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "db67e996-32a0-46f4-b25e-940a47964c9c",
+	"BuildId" : "7101da95-eb83-47b3-92dc-2c9769b241d5",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -330,18 +330,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Experimental/HTML5Networking/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-HTML5Networking.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/Marketplace/RunebergVRPlugin/Binaries/Win64/UE4Editor-RunebergVRPlugin.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/Marketplace/RunebergVRPlugin/Binaries/Win64/UE4Editor-RunebergVRPlugin.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/Marketplace/RunebergVRPlugin/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-RunebergVRPlugin.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -810,18 +798,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-WindowsMoviePlayer.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/UnrealCV/Binaries/Win64/UE4Editor-UnrealCV.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/UnrealCV/Binaries/Win64/UE4Editor-UnrealCV.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/UnrealCV/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-UnrealCV.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -1842,6 +1818,18 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-VulkanShaderFormat.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(EngineDir)/Binaries/Win64/UE4Editor-TextureFormatAndroid.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(EngineDir)/Binaries/Win64/UE4Editor-TextureFormatAndroid.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(EngineDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-TextureFormatAndroid.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -4569,10 +4557,6 @@
 			"Type" : "RequiredResource"
 		},
 		{
-			"Path" : "$(EngineDir)/Plugins/Marketplace/RunebergVRPlugin/Binaries/Win64/UE4Editor.modules",
-			"Type" : "RequiredResource"
-		},
-		{
 			"Path" : "$(EngineDir)/Plugins/Media/AndroidMedia/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4689,10 +4673,6 @@
 			"Type" : "RequiredResource"
 		},
 		{
-			"Path" : "$(EngineDir)/Plugins/UnrealCV/Binaries/Win64/UE4Editor.modules",
-			"Type" : "RequiredResource"
-		},
-		{
 			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4793,10 +4773,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Experimental/HTML5Networking/HTML5Networking.uplugin",
-			"Type" : "UFS"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/Marketplace/RunebergVRPlugin/RunebergVRPlugin.uplugin",
 			"Type" : "UFS"
 		},
 		{
@@ -4913,10 +4889,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/WindowsMoviePlayer.uplugin",
-			"Type" : "UFS"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/UnrealCV/UnrealCV.uplugin",
 			"Type" : "UFS"
 		},
 		{
@@ -6205,6 +6177,10 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbisfile_64.dll",
+			"Type" : "NonUFS"
+		},
+		{
+			"Path" : "$(EngineDir)/Binaries/ThirdParty/Qualcomm/Win64/TextureConverter.dll",
 			"Type" : "NonUFS"
 		},
 		{

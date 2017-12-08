@@ -2,153 +2,153 @@
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Target.cs" />
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Target.cs" />
 		<Filter Include="Config">
-			<UniqueIdentifier>{FE0D4478-E0C8-4DBD-B614-0595FDBEC056}</UniqueIdentifier>
+			<UniqueIdentifier>{B850BE70-290B-4410-8C5D-69C4DD6A6826}</UniqueIdentifier>
 		</Filter>
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Programs\CrashReportClient\Config\DefaultEngine.ini">
+		<None Include="..\..\..\..\UES\Engine\Programs\CrashReportClient\Config\DefaultEngine.ini">
 			<Filter>Config</Filter>
 		</None >
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Build.cs" />
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{1BB0AB8A-9452-4A4E-98ED-9024388BBB94}</UniqueIdentifier>
+			<UniqueIdentifier>{DFCC8C4A-3728-4CEF-B23A-E5EF23B04DD6}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashDescription.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashDescription.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashDescription.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashDescription.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportAnalytics.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportAnalytics.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportAnalytics.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportAnalytics.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClient.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClient.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClient.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClient.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientApp.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientApp.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientConfig.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientConfig.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientConfig.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientConfig.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientStyle.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientStyle.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientStyle.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientStyle.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientUnattended.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientUnattended.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientUnattended.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientUnattended.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportUtil.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportUtil.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashUpload.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashUpload.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashUpload.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashUpload.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\GenericErrorReport.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\GenericErrorReport.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\GenericErrorReport.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\GenericErrorReport.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\MainLoopTiming.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\MainLoopTiming.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\MainLoopTiming.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\MainLoopTiming.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PendingReports.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PendingReports.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PendingReports.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PendingReports.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PlatformErrorReport.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PlatformErrorReport.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\SCrashReportClient.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\SCrashReportClient.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\SCrashReportClient.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\SCrashReportClient.h">
 			<Filter>Private</Filter>
 		</ClInclude >
 		<Filter Include="Private\Linux">
-			<UniqueIdentifier>{2FBEFC35-319B-407F-A4ED-D594DCC1F671}</UniqueIdentifier>
+			<UniqueIdentifier>{DD4E1E59-C6FE-4868-8305-FD67DAF17E0A}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Linux\CrashReportClientMainLinux.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Linux\CrashReportClientMainLinux.cpp">
 			<Filter>Private\Linux</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Linux\LinuxErrorReport.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Linux\LinuxErrorReport.h">
 			<Filter>Private\Linux</Filter>
 		</ClInclude >
 		<Filter Include="Private\Mac">
-			<UniqueIdentifier>{6EB0B6C1-300E-455B-BED1-1F3031A238BA}</UniqueIdentifier>
+			<UniqueIdentifier>{9DB3924C-840E-431C-8D77-25EB0BAC7E4D}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\CrashReportClientMainMac.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\CrashReportClientMainMac.cpp">
 			<Filter>Private\Mac</Filter>
 		</ClCompile >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\MacErrorReport.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\MacErrorReport.cpp">
 			<Filter>Private\Mac</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\MacErrorReport.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\MacErrorReport.h">
 			<Filter>Private\Mac</Filter>
 		</ClInclude >
 		<Filter Include="Private\Windows">
-			<UniqueIdentifier>{6BB50B2F-056C-4265-92A2-0B26C9C361CF}</UniqueIdentifier>
+			<UniqueIdentifier>{829EC402-CA69-4B86-95D0-5C2FA13CA26A}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\CrashReportClientMainWindows.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\CrashReportClientMainWindows.cpp">
 			<Filter>Private\Windows</Filter>
 		</ClCompile >
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\WindowsErrorReport.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\WindowsErrorReport.cpp">
 			<Filter>Private\Windows</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\WindowsErrorReport.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\WindowsErrorReport.h">
 			<Filter>Private\Windows</Filter>
 		</ClInclude >
 		<Filter Include="Public">
-			<UniqueIdentifier>{B4D52625-4C71-4295-994E-67E316D5F3A7}</UniqueIdentifier>
+			<UniqueIdentifier>{A693F03D-C456-451B-900B-02B7043727D1}</UniqueIdentifier>
 		</Filter>
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Public\CrashReportClientApp.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Public\CrashReportClientApp.h">
 			<Filter>Public</Filter>
 		</ClInclude >
 		<Filter Include="Resources">
-			<UniqueIdentifier>{03D328D6-6995-488C-9076-D7E6729512B7}</UniqueIdentifier>
+			<UniqueIdentifier>{50BAD9F4-A56A-48F3-9EAC-696FA34EFB72}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Resources\Windows">
-			<UniqueIdentifier>{6979D230-18E5-43AA-A94F-2A1EAF9D4470}</UniqueIdentifier>
+			<UniqueIdentifier>{858DC2B9-3C3C-4C8D-9F7F-A128D1E81E72}</UniqueIdentifier>
 		</Filter>
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient-Win32.manifest">
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient-Win32.manifest">
 			<Filter>Resources\Windows</Filter>
 		</Manifest >
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient-Win64.manifest">
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient-Win64.manifest">
 			<Filter>Resources\Windows</Filter>
 		</Manifest >
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient.ico">
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient.ico">
 			<Filter>Resources\Windows</Filter>
 		</None >
-		<ResourceCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient.rc">
+		<ResourceCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient.rc">
 			<Filter>Resources\Windows</Filter>
 		</ResourceCompile >
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\Debug-CrashReportClient-Win32.manifest">
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\Debug-CrashReportClient-Win32.manifest">
 			<Filter>Resources\Windows</Filter>
 		</Manifest >
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\Debug-CrashReportClient-Win64.manifest">
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\Debug-CrashReportClient-Win64.manifest">
 			<Filter>Resources\Windows</Filter>
 		</Manifest >
 	</ItemGroup>

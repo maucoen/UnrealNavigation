@@ -2,39 +2,39 @@
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Target.cs" />
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Target.cs" />
 		<Filter Include="Config">
-			<UniqueIdentifier>{FB4DDB80-90A2-4B9C-A97F-902E676E2EA6}</UniqueIdentifier>
+			<UniqueIdentifier>{48F4A9F1-A3CD-49FC-B222-04B920EE0E3A}</UniqueIdentifier>
 		</Filter>
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Programs\ShaderCompileWorker\Config\DefaultEngine.ini">
+		<None Include="..\..\..\..\UES\Engine\Programs\ShaderCompileWorker\Config\DefaultEngine.ini">
 			<Filter>Config</Filter>
 		</None >
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Build.cs" />
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{08598C38-18D9-4E30-90BA-1F814FC8D860}</UniqueIdentifier>
+			<UniqueIdentifier>{CDD661F4-2A86-43D3-9D0F-53459F7BD850}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Private\ShaderCompileWorker.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Private\ShaderCompileWorker.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
 		<Filter Include="Resources">
-			<UniqueIdentifier>{07C91241-DBF5-43B0-8206-6A57C9BC8753}</UniqueIdentifier>
+			<UniqueIdentifier>{EB294561-503F-4F57-8F8D-A6A748C120E4}</UniqueIdentifier>
 		</Filter>
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win32.manifest">
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win32.manifest">
 			<Filter>Resources</Filter>
 		</Manifest >
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win64.manifest">
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win64.manifest">
 			<Filter>Resources</Filter>
 		</Manifest >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\resource.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\resource.h">
 			<Filter>Resources</Filter>
 		</ClInclude >
-		<ResourceCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\Resource.rc">
+		<ResourceCompile Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\Resource.rc">
 			<Filter>Resources</Filter>
 		</ResourceCompile >
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\Win32.manifest">
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\Win32.manifest">
 			<Filter>Resources</Filter>
 		</Manifest >
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\Win64.manifest">
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\Win64.manifest">
 			<Filter>Resources</Filter>
 		</Manifest >
 	</ItemGroup>

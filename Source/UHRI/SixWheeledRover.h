@@ -4,7 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "WheeledVehicle.h"
+#include "Camera/CameraComponent.h"
 #include "SixWheeledRover.generated.h"
+
+class USpringArmComponent;
 
 /**
  * 
@@ -18,6 +21,15 @@ class UHRI_API ASixWheeledRover : public AWheeledVehicle
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Collision, meta = (AllowPrivateAccess = "true"))
 		class USkeletalMeshComponent* SixWheelMesh;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Collision, meta = (AllowPrivateAccess = "true"))
+		class UCameraComponent* MastCam;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Collision, meta = (AllowPrivateAccess = "true"))
+		class USpringArmComponent* SpringArm;
+
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Collision, meta = (AllowPrivateAccess = "true"))
+	//	class UCineCameraComponent* CineCam;
 	
 public:
 	
@@ -25,6 +37,11 @@ public:
 protected:
 	// APawn interface
 	void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
+	void OnToggleCamera();
+	void ChangeCam(const bool bState, const bool bForce);
+	void ViewRight(float Val);
+	void ViewUp(float Val);
+	void ZoomIn(float Val);
 	// End of APawn interface
 	
 	// Called when the game starts or when spawned
@@ -47,6 +64,10 @@ protected:
 		float WheelMotorTorque = 100000000;
 
 private:
+
+
+	bool bMastCamActive;
+
 	FVector GlobalTargetLocation;
 	FVector GlobalStartLocation;
 	
@@ -56,6 +77,9 @@ private:
 	TArray<FName> FrontBogeyBones;
 	TArray<FName> BackBogeyBones;
 	
+	UFUNCTION()
 	void MoveForward(float Val);
+
+	UFUNCTION()
 	void MoveRight(float Val);
 };

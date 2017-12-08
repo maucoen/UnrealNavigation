@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{7131DCE9-4265-0538-7B74-A88783EBC126}",
+	"EngineAssociation": "{7139AE36-4B6E-DE1A-1139-C687D1651063}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -18,11 +18,11 @@
 	"Plugins": [
 		{
 			"Name": "UnrealCV",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "RunebergVRPlugin",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/4dfd0c5b4c97427c860bd2cf7c207136"
 		},
 		{

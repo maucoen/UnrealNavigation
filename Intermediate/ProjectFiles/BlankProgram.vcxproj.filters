@@ -2,15 +2,15 @@
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\BlankProgram\BlankProgram.Target.cs" />
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\BlankProgram\BlankProgram.Build.cs" />
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\BlankProgram\BlankProgram.Target.cs" />
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\BlankProgram\BlankProgram.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{FC627B67-61C1-4994-A12C-B02BE13B2D39}</UniqueIdentifier>
+			<UniqueIdentifier>{DC04CCDA-D31F-44FF-B965-48F721C86D1C}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\BlankProgram\Private\BlankProgram.cpp">
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\BlankProgram\Private\BlankProgram.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\BlankProgram\Private\BlankProgram.h">
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\BlankProgram\Private\BlankProgram.h">
 			<Filter>Private</Filter>
 		</ClInclude >
 	</ItemGroup>
