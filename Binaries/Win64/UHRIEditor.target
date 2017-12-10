@@ -2,7 +2,7 @@
 	"TargetName" : "UHRIEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "7101da95-eb83-47b3-92dc-2c9769b241d5",
+	"BuildId" : "74b35b16-6a04-4d3d-bd3b-f3c463aef333",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -1818,18 +1818,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-VulkanShaderFormat.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(EngineDir)/Binaries/Win64/UE4Editor-TextureFormatAndroid.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(EngineDir)/Binaries/Win64/UE4Editor-TextureFormatAndroid.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(EngineDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-TextureFormatAndroid.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -6177,10 +6165,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbisfile_64.dll",
-			"Type" : "NonUFS"
-		},
-		{
-			"Path" : "$(EngineDir)/Binaries/ThirdParty/Qualcomm/Win64/TextureConverter.dll",
 			"Type" : "NonUFS"
 		},
 		{

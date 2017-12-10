@@ -2,15 +2,15 @@
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\Mac\ShaderCacheTool\ShaderCacheTool.Target.cs" />
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\Mac\ShaderCacheTool\ShaderCacheTool.Build.cs" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Mac\ShaderCacheTool\ShaderCacheTool.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Mac\ShaderCacheTool\ShaderCacheTool.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{8D274B7C-4DF3-4D41-934B-885DFA35E8FD}</UniqueIdentifier>
+			<UniqueIdentifier>{9BE14D36-96F4-4F28-B4E2-91879AC980F4}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\Mac\ShaderCacheTool\Private\ShaderCacheTool.cpp">
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Mac\ShaderCacheTool\Private\ShaderCacheTool.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\Mac\ShaderCacheTool\Private\ShaderCacheTool.h">
+		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Mac\ShaderCacheTool\Private\ShaderCacheTool.h">
 			<Filter>Private</Filter>
 		</ClInclude >
 	</ItemGroup>

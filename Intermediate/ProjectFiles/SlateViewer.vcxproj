@@ -10,10 +10,6 @@
 			<Configuration>Debug_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Debug_Program|Tegra-Android">
-			<Configuration>Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Debug_Program|Win32">
 			<Configuration>Mac_Debug_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -21,22 +17,6 @@
 		<ProjectConfiguration Include="Mac_Debug_Program|x64">
 			<Configuration>Mac_Debug_Program</Configuration>
 			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Mac_Debug_Program|Tegra-Android">
-			<Configuration>Mac_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|Win32">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|x64">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|Tegra-Android">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Debug_Program|Win32">
 			<Configuration>HTML5_Debug_Program</Configuration>
@@ -46,22 +26,6 @@
 			<Configuration>HTML5_Debug_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="HTML5_Debug_Program|Tegra-Android">
-			<Configuration>HTML5_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|Win32">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|x64">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|Tegra-Android">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="Development_Program|Win32">
 			<Configuration>Development_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -69,10 +33,6 @@
 		<ProjectConfiguration Include="Development_Program|x64">
 			<Configuration>Development_Program</Configuration>
 			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Development_Program|Tegra-Android">
-			<Configuration>Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Development_Program|Win32">
 			<Configuration>Mac_Development_Program</Configuration>
@@ -82,22 +42,6 @@
 			<Configuration>Mac_Development_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Mac_Development_Program|Tegra-Android">
-			<Configuration>Mac_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|Win32">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|x64">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|Tegra-Android">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Development_Program|Win32">
 			<Configuration>HTML5_Development_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -106,26 +50,7 @@
 			<Configuration>HTML5_Development_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="HTML5_Development_Program|Tegra-Android">
-			<Configuration>HTML5_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|Win32">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|x64">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|Tegra-Android">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 	</ItemGroup>
-	<PropertyGroup Label="NsightTegraProject">
-		<NsightTegraProjectRevisionNumber>11</NsightTegraProjectRevisionNumber>
-	</PropertyGroup>
 	<PropertyGroup Label="Globals">
 		<ProjectGuid>{0D498625-A33E-4085-989A-BDE2F654BC5C}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
@@ -143,11 +68,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -155,24 +75,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -182,24 +84,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -207,11 +91,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -221,24 +100,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -246,24 +107,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 	<ImportGroup Label="ExtensionSettings" />
@@ -280,10 +123,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer Win32 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Win32 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer Win32 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win32\SlateViewer-Win32-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat SlateViewer Win32 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Win32 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat SlateViewer Win32 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\SlateViewer-Win32-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -297,10 +140,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer Win64 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Win64 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer Win64 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win64\SlateViewer-Win64-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat SlateViewer Win64 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Win64 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat SlateViewer Win64 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\SlateViewer-Win64-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -314,50 +157,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer Mac Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Mac Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer Mac Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Mac\SlateViewer-Mac-Debug</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer IOS Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer IOS Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer IOS Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\IOS\SlateViewer-IOS-Debug</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<AndroidAttach>False</AndroidAttach>
-		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
-		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\SlateViewer-Android-Debug-armv7-es2.apk</OverrideAPKPath>
-		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
-		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer Android Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Android Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer Android Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Android\SlateViewer-Android-Debug.so</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat SlateViewer Mac Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Mac Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat SlateViewer Mac Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\SlateViewer-Mac-Debug</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -371,27 +174,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer HTML5 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer HTML5 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer HTML5 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\SlateViewer-HTML5-Debug.exe</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer TVOS Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer TVOS Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer TVOS Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\SlateViewer-TVOS-Debug</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat SlateViewer HTML5 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat SlateViewer HTML5 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat SlateViewer HTML5 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\SlateViewer-HTML5-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -405,10 +191,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer Win32 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Win32 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer Win32 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win32\SlateViewer.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat SlateViewer Win32 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Win32 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat SlateViewer Win32 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\SlateViewer.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -422,10 +208,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer Win64 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Win64 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer Win64 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win64\SlateViewer.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat SlateViewer Win64 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Win64 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat SlateViewer Win64 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\SlateViewer.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -439,50 +225,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer Mac Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Mac Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer Mac Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Mac\SlateViewer</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer IOS Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer IOS Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer IOS Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\IOS\SlateViewer</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<AndroidAttach>False</AndroidAttach>
-		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
-		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\SlateViewer-armv7-es2.apk</OverrideAPKPath>
-		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
-		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer Android Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Android Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer Android Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Android\SlateViewer.so</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat SlateViewer Mac Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat SlateViewer Mac Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat SlateViewer Mac Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\SlateViewer</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -496,47 +242,30 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer HTML5 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer HTML5 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer HTML5 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\SlateViewer.exe</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat SlateViewer TVOS Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat SlateViewer TVOS Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat SlateViewer TVOS Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\SlateViewer</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat SlateViewer HTML5 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat SlateViewer HTML5 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat SlateViewer HTML5 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\SlateViewer.exe</NMakeOutput>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\SlateViewer.Target.cs" />
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\SlateViewer.Build.cs" />
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Private\SlateViewerApp.cpp" />
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Private\IOS\IOSSlateViewerMain.cpp" />
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Private\Linux\SlateViewerMainLinux.cpp" />
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Private\Mac\SlateViewerMainMac.cpp" />
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Private\Windows\SlateViewerMainWindows.cpp" />
-		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Public\SlateViewer.h" />
-		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Public\SlateViewerApp.h" />
-		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Resources\Windows\Debug-PCLaunch-Win32.manifest" />
-		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Resources\Windows\Debug-PCLaunch-Win64.manifest" />
-		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Resources\Windows\PCLaunch-Win32.manifest" />
-		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Resources\Windows\PCLaunch-Win64.manifest" />
-		<ResourceCompile Include="..\..\..\..\UES\Engine\Source\Programs\SlateViewer\Resources\Windows\PCLaunch.rc" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\SlateViewer.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\SlateViewer.Build.cs" />
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Private\SlateViewerApp.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Private\IOS\IOSSlateViewerMain.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Private\Linux\SlateViewerMainLinux.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Private\Mac\SlateViewerMainMac.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Private\Windows\SlateViewerMainWindows.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Public\SlateViewer.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Public\SlateViewerApp.h" />
+		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Resources\Windows\Debug-PCLaunch-Win32.manifest" />
+		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Resources\Windows\Debug-PCLaunch-Win64.manifest" />
+		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Resources\Windows\PCLaunch-Win32.manifest" />
+		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Resources\Windows\PCLaunch-Win64.manifest" />
+		<ResourceCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Resources\Windows\PCLaunch.rc" />
 	</ItemGroup>
 	<PropertyGroup>
-		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);IS_PROGRAM=1;WITH_DEV_AUTOMATION_TESTS=1;WITH_PERF_AUTOMATION_TESTS=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=1;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=1;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;WITH_PERFCOUNTERS=0;USE_LOGGING_IN_SHIPPING=0;WITH_LOGGING_TO_MEMORY=0;USE_CHECKS_IN_SHIPPING=0;UE_BUILD_MINIMAL=1;WITH_EDITOR=0;WITH_SERVER_CODE=1;WITH_CEF3=1;UBT_COMPILED_PLATFORM=Win64;UBT_COMPILED_TARGET=Program;WIN32=1;_WIN32_WINNT=0x0601;WINVER=0x0601;PLATFORM_WINDOWS=1;DEPTH_32_BIT_CONVERSION=0;PROJECT_COPYRIGHT_STRING=Fill out your copyright notice in the Description page of Project Settings.;PROJECT_PRODUCT_NAME=UE4Game;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;ORIGINAL_FILE_NAME="SlateViewer-SlateViewer.lib";UE_IS_ENGINE_MODULE=0;UE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0;SLATEVIEWER_API=;APPFRAMEWORK_API=;UE_ENABLE_ICU=1;WITH_VS_PERF_PROFILER=0;WITH_DIRECTXMATH=0;CORE_API=;COREUOBJECT_API=;SLATE_API=;INPUTCORE_API=;JSON_API=;WITH_FREETYPE=1;SLATECORE_API=;WITH_UNREALPNG=1;WITH_UNREALJPEG=1;WITH_UNREALEXR=1;IMAGEWRAPPER_API=;PROJECTS_API=;STANDALONERENDERER_API=;SOURCECODEACCESS_API=;SETTINGS_API=;WEBBROWSER_API=;VSACCESSOR_HAS_DTE=1;VISUALSTUDIOSOURCECODEACCESS_API=;SLATE_REFLECTOR_HAS_SESSION_SERVICES=0;SLATE_REFLECTOR_HAS_DESKTOP_PLATFORM=1;SLATEREFLECTOR_API=</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);F:\UES\Engine\Source;F:\UES\Engine\Source\Runtime\Launch\Private;F:\UES\Engine\Source\Runtime\Launch\Public;F:\UES\Engine\Source\Programs\SlateViewer\Public;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\SlateViewer;F:\UES\Engine\Source\Programs\SlateViewer;F:\UES\Engine\Source\Runtime\AppFramework\Public;F:\UES\Engine\Source\Runtime\AppFramework\Public\Widgets;F:\UES\Engine\Source\Runtime\AppFramework\Public\Widgets\Colors;F:\UES\Engine\Source\Runtime\AppFramework\Public\Widgets\Testing;F:\UES\Engine\Source\Runtime\AppFramework\Public\Widgets\Views;F:\UES\Engine\Source\Runtime\AppFramework\Public\Widgets\Workflow;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\AppFramework;F:\UES\Engine\Source\Runtime\AppFramework;F:\UES\Engine\Source\Runtime\Core\Public;F:\UES\Engine\Source\Runtime\Core\Public\Internationalization;F:\UES\Engine\Source\Runtime\Core\Public\Async;F:\UES\Engine\Source\Runtime\Core\Public\Concurrency;F:\UES\Engine\Source\Runtime\Core\Public\Containers;F:\UES\Engine\Source\Runtime\Core\Public\Delegates;F:\UES\Engine\Source\Runtime\Core\Public\GenericPlatform;F:\UES\Engine\Source\Runtime\Core\Public\HAL;F:\UES\Engine\Source\Runtime\Core\Public\Logging;F:\UES\Engine\Source\Runtime\Core\Public\Math;F:\UES\Engine\Source\Runtime\Core\Public\Misc;F:\UES\Engine\Source\Runtime\Core\Public\Modules;F:\UES\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;F:\UES\Engine\Source\Runtime\Core\Public\ProfilingDebugging;F:\UES\Engine\Source\Runtime\Core\Public\Serialization;F:\UES\Engine\Source\Runtime\Core\Public\Serialization\Csv;F:\UES\Engine\Source\Runtime\Core\Public\Stats;F:\UES\Engine\Source\Runtime\Core\Public\Templates;F:\UES\Engine\Source\Runtime\Core\Public\UObject;F:\UES\Engine\Source\Runtime\Core\Public\Windows;F:\UES\Engine\Source\Runtime\Core;F:\UES\Engine\Source\Runtime\CoreUObject\Public;F:\UES\Engine\Source\Runtime\CoreUObject\Public\Blueprint;F:\UES\Engine\Source\Runtime\CoreUObject\Public\Internationalization;F:\UES\Engine\Source\Runtime\CoreUObject\Public\Misc;F:\UES\Engine\Source\Runtime\CoreUObject\Public\Serialization;F:\UES\Engine\Source\Runtime\CoreUObject\Public\Templates;F:\UES\Engine\Source\Runtime\CoreUObject\Public\UObject;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\CoreUObject;F:\UES\Engine\Source\Runtime\CoreUObject;F:\UES\Engine\Source\Runtime\Slate\Public;F:\UES\Engine\Source\Runtime\Slate\Public\Framework;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Application;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Commands;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Docking;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Layout;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\MetaData;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\MultiBox;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Notifications;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Styling;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Text;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Views;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Colors;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Docking;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Images;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Input;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\LayerManager;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Layout;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Navigation;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Notifications;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Text;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Views;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\Slate;F:\UES\Engine\Source\Runtime\Slate;F:\UES\Engine\Source\Runtime\InputCore\Classes;F:\UES\Engine\Source\Runtime\InputCore\Public;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\InputCore;F:\UES\Engine\Source\Runtime\InputCore;F:\UES\Engine\Source\Runtime\Json\Public;F:\UES\Engine\Source\Runtime\Json\Public\Dom;F:\UES\Engine\Source\Runtime\Json\Public\Policies;F:\UES\Engine\Source\Runtime\Json\Public\Serialization;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\Json;F:\UES\Engine\Source\Runtime\Json;F:\UES\Engine\Source\Runtime\SlateCore\Public;F:\UES\Engine\Source\Runtime\SlateCore\Public\Animation;F:\UES\Engine\Source\Runtime\SlateCore\Public\Application;F:\UES\Engine\Source\Runtime\SlateCore\Public\Brushes;F:\UES\Engine\Source\Runtime\SlateCore\Public\Fonts;F:\UES\Engine\Source\Runtime\SlateCore\Public\Input;F:\UES\Engine\Source\Runtime\SlateCore\Public\Layout;F:\UES\Engine\Source\Runtime\SlateCore\Public\Logging;F:\UES\Engine\Source\Runtime\SlateCore\Public\Rendering;F:\UES\Engine\Source\Runtime\SlateCore\Public\Sound;F:\UES\Engine\Source\Runtime\SlateCore\Public\Stats;F:\UES\Engine\Source\Runtime\SlateCore\Public\Styling;F:\UES\Engine\Source\Runtime\SlateCore\Public\Textures;F:\UES\Engine\Source\Runtime\SlateCore\Public\Types;F:\UES\Engine\Source\Runtime\SlateCore\Public\Widgets;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\SlateCore;F:\UES\Engine\Source\Runtime\SlateCore;F:\UES\Engine\Source\Runtime\ImageWrapper\Public;F:\UES\Engine\Source\Runtime\ImageWrapper\Public\Interfaces;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\ImageWrapper;F:\UES\Engine\Source\Runtime\ImageWrapper;F:\UES\Engine\Source\Runtime\Projects\Public;F:\UES\Engine\Source\Runtime\Projects\Public\Interfaces;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\Projects;F:\UES\Engine\Source\Runtime\Projects;F:\UES\Engine\Source\Developer\StandaloneRenderer\Public;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\StandaloneRenderer;F:\UES\Engine\Source\Developer\StandaloneRenderer;F:\UES\Engine\Source\Developer\SourceCodeAccess\Public;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\SourceCodeAccess;F:\UES\Engine\Source\Developer\SourceCodeAccess;F:\UES\Engine\Source\Developer\Settings\Public;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\Settings;F:\UES\Engine\Source\Developer\Settings;F:\UES\Engine\Source\Runtime\WebBrowser\Public;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\WebBrowser;F:\UES\Engine\Source\Runtime\WebBrowser;F:\UES\Engine\Plugins\Developer\VisualStudioSourceCodeAccess\Intermediate\Build\Win64\SlateViewer\Inc\VisualStudioSourceCodeAccess;F:\UES\Engine\Plugins\Developer\VisualStudioSourceCodeAccess\Source\VisualStudioSourceCodeAccess;F:\UES\Engine\Source\Developer\SlateReflector\Public;F:\UES\Engine\Intermediate\Build\Win64\SlateViewer\Inc\SlateReflector;F:\UES\Engine\Source\Developer\SlateReflector;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);IS_PROGRAM=1;WITH_DEV_AUTOMATION_TESTS=1;WITH_PERF_AUTOMATION_TESTS=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=1;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=1;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;WITH_PERFCOUNTERS=0;USE_LOGGING_IN_SHIPPING=0;WITH_LOGGING_TO_MEMORY=0;USE_CHECKS_IN_SHIPPING=0;UE_BUILD_MINIMAL=1;WITH_EDITOR=0;WITH_SERVER_CODE=1;WITH_CEF3=1;UBT_COMPILED_PLATFORM=Win64;UBT_COMPILED_TARGET=Program;WIN32=1;_WIN32_WINNT=0x0601;WINVER=0x0601;PLATFORM_WINDOWS=1;DEPTH_32_BIT_CONVERSION=0;PROJECT_COPYRIGHT_STRING=Fill out your copyright notice in the Description page of Project Settings.;PROJECT_PRODUCT_NAME=UE4Game;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;ORIGINAL_FILE_NAME="SlateViewer-SlateViewer.lib";UE_IS_ENGINE_MODULE=0;UE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0;SLATEVIEWER_API=;APPFRAMEWORK_API=;UE_ENABLE_ICU=1;WITH_VS_PERF_PROFILER=0;WITH_DIRECTXMATH=0;CORE_API=;COREUOBJECT_API=;SLATE_API=;INPUTCORE_API=;JSON_API=;WITH_FREETYPE=1;SLATECORE_API=;WITH_UNREALPNG=1;WITH_UNREALJPEG=1;WITH_UNREALEXR=1;IMAGEWRAPPER_API=;PROJECTS_API=;STANDALONERENDERER_API=;SOURCECODEACCESS_API=;SETTINGS_API=;WEBBROWSER_API=;VSACCESSOR_HAS_DTE=0;VISUALSTUDIOSOURCECODEACCESS_API=;SLATE_REFLECTOR_HAS_SESSION_SERVICES=0;SLATE_REFLECTOR_HAS_DESKTOP_PLATFORM=1;SLATEREFLECTOR_API=</NMakePreprocessorDefinitions>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);D:\Epic\UnrealEngine-4.16.3\Engine\Source;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Launch\Private;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Launch\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\SlateViewer;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Programs\SlateViewer;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\AppFramework\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\AppFramework\Public\Widgets;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\AppFramework\Public\Widgets\Colors;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\AppFramework\Public\Widgets\Testing;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\AppFramework\Public\Widgets\Views;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\AppFramework\Public\Widgets\Workflow;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\AppFramework;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\AppFramework;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Internationalization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Async;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Concurrency;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Containers;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Delegates;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\GenericPlatform;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\HAL;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Logging;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Math;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Misc;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Modules;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\ProfilingDebugging;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Serialization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Serialization\Csv;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Stats;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Templates;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\UObject;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Windows;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\Blueprint;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\Internationalization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\Misc;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\Serialization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\Templates;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\UObject;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\CoreUObject;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Application;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Commands;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Docking;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Layout;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\MetaData;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\MultiBox;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Notifications;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Styling;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Text;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Views;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Colors;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Docking;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Images;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Input;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\LayerManager;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Layout;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Navigation;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Notifications;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Text;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Views;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\Slate;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\InputCore\Classes;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\InputCore\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\InputCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\InputCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Dom;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Policies;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Serialization;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\Json;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Animation;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Application;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Brushes;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Fonts;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Input;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Layout;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Logging;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Rendering;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Sound;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Stats;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Styling;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Textures;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Types;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Widgets;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\SlateCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\ImageWrapper\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\ImageWrapper\Public\Interfaces;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\ImageWrapper;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\ImageWrapper;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects\Public\Interfaces;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\Projects;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\StandaloneRenderer\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\StandaloneRenderer;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\StandaloneRenderer;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\SourceCodeAccess\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\SourceCodeAccess;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\SourceCodeAccess;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\Settings\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\Settings;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\Settings;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\WebBrowser\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\WebBrowser;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\WebBrowser;D:\Epic\UnrealEngine-4.16.3\Engine\Plugins\Developer\VisualStudioSourceCodeAccess\Intermediate\Build\Win64\SlateViewer\Inc\VisualStudioSourceCodeAccess;D:\Epic\UnrealEngine-4.16.3\Engine\Plugins\Developer\VisualStudioSourceCodeAccess\Source\VisualStudioSourceCodeAccess;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\SlateReflector\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\SlateViewer\Inc\SlateReflector;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\SlateReflector;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>

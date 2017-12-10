@@ -2,27 +2,27 @@
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\TestPAL.Target.cs" />
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\TestPAL.Build.cs" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\TestPAL.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\TestPAL.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{0A3C7896-56C7-4B56-A23B-7F571DDEAF7F}</UniqueIdentifier>
+			<UniqueIdentifier>{31907641-9AB3-4196-B3CC-A7C5F99A8138}</UniqueIdentifier>
 		</Filter>
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\Main.cpp">
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\Main.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\Parent.cpp">
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\Parent.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\Parent.h">
+		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\Parent.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\TestDirectoryWatcher.cpp">
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\TestDirectoryWatcher.cpp">
 			<Filter>Private</Filter>
 		</ClCompile >
-		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\TestDirectoryWatcher.h">
+		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\TestDirectoryWatcher.h">
 			<Filter>Private</Filter>
 		</ClInclude >
-		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\TestPALLog.h">
+		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\TestPALLog.h">
 			<Filter>Private</Filter>
 		</ClInclude >
 	</ItemGroup>

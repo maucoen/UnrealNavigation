@@ -8,7 +8,7 @@
 #include "SixWheeledRover.generated.h"
 
 class USpringArmComponent;
-
+//
 /**
  * 
  */
@@ -55,7 +55,7 @@ protected:
 		FVector MariasLocation;
 
 	UPROPERTY(EditAnywhere)
-		float Speed;
+		float Speed = 150;
 
 	UPROPERTY(EditAnywhere)
 		float BogeyMotorTorque = 80;
@@ -82,4 +82,10 @@ private:
 
 	UFUNCTION()
 	void MoveRight(float Val);
+
+	void ToggleDrawControls();
+
+	void DrawVectors(FName Bone, FVector Torque);
+
+	bool bDraw = true;
 };

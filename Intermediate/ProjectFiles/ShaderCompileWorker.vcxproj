@@ -10,10 +10,6 @@
 			<Configuration>Debug_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Debug_Program|Tegra-Android">
-			<Configuration>Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Debug_Program|Win32">
 			<Configuration>Mac_Debug_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -21,22 +17,6 @@
 		<ProjectConfiguration Include="Mac_Debug_Program|x64">
 			<Configuration>Mac_Debug_Program</Configuration>
 			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Mac_Debug_Program|Tegra-Android">
-			<Configuration>Mac_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|Win32">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|x64">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|Tegra-Android">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Debug_Program|Win32">
 			<Configuration>HTML5_Debug_Program</Configuration>
@@ -46,22 +26,6 @@
 			<Configuration>HTML5_Debug_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="HTML5_Debug_Program|Tegra-Android">
-			<Configuration>HTML5_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|Win32">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|x64">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|Tegra-Android">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="Development_Program|Win32">
 			<Configuration>Development_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -69,10 +33,6 @@
 		<ProjectConfiguration Include="Development_Program|x64">
 			<Configuration>Development_Program</Configuration>
 			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Development_Program|Tegra-Android">
-			<Configuration>Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Development_Program|Win32">
 			<Configuration>Mac_Development_Program</Configuration>
@@ -82,22 +42,6 @@
 			<Configuration>Mac_Development_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Mac_Development_Program|Tegra-Android">
-			<Configuration>Mac_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|Win32">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|x64">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|Tegra-Android">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Development_Program|Win32">
 			<Configuration>HTML5_Development_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -106,26 +50,7 @@
 			<Configuration>HTML5_Development_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="HTML5_Development_Program|Tegra-Android">
-			<Configuration>HTML5_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|Win32">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|x64">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|Tegra-Android">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 	</ItemGroup>
-	<PropertyGroup Label="NsightTegraProject">
-		<NsightTegraProjectRevisionNumber>11</NsightTegraProjectRevisionNumber>
-	</PropertyGroup>
 	<PropertyGroup Label="Globals">
 		<ProjectGuid>{A6EF8CC0-6E77-4D9B-A6F5-40E2BE590179}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
@@ -143,11 +68,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -155,24 +75,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -182,24 +84,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -207,11 +91,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -221,24 +100,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -246,24 +107,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 	<ImportGroup Label="ExtensionSettings" />
@@ -280,10 +123,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win32 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win32 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win32 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win32\ShaderCompileWorker-Win32-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win32 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win32 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win32 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\ShaderCompileWorker-Win32-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -297,10 +140,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win64 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win64 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win64 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win64\ShaderCompileWorker-Win64-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win64 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win64 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win64 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\ShaderCompileWorker-Win64-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -314,50 +157,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Mac Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Mac Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Mac Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Mac\ShaderCompileWorker-Mac-Debug</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker IOS Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker IOS Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker IOS Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\IOS\ShaderCompileWorker-IOS-Debug</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<AndroidAttach>False</AndroidAttach>
-		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
-		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\ShaderCompileWorker-Android-Debug-armv7-es2.apk</OverrideAPKPath>
-		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
-		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Android Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Android Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Android Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Android\ShaderCompileWorker-Android-Debug.so</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Mac Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Mac Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Mac Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\ShaderCompileWorker-Mac-Debug</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -371,27 +174,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker HTML5 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker HTML5 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker HTML5 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\ShaderCompileWorker-HTML5-Debug.exe</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker TVOS Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker TVOS Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker TVOS Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\ShaderCompileWorker-TVOS-Debug</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker HTML5 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker HTML5 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker HTML5 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\ShaderCompileWorker-HTML5-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -405,10 +191,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win32 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win32 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win32 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win32\ShaderCompileWorker.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win32 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win32 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win32 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\ShaderCompileWorker.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -422,10 +208,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win64 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win64 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win64 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win64\ShaderCompileWorker.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Win64 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Win64 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Win64 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\ShaderCompileWorker.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -439,50 +225,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Mac Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Mac Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Mac Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Mac\ShaderCompileWorker</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker IOS Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker IOS Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker IOS Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\IOS\ShaderCompileWorker</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<AndroidAttach>False</AndroidAttach>
-		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
-		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\ShaderCompileWorker-armv7-es2.apk</OverrideAPKPath>
-		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
-		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Android Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Android Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Android Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Android\ShaderCompileWorker.so</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker Mac Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker Mac Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker Mac Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\ShaderCompileWorker</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -496,43 +242,26 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker HTML5 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker HTML5 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker HTML5 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\ShaderCompileWorker.exe</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker TVOS Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker TVOS Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker TVOS Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\ShaderCompileWorker</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat ShaderCompileWorker HTML5 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat ShaderCompileWorker HTML5 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat ShaderCompileWorker HTML5 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\ShaderCompileWorker.exe</NMakeOutput>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Target.cs" />
-		<None Include="..\..\..\..\UES\Engine\Programs\ShaderCompileWorker\Config\DefaultEngine.ini" />
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Build.cs" />
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Private\ShaderCompileWorker.cpp" />
-		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win32.manifest" />
-		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win64.manifest" />
-		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\resource.h" />
-		<ResourceCompile Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\Resource.rc" />
-		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\Win32.manifest" />
-		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\ShaderCompileWorker\Resources\Win64.manifest" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Programs\ShaderCompileWorker\Config\DefaultEngine.ini" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\ShaderCompileWorker.Build.cs" />
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Private\ShaderCompileWorker.cpp" />
+		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win32.manifest" />
+		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\Debug-Win64.manifest" />
+		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\resource.h" />
+		<ResourceCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\Resource.rc" />
+		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\Win32.manifest" />
+		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker\Resources\Win64.manifest" />
 	</ItemGroup>
 	<PropertyGroup>
 		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);IS_PROGRAM=1;ALLOW_LOG_FILE=0;ALLOW_WINDOWS_ERROR_REPORT_LIB=0;WITH_DEV_AUTOMATION_TESTS=1;WITH_PERF_AUTOMATION_TESTS=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=0;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=0;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;WITH_PERFCOUNTERS=0;USE_LOGGING_IN_SHIPPING=0;WITH_LOGGING_TO_MEMORY=0;USE_CHECKS_IN_SHIPPING=0;UE_BUILD_MINIMAL=1;WITH_EDITOR=0;WITH_SERVER_CODE=1;WITH_CEF3=0;UBT_COMPILED_PLATFORM=Win64;UBT_COMPILED_TARGET=Program;WIN32=1;_WIN32_WINNT=0x0601;WINVER=0x0601;PLATFORM_WINDOWS=1;DEPTH_32_BIT_CONVERSION=0;PROJECT_COPYRIGHT_STRING=Fill out your copyright notice in the Description page of Project Settings.;PROJECT_PRODUCT_NAME=UE4Game;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;ORIGINAL_FILE_NAME="ShaderCompileWorker.exe";UE_IS_ENGINE_MODULE=0;UE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0;SHADERCOMPILEWORKER_API=;UE_ENABLE_ICU=0;WITH_VS_PERF_PROFILER=0;WITH_DIRECTXMATH=0;CORE_API=;PROJECTS_API=;JSON_API=;SHADERCORE_API=;RHI_API=;RENDERCORE_API=;SANDBOXFILE_API=;TARGETPLATFORM_API=;DESKTOPPLATFORM_API=;LAUNCH_API=;PROFILERSERVICE_API=</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);F:\UES\Engine\Source;F:\UES\Engine\Source\Runtime\Launch\Private;F:\UES\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\ShaderCompileWorker;F:\UES\Engine\Source\Programs\ShaderCompileWorker;F:\UES\Engine\Source\Runtime\Core\Public;F:\UES\Engine\Source\Runtime\Core\Public\Internationalization;F:\UES\Engine\Source\Runtime\Core\Public\Async;F:\UES\Engine\Source\Runtime\Core\Public\Concurrency;F:\UES\Engine\Source\Runtime\Core\Public\Containers;F:\UES\Engine\Source\Runtime\Core\Public\Delegates;F:\UES\Engine\Source\Runtime\Core\Public\GenericPlatform;F:\UES\Engine\Source\Runtime\Core\Public\HAL;F:\UES\Engine\Source\Runtime\Core\Public\Logging;F:\UES\Engine\Source\Runtime\Core\Public\Math;F:\UES\Engine\Source\Runtime\Core\Public\Misc;F:\UES\Engine\Source\Runtime\Core\Public\Modules;F:\UES\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;F:\UES\Engine\Source\Runtime\Core\Public\ProfilingDebugging;F:\UES\Engine\Source\Runtime\Core\Public\Serialization;F:\UES\Engine\Source\Runtime\Core\Public\Serialization\Csv;F:\UES\Engine\Source\Runtime\Core\Public\Stats;F:\UES\Engine\Source\Runtime\Core\Public\Templates;F:\UES\Engine\Source\Runtime\Core\Public\UObject;F:\UES\Engine\Source\Runtime\Core\Public\Windows;F:\UES\Engine\Source\Runtime\Core;F:\UES\Engine\Source\Runtime\Projects\Public;F:\UES\Engine\Source\Runtime\Projects\Public\Interfaces;F:\UES\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\Projects;F:\UES\Engine\Source\Runtime\Projects;F:\UES\Engine\Source\Runtime\Json\Public;F:\UES\Engine\Source\Runtime\Json\Public\Dom;F:\UES\Engine\Source\Runtime\Json\Public\Policies;F:\UES\Engine\Source\Runtime\Json\Public\Serialization;F:\UES\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\Json;F:\UES\Engine\Source\Runtime\Json;F:\UES\Engine\Source\Runtime\ShaderCore\Public;F:\UES\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\ShaderCore;F:\UES\Engine\Source\Runtime\ShaderCore;F:\UES\Engine\Source\Runtime\RHI\Public;F:\UES\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\RHI;F:\UES\Engine\Source\Runtime\RHI;F:\UES\Engine\Source\Runtime\RenderCore\Public;F:\UES\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\RenderCore;F:\UES\Engine\Source\Runtime\RenderCore;F:\UES\Engine\Source\Runtime\SandboxFile\Public;F:\UES\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\SandboxFile;F:\UES\Engine\Source\Runtime\SandboxFile;F:\UES\Engine\Source\Developer\TargetPlatform\Public;F:\UES\Engine\Source\Developer\TargetPlatform\Public\Common;F:\UES\Engine\Source\Developer\TargetPlatform\Public\Interfaces;F:\UES\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\TargetPlatform;F:\UES\Engine\Source\Developer\TargetPlatform;F:\UES\Engine\Source\Developer\DesktopPlatform\Public;F:\UES\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\DesktopPlatform;F:\UES\Engine\Source\Developer\DesktopPlatform;F:\UES\Engine\Source\Runtime\Launch\Public;F:\UES\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\Launch;F:\UES\Engine\Source\Runtime\Launch;F:\UES\Engine\Source\Developer\ProfilerService\Public;F:\UES\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\ProfilerService;F:\UES\Engine\Source\Developer\ProfilerService;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);D:\Epic\UnrealEngine-4.16.3\Engine\Source;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Launch\Private;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\ShaderCompileWorker;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Programs\ShaderCompileWorker;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Internationalization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Async;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Concurrency;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Containers;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Delegates;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\GenericPlatform;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\HAL;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Logging;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Math;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Misc;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Modules;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\ProfilingDebugging;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Serialization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Serialization\Csv;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Stats;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Templates;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\UObject;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Windows;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects\Public\Interfaces;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\Projects;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Dom;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Policies;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Serialization;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\Json;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\ShaderCore\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\ShaderCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\ShaderCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\RHI\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\RHI;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\RHI;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\RenderCore\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\RenderCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\RenderCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SandboxFile\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\SandboxFile;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SandboxFile;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\TargetPlatform\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\TargetPlatform\Public\Common;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\TargetPlatform\Public\Interfaces;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\TargetPlatform;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\TargetPlatform;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\DesktopPlatform\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\DesktopPlatform;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\DesktopPlatform;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Launch\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\Launch;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Launch;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\ProfilerService\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\ShaderCompileWorker\Inc\ProfilerService;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\ProfilerService;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>

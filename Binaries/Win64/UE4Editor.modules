@@ -1,8 +1,8 @@
 {
 	"Changelist" : 0,
-	"BuildId" : "7101da95-eb83-47b3-92dc-2c9769b241d5",
+	"BuildId" : "74b35b16-6a04-4d3d-bd3b-f3c463aef333",
 	"Modules" : 
 	{
-		"UHRI" : "UE4Editor-UHRI-1669.dll"
+		"UHRI" : "UE4Editor-UHRI.dll"
 	}
 }

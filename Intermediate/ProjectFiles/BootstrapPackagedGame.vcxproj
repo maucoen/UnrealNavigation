@@ -10,10 +10,6 @@
 			<Configuration>Debug_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Debug_Program|Tegra-Android">
-			<Configuration>Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Debug_Program|Win32">
 			<Configuration>Mac_Debug_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -21,22 +17,6 @@
 		<ProjectConfiguration Include="Mac_Debug_Program|x64">
 			<Configuration>Mac_Debug_Program</Configuration>
 			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Mac_Debug_Program|Tegra-Android">
-			<Configuration>Mac_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|Win32">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|x64">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|Tegra-Android">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Debug_Program|Win32">
 			<Configuration>HTML5_Debug_Program</Configuration>
@@ -46,22 +26,6 @@
 			<Configuration>HTML5_Debug_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="HTML5_Debug_Program|Tegra-Android">
-			<Configuration>HTML5_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|Win32">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|x64">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|Tegra-Android">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="Development_Program|Win32">
 			<Configuration>Development_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -69,10 +33,6 @@
 		<ProjectConfiguration Include="Development_Program|x64">
 			<Configuration>Development_Program</Configuration>
 			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Development_Program|Tegra-Android">
-			<Configuration>Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Development_Program|Win32">
 			<Configuration>Mac_Development_Program</Configuration>
@@ -82,22 +42,6 @@
 			<Configuration>Mac_Development_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Mac_Development_Program|Tegra-Android">
-			<Configuration>Mac_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|Win32">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|x64">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|Tegra-Android">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Development_Program|Win32">
 			<Configuration>HTML5_Development_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -105,22 +49,6 @@
 		<ProjectConfiguration Include="HTML5_Development_Program|x64">
 			<Configuration>HTML5_Development_Program</Configuration>
 			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="HTML5_Development_Program|Tegra-Android">
-			<Configuration>HTML5_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|Win32">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|x64">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|Tegra-Android">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="Shipping_Program|Win32">
 			<Configuration>Shipping_Program</Configuration>
@@ -130,10 +58,6 @@
 			<Configuration>Shipping_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Shipping_Program|Tegra-Android">
-			<Configuration>Shipping_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Shipping_Program|Win32">
 			<Configuration>Mac_Shipping_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -141,22 +65,6 @@
 		<ProjectConfiguration Include="Mac_Shipping_Program|x64">
 			<Configuration>Mac_Shipping_Program</Configuration>
 			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Mac_Shipping_Program|Tegra-Android">
-			<Configuration>Mac_Shipping_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Shipping_Program|Win32">
-			<Configuration>IOS_Shipping_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Shipping_Program|x64">
-			<Configuration>IOS_Shipping_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Shipping_Program|Tegra-Android">
-			<Configuration>IOS_Shipping_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Shipping_Program|Win32">
 			<Configuration>HTML5_Shipping_Program</Configuration>
@@ -166,26 +74,7 @@
 			<Configuration>HTML5_Shipping_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="HTML5_Shipping_Program|Tegra-Android">
-			<Configuration>HTML5_Shipping_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Shipping_Program|Win32">
-			<Configuration>TVOS_Shipping_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Shipping_Program|x64">
-			<Configuration>TVOS_Shipping_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Shipping_Program|Tegra-Android">
-			<Configuration>TVOS_Shipping_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 	</ItemGroup>
-	<PropertyGroup Label="NsightTegraProject">
-		<NsightTegraProjectRevisionNumber>11</NsightTegraProjectRevisionNumber>
-	</PropertyGroup>
 	<PropertyGroup Label="Globals">
 		<ProjectGuid>{83360E23-BFAE-442F-98C9-FE546B75D9DA}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
@@ -203,11 +92,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -215,24 +99,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -242,24 +108,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -267,11 +115,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -281,24 +124,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -306,24 +131,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -333,11 +140,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -346,24 +148,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -371,24 +155,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Shipping_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Shipping_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Shipping_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 	<ImportGroup Label="ExtensionSettings" />
@@ -405,10 +171,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win32 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win32 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win32 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win32\BootstrapPackagedGame-Win32-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win32 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win32 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win32 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\BootstrapPackagedGame-Win32-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -422,10 +188,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win64 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win64 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win64 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win64\BootstrapPackagedGame-Win64-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win64 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win64 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win64 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\BootstrapPackagedGame-Win64-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -439,50 +205,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Mac Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Mac Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Mac Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Mac\BootstrapPackagedGame-Mac-Debug</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame IOS Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame IOS Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame IOS Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\IOS\BootstrapPackagedGame-IOS-Debug</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<AndroidAttach>False</AndroidAttach>
-		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
-		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\BootstrapPackagedGame-Android-Debug-armv7-es2.apk</OverrideAPKPath>
-		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
-		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Android Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Android Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Android Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Android\BootstrapPackagedGame-Android-Debug.so</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Mac Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Mac Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Mac Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\BootstrapPackagedGame-Mac-Debug</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -496,27 +222,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame HTML5 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame HTML5 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame HTML5 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\BootstrapPackagedGame-HTML5-Debug.exe</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame TVOS Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame TVOS Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame TVOS Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\BootstrapPackagedGame-TVOS-Debug</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame HTML5 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame HTML5 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame HTML5 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\BootstrapPackagedGame-HTML5-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -530,10 +239,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win32 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win32 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win32 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win32\BootstrapPackagedGame.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win32 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win32 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win32 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\BootstrapPackagedGame.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -547,10 +256,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win64 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win64 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win64 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win64\BootstrapPackagedGame.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win64 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win64 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win64 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\BootstrapPackagedGame.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -564,50 +273,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Mac Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Mac Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Mac Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Mac\BootstrapPackagedGame</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame IOS Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame IOS Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame IOS Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\IOS\BootstrapPackagedGame</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<AndroidAttach>False</AndroidAttach>
-		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
-		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\BootstrapPackagedGame-armv7-es2.apk</OverrideAPKPath>
-		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
-		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Android Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Android Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Android Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Android\BootstrapPackagedGame.so</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Mac Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Mac Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Mac Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\BootstrapPackagedGame</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -621,27 +290,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame HTML5 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame HTML5 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame HTML5 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\BootstrapPackagedGame.exe</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame TVOS Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame TVOS Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame TVOS Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\BootstrapPackagedGame</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame HTML5 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame HTML5 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame HTML5 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\BootstrapPackagedGame.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -655,10 +307,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win32 Shipping -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win32 Shipping -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win32 Shipping -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win32\BootstrapPackagedGame-Win32-Shipping.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win32 Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win32 Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win32 Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\BootstrapPackagedGame-Win32-Shipping.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -672,10 +324,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win64 Shipping -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win64 Shipping -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win64 Shipping -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win64\BootstrapPackagedGame-Win64-Shipping.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Win64 Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Win64 Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Win64 Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\BootstrapPackagedGame-Win64-Shipping.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -689,50 +341,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Mac Shipping -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Mac Shipping -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Mac Shipping -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Mac\BootstrapPackagedGame-Mac-Shipping</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame IOS Shipping -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame IOS Shipping -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame IOS Shipping -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\IOS\BootstrapPackagedGame-IOS-Shipping</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Tegra-Android'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Tegra-Android'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<AndroidAttach>False</AndroidAttach>
-		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
-		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\BootstrapPackagedGame-Android-Shipping-armv7-es2.apk</OverrideAPKPath>
-		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
-		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Android Shipping -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Android Shipping -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Android Shipping -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Android\BootstrapPackagedGame-Android-Shipping.so</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame Mac Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame Mac Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame Mac Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\BootstrapPackagedGame-Mac-Shipping</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -746,37 +358,20 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame HTML5 Shipping -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame HTML5 Shipping -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame HTML5 Shipping -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\BootstrapPackagedGame-HTML5-Shipping.exe</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Shipping_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Shipping_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame TVOS Shipping -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame TVOS Shipping -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame TVOS Shipping -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\BootstrapPackagedGame-TVOS-Shipping</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat BootstrapPackagedGame HTML5 Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat BootstrapPackagedGame HTML5 Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat BootstrapPackagedGame HTML5 Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\BootstrapPackagedGame-HTML5-Shipping.exe</NMakeOutput>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\Windows\BootstrapPackagedGame\BootstrapPackagedGame.Target.cs" />
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\Windows\BootstrapPackagedGame\BootstrapPackagedGame.Build.cs" />
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\Windows\BootstrapPackagedGame\Private\BootstrapPackagedGame.cpp" />
-		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\Windows\BootstrapPackagedGame\Private\BootstrapPackagedGame.h" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Windows\BootstrapPackagedGame\BootstrapPackagedGame.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Windows\BootstrapPackagedGame\BootstrapPackagedGame.Build.cs" />
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Windows\BootstrapPackagedGame\Private\BootstrapPackagedGame.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\Windows\BootstrapPackagedGame\Private\BootstrapPackagedGame.h" />
 	</ItemGroup>
 	<PropertyGroup>
 		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);IS_PROGRAM=1;WITH_DEV_AUTOMATION_TESTS=1;WITH_PERF_AUTOMATION_TESTS=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=1;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=0;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;WITH_PERFCOUNTERS=0;USE_LOGGING_IN_SHIPPING=0;WITH_LOGGING_TO_MEMORY=0;USE_CHECKS_IN_SHIPPING=0;UE_BUILD_MINIMAL=1;WITH_EDITOR=0;WITH_EDITORONLY_DATA=0;WITH_SERVER_CODE=1;WITH_CEF3=1;UBT_COMPILED_PLATFORM=Win64;UBT_COMPILED_TARGET=Program;WIN32=1;_WIN32_WINNT=0x0601;WINVER=0x0601;PLATFORM_WINDOWS=1;DEPTH_32_BIT_CONVERSION=0;PROJECT_COPYRIGHT_STRING=Fill out your copyright notice in the Description page of Project Settings.;PROJECT_PRODUCT_NAME=UE4Game;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;ORIGINAL_FILE_NAME="BootstrapPackagedGame-BootstrapPackagedGame.lib";UE_IS_ENGINE_MODULE=0;UE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0;BOOTSTRAPPACKAGEDGAME_API=</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);F:\UES\Engine\Source;F:\UES\Engine\Intermediate\Build\Win64\BootstrapPackagedGame\Inc\BootstrapPackagedGame;F:\UES\Engine\Source\Programs\Windows\BootstrapPackagedGame;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);D:\Epic\UnrealEngine-4.16.3\Engine\Source;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\BootstrapPackagedGame\Inc\BootstrapPackagedGame;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Programs\Windows\BootstrapPackagedGame;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>

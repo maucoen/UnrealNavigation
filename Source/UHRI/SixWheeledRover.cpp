@@ -9,8 +9,7 @@
 #include "EngineUtils.h"
 #include "Regex.h"
 #include "Camera/CameraComponent.h"
-//#include "F:\UES\Engine\Source\Runtime\CinematicCamera\Public\CineCameraComponent.h"
-//#include "Camera/CameraComponent.h" F:\UES\Engine\Source\Runtime\Engine\Classes\GameFramework\SpringArmComponent.h F:\UES\Engine\Source\Runtime\CinematicCamera\Public\CineCameraComponent.h
+#include "DrawDebugHelpers.h"
 #include "SimpleWheeledVehicleMovementComponent.h"
 
 FName SixWheelMoveComp = AWheeledVehicle::VehicleMovementComponentName;
@@ -50,8 +49,6 @@ ASixWheeledRover::ASixWheeledRover(const FObjectInitializer& ObjectInitializer)
 	//..CineCam->SetupAttachment(SpringArm);
 	//CineCam->RelativeLocation = FVector(-53.000084, 110.999878, 241.000000); // Position the camera
 	//CineCam->RelativeRotation = FRotator(0, 80, 0);
-
-
 
 }
 
@@ -103,6 +100,7 @@ void ASixWheeledRover::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 	PlayerInputComponent->BindAxis("LookUp", this, &ASixWheeledRover::ViewUp);
 	PlayerInputComponent->BindAxis("Turn", this, &ASixWheeledRover::ViewRight);
 	PlayerInputComponent->BindAxis("ZoomIn", this, &ASixWheeledRover::ZoomIn);
+	PlayerInputComponent->BindKey(EKeys::B, EInputEvent::IE_Pressed, this, &ASixWheeledRover::ToggleDrawControls);
 }
 
 void ASixWheeledRover::OnToggleCamera()
@@ -166,9 +164,9 @@ void ASixWheeledRover::MoveForward(float Val)
 		for (auto& Bone : WheelBones)
 		{
 			SixWheelMesh->AddTorque(Torque, Bone, true);
+			DrawVectors(Bone, Torque);
 		}
 	}
-	FQuat Loc = SixWheelMesh->GetBoneQuaternion("Bogey_L_F", EBoneSpaces::ComponentSpace);
 }
 
 void ASixWheeledRover::MoveRight(float Val)
@@ -176,42 +174,54 @@ void ASixWheeledRover::MoveRight(float Val)
 	FVector Torque = GetActorUpVector() * Val * BogeyMotorTorque;
 	FVector TorqueF = -GetActorForwardVector() * Val * WheelMotorTorque;
 
-	if (SixWheelMesh->GetPhysicsLinearVelocity().Size() < 30) //stationary, rotate in place
+	int i = 0;
+	float powWheel;
+	float powBogey;
+
+	for (auto& Bone : WheelBones)
 	{
-		int i = 0;
-		float powWheel;
-		float powBogey;
-		for (auto& Bone : WheelBones)
+		if (SixWheelMesh->GetPhysicsLinearVelocity().Size() < 30)
 		{
 			powWheel = FMath::Pow(-1, (i / 3));
 			SixWheelMesh->AddTorque(TorqueF*powWheel, Bone, true);
 
-			if (i < 4) 
-			{ 
+			DrawVectors(Bone, TorqueF);
+
+			if (i < 4)
+			{
 				if ((i == 0) || (i == 3)) { powBogey = -1; }
 				else { powBogey = 1; }
 
-				SixWheelMesh->SetPhysicsAngularVelocity(powBogey*Torque.GetAbs(), false, FrontBogeyBones[i]); 
+				SixWheelMesh->SetPhysicsAngularVelocity(powBogey*Torque.GetAbs(), false, FrontBogeyBones[i]);
 			}
-	
-			++i;
 		}
-	}
-	else // forward moving speed, rotate bogeys according to turn direction
-	{
-		int i = 0;
-		for (auto& Bone : FrontBogeyBones)
+
+		else if (i < 4)
 		{
-			float powBogey = FMath::Pow(-1, ((i+1) % 2));
-			if (Val != 0)
-			{
-				SixWheelMesh->SetPhysicsAngularVelocity(powBogey*Torque, false, FrontBogeyBones[i]);
-				++i;
-			}
+			float powBogey2 = FMath::Pow(-1, ((i + 1) % 2));
+			SixWheelMesh->SetPhysicsAngularVelocity(powBogey2*Torque, false, FrontBogeyBones[i]);
 		}
+		++i;
 	}
 }	
 
+void ASixWheeledRover::ToggleDrawControls()
+{
+	bDraw = !bDraw;
+}
+
+void ASixWheeledRover::DrawVectors(FName Bone, FVector Torque)
+{
+	if (bDraw)
+	{
+		FVector ArrowStart = SixWheelMesh->GetBoneLocation(Bone, EBoneSpaces::WorldSpace);
+		FVector BoneTwist = FRotator(SixWheelMesh->GetBoneQuaternion(Bone, EBoneSpaces::ComponentSpace)).Vector();
+		auto World = GetWorld();
+		DrawDebugDirectionalArrow(World, ArrowStart, ArrowStart + BoneTwist*100,
+			20, FColor::Green, false, World->GetDeltaSeconds()*2, (uint8)'\000', 2.f);
+	}
+	
+}
 
 //void ASixWheeledRover::OnHandbrakePressed()
 //{

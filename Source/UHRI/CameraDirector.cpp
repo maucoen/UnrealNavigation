@@ -40,7 +40,6 @@ void ACameraDirector::SetCameraSwitchInput()
 		if (InputComponent)
 		{
 			InputComponent->BindKey(EKeys::C, EInputEvent::IE_Pressed, this, &ACameraDirector::SwitchCam);
-			//InputComponent->BindAction("SwitchCamera", IE_Pressed, this, &ACameraDirector::SwitchCam);
 			EnableInput(Controller);
 			InputComponent->BindKey(EKeys::MotionController_Left_Grip1, EInputEvent::IE_Pressed, this, &ACameraDirector::SwitchCam);
 		}
@@ -56,7 +55,7 @@ void ACameraDirector::Tick(float DeltaTime)
 void ACameraDirector::SwitchCam()
 {
 	if (Controller && (CamIndex < ( Cameras.Num()-1)))
-	{
+	{	
 		++CamIndex;
 		Controller->SetViewTarget(Cameras[CamIndex]);
 	}

@@ -10,10 +10,6 @@
 			<Configuration>Debug_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Debug_Program|Tegra-Android">
-			<Configuration>Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Debug_Program|Win32">
 			<Configuration>Mac_Debug_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -21,22 +17,6 @@
 		<ProjectConfiguration Include="Mac_Debug_Program|x64">
 			<Configuration>Mac_Debug_Program</Configuration>
 			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Mac_Debug_Program|Tegra-Android">
-			<Configuration>Mac_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|Win32">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|x64">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Debug_Program|Tegra-Android">
-			<Configuration>IOS_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Debug_Program|Win32">
 			<Configuration>HTML5_Debug_Program</Configuration>
@@ -46,22 +26,6 @@
 			<Configuration>HTML5_Debug_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="HTML5_Debug_Program|Tegra-Android">
-			<Configuration>HTML5_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|Win32">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|x64">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Debug_Program|Tegra-Android">
-			<Configuration>TVOS_Debug_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="Development_Program|Win32">
 			<Configuration>Development_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -69,10 +33,6 @@
 		<ProjectConfiguration Include="Development_Program|x64">
 			<Configuration>Development_Program</Configuration>
 			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Development_Program|Tegra-Android">
-			<Configuration>Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Development_Program|Win32">
 			<Configuration>Mac_Development_Program</Configuration>
@@ -82,22 +42,6 @@
 			<Configuration>Mac_Development_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="Mac_Development_Program|Tegra-Android">
-			<Configuration>Mac_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|Win32">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|x64">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="IOS_Development_Program|Tegra-Android">
-			<Configuration>IOS_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Development_Program|Win32">
 			<Configuration>HTML5_Development_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -106,26 +50,7 @@
 			<Configuration>HTML5_Development_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
-		<ProjectConfiguration Include="HTML5_Development_Program|Tegra-Android">
-			<Configuration>HTML5_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|Win32">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|x64">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="TVOS_Development_Program|Tegra-Android">
-			<Configuration>TVOS_Development_Program</Configuration>
-			<Platform>Tegra-Android</Platform>
-		</ProjectConfiguration>
 	</ItemGroup>
-	<PropertyGroup Label="NsightTegraProject">
-		<NsightTegraProjectRevisionNumber>11</NsightTegraProjectRevisionNumber>
-	</PropertyGroup>
 	<PropertyGroup Label="Globals">
 		<ProjectGuid>{97B31DD6-9737-42C3-8D70-9F0261689280}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
@@ -143,11 +68,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -155,24 +75,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -182,24 +84,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -207,11 +91,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -221,24 +100,6 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -246,24 +107,6 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|x64'" Label="Configuration">
-		<ConfigurationType>Makefile</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Tegra-Android'" Label="Configuration">
-		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
-		<PlatformToolset>v140</PlatformToolset>
-		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 	<ImportGroup Label="ExtensionSettings" />
@@ -280,10 +123,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL Win32 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL Win32 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL Win32 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win32\TestPAL-Win32-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat TestPAL Win32 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat TestPAL Win32 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat TestPAL Win32 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\TestPAL-Win32-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -297,10 +140,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL Win64 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL Win64 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL Win64 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win64\TestPAL-Win64-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat TestPAL Win64 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat TestPAL Win64 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat TestPAL Win64 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\TestPAL-Win64-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -314,50 +157,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL Mac Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL Mac Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL Mac Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Mac\TestPAL-Mac-Debug</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL IOS Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL IOS Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL IOS Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\IOS\TestPAL-IOS-Debug</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<AndroidAttach>False</AndroidAttach>
-		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
-		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\TestPAL-Android-Debug-armv7-es2.apk</OverrideAPKPath>
-		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
-		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL Android Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL Android Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL Android Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Android\TestPAL-Android-Debug.so</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat TestPAL Mac Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat TestPAL Mac Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat TestPAL Mac Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\TestPAL-Mac-Debug</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -371,27 +174,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL HTML5 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL HTML5 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL HTML5 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\TestPAL-HTML5-Debug.exe</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL TVOS Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL TVOS Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL TVOS Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\TestPAL-TVOS-Debug</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat TestPAL HTML5 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat TestPAL HTML5 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat TestPAL HTML5 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\TestPAL-HTML5-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -405,10 +191,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL Win32 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL Win32 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL Win32 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win32\TestPAL.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat TestPAL Win32 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat TestPAL Win32 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat TestPAL Win32 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\TestPAL.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -422,10 +208,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL Win64 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL Win64 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL Win64 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Win64\TestPAL.exe</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat TestPAL Win64 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat TestPAL Win64 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat TestPAL Win64 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\TestPAL.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -439,50 +225,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL Mac Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL Mac Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL Mac Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Mac\TestPAL</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL IOS Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL IOS Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL IOS Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\IOS\TestPAL</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<AndroidAttach>False</AndroidAttach>
-		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
-		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\TestPAL-armv7-es2.apk</OverrideAPKPath>
-		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
-		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL Android Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL Android Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL Android Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\Android\TestPAL.so</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat TestPAL Mac Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat TestPAL Mac Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat TestPAL Mac Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\TestPAL</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -496,41 +242,24 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL HTML5 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL HTML5 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL HTML5 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\TestPAL.exe</NMakeOutput>
-	</PropertyGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-	</ImportGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'">
-		<IncludePath />
-		<ReferencePath />
-		<LibraryPath />
-		<LibraryWPath />
-		<SourcePath />
-		<ExcludePath />
-		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
-		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat TestPAL TVOS Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat TestPAL TVOS Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat TestPAL TVOS Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\TestPAL</NMakeOutput>
+		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat TestPAL HTML5 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat TestPAL HTML5 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat TestPAL HTML5 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\TestPAL.exe</NMakeOutput>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\TestPAL.Target.cs" />
-		<None Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\TestPAL.Build.cs" />
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\Main.cpp" />
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\Parent.cpp" />
-		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\Parent.h" />
-		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\TestDirectoryWatcher.cpp" />
-		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\TestDirectoryWatcher.h" />
-		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\TestPAL\Private\TestPALLog.h" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\TestPAL.Target.cs" />
+		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\TestPAL.Build.cs" />
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\Main.cpp" />
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\Parent.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\Parent.h" />
+		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\TestDirectoryWatcher.cpp" />
+		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\TestDirectoryWatcher.h" />
+		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private\TestPALLog.h" />
 	</ItemGroup>
 	<PropertyGroup>
 		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);IS_PROGRAM=1;WITH_DEV_AUTOMATION_TESTS=1;WITH_PERF_AUTOMATION_TESTS=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=1;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=0;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;WITH_PERFCOUNTERS=0;USE_LOGGING_IN_SHIPPING=1;WITH_LOGGING_TO_MEMORY=0;USE_CHECKS_IN_SHIPPING=0;UE_BUILD_MINIMAL=1;WITH_EDITOR=0;WITH_SERVER_CODE=1;WITH_CEF3=1;UBT_COMPILED_PLATFORM=Win64;UBT_COMPILED_TARGET=Program;WIN32=1;_WIN32_WINNT=0x0601;WINVER=0x0601;PLATFORM_WINDOWS=1;DEPTH_32_BIT_CONVERSION=0;PROJECT_COPYRIGHT_STRING=Fill out your copyright notice in the Description page of Project Settings.;PROJECT_PRODUCT_NAME=UE4Game;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;ORIGINAL_FILE_NAME="TestPAL-TestPAL.lib";UE_IS_ENGINE_MODULE=0;UE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0;TESTPAL_API=;UE_ENABLE_ICU=1;WITH_VS_PERF_PROFILER=0;WITH_DIRECTXMATH=0;CORE_API=;PROJECTS_API=;JSON_API=;DIRECTORYWATCHER_API=</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);F:\UES\Engine\Source;F:\UES\Engine\Source\Runtime\Launch\Private;F:\UES\Engine\Source\Programs\TestPAL\Private;F:\UES\Engine\Source\Runtime\Launch\Public;F:\UES\Engine\Intermediate\Build\Win64\TestPAL\Inc\TestPAL;F:\UES\Engine\Source\Programs\TestPAL;F:\UES\Engine\Source\Runtime\Core\Public;F:\UES\Engine\Source\Runtime\Core\Public\Internationalization;F:\UES\Engine\Source\Runtime\Core\Public\Async;F:\UES\Engine\Source\Runtime\Core\Public\Concurrency;F:\UES\Engine\Source\Runtime\Core\Public\Containers;F:\UES\Engine\Source\Runtime\Core\Public\Delegates;F:\UES\Engine\Source\Runtime\Core\Public\GenericPlatform;F:\UES\Engine\Source\Runtime\Core\Public\HAL;F:\UES\Engine\Source\Runtime\Core\Public\Logging;F:\UES\Engine\Source\Runtime\Core\Public\Math;F:\UES\Engine\Source\Runtime\Core\Public\Misc;F:\UES\Engine\Source\Runtime\Core\Public\Modules;F:\UES\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;F:\UES\Engine\Source\Runtime\Core\Public\ProfilingDebugging;F:\UES\Engine\Source\Runtime\Core\Public\Serialization;F:\UES\Engine\Source\Runtime\Core\Public\Serialization\Csv;F:\UES\Engine\Source\Runtime\Core\Public\Stats;F:\UES\Engine\Source\Runtime\Core\Public\Templates;F:\UES\Engine\Source\Runtime\Core\Public\UObject;F:\UES\Engine\Source\Runtime\Core\Public\Windows;F:\UES\Engine\Source\Runtime\Core;F:\UES\Engine\Source\Runtime\Projects\Public;F:\UES\Engine\Source\Runtime\Projects\Public\Interfaces;F:\UES\Engine\Intermediate\Build\Win64\TestPAL\Inc\Projects;F:\UES\Engine\Source\Runtime\Projects;F:\UES\Engine\Source\Runtime\Json\Public;F:\UES\Engine\Source\Runtime\Json\Public\Dom;F:\UES\Engine\Source\Runtime\Json\Public\Policies;F:\UES\Engine\Source\Runtime\Json\Public\Serialization;F:\UES\Engine\Intermediate\Build\Win64\TestPAL\Inc\Json;F:\UES\Engine\Source\Runtime\Json;F:\UES\Engine\Source\Developer\DirectoryWatcher\Public;F:\UES\Engine\Intermediate\Build\Win64\TestPAL\Inc\DirectoryWatcher;F:\UES\Engine\Source\Developer\DirectoryWatcher;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);D:\Epic\UnrealEngine-4.16.3\Engine\Source;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Launch\Private;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL\Private;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Launch\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\TestPAL\Inc\TestPAL;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Programs\TestPAL;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Internationalization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Async;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Concurrency;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Containers;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Delegates;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\GenericPlatform;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\HAL;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Logging;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Math;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Misc;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Modules;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\ProfilingDebugging;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Serialization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Serialization\Csv;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Stats;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Templates;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\UObject;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Windows;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects\Public\Interfaces;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\TestPAL\Inc\Projects;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Dom;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Policies;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Serialization;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\TestPAL\Inc\Json;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\DirectoryWatcher\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\TestPAL\Inc\DirectoryWatcher;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\DirectoryWatcher;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
