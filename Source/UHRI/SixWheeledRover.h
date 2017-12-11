@@ -55,7 +55,7 @@ protected:
 		FVector MariasLocation;
 
 	UPROPERTY(EditAnywhere)
-		float Speed = 150;
+		float MaxSpeed = 150;
 
 	UPROPERTY(EditAnywhere)
 		float BogeyMotorTorque = 80;
@@ -68,14 +68,15 @@ private:
 
 	bool bMastCamActive;
 
+	UWorld* World;
+
 	FVector GlobalTargetLocation;
 	FVector GlobalStartLocation;
 	
 	TArray<FName> FindControlStructures(FName Name);
 	TArray<FName> AllBones;
 	TArray<FName> WheelBones;
-	TArray<FName> FrontBogeyBones;
-	TArray<FName> BackBogeyBones;
+	TArray<FName> BogeyBones;
 	
 	UFUNCTION()
 	void MoveForward(float Val);

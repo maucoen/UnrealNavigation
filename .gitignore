@@ -54,9 +54,9 @@ Binaries/*
 # Builds
 Build/*
 
-# Content folder for now
+# Content folder but not MSL files
 Content/*
-DerivedDataCache/*
+!Content/msl/*
 
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
 !Build/*/

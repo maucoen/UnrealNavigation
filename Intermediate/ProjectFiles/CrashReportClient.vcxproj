@@ -10,6 +10,10 @@
 			<Configuration>Debug_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug_Program|Tegra-Android">
+			<Configuration>Debug_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
+		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Debug_Program|Win32">
 			<Configuration>Mac_Debug_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -17,6 +21,22 @@
 		<ProjectConfiguration Include="Mac_Debug_Program|x64">
 			<Configuration>Mac_Debug_Program</Configuration>
 			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Debug_Program|Tegra-Android">
+			<Configuration>Mac_Debug_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="IOS_Debug_Program|Win32">
+			<Configuration>IOS_Debug_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="IOS_Debug_Program|x64">
+			<Configuration>IOS_Debug_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="IOS_Debug_Program|Tegra-Android">
+			<Configuration>IOS_Debug_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Debug_Program|Win32">
 			<Configuration>HTML5_Debug_Program</Configuration>
@@ -26,6 +46,22 @@
 			<Configuration>HTML5_Debug_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Debug_Program|Tegra-Android">
+			<Configuration>HTML5_Debug_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="TVOS_Debug_Program|Win32">
+			<Configuration>TVOS_Debug_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="TVOS_Debug_Program|x64">
+			<Configuration>TVOS_Debug_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="TVOS_Debug_Program|Tegra-Android">
+			<Configuration>TVOS_Debug_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
+		</ProjectConfiguration>
 		<ProjectConfiguration Include="Development_Program|Win32">
 			<Configuration>Development_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -33,6 +69,10 @@
 		<ProjectConfiguration Include="Development_Program|x64">
 			<Configuration>Development_Program</Configuration>
 			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Development_Program|Tegra-Android">
+			<Configuration>Development_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Development_Program|Win32">
 			<Configuration>Mac_Development_Program</Configuration>
@@ -42,6 +82,22 @@
 			<Configuration>Mac_Development_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Development_Program|Tegra-Android">
+			<Configuration>Mac_Development_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="IOS_Development_Program|Win32">
+			<Configuration>IOS_Development_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="IOS_Development_Program|x64">
+			<Configuration>IOS_Development_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="IOS_Development_Program|Tegra-Android">
+			<Configuration>IOS_Development_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
+		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Development_Program|Win32">
 			<Configuration>HTML5_Development_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -49,6 +105,22 @@
 		<ProjectConfiguration Include="HTML5_Development_Program|x64">
 			<Configuration>HTML5_Development_Program</Configuration>
 			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Development_Program|Tegra-Android">
+			<Configuration>HTML5_Development_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="TVOS_Development_Program|Win32">
+			<Configuration>TVOS_Development_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="TVOS_Development_Program|x64">
+			<Configuration>TVOS_Development_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="TVOS_Development_Program|Tegra-Android">
+			<Configuration>TVOS_Development_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="Shipping_Program|Win32">
 			<Configuration>Shipping_Program</Configuration>
@@ -58,6 +130,10 @@
 			<Configuration>Shipping_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
+		<ProjectConfiguration Include="Shipping_Program|Tegra-Android">
+			<Configuration>Shipping_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
+		</ProjectConfiguration>
 		<ProjectConfiguration Include="Mac_Shipping_Program|Win32">
 			<Configuration>Mac_Shipping_Program</Configuration>
 			<Platform>Win32</Platform>
@@ -65,6 +141,22 @@
 		<ProjectConfiguration Include="Mac_Shipping_Program|x64">
 			<Configuration>Mac_Shipping_Program</Configuration>
 			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Mac_Shipping_Program|Tegra-Android">
+			<Configuration>Mac_Shipping_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="IOS_Shipping_Program|Win32">
+			<Configuration>IOS_Shipping_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="IOS_Shipping_Program|x64">
+			<Configuration>IOS_Shipping_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="IOS_Shipping_Program|Tegra-Android">
+			<Configuration>IOS_Shipping_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
 		</ProjectConfiguration>
 		<ProjectConfiguration Include="HTML5_Shipping_Program|Win32">
 			<Configuration>HTML5_Shipping_Program</Configuration>
@@ -74,7 +166,26 @@
 			<Configuration>HTML5_Shipping_Program</Configuration>
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
+		<ProjectConfiguration Include="HTML5_Shipping_Program|Tegra-Android">
+			<Configuration>HTML5_Shipping_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="TVOS_Shipping_Program|Win32">
+			<Configuration>TVOS_Shipping_Program</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="TVOS_Shipping_Program|x64">
+			<Configuration>TVOS_Shipping_Program</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="TVOS_Shipping_Program|Tegra-Android">
+			<Configuration>TVOS_Shipping_Program</Configuration>
+			<Platform>Tegra-Android</Platform>
+		</ProjectConfiguration>
 	</ItemGroup>
+	<PropertyGroup Label="NsightTegraProject">
+		<NsightTegraProjectRevisionNumber>11</NsightTegraProjectRevisionNumber>
+	</PropertyGroup>
 	<PropertyGroup Label="Globals">
 		<ProjectGuid>{632EF1E0-6AB3-457E-8BF6-2F065C50CC38}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
@@ -92,6 +203,11 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -99,6 +215,24 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -108,6 +242,24 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -115,6 +267,11 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -124,6 +281,24 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -131,6 +306,24 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
@@ -140,6 +333,11 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -148,6 +346,24 @@
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|Win32'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
@@ -155,6 +371,24 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Shipping_Program|Win32'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Shipping_Program|x64'" Label="Configuration">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Shipping_Program|Tegra-Android'" Label="Configuration">
+		<ConfigurationType>ExternalBuildSystem</ConfigurationType>
+		<PlatformToolset>v140</PlatformToolset>
+		<AndroidNativeAPI>UseTarget</AndroidNativeAPI>
 	</PropertyGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 	<ImportGroup Label="ExtensionSettings" />
@@ -171,10 +405,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient Win32 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win32 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win32 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\CrashReportClient-Win32-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Win32 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win32 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win32 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Win32\CrashReportClient-Win32-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -188,10 +422,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient Win64 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win64 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win64 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\CrashReportClient-Win64-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Win64 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win64 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win64 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Win64\CrashReportClient-Win64-Debug.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -205,10 +439,50 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient Mac Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Mac Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient Mac Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\CrashReportClient-Mac-Debug</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Mac Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Mac Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Mac Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Mac\CrashReportClient-Mac-Debug</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Debug_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient IOS Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient IOS Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient IOS Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\IOS\CrashReportClient-IOS-Debug</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Program|Tegra-Android'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<AndroidAttach>False</AndroidAttach>
+		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
+		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\CrashReportClient-Android-Debug-armv7-es2.apk</OverrideAPKPath>
+		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
+		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Android Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Android Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Android Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Android\CrashReportClient-Android-Debug.so</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Debug_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -222,10 +496,27 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient HTML5 Debug -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient HTML5 Debug -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient HTML5 Debug -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\CrashReportClient-HTML5-Debug.exe</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient HTML5 Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient HTML5 Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient HTML5 Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\CrashReportClient-HTML5-Debug.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Debug_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient TVOS Debug -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient TVOS Debug -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient TVOS Debug -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\CrashReportClient-TVOS-Debug</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -239,10 +530,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient Win32 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win32 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win32 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\CrashReportClient-Win32-Development.exe</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Win32 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win32 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win32 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Win32\CrashReportClient-Win32-Development.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -256,10 +547,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient Win64 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win64 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win64 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\CrashReportClient-Win64-Development.exe</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Win64 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win64 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win64 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Win64\CrashReportClient-Win64-Development.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -273,10 +564,50 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient Mac Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Mac Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient Mac Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\CrashReportClient-Mac-Development</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Mac Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Mac Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Mac Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Mac\CrashReportClient-Mac-Development</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient IOS Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient IOS Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient IOS Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\IOS\CrashReportClient-IOS-Development</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Program|Tegra-Android'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<AndroidAttach>False</AndroidAttach>
+		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
+		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\CrashReportClient-Android-Development-armv7-es2.apk</OverrideAPKPath>
+		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
+		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Android Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Android Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Android Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Android\CrashReportClient-Android-Development.so</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -290,10 +621,27 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient HTML5 Development -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient HTML5 Development -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient HTML5 Development -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\CrashReportClient-HTML5-Development.exe</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient HTML5 Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient HTML5 Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient HTML5 Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\CrashReportClient-HTML5-Development.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Development_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient TVOS Development -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient TVOS Development -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient TVOS Development -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\CrashReportClient-TVOS-Development</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -307,10 +655,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient Win32 Shipping -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win32 Shipping -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win32 Shipping -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win32\CrashReportClient.exe</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Win32 Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win32 Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win32 Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Win32\CrashReportClient.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|x64'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -324,10 +672,10 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient Win64 Shipping -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win64 Shipping -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win64 Shipping -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Win64\CrashReportClient.exe</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Win64 Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Win64 Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Win64 Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Win64\CrashReportClient.exe</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Mac_Shipping_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -341,10 +689,50 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient Mac Shipping -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Mac Shipping -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient Mac Shipping -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\Mac\CrashReportClient</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Mac Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Mac Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Mac Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Mac\CrashReportClient</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient IOS Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient IOS Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient IOS Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\IOS\CrashReportClient</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Tegra-Android'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Program|Tegra-Android'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<AndroidAttach>False</AndroidAttach>
+		<DebuggerFlavor>AndroidDebugger</DebuggerFlavor>
+		<OverrideAPKPath>F:\UES\Engine\Binaries\Android\CrashReportClient-armv7-es2.apk</OverrideAPKPath>
+		<AdditionalLibraryDirectories>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\armeabi-v7a;F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\obj\local\x86;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		<BuildXmlPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK</BuildXmlPath>
+		<AndroidManifestPath>F:\UES\Engine\Binaries\Android/../../Intermediate/Android/APK\AndroidManifest.xml</AndroidManifestPath>
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient Android Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient Android Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient Android Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\Android\CrashReportClient.so</NMakeOutput>
 	</PropertyGroup>
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Program|Win32'" Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -358,59 +746,76 @@
 		<ExcludePath />
 		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
 		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-		<NMakeBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Build.bat CrashReportClient HTML5 Shipping -waitmutex</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient HTML5 Shipping -waitmutex</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine>D:\Epic\UnrealEngine-4.16.3\Engine\Build\BatchFiles\Clean.bat CrashReportClient HTML5 Shipping -waitmutex</NMakeCleanCommandLine>
-		<NMakeOutput>D:\Epic\UnrealEngine-4.16.3\Engine\Binaries\HTML5\CrashReportClient.exe</NMakeOutput>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient HTML5 Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient HTML5 Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient HTML5 Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\HTML5\CrashReportClient.exe</NMakeOutput>
+	</PropertyGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Shipping_Program|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TVOS_Shipping_Program|Win32'">
+		<IncludePath />
+		<ReferencePath />
+		<LibraryPath />
+		<LibraryWPath />
+		<SourcePath />
+		<ExcludePath />
+		<OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+		<IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+		<NMakeBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Build.bat CrashReportClient TVOS Shipping -waitmutex</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine>F:\UES\Engine\Build\BatchFiles\Rebuild.bat CrashReportClient TVOS Shipping -waitmutex</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine>F:\UES\Engine\Build\BatchFiles\Clean.bat CrashReportClient TVOS Shipping -waitmutex</NMakeCleanCommandLine>
+		<NMakeOutput>F:\UES\Engine\Binaries\TVOS\CrashReportClient</NMakeOutput>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Target.cs" />
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Programs\CrashReportClient\Config\DefaultEngine.ini" />
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Build.cs" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashDescription.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashDescription.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportAnalytics.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportAnalytics.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClient.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClient.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientApp.cpp" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientConfig.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientConfig.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientStyle.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientStyle.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientUnattended.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientUnattended.h" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportUtil.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashUpload.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashUpload.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\GenericErrorReport.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\GenericErrorReport.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\MainLoopTiming.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\MainLoopTiming.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PendingReports.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PendingReports.h" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PlatformErrorReport.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\SCrashReportClient.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\SCrashReportClient.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Linux\CrashReportClientMainLinux.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Linux\LinuxErrorReport.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\CrashReportClientMainMac.cpp" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\MacErrorReport.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\MacErrorReport.h" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\CrashReportClientMainWindows.cpp" />
-		<ClCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\WindowsErrorReport.cpp" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\WindowsErrorReport.h" />
-		<ClInclude Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Public\CrashReportClientApp.h" />
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient-Win32.manifest" />
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient-Win64.manifest" />
-		<None Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient.ico" />
-		<ResourceCompile Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient.rc" />
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\Debug-CrashReportClient-Win32.manifest" />
-		<Manifest Include="..\..\..\..\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\Debug-CrashReportClient-Win64.manifest" />
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Target.cs" />
+		<None Include="..\..\..\..\UES\Engine\Programs\CrashReportClient\Config\DefaultEngine.ini" />
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\CrashReportClient.Build.cs" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashDescription.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashDescription.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportAnalytics.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportAnalytics.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClient.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClient.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientApp.cpp" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientConfig.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientConfig.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientStyle.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientStyle.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientUnattended.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportClientUnattended.h" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashReportUtil.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashUpload.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\CrashUpload.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\GenericErrorReport.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\GenericErrorReport.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\MainLoopTiming.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\MainLoopTiming.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PendingReports.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PendingReports.h" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\PlatformErrorReport.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\SCrashReportClient.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\SCrashReportClient.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Linux\CrashReportClientMainLinux.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Linux\LinuxErrorReport.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\CrashReportClientMainMac.cpp" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\MacErrorReport.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Mac\MacErrorReport.h" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\CrashReportClientMainWindows.cpp" />
+		<ClCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\WindowsErrorReport.cpp" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private\Windows\WindowsErrorReport.h" />
+		<ClInclude Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Public\CrashReportClientApp.h" />
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient-Win32.manifest" />
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient-Win64.manifest" />
+		<None Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient.ico" />
+		<ResourceCompile Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\CrashReportClient.rc" />
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\Debug-CrashReportClient-Win32.manifest" />
+		<Manifest Include="..\..\..\..\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Resources\Windows\Debug-CrashReportClient-Win64.manifest" />
 	</ItemGroup>
 	<PropertyGroup>
 		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);IS_PROGRAM=1;NOINITCRASHREPORTER=1;WITH_DEV_AUTOMATION_TESTS=1;WITH_PERF_AUTOMATION_TESTS=1;UNICODE;_UNICODE;__UNREAL__;IS_MONOLITHIC=1;WITH_ENGINE=0;WITH_UNREAL_DEVELOPER_TOOLS=0;WITH_COREUOBJECT=1;USE_STATS_WITHOUT_ENGINE=0;WITH_PLUGIN_SUPPORT=0;WITH_PERFCOUNTERS=0;USE_LOGGING_IN_SHIPPING=1;WITH_LOGGING_TO_MEMORY=0;USE_CHECKS_IN_SHIPPING=1;UE_BUILD_MINIMAL=1;WITH_EDITOR=0;WITH_SERVER_CODE=1;WITH_CEF3=1;UBT_COMPILED_PLATFORM=Win64;UBT_COMPILED_TARGET=Program;WIN32=1;_WIN32_WINNT=0x0601;WINVER=0x0601;PLATFORM_WINDOWS=1;DEPTH_32_BIT_CONVERSION=0;PROJECT_COPYRIGHT_STRING=Fill out your copyright notice in the Description page of Project Settings.;PROJECT_PRODUCT_NAME=UE4Game;NDEBUG=1;UE_BUILD_DEVELOPMENT=1;ORIGINAL_FILE_NAME="CrashReportClient-CrashReportClient-Win64-Development.lib";UE_IS_ENGINE_MODULE=0;UE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0;CRASHREPORTCLIENT_API=;UE_ENABLE_ICU=1;WITH_VS_PERF_PROFILER=0;WITH_DIRECTXMATH=0;CORE_API=;COREUOBJECT_API=;CRASHDEBUGHELPER_API=;SOURCE_CONTROL_WITH_SLATE=1;SOURCECONTROL_API=;INPUTCORE_API=;HTTP_PACKAGE=1;HTTP_API=;JSON_API=;PROJECTS_API=;XMLPARSER_API=;ANALYTICS_API=;ANALYTICSET_API=;DESKTOPPLATFORM_API=;SLATE_API=;WITH_FREETYPE=1;SLATECORE_API=;WITH_UNREALPNG=1;WITH_UNREALJPEG=1;WITH_UNREALEXR=1;IMAGEWRAPPER_API=;STANDALONERENDERER_API=;MESSAGELOG_API=;SLATE_REFLECTOR_HAS_SESSION_SERVICES=0;SLATE_REFLECTOR_HAS_DESKTOP_PLATFORM=1;SLATEREFLECTOR_API=</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);D:\Epic\UnrealEngine-4.16.3\Engine\Source;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Launch\Private;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Launch\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Private;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\CrashReportClient;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Programs\CrashReporter\CrashReportClient;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Internationalization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Async;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Concurrency;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Containers;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Delegates;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\GenericPlatform;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\HAL;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Logging;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Math;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Misc;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Modules;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\ProfilingDebugging;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Serialization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Serialization\Csv;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Stats;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Templates;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\UObject;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core\Public\Windows;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Core;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\Blueprint;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\Internationalization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\Misc;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\Serialization;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\Templates;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject\Public\UObject;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\CoreUObject;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\CoreUObject;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\CrashDebugHelper\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\CrashDebugHelper;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\CrashDebugHelper;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\SourceControl\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\SourceControl\Public\Tests;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\SourceControl;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\SourceControl;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\InputCore\Classes;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\InputCore\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\InputCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\InputCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Online\HTTP\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Online\HTTP\Public\GenericPlatform;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Online\HTTP\Public\Interfaces;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Online\HTTP\Public\Windows;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\HTTP;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Online\HTTP;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Dom;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Policies;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json\Public\Serialization;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Json;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Json;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects\Public\Interfaces;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Projects;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Projects;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Editor\XmlParser\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\XmlParser\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\XmlParser;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\XmlParser;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Analytics\Analytics\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Analytics\Analytics\Public\Interfaces;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Analytics;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Analytics\Analytics;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Analytics\AnalyticsET\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\AnalyticsET;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Analytics\AnalyticsET;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\DesktopPlatform\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\DesktopPlatform;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\DesktopPlatform;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Application;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Commands;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Docking;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Layout;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\MetaData;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\MultiBox;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Notifications;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Styling;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Text;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Framework\Views;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Colors;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Docking;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Images;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Input;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\LayerManager;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Layout;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Navigation;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Notifications;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Text;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate\Public\Widgets\Views;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Slate;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\Slate;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Animation;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Application;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Brushes;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Fonts;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Input;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Layout;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Logging;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Rendering;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Sound;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Stats;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Styling;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Textures;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Types;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore\Public\Widgets;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\SlateCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\SlateCore;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\ImageWrapper\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\ImageWrapper\Public\Interfaces;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\ImageWrapper;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Runtime\ImageWrapper;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\StandaloneRenderer\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\StandaloneRenderer;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\StandaloneRenderer;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\MessageLog\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\MessageLog;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\MessageLog;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\SlateReflector\Public;D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\SlateReflector;D:\Epic\UnrealEngine-4.16.3\Engine\Source\Developer\SlateReflector;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
+		<NMakeIncludeSearchPath>$(NMakeIncludeSearchPath);F:\UES\Engine\Source;F:\UES\Engine\Source\Runtime\Launch\Private;F:\UES\Engine\Source\Runtime\Launch\Public;F:\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Private;F:\UES\Engine\Source\Programs\CrashReporter\CrashReportClient\Public;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\CrashReportClient;F:\UES\Engine\Source\Programs\CrashReporter\CrashReportClient;F:\UES\Engine\Source\Runtime\Core\Public;F:\UES\Engine\Source\Runtime\Core\Public\Internationalization;F:\UES\Engine\Source\Runtime\Core\Public\Async;F:\UES\Engine\Source\Runtime\Core\Public\Concurrency;F:\UES\Engine\Source\Runtime\Core\Public\Containers;F:\UES\Engine\Source\Runtime\Core\Public\Delegates;F:\UES\Engine\Source\Runtime\Core\Public\GenericPlatform;F:\UES\Engine\Source\Runtime\Core\Public\HAL;F:\UES\Engine\Source\Runtime\Core\Public\Logging;F:\UES\Engine\Source\Runtime\Core\Public\Math;F:\UES\Engine\Source\Runtime\Core\Public\Misc;F:\UES\Engine\Source\Runtime\Core\Public\Modules;F:\UES\Engine\Source\Runtime\Core\Public\Modules\Boilerplate;F:\UES\Engine\Source\Runtime\Core\Public\ProfilingDebugging;F:\UES\Engine\Source\Runtime\Core\Public\Serialization;F:\UES\Engine\Source\Runtime\Core\Public\Serialization\Csv;F:\UES\Engine\Source\Runtime\Core\Public\Stats;F:\UES\Engine\Source\Runtime\Core\Public\Templates;F:\UES\Engine\Source\Runtime\Core\Public\UObject;F:\UES\Engine\Source\Runtime\Core\Public\Windows;F:\UES\Engine\Source\Runtime\Core;F:\UES\Engine\Source\Runtime\CoreUObject\Public;F:\UES\Engine\Source\Runtime\CoreUObject\Public\Blueprint;F:\UES\Engine\Source\Runtime\CoreUObject\Public\Internationalization;F:\UES\Engine\Source\Runtime\CoreUObject\Public\Misc;F:\UES\Engine\Source\Runtime\CoreUObject\Public\Serialization;F:\UES\Engine\Source\Runtime\CoreUObject\Public\Templates;F:\UES\Engine\Source\Runtime\CoreUObject\Public\UObject;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\CoreUObject;F:\UES\Engine\Source\Runtime\CoreUObject;F:\UES\Engine\Source\Developer\CrashDebugHelper\Public;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\CrashDebugHelper;F:\UES\Engine\Source\Developer\CrashDebugHelper;F:\UES\Engine\Source\Developer\SourceControl\Public;F:\UES\Engine\Source\Developer\SourceControl\Public\Tests;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\SourceControl;F:\UES\Engine\Source\Developer\SourceControl;F:\UES\Engine\Source\Runtime\InputCore\Classes;F:\UES\Engine\Source\Runtime\InputCore\Public;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\InputCore;F:\UES\Engine\Source\Runtime\InputCore;F:\UES\Engine\Source\Runtime\Online\HTTP\Public;F:\UES\Engine\Source\Runtime\Online\HTTP\Public\GenericPlatform;F:\UES\Engine\Source\Runtime\Online\HTTP\Public\Interfaces;F:\UES\Engine\Source\Runtime\Online\HTTP\Public\Windows;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\HTTP;F:\UES\Engine\Source\Runtime\Online\HTTP;F:\UES\Engine\Source\Runtime\Json\Public;F:\UES\Engine\Source\Runtime\Json\Public\Dom;F:\UES\Engine\Source\Runtime\Json\Public\Policies;F:\UES\Engine\Source\Runtime\Json\Public\Serialization;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Json;F:\UES\Engine\Source\Runtime\Json;F:\UES\Engine\Source\Runtime\Projects\Public;F:\UES\Engine\Source\Runtime\Projects\Public\Interfaces;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Projects;F:\UES\Engine\Source\Runtime\Projects;F:\UES\Engine\Source\Editor\XmlParser\Public;F:\UES\Engine\Source\Runtime\XmlParser\Public;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\XmlParser;F:\UES\Engine\Source\Runtime\XmlParser;F:\UES\Engine\Source\Runtime\Analytics\Analytics\Public;F:\UES\Engine\Source\Runtime\Analytics\Analytics\Public\Interfaces;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Analytics;F:\UES\Engine\Source\Runtime\Analytics\Analytics;F:\UES\Engine\Source\Runtime\Analytics\AnalyticsET\Public;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\AnalyticsET;F:\UES\Engine\Source\Runtime\Analytics\AnalyticsET;F:\UES\Engine\Source\Developer\DesktopPlatform\Public;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\DesktopPlatform;F:\UES\Engine\Source\Developer\DesktopPlatform;F:\UES\Engine\Source\Runtime\Slate\Public;F:\UES\Engine\Source\Runtime\Slate\Public\Framework;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Application;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Commands;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Docking;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Layout;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\MetaData;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\MultiBox;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Notifications;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Styling;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Text;F:\UES\Engine\Source\Runtime\Slate\Public\Framework\Views;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Colors;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Docking;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Images;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Input;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\LayerManager;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Layout;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Navigation;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Notifications;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Text;F:\UES\Engine\Source\Runtime\Slate\Public\Widgets\Views;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\Slate;F:\UES\Engine\Source\Runtime\Slate;F:\UES\Engine\Source\Runtime\SlateCore\Public;F:\UES\Engine\Source\Runtime\SlateCore\Public\Animation;F:\UES\Engine\Source\Runtime\SlateCore\Public\Application;F:\UES\Engine\Source\Runtime\SlateCore\Public\Brushes;F:\UES\Engine\Source\Runtime\SlateCore\Public\Fonts;F:\UES\Engine\Source\Runtime\SlateCore\Public\Input;F:\UES\Engine\Source\Runtime\SlateCore\Public\Layout;F:\UES\Engine\Source\Runtime\SlateCore\Public\Logging;F:\UES\Engine\Source\Runtime\SlateCore\Public\Rendering;F:\UES\Engine\Source\Runtime\SlateCore\Public\Sound;F:\UES\Engine\Source\Runtime\SlateCore\Public\Stats;F:\UES\Engine\Source\Runtime\SlateCore\Public\Styling;F:\UES\Engine\Source\Runtime\SlateCore\Public\Textures;F:\UES\Engine\Source\Runtime\SlateCore\Public\Types;F:\UES\Engine\Source\Runtime\SlateCore\Public\Widgets;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\SlateCore;F:\UES\Engine\Source\Runtime\SlateCore;F:\UES\Engine\Source\Runtime\ImageWrapper\Public;F:\UES\Engine\Source\Runtime\ImageWrapper\Public\Interfaces;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\ImageWrapper;F:\UES\Engine\Source\Runtime\ImageWrapper;F:\UES\Engine\Source\Developer\StandaloneRenderer\Public;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\StandaloneRenderer;F:\UES\Engine\Source\Developer\StandaloneRenderer;F:\UES\Engine\Source\Developer\MessageLog\Public;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\MessageLog;F:\UES\Engine\Source\Developer\MessageLog;F:\UES\Engine\Source\Developer\SlateReflector\Public;F:\UES\Engine\Intermediate\Build\Win64\CrashReportClient\Inc\SlateReflector;F:\UES\Engine\Source\Developer\SlateReflector;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\shared;C:\Program Files (x86)\Windows Kits\8.1\include\um;C:\Program Files (x86)\Windows Kits\8.1\include\winrt;;</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>

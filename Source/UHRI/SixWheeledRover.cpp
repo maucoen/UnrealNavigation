@@ -7,8 +7,10 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "EngineUtils.h"
+#include "UHRIHUD.h"
 #include "Regex.h"
 #include "Camera/CameraComponent.h"
+#include "UObject/ConstructorHelpers.h"
 #include "DrawDebugHelpers.h"
 #include "SimpleWheeledVehicleMovementComponent.h"
 
@@ -58,6 +60,11 @@ void ASixWheeledRover::BeginPlay()
 	Super::BeginPlay();
 	SetBoneArrays();
 
+	World = GetWorld();
+
+	// use our custom HUD class
+	//HUDClass = AUHRIHUD::StaticClass();
+
 	/*GlobalStartLocation = GetActorLocation();
 	GlobalTargetLocation = GetTransform().TransformPosition(MariasLocation);*/
 }
@@ -73,10 +80,10 @@ void ASixWheeledRover::SetBoneArrays()
 	for (auto& Str : WheelBones)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Detected the following wheel: %s"), *Str.ToString());
-		SixWheelMesh->SetPhysicsMaxAngularVelocity(100, false, Str);
+		SixWheelMesh->SetPhysicsMaxAngularVelocity(MaxSpeed, false, Str);
 	}
 
-	FrontBogeyBones = FindControlStructures(TEXT("Bogey.+(_F|_R)$"));
+	BogeyBones = FindControlStructures(TEXT("Bogey.+(_F|_R)$"));
 }
 
 TArray<FName> ASixWheeledRover::FindControlStructures(FName Name)
@@ -159,47 +166,71 @@ void ASixWheeledRover::MoveForward(float Val)
 {
 	if (Val != 0)
 	{
-		FVector Torque = -GetActorForwardVector() * Val * WheelMotorTorque;
+		FRotator Twist = FRotator().ZeroRotator;
+		FVector BogeyTwist =  GetActorUpVector();
 
+		int i = 0;
+		float powBogey =0;
 		for (auto& Bone : WheelBones)
 		{
+			Twist = SixWheelMesh->GetBoneQuaternion(Bone, EBoneSpaces::WorldSpace).Rotator();
+			Twist.Roll = 0;
+			FVector Torque = -Val * Twist.Vector() * WheelMotorTorque;
+
 			SixWheelMesh->AddTorque(Torque, Bone, true);
+			
 			DrawVectors(Bone, Torque);
+
+			FRotator Twist = SixWheelMesh->GetBoneQuaternion(Bone, EBoneSpaces::ComponentSpace).Rotator();
+			auto PropControl = BogeyTwist * -Twist.Yaw * 500;
+			
+			// proportional control to straighten bogeys
+			SixWheelMesh->SetPhysicsAngularVelocity(PropControl, false, Bone);
 		}
 	}
 }
 
 void ASixWheeledRover::MoveRight(float Val)
 {
-	FVector Torque = GetActorUpVector() * Val * BogeyMotorTorque;
-	FVector TorqueF = -GetActorForwardVector() * Val * WheelMotorTorque;
+	FVector BogeyTwist = GetActorUpVector() * Val * BogeyMotorTorque;
+	FRotator Twist = FRotator().ZeroRotator;
 
 	int i = 0;
 	float powWheel;
-	float powBogey;
+	float powBogey = 1;
 
 	for (auto& Bone : WheelBones)
 	{
 		if (SixWheelMesh->GetPhysicsLinearVelocity().Size() < 30)
 		{
+			
+			Twist = SixWheelMesh->GetBoneQuaternion(Bone, EBoneSpaces::WorldSpace).Rotator();
+			Twist.Roll = 0;
+			
 			powWheel = FMath::Pow(-1, (i / 3));
-			SixWheelMesh->AddTorque(TorqueF*powWheel, Bone, true);
+			FVector Torque =  Val * Twist.Vector() * WheelMotorTorque * powWheel; //-Val *
 
-			DrawVectors(Bone, TorqueF);
+			
+			SixWheelMesh->AddTorque(Torque, Bone, true);
+
+			DrawVectors(Bone, Torque);
 
 			if (i < 4)
 			{
-				if ((i == 0) || (i == 3)) { powBogey = -1; }
-				else { powBogey = 1; }
+				if ((i == 0) || (i == 3)) { powBogey = 1; }
+				else { powBogey = -1; }
+				
+				FRotator Twist = SixWheelMesh->GetBoneQuaternion(BogeyBones[i], EBoneSpaces::ComponentSpace).Rotator();
+				auto PropControl = BogeyTwist.GetAbs() * -(Twist.Yaw + powBogey*45) * 0.1;
 
-				SixWheelMesh->SetPhysicsAngularVelocity(powBogey*Torque.GetAbs(), false, FrontBogeyBones[i]);
+				SixWheelMesh->SetPhysicsAngularVelocity(PropControl, false, BogeyBones[i]);
 			}
 		}
 
 		else if (i < 4)
 		{
 			float powBogey2 = FMath::Pow(-1, ((i + 1) % 2));
-			SixWheelMesh->SetPhysicsAngularVelocity(powBogey2*Torque, false, FrontBogeyBones[i]);
+			SixWheelMesh->SetPhysicsAngularVelocity(powBogey2*BogeyTwist, false, BogeyBones[i]);
 		}
 		++i;
 	}
@@ -214,24 +245,14 @@ void ASixWheeledRover::DrawVectors(FName Bone, FVector Torque)
 {
 	if (bDraw)
 	{
+
+		Torque = Torque.RotateAngleAxis(90, GetActorUpVector()) / 5000;
 		FVector ArrowStart = SixWheelMesh->GetBoneLocation(Bone, EBoneSpaces::WorldSpace);
-		FVector BoneTwist = FRotator(SixWheelMesh->GetBoneQuaternion(Bone, EBoneSpaces::ComponentSpace)).Vector();
-		auto World = GetWorld();
-		DrawDebugDirectionalArrow(World, ArrowStart, ArrowStart + BoneTwist*100,
-			20, FColor::Green, false, World->GetDeltaSeconds()*2, (uint8)'\000', 2.f);
+		DrawDebugDirectionalArrow(World, ArrowStart, ArrowStart - Torque,
+			20, FColor::Green, false, World->GetDeltaSeconds() * 1.1, (uint8)'\000', 2.f);
 	}
 	
 }
-
-//void ASixWheeledRover::OnHandbrakePressed()
-//{
-//	GetVehicleMovementComponent()->SetHandbrakeInput(true);
-//}
-//
-//void ASixWheeledRover::OnHandbrakeReleased()
-//{
-//	GetVehicleMovementComponent()->SetHandbrakeInput(false);
-//}
 
 //void ASixWheeledRover::OnToggleCamera()
 //{

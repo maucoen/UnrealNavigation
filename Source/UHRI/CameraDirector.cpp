@@ -3,13 +3,13 @@
 #include "CameraDirector.h"
 #include "Kismet/GameplayStatics.h"
 #include "Camera/CameraComponent.h"
-//#include "Runtime/CinematicCamera/Public/CineCameraComponent.h"
-//#include "Public/C"
 #include "EngineUtils.h"
 #include "Core.h"
+#include "Engine.h"
 #include "ModuleManager.h"
 #include "IPluginManager.h"
 
+#define D(x) if(GEngine){GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT(x));}
 
 // Sets default values
 ACameraDirector::ACameraDirector()
@@ -64,6 +64,9 @@ void ACameraDirector::SwitchCam()
 		CamIndex = 0;
 		Controller->SetViewTarget(Cameras[CamIndex]);
 	}
+
+	auto cam = Cameras[CamIndex]->GetName();
+	if (GEngine) { GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, Cameras[CamIndex]->GetName(), true, FVector2D(2,2)); }
 }
 
 template<typename T>
