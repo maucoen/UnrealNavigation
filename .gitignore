@@ -56,7 +56,7 @@ Build/*
 
 # Content folder but not MSL files
 Content/*
-!Content/msl/*
+!Content/msl/**
 
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
 !Build/*/
