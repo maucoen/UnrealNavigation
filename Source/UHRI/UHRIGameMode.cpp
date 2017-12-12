@@ -2,7 +2,6 @@
 
 #include "UHRIGameMode.h"
 #include "TimerManager.h"
-#include "UHRICharacter.h"
 #include "UHRIGameInstance.h"
 #include "UObject/ConstructorHelpers.h"
 #include "GameLiftServerSDK.h"
@@ -68,7 +67,7 @@ AUHRIGameMode::AUHRIGameMode()
 #endif
 
 	// set default pawn class to spawn
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/Curiosity"));
+	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/msl/Curiosity"));
 	if (PlayerPawnBPClass.Class != NULL)
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
