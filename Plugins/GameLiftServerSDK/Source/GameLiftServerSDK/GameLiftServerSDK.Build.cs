@@ -16,7 +16,7 @@ using UnrealBuildTool;
 
 public class GameLiftServerSDK : ModuleRules
 {
-    public GameLiftServerSDK(TargetInfo Target)
+    public GameLiftServerSDK(ReadOnlyTargetRules Target)
     {
         PublicIncludePaths.AddRange(
             new string[] {

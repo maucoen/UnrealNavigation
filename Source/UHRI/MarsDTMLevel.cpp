@@ -16,7 +16,7 @@ void AMarsDTMLevel::BeginPlay()
 		InputComponent = NewObject<UInputComponent>(this);
 		if (InputComponent)
 		{
-			InputComponent->BindKey(EKeys::M, EInputEvent::IE_Pressed, this, &AMarsDTMLevel::InLoadMenu);
+	
 			InputComponent->BindKey(EKeys::Escape, EInputEvent::IE_Pressed, this, &AMarsDTMLevel::InLoadMenu);
 		}
 	}

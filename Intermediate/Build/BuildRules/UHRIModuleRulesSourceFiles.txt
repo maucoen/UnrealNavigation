@@ -1,5 +1,0 @@
-F:\MAU\UHRI\Source\UHRI\UHRI.Build.cs
-F:\MAU\UHRI\Plugins\GameLiftServerSDK\Source\GameLiftServerSDK\GameLiftServerSDK.Build.cs
-F:\MAU\UHRI\Source\UHRI.Target.cs
-F:\MAU\UHRI\Source\UHRIEditor.Target.cs
-F:\MAU\UHRI\Source\UHRIServer.Target.cs
