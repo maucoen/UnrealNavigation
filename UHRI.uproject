@@ -18,7 +18,7 @@
 	"Plugins": [
 		{
 			"Name": "UnrealCV",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "RunebergVRPlugin",
