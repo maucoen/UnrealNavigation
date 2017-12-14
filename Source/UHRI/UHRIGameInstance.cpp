@@ -1,15 +1,14 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "UHRIGameInstance.h"
-
 #include "Engine/Engine.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Blueprint/UserWidget.h"
 #include "Kismet/GameplayStatics.h"
 #include "OnlineSubsystem.h"
 #include "OnlineSessionSettings.h"
-
-//#include "PlatformTrigger.h"
+#include "GameLiftClientSDK/Public/GameLiftClientObject.h"
+#include "GameLiftClientSDK/Public/GameLiftClientApi.h"
 #include "MenuSystem/MainMenu.h"
 #include "MenuSystem/MenuWidget.h"
 
@@ -29,7 +28,11 @@ UUHRIGameInstance::UUHRIGameInstance(const FObjectInitializer & ObjectInitialize
 
 void UUHRIGameInstance::Init()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Found class %s"), *MenuClass->GetName());
+	Super::Init();
+
+	// Create the game lift object. This is required before calling any GameLift functions.
+	GameLiftClientObject = UGameLiftClientObject::CreateGameLiftObject("Your Access Key", "Your Secret Key");
+	////////////////////
 
 	Subsystem = IOnlineSubsystem::Get();
 	
@@ -295,4 +298,80 @@ void UUHRIGameInstance::OnFindSessionsComplete(bool Sucess)
 			Menu->SetServerList(ServerList);
 		}
 	}
+}
+
+void UUHRIGameInstance::CreateGameSession()
+{
+ 
+	FGameLiftGameSessionConfig MySessionConfig;
+	MySessionConfig.SetAliasID("Your Alias ID");
+	MySessionConfig.SetMaxPlayers(10);
+	UGameLiftCreateGameSession* MyGameSessionObject = GameLiftClientObject->CreateGameSession(MySessionConfig);
+	MyGameSessionObject->OnCreateGameSessionSuccess.AddDynamic(this, &UUHRIGameInstance::OnGameCreationSuccess);
+	MyGameSessionObject->OnCreateGameSessionFailed.AddDynamic(this, &UUHRIGameInstance::OnGameCreationFailed);
+	MyGameSessionObject->Activate();
+ 
+}
+
+void UUHRIGameInstance::OnGameCreationSuccess(const FString& GameSessionID)
+{
+	DescribeGameSession(GameSessionID);
+}
+
+void UUHRIGameInstance::OnGameCreationFailed(const FString& ErrorMessage)
+{
+ 
+	// Do stuff...
+ 
+}
+
+void UUHRIGameInstance::DescribeGameSession(const FString& GameSessionID)
+{
+ 
+	UGameLiftDescribeGameSession* MyDescribeGameSessionObject = GameLiftClientObject->DescribeGameSession(GameSessionID);
+	MyDescribeGameSessionObject->OnDescribeGameSessionStateSuccess.AddDynamic(this, &UUHRIGameInstance::OnDescribeGameSessionSuccess);
+	MyDescribeGameSessionObject->OnDescribeGameSessionStateFailed.AddDynamic(this, &UUHRIGameInstance::OnDescribeGameSessionFailed);
+	MyDescribeGameSessionObject->Activate();
+ 
+}
+
+void UUHRIGameInstance::OnDescribeGameSessionSuccess(const FString& SessionID, EGameLiftGameSessionStatus SessionState)
+{
+	// Player sessions can only be created on ACTIVE instance.
+	if (SessionState == EGameLiftGameSessionStatus::STATUS_Active)
+	{
+		CreatePlayerSession(SessionID, "Your Unique Player ID");
+	}
+}
+
+void UUHRIGameInstance::OnDescribeGameSessionFailed(const FString& ErrorMessage)
+{
+ 
+	// Do stuff...
+ 
+}
+
+void UUHRIGameInstance::CreatePlayerSession(const FString& GameSessionID, const FString UniquePlayerID)
+{
+ 
+	UGameLiftCreatePlayerSession* MyCreatePlayerSessionObject = GameLiftClientObject->CreatePlayerSession(GameSessionID, UniquePlayerID);
+	MyCreatePlayerSessionObject->OnCreatePlayerSessionSuccess.AddDynamic(this, &UUHRIGameInstance::OnPlayerSessionCreateSuccess);
+	MyCreatePlayerSessionObject->OnCreatePlayerSessionFailed.AddDynamic(this, &UUHRIGameInstance::OnPlayerSessionCreateFail);
+	MyCreatePlayerSessionObject->Activate();
+ 
+}
+
+void UUHRIGameInstance::OnPlayerSessionCreateSuccess(const FString& IPAddress, const FString& Port, const FString& PlayerSessionID)
+{
+ 
+	const FString TravelURL = IPAddress + ":" + Port;
+	UGameplayStatics::GetPlayerController(this, 0)->ClientTravel(TravelURL, ETravelType::TRAVEL_Absolute);
+ 
+}
+
+void UUHRIGameInstance::OnPlayerSessionCreateFail(const FString& ErrorMessage)
+{
+ 
+	// Do stuff...
+ 
 }

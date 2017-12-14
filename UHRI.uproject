@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{7139AE36-4B6E-DE1A-1139-C687D1651063}",
+	"EngineAssociation": "{7131DCE9-4265-0538-7B74-A88783EBC126}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -31,6 +31,10 @@
 		},
 		{
 			"Name": "OnlineSubsystem",
+			"Enabled": true
+		},
+		{
+			"Name": "GameLiftClientSDK",
 			"Enabled": true
 		}
 	]

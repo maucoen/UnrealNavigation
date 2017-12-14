@@ -67,7 +67,7 @@ AUHRIGameMode::AUHRIGameMode()
 #endif
 
 	// set default pawn class to spawn
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/msl/Curiosity"));
+	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/VehicleAdv/MarsBuggy_BP"));
 	if (PlayerPawnBPClass.Class != NULL)
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
@@ -82,12 +82,8 @@ void AUHRIGameMode::PostLogin(APlayerController* NewPlayer)
 	++NumberOfPlayers;
 
 	UE_LOG(LogTemp, Warning, TEXT("GameMode: Posted login for player %d"), NumberOfPlayers);
-
-	/*if (NumberOfPlayers >= 2)
-	{
-	GetWorldTimerManager().SetTimer(GameStartTimer, this, &AUHRIGameMode::StartGame, 6);
-	}*/
 }
+
 void AUHRIGameMode::StartGame()
 {/*
  auto GameInstance = Cast<UUHRIGameInstance>(GetGameInstance());
