@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-CognitoIdentity.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\Epic\Projects\UHRI\Plugins\GameLiftClientSDK\Intermediate\Build\Win64\UE4Editor\Development\CognitoIdentity\Module.CognitoIdentity.cpp.obj"
+"D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\PCLaunch.rc.res"
+"D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"D:\Epic\Projects\UHRI\Plugins\GameLiftClientSDK\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CognitoIdentity.lib"

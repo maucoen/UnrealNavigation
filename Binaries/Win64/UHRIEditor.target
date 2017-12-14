@@ -2,7 +2,7 @@
 	"TargetName" : "UHRIEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "7101da95-eb83-47b3-92dc-2c9769b241d5",
+	"BuildId" : "fcd8652d-4fc0-44ec-8389-f9c771584271",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -31,6 +31,42 @@
 		{
 			"Path" : "$(EngineDir)/Binaries/Win64/UE4Editor-Cmd.pdb",
 			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-AWSCore.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-AWSCore.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-AWSCore.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-GameLiftClientSDK.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-GameLiftClientSDK.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GameLiftClientSDK.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-CognitoIdentity.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-CognitoIdentity.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-CognitoIdentity.lib",
+			"Type" : "ImportLibrary"
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll",
@@ -798,6 +834,18 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-WindowsMoviePlayer.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/UnrealCV/Binaries/Win64/UE4Editor-UnrealCV.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/UnrealCV/Binaries/Win64/UE4Editor-UnrealCV.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/UnrealCV/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-UnrealCV.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -1818,18 +1866,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-VulkanShaderFormat.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(EngineDir)/Binaries/Win64/UE4Editor-TextureFormatAndroid.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(EngineDir)/Binaries/Win64/UE4Editor-TextureFormatAndroid.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(EngineDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-TextureFormatAndroid.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -4485,6 +4521,10 @@
 			"Type" : "ImportLibrary"
 		},
 		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor.modules",
+			"Type" : "RequiredResource"
+		},
+		{
 			"Path" : "$(EngineDir)/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4673,6 +4713,10 @@
 			"Type" : "RequiredResource"
 		},
 		{
+			"Path" : "$(EngineDir)/Plugins/UnrealCV/Binaries/Win64/UE4Editor.modules",
+			"Type" : "RequiredResource"
+		},
+		{
 			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4701,6 +4745,10 @@
 	[
 		{
 			"Path" : "$(ProjectDir)/UHRI.uproject",
+			"Type" : "UFS"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/GameLiftClientSDK.uplugin",
 			"Type" : "UFS"
 		},
 		{
@@ -4892,6 +4940,10 @@
 			"Type" : "UFS"
 		},
 		{
+			"Path" : "$(EngineDir)/Plugins/UnrealCV/UnrealCV.uplugin",
+			"Type" : "UFS"
+		},
+		{
 			"Path" : "$(EngineDir)/Content/Slate/...",
 			"Type" : "UFS"
 		},
@@ -4906,6 +4958,18 @@
 		{
 			"Path" : "$(EngineDir)/Content/SlateDebug/...",
 			"Type" : "UFS"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-core.dll",
+			"Type" : "NonUFS"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-gamelift.dll",
+			"Type" : "NonUFS"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-cognito-identity.dll",
+			"Type" : "NonUFS"
 		},
 		{
 			"Path" : "$(EngineDir)/Binaries/ThirdParty/Perforce/p4api.dll",
@@ -6177,10 +6241,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbisfile_64.dll",
-			"Type" : "NonUFS"
-		},
-		{
-			"Path" : "$(EngineDir)/Binaries/ThirdParty/Qualcomm/Win64/TextureConverter.dll",
 			"Type" : "NonUFS"
 		},
 		{

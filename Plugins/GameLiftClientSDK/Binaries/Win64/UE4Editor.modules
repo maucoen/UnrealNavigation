@@ -1,0 +1,10 @@
+{
+	"Changelist" : 0,
+	"BuildId" : "fcd8652d-4fc0-44ec-8389-f9c771584271",
+	"Modules" : 
+	{
+		"AWSCore" : "UE4Editor-AWSCore.dll",
+		"CognitoIdentity" : "UE4Editor-CognitoIdentity.dll",
+		"GameLiftClientSDK" : "UE4Editor-GameLiftClientSDK.dll"
+	}
+}
