@@ -137,7 +137,7 @@ void UUHRIGameInstance::OnCreateSessionComplete(FName SessionName, bool Success)
 	UWorld* World = GetWorld();
 	if (!ensure(World != nullptr)) return;
 
-	World->ServerTravel("/Game/Maps/MarsDTM?listen");
+	World->ServerTravel("/Game/Maps/GaleCrater?listen");
 }
 
 void UUHRIGameInstance::OnDestroySessionComplete(FName SessionName, bool Success)

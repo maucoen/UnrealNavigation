@@ -17,8 +17,8 @@
 
 AMarsBuggyHUD::AMarsBuggyHUD()
 {
-	static ConstructorHelpers::FObjectFinder<UFont> Font(TEXT("/Engine/EngineFonts/RobotoDistanceField"));
-	HUDFont = Font.Object;
+	//static ConstructorHelpers::FObjectFinder<UFont> Font(TEXT("/Engine/EngineFonts/RobotoDistanceField"));
+	//HUDFont = Font.Object;
 }
 
 void AMarsBuggyHUD::DrawHUD()

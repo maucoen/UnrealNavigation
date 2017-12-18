@@ -1,6 +1,6 @@
 {
 	"Changelist" : 0,
-	"BuildId" : "fcd8652d-4fc0-44ec-8389-f9c771584271",
+	"BuildId" : "",
 	"Modules" : 
 	{
 		"GameLiftServerSDK" : "UE4Editor-GameLiftServerSDK.dll"
