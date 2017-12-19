@@ -15,23 +15,27 @@
 			]
 		}
 	],
-  "Plugins": [
-    {
-      "Name": "UnrealCV",
-      "Enabled": true
-    },
-    {
-      "Name": "RunebergVRPlugin",
-      "Enabled": false,
-      "MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/4dfd0c5b4c97427c860bd2cf7c207136"
-    },
-    {
-      "Name": "OnlineSubsystem",
-      "Enabled": true
-    },
+	"Plugins": [
 		{
-      "Name": "GameLiftServerSDK",
-      "Enabled": true
-    }
-  ]
+			"Name": "UnrealCV",
+			"Enabled": true
+		},
+		{
+			"Name": "RunebergVRPlugin",
+			"Enabled": false,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/4dfd0c5b4c97427c860bd2cf7c207136"
+		},
+		{
+			"Name": "OnlineSubsystem",
+			"Enabled": true
+		},
+		{
+			"Name": "GameLiftServerSDK",
+			"Enabled": true
+		},
+		{
+			"Name": "GameLiftClientSDK",
+			"Enabled": true
+		}
+	]
 }

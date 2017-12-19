@@ -33,6 +33,42 @@
 			"Type" : "SymbolFile"
 		},
 		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-AWSCore.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-AWSCore.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-AWSCore.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-GameLiftClientSDK.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-GameLiftClientSDK.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GameLiftClientSDK.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-CognitoIdentity.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-CognitoIdentity.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-CognitoIdentity.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
 			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Binaries/Win64/UE4Editor-GameLiftServerSDK.dll",
 			"Type" : "DynamicLibrary"
 		},
@@ -4473,6 +4509,10 @@
 			"Type" : "ImportLibrary"
 		},
 		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor.modules",
+			"Type" : "RequiredResource"
+		},
+		{
 			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4692,6 +4732,10 @@
 			"Type" : "UFS"
 		},
 		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/GameLiftClientSDK.uplugin",
+			"Type" : "UFS"
+		},
+		{
 			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/GameLiftServerSDK.uplugin",
 			"Type" : "UFS"
 		},
@@ -4898,6 +4942,18 @@
 		{
 			"Path" : "$(EngineDir)/Content/SlateDebug/...",
 			"Type" : "UFS"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-core.dll",
+			"Type" : "NonUFS"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-gamelift.dll",
+			"Type" : "NonUFS"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-cognito-identity.dll",
+			"Type" : "NonUFS"
 		},
 		{
 			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/ThirdParty/GameLiftServerSDK/Win64/aws-cpp-sdk-gamelift-server.dll",
