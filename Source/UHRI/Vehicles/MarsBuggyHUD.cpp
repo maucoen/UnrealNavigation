@@ -10,9 +10,9 @@
 
 // Needed for VR Headset
 #include "Engine.h"
-#if HMD_MODULE_INCLUDED
-#include "IHeadMountedDisplay.h"
-#endif  // HMD_MODULE_INCLUDED
+//#if HMD_MODULE_INCLUDED
+//#include "IHeadMountedDisplay.h"
+//#endif  // HMD_MODULE_INCLUDED
 #define LOCTEXT_NAMESPACE "VehicleHUD"
 
 AMarsBuggyHUD::AMarsBuggyHUD()
@@ -32,12 +32,12 @@ void AMarsBuggyHUD::DrawHUD()
 	bool bHMDDeviceActive = false;
 
 	// We dont want the onscreen hud when using a HMD device	
-#if HMD_MODULE_INCLUDED
-	if (GEngine->HMDDevice.IsValid() == true)
-	{
-		bHMDDeviceActive = GEngine->HMDDevice->IsStereoEnabled();
-	}
-#endif // HMD_MODULE_INCLUDED
+//#if HMD_MODULE_INCLUDED
+//	if (GEngine->HMDDevice.IsValid() == true)
+//	{
+//		bHMDDeviceActive = GEngine->HMDDevice->IsStereoEnabled();
+//	}
+//#endif // HMD_MODULE_INCLUDED
 	if (bHMDDeviceActive == false)
 	{
 		// Get our vehicle so we can check if we are in car. If we are we don't want onscreen HUD
