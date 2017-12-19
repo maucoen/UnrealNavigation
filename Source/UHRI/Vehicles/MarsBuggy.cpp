@@ -250,12 +250,12 @@ void AMarsBuggy::Tick(float Delta)
 	//SetupInCarHUD();
 
 	bool bHMDActive = false;
-#if HMD_MODULE_INCLUDED
-	if ((GEngine->HMDDevice.IsValid() == true) && ((GEngine->HMDDevice->IsHeadTrackingAllowed() == true) || (GEngine->IsStereoscopic3D() == true)))
-	{
-		bHMDActive = true;
-	}
-#endif // HMD_MODULE_INCLUDED
+//#if HMD_MODULE_INCLUDED
+//	if ((GEngine->HMDDevice.IsValid() == true) && ((GEngine->HMDDevice->IsHeadTrackingAllowed() == true) || (GEngine->IsStereoscopic3D() == true)))
+//	{
+//		bHMDActive = true;
+//	}
+//#endif // HMD_MODULE_INCLUDED
 	if (bHMDActive == false)
 	{
 		if ((InputComponent) && (bInCarCameraActive == true))

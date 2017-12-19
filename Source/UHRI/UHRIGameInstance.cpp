@@ -7,12 +7,12 @@
 #include "Kismet/GameplayStatics.h"
 #include "OnlineSubsystem.h"
 #include "OnlineSessionSettings.h"
-#include "GameLiftClientSDK/Public/GameLiftClientObject.h"
-#include "GameLiftClientSDK/Public/GameLiftClientApi.h"
+//#include "GameLiftClientSDK/Public/GameLiftClientObject.h"
+//#include "GameLiftClientSDK/Public/GameLiftClientApi.h"
 #include "MenuSystem/MainMenu.h"
 #include "MenuSystem/MenuWidget.h"
 
-const static FName SESSION_NAME = TEXT("Game"); //named Game because of bug in NULL OSS
+const static FName SESSION_NAME = TEXT("Game");
 const static FName SERVER_NAME_SETTINGS_KEY = TEXT("ServerName");
 
 UUHRIGameInstance::UUHRIGameInstance(const FObjectInitializer & ObjectInitializer)
@@ -31,7 +31,7 @@ void UUHRIGameInstance::Init()
 	Super::Init();
 
 	// Create the game lift object. This is required before calling any GameLift functions.
-	GameLiftClientObject = UGameLiftClientObject::CreateGameLiftObject("Your Access Key", "Your Secret Key");
+	//GameLiftClientObject = UGameLiftClientObject::CreateGameLiftObject("Your Access Key", "Your Secret Key");
 	////////////////////
 
 	Subsystem = IOnlineSubsystem::Get();
@@ -87,12 +87,11 @@ void UUHRIGameInstance::InGameLoadMenu()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("I am dedicated!"));
 	}
-	else
+	else if(!Subsystem->IsServer())
 	{
 		UE_LOG(LogTemp, Warning, TEXT("I am client!"));
 	}
 }
-
 
 void UUHRIGameInstance::Host(FString ServerName)
 {
@@ -241,7 +240,6 @@ void UUHRIGameInstance::OnJoinSessionComplete(FName SessionName, EOnJoinSessionC
 	}
 }
 
-
 void UUHRIGameInstance::LoadMainMenu()
 {
 	APlayerController* PlayerController = GetFirstLocalPlayerController();
@@ -300,78 +298,80 @@ void UUHRIGameInstance::OnFindSessionsComplete(bool Sucess)
 	}
 }
 
-void UUHRIGameInstance::CreateGameSession()
-{
- 
-	FGameLiftGameSessionConfig MySessionConfig;
-	MySessionConfig.SetAliasID("Your Alias ID");
-	MySessionConfig.SetMaxPlayers(10);
-	UGameLiftCreateGameSession* MyGameSessionObject = GameLiftClientObject->CreateGameSession(MySessionConfig);
-	MyGameSessionObject->OnCreateGameSessionSuccess.AddDynamic(this, &UUHRIGameInstance::OnGameCreationSuccess);
-	MyGameSessionObject->OnCreateGameSessionFailed.AddDynamic(this, &UUHRIGameInstance::OnGameCreationFailed);
-	MyGameSessionObject->Activate();
- 
-}
 
-void UUHRIGameInstance::OnGameCreationSuccess(const FString& GameSessionID)
-{
-	DescribeGameSession(GameSessionID);
-}
-
-void UUHRIGameInstance::OnGameCreationFailed(const FString& ErrorMessage)
-{
- 
-	// Do stuff...
- 
-}
-
-void UUHRIGameInstance::DescribeGameSession(const FString& GameSessionID)
-{
- 
-	UGameLiftDescribeGameSession* MyDescribeGameSessionObject = GameLiftClientObject->DescribeGameSession(GameSessionID);
-	MyDescribeGameSessionObject->OnDescribeGameSessionStateSuccess.AddDynamic(this, &UUHRIGameInstance::OnDescribeGameSessionSuccess);
-	MyDescribeGameSessionObject->OnDescribeGameSessionStateFailed.AddDynamic(this, &UUHRIGameInstance::OnDescribeGameSessionFailed);
-	MyDescribeGameSessionObject->Activate();
- 
-}
-
-void UUHRIGameInstance::OnDescribeGameSessionSuccess(const FString& SessionID, EGameLiftGameSessionStatus SessionState)
-{
-	// Player sessions can only be created on ACTIVE instance.
-	if (SessionState == EGameLiftGameSessionStatus::STATUS_Active)
-	{
-		CreatePlayerSession(SessionID, "Your Unique Player ID");
-	}
-}
-
-void UUHRIGameInstance::OnDescribeGameSessionFailed(const FString& ErrorMessage)
-{
- 
-	// Do stuff...
- 
-}
-
-void UUHRIGameInstance::CreatePlayerSession(const FString& GameSessionID, const FString UniquePlayerID)
-{
- 
-	UGameLiftCreatePlayerSession* MyCreatePlayerSessionObject = GameLiftClientObject->CreatePlayerSession(GameSessionID, UniquePlayerID);
-	MyCreatePlayerSessionObject->OnCreatePlayerSessionSuccess.AddDynamic(this, &UUHRIGameInstance::OnPlayerSessionCreateSuccess);
-	MyCreatePlayerSessionObject->OnCreatePlayerSessionFailed.AddDynamic(this, &UUHRIGameInstance::OnPlayerSessionCreateFail);
-	MyCreatePlayerSessionObject->Activate();
- 
-}
-
-void UUHRIGameInstance::OnPlayerSessionCreateSuccess(const FString& IPAddress, const FString& Port, const FString& PlayerSessionID)
-{
- 
-	const FString TravelURL = IPAddress + ":" + Port;
-	UGameplayStatics::GetPlayerController(this, 0)->ClientTravel(TravelURL, ETravelType::TRAVEL_Absolute);
- 
-}
-
-void UUHRIGameInstance::OnPlayerSessionCreateFail(const FString& ErrorMessage)
-{
- 
-	// Do stuff...
- 
-}
+/// GAMELIFT SPECIFIC FUNCTIONS
+//void UUHRIGameInstance::CreateGameSession()
+//{
+// 
+//	FGameLiftGameSessionConfig MySessionConfig;
+//	MySessionConfig.SetAliasID("Your Alias ID");
+//	MySessionConfig.SetMaxPlayers(10);
+//	UGameLiftCreateGameSession* MyGameSessionObject = GameLiftClientObject->CreateGameSession(MySessionConfig);
+//	MyGameSessionObject->OnCreateGameSessionSuccess.AddDynamic(this, &UUHRIGameInstance::OnGameCreationSuccess);
+//	MyGameSessionObject->OnCreateGameSessionFailed.AddDynamic(this, &UUHRIGameInstance::OnGameCreationFailed);
+//	MyGameSessionObject->Activate();
+// 
+//}
+//
+//void UUHRIGameInstance::OnGameCreationSuccess(const FString& GameSessionID)
+//{
+//	DescribeGameSession(GameSessionID);
+//}
+//
+//void UUHRIGameInstance::OnGameCreationFailed(const FString& ErrorMessage)
+//{
+// 
+//	// Do stuff...
+// 
+//}
+//
+//void UUHRIGameInstance::DescribeGameSession(const FString& GameSessionID)
+//{
+// 
+//	UGameLiftDescribeGameSession* MyDescribeGameSessionObject = GameLiftClientObject->DescribeGameSession(GameSessionID);
+//	MyDescribeGameSessionObject->OnDescribeGameSessionStateSuccess.AddDynamic(this, &UUHRIGameInstance::OnDescribeGameSessionSuccess);
+//	MyDescribeGameSessionObject->OnDescribeGameSessionStateFailed.AddDynamic(this, &UUHRIGameInstance::OnDescribeGameSessionFailed);
+//	MyDescribeGameSessionObject->Activate();
+// 
+//}
+//
+//void UUHRIGameInstance::OnDescribeGameSessionSuccess(const FString& SessionID, EGameLiftGameSessionStatus SessionState)
+//{
+//	// Player sessions can only be created on ACTIVE instance.
+//	if (SessionState == EGameLiftGameSessionStatus::STATUS_Active)
+//	{
+//		CreatePlayerSession(SessionID, "Your Unique Player ID");
+//	}
+//}
+//
+//void UUHRIGameInstance::OnDescribeGameSessionFailed(const FString& ErrorMessage)
+//{
+// 
+//	// Do stuff...
+// 
+//}
+//
+//void UUHRIGameInstance::CreatePlayerSession(const FString& GameSessionID, const FString UniquePlayerID)
+//{
+// 
+//	UGameLiftCreatePlayerSession* MyCreatePlayerSessionObject = GameLiftClientObject->CreatePlayerSession(GameSessionID, UniquePlayerID);
+//	MyCreatePlayerSessionObject->OnCreatePlayerSessionSuccess.AddDynamic(this, &UUHRIGameInstance::OnPlayerSessionCreateSuccess);
+//	MyCreatePlayerSessionObject->OnCreatePlayerSessionFailed.AddDynamic(this, &UUHRIGameInstance::OnPlayerSessionCreateFail);
+//	MyCreatePlayerSessionObject->Activate();
+// 
+//}
+//
+//void UUHRIGameInstance::OnPlayerSessionCreateSuccess(const FString& IPAddress, const FString& Port, const FString& PlayerSessionID)
+//{
+// 
+//	const FString TravelURL = IPAddress + ":" + Port;
+//	UGameplayStatics::GetPlayerController(this, 0)->ClientTravel(TravelURL, ETravelType::TRAVEL_Absolute);
+// 
+//}
+//
+//void UUHRIGameInstance::OnPlayerSessionCreateFail(const FString& ErrorMessage)
+//{
+// 
+//	// Do stuff...
+// 
+//}

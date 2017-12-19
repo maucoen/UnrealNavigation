@@ -10,6 +10,6 @@ public class UHRI : ModuleRules
 
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore",
             "Slate", "HeadMountedDisplay", "UMG", "SlateCore", "OnlineSubsystem",
-            "OnlineSubsystemAmazon", "GameLiftServerSDK", "GameLiftClientSDK", "PhysXVehicles" }); 
+            "OnlineSubsystemAmazon", "GameLiftServerSDK", "PhysXVehicles" }); //"GameLiftClientSDK",
     }
 }

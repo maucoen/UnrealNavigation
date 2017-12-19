@@ -91,11 +91,11 @@ void AUHRIGameMode::StartGame()
 
  GameInstance->StartSession();
  */
-	UWorld* World = GetWorld();
+	/*UWorld* World = GetWorld();
 	if (!ensure(World != nullptr)) return;
 
 	bUseSeamlessTravel = true;
-	World->ServerTravel("/Game/Maps/MarsDTM?listen");
+	World->ServerTravel("/Game/Maps/GaleCrater?listen");*/
 
 }
 void AUHRIGameMode::Logout(AController* Exiting)

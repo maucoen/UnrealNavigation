@@ -17,10 +17,6 @@ UCLASS()
 class UHRI_API UUHRIGameInstance : public UGameInstance, public IMenuInterface
 {
 	GENERATED_BODY()
-
-	UPROPERTY()
-		class UGameLiftClientObject* GameLiftClientObject;
-
 	
 public:
 	UUHRIGameInstance(const FObjectInitializer & ObjectInitializer);
@@ -28,26 +24,29 @@ public:
 	virtual void Init();
 
 
-	// Create Game Session ///////////////////////////////////////////////////
-	void CreateGameSession();
-	UFUNCTION()
-		void OnGameCreationSuccess(const FString& GameSessionID);
-	UFUNCTION()
-		void OnGameCreationFailed(const FString& ErrorMessage);
+	/*UPROPERTY()
+	class UGameLiftClientObject* GameLiftClientObject;*/
 
-	// Describe Game Session /////////////////////////////////////////////////
-	void DescribeGameSession(const FString& GameSessionID);
-	UFUNCTION()
-		void OnDescribeGameSessionSuccess(const FString& SessionID, EGameLiftGameSessionStatus SessionState);
-	UFUNCTION()
-		void OnDescribeGameSessionFailed(const FString& ErrorMessage);
+	//// Create Game Session ///////////////////////////////////////////////////
+	//void CreateGameSession();
+	//UFUNCTION()
+	//	void OnGameCreationSuccess(const FString& GameSessionID);
+	//UFUNCTION()
+	//	void OnGameCreationFailed(const FString& ErrorMessage);
 
-	// Create Player Session /////////////////////////////////////////////////
-	void CreatePlayerSession(const FString& GameSessionID, const FString UniquePlayerID);
-	UFUNCTION()
-		void OnPlayerSessionCreateSuccess(const FString& IPAddress, const FString& Port, const FString& PlayerSessionID);
-	UFUNCTION()
-		void OnPlayerSessionCreateFail(const FString& ErrorMessage);
+	//// Describe Game Session /////////////////////////////////////////////////
+	//void DescribeGameSession(const FString& GameSessionID);
+	//UFUNCTION()
+	//	void OnDescribeGameSessionSuccess(const FString& SessionID, EGameLiftGameSessionStatus SessionState);
+	//UFUNCTION()
+	//	void OnDescribeGameSessionFailed(const FString& ErrorMessage);
+
+	//// Create Player Session /////////////////////////////////////////////////
+	//void CreatePlayerSession(const FString& GameSessionID, const FString UniquePlayerID);
+	//UFUNCTION()
+	//	void OnPlayerSessionCreateSuccess(const FString& IPAddress, const FString& Port, const FString& PlayerSessionID);
+	//UFUNCTION()
+	//	void OnPlayerSessionCreateFail(const FString& ErrorMessage);
 
 
 
@@ -70,9 +69,6 @@ public:
 
 private:
 
-
-
-
 	TSubclassOf<class UUserWidget> MenuClass;
 	TSubclassOf<class UUserWidget> InGameMenuClass;
 
@@ -91,6 +87,5 @@ private:
 	void CreateSession();
 
 	TSharedPtr<class FOnlineSessionSearch> SessionSearch;
-
 };
 
