@@ -16,7 +16,7 @@ using UnrealBuildTool;
 
 public class GameLiftServerSDK : ModuleRules
 {
-    public GameLiftServerSDK(ReadOnlyTargetRules Target)
+    public GameLiftServerSDK(TargetInfo Target)
     {
         PublicIncludePaths.AddRange(
             new string[] {
@@ -61,8 +61,7 @@ public class GameLiftServerSDK : ModuleRules
 
         if (bHasGameLiftSDK)
         {
-            if (Target.Type == TargetRules.TargetType.Server)
-            {
+       
                 Definitions.Add("WITH_GAMELIFT=1");    
                 if (Target.Platform == UnrealTargetPlatform.Linux)
                 {
@@ -82,14 +81,9 @@ public class GameLiftServerSDK : ModuleRules
                     RuntimeDependencies.Add(new RuntimeDependency(SDKLibWindows));
                 }
             }
-            else
-            {
-                Definitions.Add("WITH_GAMELIFT=0");
-            }
-        }
         else
         {
-            Definitions.Add("WITH_GAMELIFT=0");
+            Definitions.Add("WITH_GAMELIFT=1");
         }
     }
 }

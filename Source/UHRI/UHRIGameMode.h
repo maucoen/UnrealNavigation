@@ -19,6 +19,8 @@ public:
 
 	void Logout(AController* Exiting) override;
 
+	bool bIsServer = true;
+
 private:
 	uint32 NumberOfPlayers = 0;
 

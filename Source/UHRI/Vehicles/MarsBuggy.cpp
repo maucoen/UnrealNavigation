@@ -3,7 +3,7 @@
 #include "MarsBuggy.h"
 #include "BackWheelMarsBuggy.h"
 #include "MidWheelMarsBuggy.h"
-#include "MarsBuggyHUD.h"
+//#include "MarsBuggyHUD.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
@@ -137,19 +137,19 @@ AMarsBuggy::AMarsBuggy()
 	InternalCamera->SetupAttachment(InternalCameraBase);
 
 	// In car HUD
-	// Create text render component for in car speed display
-	InCarSpeed = CreateDefaultSubobject<UTextRenderComponent>(TEXT("IncarSpeed"));
-	InCarSpeed->SetRelativeScale3D(FVector(0.1f, 0.1f, 0.1f));
-	InCarSpeed->SetRelativeLocation(FVector(35.0f, -6.0f, 20.0f));
-	InCarSpeed->SetRelativeRotation(FRotator(0.0f, 180.0f, 0.0f));
-	InCarSpeed->SetupAttachment(GetMesh());
+	//// Create text render component for in car speed display
+	//InCarSpeed = CreateDefaultSubobject<UTextRenderComponent>(TEXT("IncarSpeed"));
+	//InCarSpeed->SetRelativeScale3D(FVector(0.1f, 0.1f, 0.1f));
+	//InCarSpeed->SetRelativeLocation(FVector(35.0f, -6.0f, 20.0f));
+	//InCarSpeed->SetRelativeRotation(FRotator(0.0f, 180.0f, 0.0f));
+	//InCarSpeed->SetupAttachment(GetMesh());
 
-	// Create text render component for in car gear display
-	InCarGear = CreateDefaultSubobject<UTextRenderComponent>(TEXT("IncarGear"));
-	InCarGear->SetRelativeScale3D(FVector(0.1f, 0.1f, 0.1f));
-	InCarGear->SetRelativeLocation(FVector(35.0f, 5.0f, 20.0f));
-	InCarGear->SetRelativeRotation(FRotator(0.0f, 180.0f, 0.0f));
-	InCarGear->SetupAttachment(GetMesh());
+	//// Create text render component for in car gear display
+	//InCarGear = CreateDefaultSubobject<UTextRenderComponent>(TEXT("IncarGear"));
+	//InCarGear->SetRelativeScale3D(FVector(0.1f, 0.1f, 0.1f));
+	//InCarGear->SetRelativeLocation(FVector(35.0f, 5.0f, 20.0f));
+	//InCarGear->SetRelativeRotation(FRotator(0.0f, 180.0f, 0.0f));
+	//InCarGear->SetupAttachment(GetMesh());
 
 	//// Setup the audio component and allocate it a sound cue
 	//static ConstructorHelpers::FObjectFinder<USoundCue> SoundCue(TEXT("/Game/VehicleAdv/Sound/Engine_Loop_Cue.Engine_Loop_Cue"));
@@ -244,18 +244,18 @@ void AMarsBuggy::Tick(float Delta)
 	UpdatePhysicsMaterial();
 
 	// Update the strings used in the hud (incar and onscreen)
-	UpdateHUDStrings();
+	//UpdateHUDStrings();
 
 	// Set the string in the incar hud
-	SetupInCarHUD();
+	//SetupInCarHUD();
 
 	bool bHMDActive = false;
-#if HMD_MODULE_INCLUDED
-	if ((GEngine->HMDDevice.IsValid() == true) && ((GEngine->HMDDevice->IsHeadTrackingAllowed() == true) || (GEngine->IsStereoscopic3D() == true)))
-	{
-		bHMDActive = true;
-	}
-#endif // HMD_MODULE_INCLUDED
+//#if HMD_MODULE_INCLUDED
+//	if ((GEngine->HMDDevice.IsValid() == true) && ((GEngine->HMDDevice->IsHeadTrackingAllowed() == true) || (GEngine->IsStereoscopic3D() == true)))
+//	{
+//		bHMDActive = true;
+//	}
+//#endif // HMD_MODULE_INCLUDED
 	if (bHMDActive == false)
 	{
 		if ((InputComponent) && (bInCarCameraActive == true))
@@ -279,8 +279,8 @@ void AMarsBuggy::BeginPlay()
 	bool bWantInCar = false;
 	// First disable both speed/gear displays 
 	bInCarCameraActive = false;
-	InCarSpeed->SetVisibility(bInCarCameraActive);
-	InCarGear->SetVisibility(bInCarCameraActive);
+	//InCarSpeed->SetVisibility(bInCarCameraActive);
+	//InCarGear->SetVisibility(bInCarCameraActive);
 
 	// Enable in car view if HMD is attached
 //#if HMD_MODULE_INCLUDED

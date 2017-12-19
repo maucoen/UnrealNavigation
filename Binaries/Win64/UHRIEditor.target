@@ -2,7 +2,7 @@
 	"TargetName" : "UHRIEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "fcd8652d-4fc0-44ec-8389-f9c771584271",
+	"BuildId" : "8cf3593f-a9fd-4a2c-b088-d8e4b52139b9",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -33,39 +33,15 @@
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-AWSCore.dll",
+			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Binaries/Win64/UE4Editor-GameLiftServerSDK.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-AWSCore.pdb",
+			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Binaries/Win64/UE4Editor-GameLiftServerSDK.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-AWSCore.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-GameLiftClientSDK.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-GameLiftClientSDK.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GameLiftClientSDK.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-CognitoIdentity.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor-CognitoIdentity.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-CognitoIdentity.lib",
+			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GameLiftServerSDK.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -534,18 +510,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Online/OnlineSubsystem/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-OnlineSubsystem.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/Online/OnlineSubsystemAmazon/Binaries/Win64/UE4Editor-OnlineSubsystemAmazon.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/Online/OnlineSubsystemAmazon/Binaries/Win64/UE4Editor-OnlineSubsystemAmazon.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/Online/OnlineSubsystemAmazon/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-OnlineSubsystemAmazon.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -4509,19 +4473,7 @@
 			"Type" : "ImportLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Binaries/Win64/UE4Editor-GameLiftServerSDK.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Binaries/Win64/UE4Editor-GameLiftServerSDK.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GameLiftServerSDK.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/Binaries/Win64/UE4Editor.modules",
+			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
 		{
@@ -4637,10 +4589,6 @@
 			"Type" : "RequiredResource"
 		},
 		{
-			"Path" : "$(EngineDir)/Plugins/Online/OnlineSubsystemAmazon/Binaries/Win64/UE4Editor.modules",
-			"Type" : "RequiredResource"
-		},
-		{
 			"Path" : "$(EngineDir)/Plugins/Online/OnlineSubsystemNull/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4735,10 +4683,6 @@
 		{
 			"Path" : "$(EngineDir)/Binaries/Win64/HTML5/UE4Editor.modules",
 			"Type" : "RequiredResource"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/Binaries/Win64/UE4Editor.modules",
-			"Type" : "RequiredResource"
 		}
 	],
 	"RuntimeDependencies" :
@@ -4748,7 +4692,7 @@
 			"Type" : "UFS"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/GameLiftClientSDK.uplugin",
+			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/GameLiftServerSDK.uplugin",
 			"Type" : "UFS"
 		},
 		{
@@ -4864,10 +4808,6 @@
 			"Type" : "UFS"
 		},
 		{
-			"Path" : "$(EngineDir)/Plugins/Online/OnlineSubsystemAmazon/OnlineSubsystemAmazon.uplugin",
-			"Type" : "UFS"
-		},
-		{
 			"Path" : "$(EngineDir)/Plugins/Online/OnlineSubsystemNull/OnlineSubsystemNull.uplugin",
 			"Type" : "UFS"
 		},
@@ -4960,15 +4900,7 @@
 			"Type" : "UFS"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-core.dll",
-			"Type" : "NonUFS"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-gamelift.dll",
-			"Type" : "NonUFS"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-cognito-identity.dll",
+			"Path" : "$(ProjectDir)/Plugins/GameLiftServerSDK/ThirdParty/GameLiftServerSDK/Win64/aws-cpp-sdk-gamelift-server.dll",
 			"Type" : "NonUFS"
 		},
 		{

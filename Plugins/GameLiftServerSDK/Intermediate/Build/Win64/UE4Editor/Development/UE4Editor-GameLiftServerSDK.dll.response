@@ -15,7 +15,9 @@
 /INCREMENTAL:NO
 /ignore:4199
 /ignore:4099
+/DELAYLOAD:"aws-cpp-sdk-gamelift-server.dll"
 /DELAYLOAD:"d3d12.dll"
+/LIBPATH:"D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\ThirdParty\GameLiftServerSDK\Win64"
 /NODEFAULTLIB:"LIBCMT"
 /NODEFAULTLIB:"LIBCPMT"
 /NODEFAULTLIB:"LIBCMTD"
@@ -54,6 +56,7 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
+"D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\ThirdParty\GameLiftServerSDK\Win64\aws-cpp-sdk-gamelift-server.lib"
 "D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Core.lib"
 "D:\Epic\UnrealEngine-4.16.3\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Projects.lib"
 /OUT:"D:\Epic\Projects\UHRI\Plugins\GameLiftServerSDK\Binaries\Win64\UE4Editor-GameLiftServerSDK.dll"
