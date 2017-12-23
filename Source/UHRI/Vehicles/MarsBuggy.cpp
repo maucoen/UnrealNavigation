@@ -15,7 +15,10 @@
 #include "Engine/Engine.h"
 #include "GameFramework/Controller.h"
 #include "UObject/ConstructorHelpers.h"
+#include "UHRIGameInstance.h"
+#include "Kismet/GameplayStatics.h"
 #include "IHeadMountedDisplay.h"
+#include "TimerManager.h"
 
 const FName AMarsBuggy::LookUpBinding("LookUp");
 const FName AMarsBuggy::LookRightBinding("LookRight");
@@ -169,6 +172,7 @@ void AMarsBuggy::SetupPlayerInputComponent(class UInputComponent* PlayerInputCom
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	PlayerComp = PlayerInputComponent;
 	// set up gameplay key bindings
 	check(PlayerInputComponent);
 
@@ -187,12 +191,32 @@ void AMarsBuggy::SetupPlayerInputComponent(class UInputComponent* PlayerInputCom
 void AMarsBuggy::MoveForward(float Val)
 {
 	GetVehicleMovementComponent()->SetThrottleInput(Val);
+	//auto Controller = UGameplayStatics::GetPlayerController(this, 0);
 
+
+
+	/*if (Controller)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("player controller: %s"), Controller->GetUniqueID());
+	}*/
+
+	//Controller
 }
 
 void AMarsBuggy::MoveRight(float Val)
 {
 	GetVehicleMovementComponent()->SetSteeringInput(Val);
+	UEngine* Engine = GEngine;
+	if (!ensure(Engine != nullptr)) return;
+
+	if (GetController())
+	{ //crash here??
+		Engine->AddOnScreenDebugMessage(0, 0.1, FColor::Green, FString::Printf(TEXT("Buggys controller: %f"), Val));
+	}
+	else
+	{
+		Engine->AddOnScreenDebugMessage(0, 0.1, FColor::Red, FString::Printf(TEXT("no controller")));
+	}
 }
 
 void AMarsBuggy::OnHandbrakePressed()
@@ -208,6 +232,19 @@ void AMarsBuggy::OnHandbrakeReleased()
 void AMarsBuggy::OnToggleCamera()
 {
 	EnableIncarView(!bInCarCameraActive);
+
+	UEngine* Engine = GEngine;
+	if (!ensure(Engine != nullptr)) return;
+
+	if (GetController())
+	{ //crash here??
+		Engine->AddOnScreenDebugMessage(0, 0.1, FColor::Green, FString::Printf(TEXT("switch cam")));
+	}
+	else
+	{
+		Engine->AddOnScreenDebugMessage(0, 0.1, FColor::Red, FString::Printf(TEXT("no controller")));
+	}
+
 }
 
 void AMarsBuggy::EnableIncarView(const bool bState)
@@ -236,7 +273,9 @@ void AMarsBuggy::EnableIncarView(const bool bState)
 void AMarsBuggy::Tick(float Delta)
 {
 	Super::Tick(Delta);
-
+	
+	
+	
 	// Setup the flag to say we are in reverse gear
 	bInReverseGear = GetVehicleMovement()->GetCurrentGear() < 0;
 
@@ -281,15 +320,44 @@ void AMarsBuggy::BeginPlay()
 	bInCarCameraActive = false;
 	//InCarSpeed->SetVisibility(bInCarCameraActive);
 	//InCarGear->SetVisibility(bInCarCameraActive);
-
-	// Enable in car view if HMD is attached
-//#if HMD_MODULE_INCLUDED
-//	bWantInCar = UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled();
-//#endif // HMD_MODULE_INCLUDED
-
 	EnableIncarView(bWantInCar);
-	//// Start an engine sound playing
-	//EngineSoundComponent->Play();
+
+}
+
+void AMarsBuggy::RestartAll()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Inside restart"));
+
+	//if (!IsRunningDedicatedServer())
+	//{
+	//	auto cont = Cast<APlayerController>(GetController());
+
+	//	if (cont)
+	//	{
+	//		cont->UnPossess();
+	//		//DefaultPawnClass->Spawn
+
+	//		if (cont->GetPawn() == NULL)
+	//		{
+	//			//auto pawn = Cast<APawn>(DefaultPawnClass);
+	//			cont->Possess(this);
+	//			this->SetOwner(cont);
+
+	//			if (cont->GetPawn() == this)
+	//			{
+	//				this->Destroy();
+	//			}
+	//			else if (cont->GetPawn() != this)
+	//			{
+	//				cont->Possess(this);
+	//			}
+	//		}
+
+	//		cont->ServerRestartPlayer();
+	//		UE_LOG(LogTemp, Warning, TEXT("player server restart"));
+	//	}
+	//}
+		
 }
 
 void AMarsBuggy::OnResetVR()

@@ -86,5 +86,7 @@ public:
 		void OnPlayerSessionCreateSuccess(const FString& IPAddress, const FString& Port, const FString& PlayerSessionID);
 	UFUNCTION()
 		void OnPlayerSessionCreateFail(const FString& ErrorMessage);
+	
+	void WeHaveAPawn();
 };
 

@@ -5,6 +5,7 @@
 #include "UHRIGameInstance.h"
 #include "UObject/ConstructorHelpers.h"
 #include "GameLiftServerSDK.h"
+//#include "Engine/Engine.h"
 
 AUHRIGameMode::AUHRIGameMode()
 	: Super()
@@ -70,28 +71,72 @@ AUHRIGameMode::AUHRIGameMode()
 void AUHRIGameMode::PostLogin(APlayerController* NewPlayer)
 {
 	Super::PostLogin(NewPlayer);
-	++NumberOfPlayers;
+	
+	Players.Add(NewPlayer);
 
-	UE_LOG(LogTemp, Warning, TEXT("GameMode: Posted login for player %d"), NumberOfPlayers);
+
+	//	NewPlayer->ServerRestartPlayer();
+	//}
+	
+
+	//NewPlayer->ClientRestart(Cast<APawn>(DefaultPawnClass));
+
+	//if (GEngine) { GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Bye bye!"), true, FVector2D(2, 2)); }
+	
+	//FTimerHandle GameStartTimer;
+
+	//GetWorldTimerManager().SetTimer(GameStartTimer, this, &AUHRIGameMode::TimerRep, 10.0f, true, 20.0f);
+
+	// Call RepeatingFunction once per second, starting two seconds from now.
+//	GetWorldTimerManager().SetTimer(GameStartTimer, this, &AMarsDTMLevel::Quit, 2);
+
+	//GetWorldTimerManager().SetTimer(MemberTimerHandle, this, &AMyActor::RepeatingFunction, 1.0f, true, 2.0f);
 }
 
-void AUHRIGameMode::StartGame()
-{/*
- auto GameInstance = Cast<UUHRIGameInstance>(GetGameInstance());
- if (GameInstance == nullptr) return;
+void AUHRIGameMode::TimerRep()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Inside restart"));
 
- GameInstance->StartSession();
- */
-	/*UWorld* World = GetWorld();
-	if (!ensure(World != nullptr)) return;
+	auto cont = Players.Last();
 
-	bUseSeamlessTravel = true;
-	World->ServerTravel("/Game/Maps/GaleCrater?listen");*/
+	if (cont)
+	{
+		cont->UnPossess();
+		//DefaultPawnClass->Spawn
 
+		if (cont->GetPawn() == NULL)
+		{
+			auto pawn = Cast<APawn>(DefaultPawnClass);
+			cont->Possess(pawn);
+			pawn->SetOwner(cont);
+
+			if (cont->GetPawn() == pawn)
+			{
+				pawn->Destroy();
+			}
+			else if (cont->GetPawn() != pawn)
+			{
+				cont->Possess(pawn);
+			}
+		}
+
+		cont->ServerRestartPlayer();
+		UE_LOG(LogTemp, Warning, TEXT("player server restart"));
+	}
 }
+
 void AUHRIGameMode::Logout(AController* Exiting)
 {
 	Super::Logout(Exiting);
-	--NumberOfPlayers;
 }
 
+//[/ Script / Engine.GameEngine]
+//+ NetDriverDefinitions = (DefName = "GameNetDriver", DriverClassName = "OnlineSubsystemSteam.SteamNetDriver", DriverClassNameFallback = "OnlineSubsystemUtils.IpNetDriver")
+//
+//
+//[OnlineSubsystemSteam]
+//bEnabled = false
+//SteamDevAppId = 480
+//
+//[/ Script / OnlineSubsystemSteam.SteamNetDriver]
+//NetConnectionClassName = "OnlineSubsystemSteam.SteamNetConnection"

@@ -4944,15 +4944,15 @@
 			"Type" : "UFS"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-core.dll",
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/GameLiftClientSDK/Win64/aws-cpp-sdk-core.dll",
 			"Type" : "NonUFS"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-gamelift.dll",
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/GameLiftClientSDK/Win64/aws-cpp-sdk-gamelift.dll",
 			"Type" : "NonUFS"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/aws-cpp-sdk-cognito-identity.dll",
+			"Path" : "$(ProjectDir)/Plugins/GameLiftClientSDK/ThirdParty/GameLiftClientSDK/Win64/aws-cpp-sdk-cognito-identity.dll",
 			"Type" : "NonUFS"
 		},
 		{

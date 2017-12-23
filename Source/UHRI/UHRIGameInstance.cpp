@@ -11,6 +11,7 @@
 #include "GameLiftClientSDK/Public/GameLiftClientApi.h"
 #include "MenuSystem/MainMenu.h"
 #include "MenuSystem/MenuWidget.h"
+#include "TimerManager.h"
 
 const static FName SESSION_NAME = TEXT("Game");
 const static FName SERVER_NAME_SETTINGS_KEY = TEXT("ServerName");
@@ -56,7 +57,8 @@ void UUHRIGameInstance::Init()
 		UE_LOG(LogTemp, Warning, TEXT("Found NO OSS"));
 	}
 
-	
+	FTimerHandle GameStartTimer;
+	GetTimerManager().SetTimer(GameStartTimer, this, &UUHRIGameInstance::WeHaveAPawn, 1.0f, true, 2.0f);
 }
 
 // Blueprint callable 
@@ -346,10 +348,10 @@ void UUHRIGameInstance::DescribeGameSession(const FString& GameSessionID)
 void UUHRIGameInstance::OnDescribeGameSessionSuccess(const FString& SessionID, EGameLiftGameSessionStatus SessionState)
 {
 	// Player sessions can only be created on ACTIVE instance.
-	if (SessionState == EGameLiftGameSessionStatus::STATUS_Active)
+	/*if (SessionState == EGameLiftGameSessionStatus::STATUS_Active)
 	{
 		CreatePlayerSession(SessionID, "Your Unique Player ID");
-	}
+	}*/
 }
 
 void UUHRIGameInstance::OnDescribeGameSessionFailed(const FString& ErrorMessage)
@@ -375,11 +377,15 @@ void UUHRIGameInstance::OnPlayerSessionCreateSuccess(const FString& IPAddress, c
 	const FString TravelURL = IPAddress + ":" + Port;
 //	UGameplayStatics::GetPlayerController(this, 0)->ClientTravel(TravelURL, ETravelType::TRAVEL_Absolute);
 	
+	UEngine* Engine = GetEngine();
+	if (!ensure(Engine != nullptr)) return;
+	Engine->AddOnScreenDebugMessage(0, 5, FColor::Green, FString::Printf(TEXT("Joining %s"), *TravelURL));
+
+
 	APlayerController* PlayerController = GetFirstLocalPlayerController();
 	if (!ensure(PlayerController != nullptr)) return;
-
 	PlayerController->ClientTravel(TravelURL, ETravelType::TRAVEL_Absolute);
- 
+
 }
 
 void UUHRIGameInstance::OnPlayerSessionCreateFail(const FString& ErrorMessage)
@@ -387,4 +393,49 @@ void UUHRIGameInstance::OnPlayerSessionCreateFail(const FString& ErrorMessage)
  
 	// Do stuff...
  
+}
+
+void UUHRIGameInstance::WeHaveAPawn()
+{
+	APlayerController* PlayerController = GetFirstLocalPlayerController();
+
+	if (!IsRunningDedicatedServer())
+	{
+		if (PlayerController)
+		{
+			auto pawn = PlayerController->GetControlledPawn();
+
+			if (pawn)
+			{
+
+				UE_LOG(LogTemp, Warning, TEXT("Yes pawn, id: %i"), pawn->GetUniqueID());
+			}
+			else
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Yes controller, no pawn"));
+			}
+
+			auto ackpawn = PlayerController->AcknowledgedPawn;
+
+			if (ackpawn)
+			{
+
+				UE_LOG(LogTemp, Warning, TEXT("Yes ackpawn, id: %i"), ackpawn->GetUniqueID());
+			}
+			else
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Yes controller, no ackpawn"));
+			}
+
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("No local controller"));
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("dedicated server"));
+
+	}
 }

@@ -45,6 +45,8 @@ class UHRI_API AMarsBuggy : public AWheeledVehicle
 	//UPROPERTY(Category = Display, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	//	UAudioComponent* EngineSoundComponent;
 
+	class UInputComponent* PlayerComp;
+
 public:
 	AMarsBuggy();
 
@@ -121,6 +123,8 @@ private:
 
 	/** Update the gear and speed strings */
 	void UpdateHUDStrings();
+
+	void RestartAll();
 
 	/* Are we on a 'slippery' surface */
 	bool bIsLowFriction;
