@@ -2,7 +2,7 @@
 
 #include "UHRIGameMode.h"
 #include "TimerManager.h"
-#include "UHRIGameInstance.h"
+//#include "UHRIGameInstance.h"
 #include "UObject/ConstructorHelpers.h"
 #include "GameLiftServerSDK.h"
 //#include "Engine/Engine.h"
@@ -74,11 +74,16 @@ void AUHRIGameMode::PostLogin(APlayerController* NewPlayer)
 	
 	Players.Add(NewPlayer);
 
+	/*APawn* NewCharacter = SpawnDefaultPawnFor(NewPlayer, FindPlayerStart(NewPlayer));
 
+	if (NewCharacter)
+	{
+		NewPlayer->Possess(NewCharacter);
+	}*/
 	//	NewPlayer->ServerRestartPlayer();
 	//}
 	
-
+	//SpawnPlayerFromSimulate
 	//NewPlayer->ClientRestart(Cast<APawn>(DefaultPawnClass));
 
 	//if (GEngine) { GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, TEXT("Bye bye!"), true, FVector2D(2, 2)); }

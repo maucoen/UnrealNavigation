@@ -27,6 +27,10 @@ UUHRIGameInstance::UUHRIGameInstance(const FObjectInitializer & ObjectInitialize
 	ConstructorHelpers::FClassFinder<UUserWidget> InGameMenuBPClass(TEXT("/Game/MenuSystem/WBP_InGameMenu"));
 	if (!ensure(InGameMenuBPClass.Class != nullptr)) return;
 	InGameMenuClass = InGameMenuBPClass.Class;
+
+	
+	
+	
 }
 
 void UUHRIGameInstance::Init()
