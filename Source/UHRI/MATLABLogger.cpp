@@ -8,10 +8,6 @@
 AMATLABLogger::AMATLABLogger()
 	: Super()
 {
-	
-
-
-
 
 	// set default pawn class to spawn
 	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/VehicleAdv/MarsBuggy_BP"));
@@ -26,7 +22,7 @@ void AMATLABLogger::PostLogin(APlayerController* NewPlayer)
 {
 	Super::PostLogin(NewPlayer);
 
-	Players.Add(NewPlayer);
+	Players.Add(NewPlayer->GetPawn());
 
 	Matlab = engOpen(NULL);
 
@@ -42,22 +38,20 @@ void AMATLABLogger::PostLogin(APlayerController* NewPlayer)
 	engEvalString(Matlab, "view(-10, 35);");
 
 	FTimerHandle GameStartTimer;
-	GetWorldTimerManager().SetTimer(GameStartTimer, this, &AMATLABLogger::SendToMatlab, 1.0f, true, 10.0f);
+	GetWorldTimerManager().SetTimer(GameStartTimer, this, &AMATLABLogger::SendToMatlab, 0.2f, true, 10.0f);
+
+	//dynamic cast to access public location of first player's actor;
+	InitialPos = Players[0]->GetActorLocation();
 
 }
 
 void AMATLABLogger::SendToMatlab()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Sending to matlab"));
-
-
 	//dynamic cast to access public location of first player's actor;
-	auto pos = Cast<AActor, APlayerController>(Players[0])->GetActorLocation();
+	auto pos = Players[0]->GetActorLocation() - InitialPos;
 
 	double posy[3] = { pos.X, pos.Y, pos.Z };
 
-	UE_LOG(LogTemp, Warning, TEXT("Sending to matlab"));
-	
 	/*
 	* Create a variable from our data
 	*/
@@ -68,14 +62,17 @@ void AMATLABLogger::SendToMatlab()
 	* Place the variable T into the MATLAB workspace
 	*/
 	engPutVariable(Matlab, "T", T);
-	engEvalString(Matlab, "stem3(T(1),T(2),T(3));");
+	engEvalString(Matlab, "scatter3(T(1),T(2),T(3),'d');");
 
 }
 
 void AMATLABLogger::Logout(AController* Exiting)
 {
 	Super::Logout(Exiting);
-
-	engClose(Matlab);
+	
+	// save to filepath and close engine
+	engEvalString(Matlab, "saveas(gcf,'D:\\Epic\\Projects\\UHRI\\Saved\\matlab\\stem.png')");
+	engEvalString(Matlab, "save('D:\\Epic\\Projects\\UHRI\\Saved\\matlab\\stem.mat')");
+	engClose(Matlab); 
 }
 

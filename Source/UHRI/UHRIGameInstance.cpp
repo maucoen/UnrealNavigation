@@ -412,11 +412,11 @@ void UUHRIGameInstance::WeHaveAPawn()
 			if (pawn)
 			{
 
-				UE_LOG(LogTemp, Warning, TEXT("Yes pawn, id: %i"), pawn->GetUniqueID());
+				//UE_LOG(LogTemp, Warning, TEXT("Yes pawn, id: %i"), pawn->GetUniqueID());
 			}
 			else
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Yes controller, no pawn"));
+				//UE_LOG(LogTemp, Warning, TEXT("Yes controller, no pawn"));
 			}
 
 			auto ackpawn = PlayerController->AcknowledgedPawn;
@@ -424,11 +424,11 @@ void UUHRIGameInstance::WeHaveAPawn()
 			if (ackpawn)
 			{
 
-				UE_LOG(LogTemp, Warning, TEXT("Yes ackpawn, id: %i"), ackpawn->GetUniqueID());
+				//UE_LOG(LogTemp, Warning, TEXT("Yes ackpawn, id: %i"), ackpawn->GetUniqueID());
 			}
 			else
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Yes controller, no ackpawn"));
+				//UE_LOG(LogTemp, Warning, TEXT("Yes controller, no ackpawn"));
 			}
 
 		}
