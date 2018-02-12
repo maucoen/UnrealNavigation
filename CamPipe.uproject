@@ -1,0 +1,31 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{1B937CE2-1F0C-1201-0024-030A90D6A4D8}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "CamPipe",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "PhysXVehicles",
+			"Enabled": true
+		},
+		{
+			"Name": "RawInput",
+			"Enabled": true
+		},
+		{
+			"Name": "UnrealCV",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/4809705257f14ee596aa68479ffaa7f8"
+		}
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 4,
+	"VersionName": "0.3.10",
+	"FriendlyName": "Unreal CV",
+	"Description": "UnrealCV is a plugin to connect computer vision algorithm and the games built by Unreal Engine",
+	"Category": "Science",
+	"CreatedBy": "Weichao Qiu",
+	"CreatedByURL": "http://unrealcv.org",
+	"DocsURL": "http://docs.unrealcv.org",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/4809705257f14ee596aa68479ffaa7f8",
+	"SupportURL": "",
+	"EngineVersion": "4.18.0",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "UnrealCV",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		}
+	]
+}
