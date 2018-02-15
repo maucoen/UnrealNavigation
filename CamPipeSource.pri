@@ -7322,6 +7322,8 @@ SOURCES += \
 	"$$CamPipeRootPath/Source/CamPipe/CamPipeWheelFront.cpp" \
 	"$$CamPipeRootPath/Source/CamPipe/CamPipeWheelRear.cpp" \
 	"$$CamPipeRootPath/Source/CamPipe/CamPublisher.cpp" \
+	"$$CamPipeRootPath/Source/CamPipe/ROSImagePublisher.cpp" \
+	"$$CamPipeRootPath/Source/CamPipe/ROSLoggerSimState.cpp" \
 	"$$CamPipeRootPath/Source/CamPipe/ROSTransformPublisher.cpp" \
  
 

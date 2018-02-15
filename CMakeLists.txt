@@ -7335,6 +7335,8 @@ set(SOURCE_FILES
 	"${GAME_ROOT_PATH}/Source/CamPipe/CamPipeWheelFront.cpp"
 	"${GAME_ROOT_PATH}/Source/CamPipe/CamPipeWheelRear.cpp"
 	"${GAME_ROOT_PATH}/Source/CamPipe/CamPublisher.cpp"
+	"${GAME_ROOT_PATH}/Source/CamPipe/ROSImagePublisher.cpp"
+	"${GAME_ROOT_PATH}/Source/CamPipe/ROSLoggerSimState.cpp"
 	"${GAME_ROOT_PATH}/Source/CamPipe/ROSTransformPublisher.cpp"
  )
 
@@ -16815,6 +16817,8 @@ set(HEADER_FILES
 	"${GAME_ROOT_PATH}/Plugins/UROSBridge/Source/UROSBridge/Public/rosgraph_msgs/Clock.h"
 	"${GAME_ROOT_PATH}/Plugins/UROSBridge/Source/UROSBridge/Public/rospy_tutorials/AddTwoInts.h"
 	"${GAME_ROOT_PATH}/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/ChannelFloat32.h"
+	"${GAME_ROOT_PATH}/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/CompressedImage.h"
+	"${GAME_ROOT_PATH}/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/Image.h"
 	"${GAME_ROOT_PATH}/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/JointState.h"
 	"${GAME_ROOT_PATH}/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/PointCloud2.h"
 	"${GAME_ROOT_PATH}/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/PointField.h"
@@ -16866,6 +16870,8 @@ set(HEADER_FILES
 	"${GAME_ROOT_PATH}/Source/CamPipe/CamPipeWheelFront.h"
 	"${GAME_ROOT_PATH}/Source/CamPipe/CamPipeWheelRear.h"
 	"${GAME_ROOT_PATH}/Source/CamPipe/CamPublisher.h"
+	"${GAME_ROOT_PATH}/Source/CamPipe/ROSImagePublisher.h"
+	"${GAME_ROOT_PATH}/Source/CamPipe/ROSLoggerSimState.h"
 	"${GAME_ROOT_PATH}/Source/CamPipe/ROSTransformPublisher.h"
  )
 

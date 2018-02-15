@@ -10,6 +10,8 @@ public class CamPipe : ModuleRules
 
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore",
             "UROSBridge",
+			"UCoordConv",
+			"UnrealCV",
             "Json",
             "JsonUtilities","PhysXVehicles", "HeadMountedDisplay" });
 

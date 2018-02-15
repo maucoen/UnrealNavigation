@@ -9475,6 +9475,8 @@ HEADERS += \
 	"$$CamPipeRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/rosgraph_msgs/Clock.h" \
 	"$$CamPipeRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/rospy_tutorials/AddTwoInts.h" \
 	"$$CamPipeRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/ChannelFloat32.h" \
+	"$$CamPipeRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/CompressedImage.h" \
+	"$$CamPipeRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/Image.h" \
 	"$$CamPipeRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/JointState.h" \
 	"$$CamPipeRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/PointCloud2.h" \
 	"$$CamPipeRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/PointField.h" \
@@ -9526,6 +9528,8 @@ HEADERS += \
 	"$$CamPipeRootPath/Source/CamPipe/CamPipeWheelFront.h" \
 	"$$CamPipeRootPath/Source/CamPipe/CamPipeWheelRear.h" \
 	"$$CamPipeRootPath/Source/CamPipe/CamPublisher.h" \
+	"$$CamPipeRootPath/Source/CamPipe/ROSImagePublisher.h" \
+	"$$CamPipeRootPath/Source/CamPipe/ROSLoggerSimState.h" \
 	"$$CamPipeRootPath/Source/CamPipe/ROSTransformPublisher.h" \
  
 

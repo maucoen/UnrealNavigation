@@ -4,17 +4,19 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "ROSTransformPublisher.generated.h"
+#include "ROSBridgeHandler.h"
+#include "UnrealNetwork.h"
+#include "ROSImagePublisher.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class CAMPIPE_API UROSTransformPublisher : public UActorComponent
+class CAMPIPE_API UROSImagePublisher : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UROSTransformPublisher();
+	UROSImagePublisher();
 
 protected:
 	// Called when the game starts
@@ -24,20 +26,30 @@ protected:
 
 	void SendToROS();
 
-	class AROSLoggerSimState* GameState;
-
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
  	// Add a smart pointer to ROSBridgeHandler
+
     UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+    AActor* Owner;
+
+	uint32 Count;
+
+	// Add a smart pointer to ROSBridgeHandler
+    TSharedPtr<FROSBridgeHandler> Handler;
+
+	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+    FString IPAddress;
+
+    UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+    uint32 Port;
+
+	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
     FString Topic;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
     FString Type;
 
-    UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-    AActor* Owner;
-		
 };

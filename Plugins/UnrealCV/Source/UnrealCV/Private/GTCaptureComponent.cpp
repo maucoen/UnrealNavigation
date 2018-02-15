@@ -144,9 +144,12 @@ UGTCaptureComponent* UGTCaptureComponent::Create(APawn* InPawn, TArray<FString> 
 		CaptureComponent->AttachToComponent(GTCapturer, AttachmentRules);
 		InitCaptureComponent(CaptureComponent);
 
+		UE_LOG(LogUnrealCV, Warning, TEXT("mode is %s"), *Mode);
+
 		UMaterial* Material = GetMaterial(Mode);
 		if (Mode == "lit") // For rendered images
 		{
+			UE_LOG(LogUnrealCV, Warning, TEXT("inside mode lit"));
 			// FViewMode::Lit(CaptureComponent->ShowFlags);
 			CaptureComponent->TextureTarget->TargetGamma = GEngine->GetDisplayGamma();
 			// float DisplayGamma = SceneViewport->GetDisplayGamma();
