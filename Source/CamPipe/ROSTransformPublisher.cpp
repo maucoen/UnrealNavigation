@@ -15,8 +15,8 @@ UROSTransformPublisher::UROSTransformPublisher()
 	PrimaryComponentTick.bCanEverTick = true;
 
     // Set rostopic name which publish strings
-    Topic = TEXT("BuggyTransform");
-    Type = TEXT("geometry_msgs/Transform");
+    //Topic = TEXT("BuggyTransform");
+    //Type = TEXT("geometry_msgs/Transform");
 
     Owner = GetOwner();
 }
@@ -61,5 +61,5 @@ void UROSTransformPublisher::SendToROS()
 	// Transform to ROS coordinate system
     FTransform TF = Owner->GetActorTransform();
     //Send tf to gamestate
-    GameState->PublishTransform(Topic,TF);
+    //GameState->PublishTransform(Topic,TF);
 }

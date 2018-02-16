@@ -598,7 +598,8 @@ FExecStatus FCameraCommandHandler::GetPngBinary(const TArray<FString>& Args, con
 		return FExecStatus::Error(FString::Printf(TEXT("Invalid camera id %d"), CameraId));
 	}
 
-	TArray<uint8> ImgData = GTCapturer->CapturePng(ViewMode);
+	TArray<uint8> ImgData; //= GTCapturer->CapturePng(ViewMode);
+	//TArray<FColor> ImgData = GTCapturer->CapturePng(ViewMode);
 	return FExecStatus::Binary(ImgData);
 }
 

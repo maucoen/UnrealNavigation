@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "Components/SceneCaptureComponent2D.h"
 #include "ROSBridgeHandler.h"
 #include "UnrealNetwork.h"
 #include "ROSImagePublisher.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class CAMPIPE_API UROSImagePublisher : public UActorComponent
+class CAMPIPE_API UROSImagePublisher : public USceneCaptureComponent2D
 {
 	GENERATED_BODY()
 
@@ -51,5 +51,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
     FString Type;
+
+	class UGTCaptureComponent* GTCapturer;
+
+	TArray<uint8> SceneCapture(USceneCaptureComponent2D* This);
 
 };

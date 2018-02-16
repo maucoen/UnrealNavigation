@@ -34,6 +34,8 @@ public:
 
 	static UMaterial* GetMaterial(FString ModeName);
 
+	void SavePng(UTextureRenderTarget2D* RenderTarget, FString Filename);
+
 	// virtual void Tick(float DeltaTime) override; // TODO
 	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override; // TODO
 
@@ -43,7 +45,8 @@ public:
 	FAsyncRecord* Capture(FString Mode, FString Filename);
 
 	/** Read binary data in png format */
-	TArray<uint8> CapturePng(FString Mode);
+	//TArray<uint8> CapturePng(FString Mode);
+	TArray<FColor> CapturePng(FString Mode);
 
 	/** Read binary data in uncompressed numpy array */
 	TArray<uint8> CaptureNpyUint8(FString Mode, int32 Channels);
@@ -53,9 +56,14 @@ public:
 
 	USceneCaptureComponent2D* GetCaptureComponent(FString Mode);
 
+	TArray<uint8> ImgAData;
+
+	//TSharedPtr<TArray<uint8>> ImggDat;
+
 private:
 	const bool bIsTicking = true;
 
 	TQueue<FGTCaptureTask, EQueueMode::Spsc> PendingTasks;
 	TMap<FString, USceneCaptureComponent2D*> CaptureComponents;
+	
 };

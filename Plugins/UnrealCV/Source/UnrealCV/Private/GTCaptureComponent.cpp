@@ -30,6 +30,7 @@ void InitCaptureComponent(USceneCaptureComponent2D* CaptureComponent)
 
 	CaptureComponent->RegisterComponentWithWorld(World); // What happened for this?
 	// CaptureComponent->AddToRoot(); This is not necessary since it has been attached to the Pawn.
+
 }
 
 
@@ -46,7 +47,7 @@ void SaveExr(UTextureRenderTarget2D* RenderTarget, FString Filename)
 	FFileHelper::SaveArrayToFile(ExrData, *Filename);
 }
 
-void SavePng(UTextureRenderTarget2D* RenderTarget, FString Filename)
+void UGTCaptureComponent::SavePng(UTextureRenderTarget2D* RenderTarget, FString Filename)
 {
 	SCOPE_CYCLE_COUNTER(STAT_SavePng);
 
@@ -228,15 +229,14 @@ FAsyncRecord* UGTCaptureComponent::Capture(FString Mode, FString InFilename)
 	return AsyncRecord;
 }
 
-TArray<uint8> UGTCaptureComponent::CapturePng(FString Mode)
+TArray<FColor> UGTCaptureComponent::CapturePng(FString Mode)
 {
 	// Flush location and rotation
 	check(CaptureComponents.Num() != 0);
 	USceneCaptureComponent2D* CaptureComponent = CaptureComponents.FindRef(Mode);
 
 	TArray<uint8> ImgData;
-	if (CaptureComponent == nullptr)
-		return ImgData;
+	//if (CaptureComponent == nullptr)return ImgData;
 
 	// Attach this to something, for example, a real camera
 	const FRotator PawnViewRotation = Pawn->GetViewRotation();
@@ -259,9 +259,11 @@ TArray<uint8> UGTCaptureComponent::CapturePng(FString Mode)
 												  // Instead of using this flag, we will set the gamma to the correct value directly
 	RenderTargetResource->ReadPixels(Image, ReadSurfaceDataFlags);
 	ImageWrapper->SetRaw(Image.GetData(), Image.GetAllocatedSize(), Width, Height, ERGBFormat::BGRA, 8);
-	ImgData = ImageWrapper->GetCompressed();
-
-	return ImgData;
+	
+	//ImgData = Image.GetData();
+	//ImgData = ImageWrapper->GetCompressed();
+	//ImageWrapper->GetRaw(ERGBFormat::BGRA, 8, ImgData);
+	return Image;
 }
 
 TArray<uint8> UGTCaptureComponent::CaptureNpyUint8(FString Mode, int32 Channels)
@@ -503,7 +505,19 @@ void UGTCaptureComponent::TickComponent(float DeltaTime, enum ELevelTick TickTyp
 			FString LowerCaseFilename = Task.Filename.ToLower();
 			if (LowerCaseFilename.EndsWith("png"))
 			{
+				//UE_LOG(LogUnrealCV, Warning, TEXT("about to save png"));
+				//ImgAData.Empty();
 				SavePng(CaptureComponent->TextureTarget, Task.Filename);
+			
+			
+	 			//TSharedPtr<TArray<uint8>> ImggDat = MakeShareable(new TArray<uint8>());
+				//ImggDat->Append(ImgAData);
+   			 	//UE_LOG(LogTemp, Warning, TEXT("about to check size"));
+    			//if (ImgAData.Num() > 0)
+				//{
+					//UE_LOG(LogTemp, Warning, TEXT("is %d"), ImgAData.Num());
+				//}
+				
 			}
 			else if (LowerCaseFilename.EndsWith("exr"))
 			{
