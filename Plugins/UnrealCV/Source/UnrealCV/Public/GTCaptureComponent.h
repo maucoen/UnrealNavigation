@@ -41,12 +41,18 @@ public:
 
 	void SetFOVAngle(float FOV);
 
+	/** Export raw png image data **/
+	TArray<FColor> ExportPng(UTextureRenderTarget2D* RenderTarget);
+
+	/** Export compressed png image data **/
+	TArray<uint8> ExportPngCompressed(UTextureRenderTarget2D* RenderTarget);
+
 	/** Save image to a file */
 	FAsyncRecord* Capture(FString Mode, FString Filename);
 
 	/** Read binary data in png format */
 	//TArray<uint8> CapturePng(FString Mode);
-	TArray<FColor> CapturePng(FString Mode);
+	TArray<uint8> CapturePng(FString Mode);
 
 	/** Read binary data in uncompressed numpy array */
 	TArray<uint8> CaptureNpyUint8(FString Mode, int32 Channels);

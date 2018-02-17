@@ -66,8 +66,62 @@ void UGTCaptureComponent::SavePng(UTextureRenderTarget2D* RenderTarget, FString 
 		// Instead of using this flag, we will set the gamma to the correct value directly
 		RenderTargetResource->ReadPixels(Image, ReadSurfaceDataFlags);
 	}
+	UE_LOG(LogTemp, Warning, TEXT("Image data in SavePng pre Serialisation is %d, %d, %d, %d"),Image[1001].R,Image[1001].G,Image[1001].B,Image[1001].A);
 	TArray<uint8> ImgData = SerializationUtils::Image2Png(Image, Width, Height);
+	UE_LOG(LogTemp, Warning, TEXT("INSIDE SavePnG"));
 	FFileHelper::SaveArrayToFile(ImgData, *Filename);
+}
+
+TArray<FColor> UGTCaptureComponent::ExportPng(UTextureRenderTarget2D* RenderTarget)
+{
+	SCOPE_CYCLE_COUNTER(STAT_SavePng);
+
+	int32 Width = RenderTarget->SizeX, Height = RenderTarget->SizeY;
+	TArray<FColor> Image;
+	FTextureRenderTargetResource* RenderTargetResource;
+	Image.AddZeroed(Width * Height);
+	{
+		SCOPE_CYCLE_COUNTER(STAT_GetResource);
+		RenderTargetResource = RenderTarget->GameThread_GetRenderTargetResource();
+	}
+	{
+		SCOPE_CYCLE_COUNTER(STAT_ReadPixels);
+		FReadSurfaceDataFlags ReadSurfaceDataFlags;
+		ReadSurfaceDataFlags.SetLinearToGamma(false); // This is super important to disable this!
+		// Instead of using this flag, we will set the gamma to the correct value directly
+		RenderTargetResource->ReadPixels(Image, ReadSurfaceDataFlags);
+	}
+	// UE_LOG(LogTemp, Warning, TEXT("Image data in ExportPng pre Serialisation is %d, %d, %d, %d"),Image[1001].R,Image[1001].G,Image[1001].B,Image[1001].A);
+	// TArray<uint8> ImgData = SerializationUtils::Image2Png(Image, Width, Height);
+	UE_LOG(LogTemp, Warning, TEXT("INSIDE ExportPnG"));
+	// FFileHelper::SaveArrayToFile(ImgData, TEXT("test_file_in_exportpng.png"));
+	return Image;//ImgData;
+}
+
+TArray<uint8> UGTCaptureComponent::ExportPngCompressed(UTextureRenderTarget2D* RenderTarget)
+{
+	SCOPE_CYCLE_COUNTER(STAT_SavePng);
+
+	int32 Width = RenderTarget->SizeX, Height = RenderTarget->SizeY;
+	TArray<FColor> Image;
+	FTextureRenderTargetResource* RenderTargetResource;
+	Image.AddZeroed(Width * Height);
+	{
+		SCOPE_CYCLE_COUNTER(STAT_GetResource);
+		RenderTargetResource = RenderTarget->GameThread_GetRenderTargetResource();
+	}
+	{
+		SCOPE_CYCLE_COUNTER(STAT_ReadPixels);
+		FReadSurfaceDataFlags ReadSurfaceDataFlags;
+		ReadSurfaceDataFlags.SetLinearToGamma(false); // This is super important to disable this!
+		// Instead of using this flag, we will set the gamma to the correct value directly
+		RenderTargetResource->ReadPixels(Image, ReadSurfaceDataFlags);
+	}
+	// UE_LOG(LogTemp, Warning, TEXT("Image data in ExportPng pre Serialisation is %d, %d, %d, %d"),Image[1001].R,Image[1001].G,Image[1001].B,Image[1001].A);
+	TArray<uint8> ImgData = SerializationUtils::Image2Png(Image, Width, Height);
+	UE_LOG(LogTemp, Warning, TEXT("INSIDE ExportPnGCompressed"));
+	// FFileHelper::SaveArrayToFile(ImgData, TEXT("test_file_in_exportpng.png"));
+	return ImgData;
 }
 
 UMaterial* UGTCaptureComponent::GetMaterial(FString InModeName = TEXT(""))
@@ -229,7 +283,7 @@ FAsyncRecord* UGTCaptureComponent::Capture(FString Mode, FString InFilename)
 	return AsyncRecord;
 }
 
-TArray<FColor> UGTCaptureComponent::CapturePng(FString Mode)
+TArray<uint8> UGTCaptureComponent::CapturePng(FString Mode)
 {
 	// Flush location and rotation
 	check(CaptureComponents.Num() != 0);
@@ -258,12 +312,20 @@ TArray<FColor> UGTCaptureComponent::CapturePng(FString Mode)
 	ReadSurfaceDataFlags.SetLinearToGamma(false); // This is super important to disable this!
 												  // Instead of using this flag, we will set the gamma to the correct value directly
 	RenderTargetResource->ReadPixels(Image, ReadSurfaceDataFlags);
+	// UE_LOG(LogTemp, Warning, TEXT("Width is %d, Height is %d"),Width, Height);
 	ImageWrapper->SetRaw(Image.GetData(), Image.GetAllocatedSize(), Width, Height, ERGBFormat::BGRA, 8);
-	
+	// ImageWrapper->SetRaw(Image.GetData(), Image.GetAllocatedSize(), Width, Height, ERGBFormat::Gray, 8);
+
+	UE_LOG(LogTemp, Warning, TEXT("Image data in CapturePNG pre compression is %d, %d, %d, %d"),Image[1001].R,Image[1001].G,Image[1001].B,Image[1001].A);
+
 	//ImgData = Image.GetData();
-	//ImgData = ImageWrapper->GetCompressed();
-	//ImageWrapper->GetRaw(ERGBFormat::BGRA, 8, ImgData);
-	return Image;
+	ImgData = ImageWrapper->GetCompressed((int32)1); //1 should be uncompressed, 0 is default
+	// ImgData = ImageWrapper->GetRaw();
+	// TArray<uint8>& ImgDataRef = ImgData;
+
+	// ImageWrapper->GetRaw(ERGBFormat::BGRA, 8, ImgDataRef);
+
+	return ImgData;//.GetData()//ImgData;//Image;
 }
 
 TArray<uint8> UGTCaptureComponent::CaptureNpyUint8(FString Mode, int32 Channels)
@@ -296,6 +358,7 @@ TArray<uint8> UGTCaptureComponent::CaptureNpyUint8(FString Mode, int32 Channels)
 	// Instead of using this flag, we will set the gamma to the correct value directly
 	RenderTargetResource->ReadPixels(ImageData, ReadSurfaceDataFlags);
 
+	UE_LOG(LogTemp, Warning, TEXT("Image data before serialize is %d, %d, %d, %d"),ImageData[1001].R,ImageData[1001].G,ImageData[1001].B,ImageData[1001].A);
 	// Check the byte order of data
 	// Compress image data to npy array
 	// Generate a header for the numpy array
@@ -342,13 +405,13 @@ TArray<uint8> UGTCaptureComponent::CaptureNpyFloat16(FString Mode, int32 Channel
 TArray<uint8> UGTCaptureComponent::NpySerialization(TArray<FColor> ImageData, int32 Width, int32 Height, int32 Channel)
 {
 	uint8 *TypePointer = nullptr; // Only used for determing the type
-
+	UE_LOG(LogTemp, Warning, TEXT("INSIDE NPySerialization"));
 	std::vector<int> Shape;
 	Shape.push_back(Height);
 	Shape.push_back(Width);
 	if (Channel != 1) Shape.push_back(Channel);
 
-	std::vector<char> NpyHeader = cnpy::create_npy_header(TypePointer, Shape);
+	// std::vector<char> NpyHeader;// = cnpy::create_npy_header(TypePointer, Shape);
 
 	// Append the actual data
 	// FIXME: A slow implementation to convert TArray<FFloat16Color> to binary.
@@ -362,7 +425,7 @@ TArray<uint8> UGTCaptureComponent::NpySerialization(TArray<FColor> ImageData, in
 	// std::vector<char> NpyData;
 	std::vector<uint8> Uint8Data;
 	Uint8Data.reserve(ImageData.Num() * Channel);
-
+	UE_LOG(LogTemp, Warning, TEXT("Image data in serialize is %d, %d, %d, %d"),ImageData[101].R,ImageData[101].G,ImageData[101].B,ImageData[101].A);
 	for (int i = 0; i < ImageData.Num(); i++)
 	{
 		if (Channel == 1)
@@ -384,6 +447,7 @@ TArray<uint8> UGTCaptureComponent::NpySerialization(TArray<FColor> ImageData, in
 			Uint8Data.push_back(ImageData[i].A);
 		}
 	}
+	UE_LOG(LogTemp, Warning, TEXT("Uint8Data %d, %d, %d, %d"),Uint8Data[401],Uint8Data[402],Uint8Data[403],Uint8Data[404]);	
 	check(Uint8Data.size() == Width * Height * Channel);
 	// Convert to binary array
 	const unsigned char* bytes = reinterpret_cast<const unsigned char*>(&Uint8Data[0]);
@@ -392,11 +456,12 @@ TArray<uint8> UGTCaptureComponent::NpySerialization(TArray<FColor> ImageData, in
 	// https://stackoverflow.com/questions/11022099/convert-float-vector-to-byte-vector-and-back
 	std::vector<unsigned char> NpyData(bytes, bytes + sizeof(uint8) * Uint8Data.size());
 
-	NpyHeader.insert(NpyHeader.end(), NpyData.begin(), NpyData.end());
+	//NpyHeader.insert(NpyHeader.end(), NpyData.begin(), NpyData.end());
+	// NpyHeader.insert(NpyData.begin(), NpyData.end());
 
 	// FIXME: Find a more efficient implementation
 	TArray<uint8> BinaryData;
-	for (char Element : NpyHeader)
+	for (char Element : NpyData)
 	{
 		BinaryData.Add(Element);
 	}
@@ -468,19 +533,19 @@ void UGTCaptureComponent::TickComponent(float DeltaTime, enum ELevelTick TickTyp
 	// from ab237f46dc0eee40263acbacbe938312eb0dffbb:CameraComponent.cpp:232
 	check(this->Pawn); // this GTCapturer should be released, if the Pawn is deleted.
 	const APawn* OwningPawn = this->Pawn;
-	const AController* OwningController = OwningPawn ? OwningPawn->GetController() : nullptr;
-	if (OwningController && OwningController->IsLocalPlayerController())
+	// const AController* OwningController = OwningPawn ? OwningPawn->GetController() : nullptr;
+	// if (OwningController && OwningController->IsLocalPlayerController())
+	// {
+	const FRotator PawnViewRotation = OwningPawn->GetActorRotation();
+	for (auto Elem : CaptureComponents)
 	{
-		const FRotator PawnViewRotation = OwningPawn->GetViewRotation();
-		for (auto Elem : CaptureComponents)
+		USceneCaptureComponent2D* CaptureComponent = Elem.Value;
+		if (!PawnViewRotation.Equals(CaptureComponent->GetComponentRotation()))
 		{
-			USceneCaptureComponent2D* CaptureComponent = Elem.Value;
-			if (!PawnViewRotation.Equals(CaptureComponent->GetComponentRotation()))
-			{
-				CaptureComponent->SetWorldRotation(PawnViewRotation);
-			}
+			CaptureComponent->SetWorldRotation(PawnViewRotation);
 		}
 	}
+	// }
 
 	while (!PendingTasks.IsEmpty())
 	{

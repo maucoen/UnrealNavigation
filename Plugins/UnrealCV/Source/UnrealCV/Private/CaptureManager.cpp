@@ -34,6 +34,7 @@ UGTCaptureComponent* FCaptureManager::GetCamera(int32 CameraId)
 	}
 	else
 	{
+		UE_LOG(LogTemp, Warning, TEXT("No camera for input ID %d"),CameraId);
 		return nullptr;
 	}
 }

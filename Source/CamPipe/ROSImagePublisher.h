@@ -6,6 +6,7 @@
 #include "Components/SceneCaptureComponent2D.h"
 #include "ROSBridgeHandler.h"
 #include "UnrealNetwork.h"
+#include "GTCaptureComponent.h"
 #include "ROSImagePublisher.generated.h"
 
 
@@ -24,7 +25,9 @@ protected:
 
 	virtual void EndPlay(const EEndPlayReason::Type Reason);
 
-	void SendToROS();
+	void EnqueueROSTask();
+
+	void SendToROS(UTextureRenderTarget2D* RenderTarget);
 
 public:	
 	// Called every frame
@@ -56,4 +59,10 @@ public:
 
 	TArray<uint8> SceneCapture(USceneCaptureComponent2D* This);
 
+private:
+
+	APawn* CastedPawn;
+
+	TQueue<FGTCaptureTask, EQueueMode::Spsc> PendingTasksROS;
+	// TMap<FString, USceneCaptureComponent2D*> CaptureComponents;
 };
