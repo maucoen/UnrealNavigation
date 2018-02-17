@@ -194,7 +194,6 @@ void ACamPipePawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputC
 void ACamPipePawn::MoveForward(float Val)
 {
 	GetVehicleMovementComponent()->SetThrottleInput(Val);
-
 }
 
 void ACamPipePawn::MoveRight(float Val)
