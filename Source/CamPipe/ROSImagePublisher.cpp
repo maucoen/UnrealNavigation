@@ -85,6 +85,7 @@ void UROSImagePublisher::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 		}
 		else
 		{
+<<<<<<< HEAD
             // Capture Image
             TArray<uint8> ImgData;
             if (bIsCompressed)
@@ -100,6 +101,19 @@ void UROSImagePublisher::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 		    ROSHeader.SetStamp(FROSTime());
 
             // Send to ROS asynchronously!
+=======
+            // TODO: ASYNC
+            //SendToROS();
+
+            // Serialise 
+            TArray<uint8> ImgData = GTCapturer->CaptureNpyUint8(TEXT("lit"), channels);
+		    UE_LOG(LogTemp, Warning, TEXT("captured!"));
+       
+            // TODO check that this timing is right - if it is actually captured a lot later, and the time stamp is from now, then it might not be correct
+            auto Header = std_msgs::Header(++Count, FROSTime(), TEXT("0"));
+            
+            // Instantiate a copy of the actual task, and queue the task for execution with StartBackgroundTask()
+>>>>>>> bc6ee48153eb6bf8ecedc6f3be7d7b8e786a38ea
             (new FAutoDeleteAsyncTask<FSendToROS>(
                 Handler, 
                 ImgData,
