@@ -193,12 +193,12 @@ void ACamPipePawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputC
 
 void ACamPipePawn::MoveForward(float Val)
 {
-	GetVehicleMovementComponent()->SetThrottleInput(Val);
+	// GetVehicleMovementComponent()->SetThrottleInput(Val);
 }
 
 void ACamPipePawn::MoveRight(float Val)
 {
-	GetVehicleMovementComponent()->SetSteeringInput(Val);
+	// GetVehicleMovementComponent()->SetSteeringInput(Val);
 }
 
 void ACamPipePawn::OnHandbrakePressed()

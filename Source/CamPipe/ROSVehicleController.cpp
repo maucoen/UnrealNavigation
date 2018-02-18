@@ -21,9 +21,30 @@ void UROSVehicleController::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
+    // auto Root = Owner->GetRootComponent();
+    // UE_LOG(LogTemp, Warning, TEXT("root worked"));
+    // this->AttachToComponent(Root, FAttachmentTransformRules::SnapToTargetIncludingScale);
 	
+    // Set websocket server address to default
+    Handler = MakeShareable<FROSBridgeHandler>(new FROSBridgeHandler(IPAddress, Port));
+
+    // **** Create Subscriber here ****
+	Handler->AddSubscriber(
+		MakeShareable<FROSControllerSubscriberCallback>(
+        new FROSControllerSubscriberCallback(Owner, Type, Topic)));
+
+   	UE_LOG(LogTemp, Warning, TEXT("Added subscriber for control messges"));
+       
+    //Connect to ROSBridge Websocket server.
+    Handler->Connect();
 }
 
+// Called when game ends or actor deleted
+void UROSVehicleController::EndPlay(const EEndPlayReason::Type Reason)
+{
+    Handler->Disconnect();
+    Super::EndPlay(Reason);
+}
 
 // Called every frame
 void UROSVehicleController::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -31,59 +52,7 @@ void UROSVehicleController::TickComponent(float DeltaTime, ELevelTick TickType, 
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+
+    if(Handler.IsValid()) Handler->Process();
 }
 
-// Copyright 2017, Institute for Artificial Intelligence - University of Bremen
-
-#pragma once
-
-#include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "RRobot.h"
-#include "ROSBridgeHandler.h"
-#include "ROSBridgeSubscriber.h"
-#include "sensor_msgs/JointState.h"
-
-/*
-class FRobotForceSubscriberCallback : public FROSBridgeSubscriber 
-{
-public:
-    FRobotForceSubscriberCallback(ARRobot* InRobot, const FString& InTopic) :
-        FROSBridgeSubscriber(InTopic, TEXT("sensor_msgs/JointState"))
-    {
-        Robot = InRobot;
-    }
-
-    ~FRobotForceSubscriberCallback() override {};
-
-    TSharedPtr<FROSBridgeMsg> ParseMessage(TSharedPtr<FJsonObject> JsonObject) const override
-    {
-        TSharedPtr<sensor_msgs::JointState> JointStateMessage =
-            MakeShareable<sensor_msgs::JointState>(new sensor_msgs::JointState());
-        JointStateMessage->FromJson(JsonObject);
-
-        return StaticCastSharedPtr<FROSBridgeMsg>(JointStateMessage);
-    }
-
-    void Callback(TSharedPtr<FROSBridgeMsg> msg) override
-    {
-        TSharedPtr<sensor_msgs::JointState> JointStateMessage = StaticCastSharedPtr<sensor_msgs::JointState>(msg);
-
-        TArray<FString> ListJointName = JointStateMessage->GetName();
-        TArray<double> ListJointForce = JointStateMessage->GetEffort();
-        UE_LOG(LogTemp, Warning, TEXT("ListJointName.Num() = %d"), ListJointName.Num());
-
-        checkf(ListJointName.Num() == ListJointForce.Num(), TEXT("Error: Length of JointName and JointForce aren't equal."));
-
-        for (int i = 0; i < ListJointName.Num(); i++)
-        {
-            FString JointName = ListJointName[i];
-            double JointEffort = ListJointForce[i];
-            Robot->AddForceToJoint(JointName, JointEffort * 10000);
-        }
-        return;
-    }
-
-private:
-	ARRobot * Robot;
-}; */

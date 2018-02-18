@@ -109,7 +109,7 @@ void UROSImagePublisher::TickComponent(float DeltaTime, ELevelTick TickType, FAc
             TArray<uint8> ImgData = GTCapturer->CaptureNpyUint8(TEXT("lit"), channels);
 		    UE_LOG(LogTemp, Warning, TEXT("captured!"));
        
-
+            // TODO check that this timing is right - if it is actually captured a lot later, and the time stamp is from now, then it might not be correct
             auto Header = std_msgs::Header(++Count, FROSTime(), TEXT("0"));
             
             // Instantiate a copy of the actual task, and queue the task for execution with StartBackgroundTask()
