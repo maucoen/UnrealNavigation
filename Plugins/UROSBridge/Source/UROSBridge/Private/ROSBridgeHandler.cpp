@@ -61,6 +61,9 @@ uint32 FROSBridgeHandler::FROSBridgeHandlerRunnable::Run()
 	// Counter for re-trying an initially unsuccessful connection
 	uint32 ConnectionTrialCounter = 0;
 
+    UE_LOG(LogROS, Warning, TEXT("inside ROS run"));
+				
+
 	// Main loop for the thread
 	while (StopCounter.GetValue() == 0)
 	{
