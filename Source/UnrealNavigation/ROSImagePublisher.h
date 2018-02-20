@@ -72,6 +72,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bIsCompressed = false;
+
+	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+	FString Mode = TEXT("list");
 };
 
 // This is our async task

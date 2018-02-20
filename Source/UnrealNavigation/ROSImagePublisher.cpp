@@ -40,7 +40,7 @@ void UROSImagePublisher::BeginPlay()
     // Initialised Capture Components list 
     Owner = GetOwner();
     CastedPawn = Cast<APawn>(Owner);
-    Modes.Add(TEXT("lit"));
+    Modes.Add(Mode); //TEXT("lit");
     GTCapturer = UGTCaptureComponent::Create(CastedPawn, Modes);
 
 	Owner->GetWorldTimerManager().SetTimer(GameStartTimer, this, 
