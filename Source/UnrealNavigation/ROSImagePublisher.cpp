@@ -36,10 +36,10 @@ void UROSImagePublisher::BeginPlay()
         case EImagingType::MONO:
         {
             Modes.Add(TEXT("lit"));
-            FString Topic = TEXT("/camera/image_raw");
-            GTCapturer = UGTCaptureComponent::Create(CastedPawn, Modes);
+            Topics.Add(TEXT("/camera/image_raw"));
+            GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
 
-        for (Topic : Topics)
+        for (FString Topic : Topics)
             {
                 Handler->AddPublisher(
 		        MakeShareable<FROSBridgePublisher>(
@@ -48,16 +48,16 @@ void UROSImagePublisher::BeginPlay()
             break;
         }
 
-        case EImagingType::RGBD
+        case EImagingType::RGBD:
         {
             Modes.Add(TEXT("lit"));
-            Modes.Add(TEXT("depth")); 
-            GTCapturer = UGTCaptureComponent::Create(CastedPawn, Modes);
+            Modes.Add(TEXT("vis_depth")); 
+            GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
             
             Topics.Add(TEXT("/camera/image_raw"));
             Topics.Add(TEXT("/camera/depth_registered/image_raw"));
 
-            for (Topic : Topics)
+            for (FString Topic : Topics)
             {
                 Handler->AddPublisher(
 		        MakeShareable<FROSBridgePublisher>(
@@ -66,15 +66,16 @@ void UROSImagePublisher::BeginPlay()
             break;
         }
 
-        case EImagingType::STEREO
+        case EImagingType::STEREO:
         {
             Modes.Add(TEXT("lit"));
-            GTCapturer = UGTCaptureComponent::Create(CastedPawn, Modes);
-            
+            Modes.Add(TEXT("lit"));
+            GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
+            GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
             Topics.Add(TEXT("/camera/left/image_raw"));
             Topics.Add(TEXT("/camera/right/image_raw"));
 
-            for (Topic : Topics)
+            for (FString Topic : Topics)
             {
                 Handler->AddPublisher(
 		        MakeShareable<FROSBridgePublisher>(
@@ -126,43 +127,77 @@ void UROSImagePublisher::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 			break;
 		}  
         PendingTasksROS.Dequeue(Task);
-		USceneCaptureComponent2D* CaptureComponent = GTCapturer->GetCaptureComponent(Task.Mode);
-		if (CaptureComponent == nullptr)
-		{
-			UE_LOG(LogTemp, Warning, TEXT("Unrecognized capture mode, in UROSImagePublisher Tick Component %s"), *Task.Mode);
-		}
-		else
-		{
-            // Capture Image
-            TArray<uint8> ImgData;
-            if (bIsCompressed)
-            {
-                ImgData = GTCapturer->CapturePng(Modes[0]);
-                   
-            }
-            else 
-            {
-		        ImgData = GTCapturer->CaptureNpyUint8(Modes[0], channels);
-            }
-            ROSHeader.SetSeq(++Count);
-		    ROSHeader.SetStamp(FROSTime());
 
-            GTCapturer->SavePng(GTCapturer->GetCaptureComponent(Task.Mode)->TextureTarget,Task.Filename);
-            // Send to ROS asynchronously!
-            (new FAutoDeleteAsyncTask<FSendToROS>(
-                Handler, 
-                ImgData,
-                ROSHeader,
-                Topic,
-                bIsCompressed
-            ))->StartBackgroundTask();	
+        FVector eye = FVector(0,50,00);
+ 
+        for (int i=0; i < Modes.Num(); i++)
+        {
+
+            GTCapturers[i]->SetWorldLocation(Owner->GetActorLocation());
+            GTCapturers[i]->AddRelativeLocation(FVector(0,0,100));
+            if (i>0) //&& (Modes[i] == TEXT("lit"))) //stereo eye
+            {
+                GTCapturers[i]->AddRelativeLocation(eye);
+            }
+            
+		    USceneCaptureComponent2D* CaptureComponent = GTCapturers[i]->GetCaptureComponent(Modes[i]);
+		            
+            // check(CaptureComponents.Num() != 0);
+            // USceneCaptureComponent2D* CaptureComponent = GTCapturer->GetCaptureComponent(Mode);
+	            if (CaptureComponent == nullptr)
+                {
+                    UE_LOG(LogTemp, Warning, TEXT("NULL Capture! No enqueue")); 
+                    return;
+                }
+                const FRotator PawnViewRotation = CastedPawn->GetActorRotation();
+	            if (!PawnViewRotation.Equals(CaptureComponent->GetComponentRotation()))
+	            {
+		            CaptureComponent->SetWorldRotation(PawnViewRotation+FRotator(0,20,0));
+	            }
+            
+
+            if (CaptureComponent == nullptr)
+		    {
+			    UE_LOG(LogTemp, Warning, TEXT("Unrecognized capture mode %s"), *Modes[i]);
+		    }
+		    else
+		    {
+                
+                // Capture Image; 
+                TArray<uint8> ImgData;
+                if (bIsCompressed)
+                {
+                    ImgData = GTCapturers[i]->CapturePng(Modes[i]);
+                }
+                else 
+                {
+		            ImgData = GTCapturers[i]->CaptureNpyUint8(Modes[i], channels);
+                }
+                ROSHeader.SetSeq(++Count);
+		        ROSHeader.SetStamp(FROSTime());
+
+
+                FString Filename = FString::FromInt(Count) + Modes[i]+ FString::FromInt(i)+ TEXT(".png");
+                
+                GTCapturers[i]->SavePng(GTCapturers[i]->GetCaptureComponent(Modes[i])->TextureTarget,Filename);
+            
+                // Send to ROS asynchronously!
+                (new FAutoDeleteAsyncTask<FSendToROS>(
+                    Handler, 
+                    ImgData,
+                    ROSHeader,
+                    Topics[i],
+                    bIsCompressed
+                ))->StartBackgroundTask();	
+            }
+            
 		}
 		Task.AsyncRecord->bIsCompleted = true;
     }
     if(Handler.IsValid()) Handler->Process();
 }
 
-void UROSImagePublisher::EnqueueImageTask(ImagingType)
+void UROSImagePublisher::EnqueueImageTask()
 {
 
         // Setup Publisher to publish the correct types
@@ -170,35 +205,72 @@ void UROSImagePublisher::EnqueueImageTask(ImagingType)
     {
         case EImagingType::MONO:
         {
-            Modes.Add(TEXT("lit"));
-            FString Topic = TEXT("/camera/image_raw");
-            GTCapturer = UGTCaptureComponent::Create(CastedPawn, Modes);
+            GTCapturers[0]->SetWorldLocation(Owner->GetActorLocation()+FVector(0,0,150));
+            // check(CaptureComponents.Num() != 0);
 
-            
-	        Handler->AddPublisher(
-		        MakeShareable<FROSBridgePublisher>(
-                    new FROSBridgePublisher(Topic, Type)));
+            for (FString Mode : Modes)
+            {
+                USceneCaptureComponent2D* CaptureComponent = GTCapturers[0]->GetCaptureComponent(Mode);
+	            if (CaptureComponent == nullptr)
+                {
+                    UE_LOG(LogTemp, Warning, TEXT("NULL Capture! No enqueue")); 
+                    return;
+                }
+                const FRotator PawnViewRotation = CastedPawn->GetActorRotation();
+	            if (!PawnViewRotation.Equals(CaptureComponent->GetComponentRotation()))
+	            {
+		            CaptureComponent->SetWorldRotation(PawnViewRotation+FRotator(0,10,0));
+	            }
+            }
+	        
+            FString InFilename = FString::FromInt(Count) + TEXT("mono.png");
+	        FAsyncRecord* AsyncRecord = FAsyncRecord::Create();
+	        FGTCaptureTask GTCaptureTask = FGTCaptureTask(Modes[0], InFilename, GFrameCounter, AsyncRecord);
+	        PendingTasksROS.Enqueue(GTCaptureTask);
             break;
         }
 
-        case EImagingType::RGBD
-        {}
+        case EImagingType::RGBD:
+        {
+
+	        
+            FString InFilename = FString::FromInt(Count) + TEXT("mono.png");
+	        FAsyncRecord* AsyncRecord = FAsyncRecord::Create();
+	        FGTCaptureTask GTCaptureTask = FGTCaptureTask(Modes[0], InFilename, GFrameCounter, AsyncRecord);
+	        PendingTasksROS.Enqueue(GTCaptureTask);
+            break;
+        }
+
+        case EImagingType::STEREO:
+        {
+            
+  
+	        
+            FString InFilename = FString::FromInt(Count) + TEXT("mono.png");
+	        FAsyncRecord* AsyncRecord = FAsyncRecord::Create();
+	        FGTCaptureTask GTCaptureTask = FGTCaptureTask(Modes[0], InFilename, GFrameCounter, AsyncRecord);
+	        PendingTasksROS.Enqueue(GTCaptureTask);
+            break;
+        }
     }
-
-
-    GTCapturer->SetWorldLocation(Owner->GetActorLocation()+FVector(0,0,150));
-    // check(CaptureComponents.Num() != 0);
-	USceneCaptureComponent2D* CaptureComponent = GTCapturer->GetCaptureComponent(Modes[0]);
-	if (CaptureComponent == nullptr)
-		UE_LOG(LogTemp, Warning, TEXT("Null pointer for capture component in enqueue ROS Task"));// return nullptr;
-
-	const FRotator PawnViewRotation = CastedPawn->GetActorRotation();
-	if (!PawnViewRotation.Equals(CaptureComponent->GetComponentRotation()))
-	{
-		CaptureComponent->SetWorldRotation(PawnViewRotation+FRotator(0,10,0));
-	}
-    FString InFilename = FString::FromInt(Count) + TEXT("test_async.png");
-	FAsyncRecord* AsyncRecord = FAsyncRecord::Create();
-	FGTCaptureTask GTCaptureTask = FGTCaptureTask(Modes[0], InFilename, GFrameCounter, AsyncRecord);
-	PendingTasksROS.Enqueue(GTCaptureTask);
 }
+
+          // //FVector eye = FVector(0,0,120);
+            // for (FString Mode : Modes)
+            // {
+                
+            //     //GTCapturer[i]->SetWorldLocation(Owner->GetActorLocation());
+            //     //GTCapturers[i]->AddLocalOffset(eye);
+            //     USceneCaptureComponent2D* CaptureComponent = GTCapturer->GetCaptureComponent(Mode);
+	        //     if (CaptureComponent == nullptr)
+            //     {
+            //         UE_LOG(LogTemp, Warning, TEXT("NULL Capture! No enqueue")); 
+            //         return;
+            //     }
+            //     const FRotator PawnViewRotation = CastedPawn->GetActorRotation();
+	        //     if (!PawnViewRotation.Equals(CaptureComponent->GetComponentRotation()))
+	        //     {
+		    //         CaptureComponent->SetWorldRotation(PawnViewRotation+FRotator(0,10,0));
+	        //     }
+            //     /eye+=FVector(0,10,0); //offset the next capturer by 10cm to the right
+            // }

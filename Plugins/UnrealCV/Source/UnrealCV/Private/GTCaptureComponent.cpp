@@ -132,7 +132,7 @@ UMaterial* UGTCaptureComponent::GetMaterial(FString InModeName = TEXT(""))
 	{
 		MaterialPathMap = new TMap<FString, FString>();
 		MaterialPathMap->Add(TEXT("depth"), TEXT("Material'/UnrealCV/SceneDepthWorldUnits.SceneDepthWorldUnits'"));
-    MaterialPathMap->Add(TEXT("plane_depth"), TEXT("Material'/UnrealCV/ScenePlaneDepthWorldUnits.ScenePlaneDepthWorldUnits'"));
+    	MaterialPathMap->Add(TEXT("plane_depth"), TEXT("Material'/UnrealCV/ScenePlaneDepthWorldUnits.ScenePlaneDepthWorldUnits'"));
 		MaterialPathMap->Add(TEXT("vis_depth"), TEXT("Material'/UnrealCV/SceneDepth.SceneDepth'"));
 		MaterialPathMap->Add(TEXT("debug"), TEXT("Material'/UnrealCV/debug.debug'"));
 		// MaterialPathMap->Add(TEXT("object_mask"), TEXT("Material'/UnrealCV/VertexColorMaterial.VertexColorMaterial'"));
@@ -164,6 +164,8 @@ UMaterial* UGTCaptureComponent::GetMaterial(FString InModeName = TEXT(""))
 	{
 		UE_LOG(LogUnrealCV, Warning, TEXT("Can not recognize visualization mode %s"), *InModeName);
 	}
+	else UE_LOG(LogUnrealCV, Warning, TEXT("Returning %s"), *InModeName);
+	
 	return Material;
 }
 
@@ -553,7 +555,7 @@ void UGTCaptureComponent::TickComponent(float DeltaTime, enum ELevelTick TickTyp
 		PendingTasks.Peek(Task);
 		uint64 CurrentFrame = GFrameCounter;
 
-		int32 SkipFrame = 1;
+		int32 SkipFrame = 2;
 		if (!(CurrentFrame > Task.CurrentFrame + SkipFrame)) // TODO: This is not an elegant solution, fix it later.
 		{ // Wait for the rendering thread to catch up game thread.
 			break;

@@ -53,13 +53,17 @@ protected:
 
 	void EnqueueImageTask();
 		
-	UGTCaptureComponent* GTCapturer;
+	//UGTCaptureComponent* GTCapturer;
+
+	TArray<UGTCaptureComponent*> GTCapturers;
 
 	struct FTimerHandle GameStartTimer;
 
 	class std_msgs::Header ROSHeader;
 	APawn* CastedPawn;
 	TQueue<FGTCaptureTask, EQueueMode::Spsc> PendingTasksROS;
+	//TQueue<FVector, EQueueMode::Spsc> PendingTasks;
+
 	uint32 channels = 3;
 	uint32 Count = 0;
 	TArray<FString> Modes;
@@ -132,7 +136,7 @@ protected:
 	
 	// HARD Settings, check unrealcv.ini before starting up
 	uint32 height = 400;
-    uint32 width = 700;
+    uint32 width = 400;
     uint32 step = width*3;
     FString encoding = TEXT("rgb8");
     uint8 isbigendian = 0;
