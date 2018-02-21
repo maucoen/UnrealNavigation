@@ -204,7 +204,7 @@ UGTCaptureComponent* UGTCaptureComponent::Create(APawn* InPawn, TArray<FString> 
 		UMaterial* Material = GetMaterial(Mode);
 		if (Mode == "lit") // For rendered images
 		{
-			UE_LOG(LogUnrealCV, Warning, TEXT("inside mode lit"));
+			//UE_LOG(LogUnrealCV, Warning, TEXT("inside mode lit"));
 			// FViewMode::Lit(CaptureComponent->ShowFlags);
 			CaptureComponent->TextureTarget->TargetGamma = GEngine->GetDisplayGamma();
 			// float DisplayGamma = SceneViewport->GetDisplayGamma();
@@ -225,7 +225,7 @@ UGTCaptureComponent* UGTCaptureComponent::Create(APawn* InPawn, TArray<FString> 
 			{
 				FViewMode::Wireframe(CaptureComponent->ShowFlags);
 			}
-			else
+			else //depth requires post processing
 			{
 				check(Material);
 				// GEngine->GetDisplayGamma(), the default gamma is 2.2

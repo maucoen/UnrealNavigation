@@ -3,7 +3,6 @@
 
 #include "ROSImagePublisher.h"
 #include "TimerManager.h"
-//#include "ROSLoggerSimState.h"
 #include "CaptureManager.h"
 
 // Sets default values for this component's properties
@@ -20,8 +19,10 @@ UROSImagePublisher::UROSImagePublisher()
 void UROSImagePublisher::BeginPlay()
 {
 	Super::BeginPlay();
-    
-    ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("0"));
+
+    Owner = GetOwner();
+    CastedPawn = Cast<APawn>(Owner);
+
     
     // Set websocket server address to default
     Handler = MakeShareable<FROSBridgeHandler>(new FROSBridgeHandler(IPAddress, Port));
@@ -29,21 +30,66 @@ void UROSImagePublisher::BeginPlay()
     if (bIsCompressed) {Type = TEXT("sensor_msgs/CompressedImage");}
     else { Type = TEXT("sensor_msgs/Image"); }
 
-    // **** Create publishers here ****
-	Handler->AddPublisher(
-		MakeShareable<FROSBridgePublisher>(
-        new FROSBridgePublisher(Topic, Type)));
+    // Setup Publisher to publish the correct types
+    switch(ImagingType)
+    {
+        case EImagingType::MONO:
+        {
+            Modes.Add(TEXT("lit"));
+            FString Topic = TEXT("/camera/image_raw");
+            GTCapturer = UGTCaptureComponent::Create(CastedPawn, Modes);
+
+        for (Topic : Topics)
+            {
+                Handler->AddPublisher(
+		        MakeShareable<FROSBridgePublisher>(
+                    new FROSBridgePublisher(Topic, Type)));
+            }
+            break;
+        }
+
+        case EImagingType::RGBD
+        {
+            Modes.Add(TEXT("lit"));
+            Modes.Add(TEXT("depth")); 
+            GTCapturer = UGTCaptureComponent::Create(CastedPawn, Modes);
+            
+            Topics.Add(TEXT("/camera/image_raw"));
+            Topics.Add(TEXT("/camera/depth_registered/image_raw"));
+
+            for (Topic : Topics)
+            {
+                Handler->AddPublisher(
+		        MakeShareable<FROSBridgePublisher>(
+                    new FROSBridgePublisher(Topic, Type)));
+            }
+            break;
+        }
+
+        case EImagingType::STEREO
+        {
+            Modes.Add(TEXT("lit"));
+            GTCapturer = UGTCaptureComponent::Create(CastedPawn, Modes);
+            
+            Topics.Add(TEXT("/camera/left/image_raw"));
+            Topics.Add(TEXT("/camera/right/image_raw"));
+
+            for (Topic : Topics)
+            {
+                Handler->AddPublisher(
+		        MakeShareable<FROSBridgePublisher>(
+                    new FROSBridgePublisher(Topic, Type)));
+            }
+            break;
+        }
+    }
+
+    ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("0"));
 
     //Connect to ROSBridge Websocket server.
     Handler->Connect();
-    
-    // Initialised Capture Components list 
-    Owner = GetOwner();
-    CastedPawn = Cast<APawn>(Owner);
-    Modes.Add(Mode); //TEXT("lit");
-    GTCapturer = UGTCaptureComponent::Create(CastedPawn, Modes);
 
-	Owner->GetWorldTimerManager().SetTimer(GameStartTimer, this, 
+    Owner->GetWorldTimerManager().SetTimer(GameStartTimer, this, 
 	&UROSImagePublisher::EnqueueImageTask, Period, true, Delay);
 }
 
@@ -59,11 +105,12 @@ void UROSImagePublisher::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-    if (Count == StopAt)
+    if (Count >= MaxImages)
     {
         GetWorld()->GetTimerManager().ClearTimer(GameStartTimer);
-        UE_LOG(LogTemp, Warning, TEXT("Clearing publishing"));
+        UE_LOG(LogTemp, Warning, TEXT("stopped image pub"));
         PendingTasksROS.Empty();
+        Count++;
     }
 
     while (!PendingTasksROS.IsEmpty())
@@ -115,8 +162,30 @@ void UROSImagePublisher::TickComponent(float DeltaTime, ELevelTick TickType, FAc
     if(Handler.IsValid()) Handler->Process();
 }
 
-void UROSImagePublisher::EnqueueImageTask()
+void UROSImagePublisher::EnqueueImageTask(ImagingType)
 {
+
+        // Setup Publisher to publish the correct types
+    switch(ImagingType)
+    {
+        case EImagingType::MONO:
+        {
+            Modes.Add(TEXT("lit"));
+            FString Topic = TEXT("/camera/image_raw");
+            GTCapturer = UGTCaptureComponent::Create(CastedPawn, Modes);
+
+            
+	        Handler->AddPublisher(
+		        MakeShareable<FROSBridgePublisher>(
+                    new FROSBridgePublisher(Topic, Type)));
+            break;
+        }
+
+        case EImagingType::RGBD
+        {}
+    }
+
+
     GTCapturer->SetWorldLocation(Owner->GetActorLocation()+FVector(0,0,150));
     // check(CaptureComponents.Num() != 0);
 	USceneCaptureComponent2D* CaptureComponent = GTCapturer->GetCaptureComponent(Modes[0]);
@@ -126,7 +195,7 @@ void UROSImagePublisher::EnqueueImageTask()
 	const FRotator PawnViewRotation = CastedPawn->GetActorRotation();
 	if (!PawnViewRotation.Equals(CaptureComponent->GetComponentRotation()))
 	{
-		CaptureComponent->SetWorldRotation(PawnViewRotation);
+		CaptureComponent->SetWorldRotation(PawnViewRotation+FRotator(0,10,0));
 	}
     FString InFilename = FString::FromInt(Count) + TEXT("test_async.png");
 	FAsyncRecord* AsyncRecord = FAsyncRecord::Create();

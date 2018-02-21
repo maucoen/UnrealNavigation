@@ -12,10 +12,34 @@
 #include "ROSImagePublisher.generated.h"
 
 
+// UENUM(BlueprintType)		//"BlueprintType" is essential to include
+// enum class EImageTypeEnum : uint8
+// {
+//         RGBD 	UMETA(DisplayName="RGBD"),
+//         MONO 	UMETA(DisplayName="Monocular"),
+// 		STEREO	UMETA(DisplayName="Stereo")
+// };
+
+UENUM(BlueprintType)
+namespace EImagingType
+{
+	enum Type 
+	{	
+		MONO	UMETA(DisplayName = "Monocular"),
+		RGBD	UMETA(DisplayName = "RGBD"),
+		STEREO 	UMETA(DisplayName = "Stereo"),
+	};
+}
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class UNREALNAVIGATION_API UROSImagePublisher : public UActorComponent
 {
 	GENERATED_BODY()
+
+	// UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Enum)
+	// EImageTypeEnum Imaging;
+
+
 
 public:	
 	// Sets default values for this component's properties
@@ -39,6 +63,10 @@ protected:
 	uint32 channels = 3;
 	uint32 Count = 0;
 	TArray<FString> Modes;
+	TArray<FString> Topics;
+
+	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+	TEnumAsByte<EImagingType::Type > ImagingType;
 
 public:	
 	// Called every frame
@@ -56,8 +84,8 @@ public:
     UPROPERTY(EditAnywhere, Category = "ROS Publisher")
     uint32 Port = 9090;
 
-	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-    FString Topic = TEXT("/camera/image_raw");
+	// UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+    // FString Topic = TEXT("/camera/image_raw");
 
     FString Type = TEXT("sensor_msgs/Image"); 
 
@@ -68,13 +96,11 @@ public:
     float Period = 0.5f;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-    uint32 StopAt = 100;
+    uint32 MaxImages = 100;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bIsCompressed = false;
 
-	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-	FString Mode = TEXT("list");
 };
 
 // This is our async task
@@ -97,7 +123,6 @@ public:
 		bIsCompressed(InbIsCompressed)
 	{}
 
- 
 protected:
 	TSharedPtr<FROSBridgeHandler> Handler;
 	TArray<uint8> ImgData;
@@ -105,9 +130,9 @@ protected:
 	FString Topic;
 	bool bIsCompressed;
 	
-	// HARD Settings, don't change
+	// HARD Settings, check unrealcv.ini before starting up
 	uint32 height = 400;
-    uint32 width = 1000;
+    uint32 width = 700;
     uint32 step = width*3;
     FString encoding = TEXT("rgb8");
     uint8 isbigendian = 0;
