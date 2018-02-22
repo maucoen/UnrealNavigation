@@ -77,11 +77,11 @@ ABuggy::ABuggy()
 
 	// Engine 
 	// Torque setup
-	Vehicle4W->MaxEngineRPM = 5700.0f;
+	Vehicle4W->MaxEngineRPM = 1000.0f;
 	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->Reset();
-	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(0.0f, 400.0f);
-	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(1890.0f, 500.0f);
-	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(5730.0f, 400.0f);
+	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(500.0f, 400.0f);
+	Vehicle4W->EngineSetup.TorqueCurve.GetRichCurve()->AddKey(500.0f, 1000.0f);
+
  
 	// Adjust the steering 
 	Vehicle4W->SteeringCurve.GetRichCurve()->Reset();
@@ -170,6 +170,8 @@ ABuggy::ABuggy()
 
 	bIsLowFriction = false;
 	bInReverseGear = false;
+
+
 }
 
 void ABuggy::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -242,6 +244,11 @@ void ABuggy::EnableIncarView(const bool bState)
 void ABuggy::Tick(float Delta)
 {
 	Super::Tick(Delta);
+
+	if (GetMesh()->GetPhysicsLinearVelocity().Size() >= 100)
+	{
+		GetMesh()->SetPhysicsLinearVelocity(GetMesh()->GetPhysicsLinearVelocity()*0.95);
+	}
 
 	// Setup the flag to say we are in reverse gear
 	bInReverseGear = GetVehicleMovement()->GetCurrentGear() < 0;

@@ -50,11 +50,12 @@ void UROSImagePublisher::BeginPlay()
 
         case EImagingType::RGBD:
         {
+             
             Modes.Add(TEXT("lit"));
-            Modes.Add(TEXT("vis_depth")); 
+            Modes.Add(TEXT("vis_depth"));
             GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
-            
-            Topics.Add(TEXT("/camera/image_raw"));
+            GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
+            Topics.Add(TEXT("/camera/rgb/image_raw"));
             Topics.Add(TEXT("/camera/depth_registered/image_raw"));
 
             for (FString Topic : Topics)
@@ -90,6 +91,8 @@ void UROSImagePublisher::BeginPlay()
     //Connect to ROSBridge Websocket server.
     Handler->Connect();
 
+    float Period = 1.0 / Frequency;
+
     Owner->GetWorldTimerManager().SetTimer(GameStartTimer, this, 
 	&UROSImagePublisher::EnqueueImageTask, Period, true, Delay);
 }
@@ -97,6 +100,7 @@ void UROSImagePublisher::BeginPlay()
 // Called when game ends or actor deleted
 void UROSImagePublisher::EndPlay(const EEndPlayReason::Type Reason)
 {
+    PendingTasksROS.Empty();
     Super::EndPlay(Reason);
     Handler->Disconnect();   
 }
@@ -129,16 +133,19 @@ void UROSImagePublisher::TickComponent(float DeltaTime, ELevelTick TickType, FAc
         PendingTasksROS.Dequeue(Task);
 
         FVector eye = FVector(0,50,00);
- 
+        ++Count;
         for (int i=0; i < Modes.Num(); i++)
         {
 
             GTCapturers[i]->SetWorldLocation(Owner->GetActorLocation());
             GTCapturers[i]->AddRelativeLocation(FVector(0,0,100));
-            if (i>0) //&& (Modes[i] == TEXT("lit"))) //stereo eye
+            if (i>0 && (Modes[i] == TEXT("lit"))) //stereo eye
             {
                 GTCapturers[i]->AddRelativeLocation(eye);
             }
+
+            GTCapturers[i]->SetWorldRotation(Owner->GetActorRotation());
+            GTCapturers[i]->AddRelativeRotation(FRotator(0,45,0));
             
 		    USceneCaptureComponent2D* CaptureComponent = GTCapturers[i]->GetCaptureComponent(Modes[i]);
 		            
@@ -149,10 +156,11 @@ void UROSImagePublisher::TickComponent(float DeltaTime, ELevelTick TickType, FAc
                     UE_LOG(LogTemp, Warning, TEXT("NULL Capture! No enqueue")); 
                     return;
                 }
-                const FRotator PawnViewRotation = CastedPawn->GetActorRotation();
+                const FRotator PawnViewRotation = Owner->GetActorRotation();
 	            if (!PawnViewRotation.Equals(CaptureComponent->GetComponentRotation()))
 	            {
-		            CaptureComponent->SetWorldRotation(PawnViewRotation+FRotator(0,20,0));
+		            CaptureComponent->SetWorldRotation(Owner->GetActorRotation());
+                    CaptureComponent->AddRelativeRotation(FRotator(0,45,0));
 	            }
             
 
@@ -172,14 +180,15 @@ void UROSImagePublisher::TickComponent(float DeltaTime, ELevelTick TickType, FAc
                 else 
                 {
 		            ImgData = GTCapturers[i]->CaptureNpyUint8(Modes[i], channels);
+                    UE_LOG(LogTemp, Warning, TEXT("Capturing %s"), *Modes[i]);
                 }
-                ROSHeader.SetSeq(++Count);
+                ROSHeader.SetSeq(Count);
 		        ROSHeader.SetStamp(FROSTime());
 
 
                 FString Filename = FString::FromInt(Count) + Modes[i]+ FString::FromInt(i)+ TEXT(".png");
                 
-                GTCapturers[i]->SavePng(GTCapturers[i]->GetCaptureComponent(Modes[i])->TextureTarget,Filename);
+               // GTCapturers[i]->SavePng(GTCapturers[i]->GetCaptureComponent(Modes[i])->TextureTarget,Filename);
             
                 // Send to ROS asynchronously!
                 (new FAutoDeleteAsyncTask<FSendToROS>(
@@ -232,9 +241,8 @@ void UROSImagePublisher::EnqueueImageTask()
 
         case EImagingType::RGBD:
         {
-
-	        
             FString InFilename = FString::FromInt(Count) + TEXT("mono.png");
+            
 	        FAsyncRecord* AsyncRecord = FAsyncRecord::Create();
 	        FGTCaptureTask GTCaptureTask = FGTCaptureTask(Modes[0], InFilename, GFrameCounter, AsyncRecord);
 	        PendingTasksROS.Enqueue(GTCaptureTask);
@@ -243,10 +251,8 @@ void UROSImagePublisher::EnqueueImageTask()
 
         case EImagingType::STEREO:
         {
-            
-  
-	        
             FString InFilename = FString::FromInt(Count) + TEXT("mono.png");
+
 	        FAsyncRecord* AsyncRecord = FAsyncRecord::Create();
 	        FGTCaptureTask GTCaptureTask = FGTCaptureTask(Modes[0], InFilename, GFrameCounter, AsyncRecord);
 	        PendingTasksROS.Enqueue(GTCaptureTask);

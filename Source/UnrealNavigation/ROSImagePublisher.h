@@ -97,10 +97,10 @@ public:
     float Delay = 2.0f;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-    float Period = 0.5f;
+    float Frequency = 1.0f;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-    uint32 MaxImages = 100;
+    uint32 MaxImages = 50;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bIsCompressed = false;
