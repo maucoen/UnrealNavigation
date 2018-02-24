@@ -9529,5 +9529,6 @@ HEADERS += \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/BuggyHud.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/BuggyWheelFront.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/BuggyWheelRear.h" \
+	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/SixWheeler.h" \
  
 

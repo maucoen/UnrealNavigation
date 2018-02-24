@@ -7,6 +7,11 @@
 
 #include "ROSTime.h"
 
+//For UE4 Profiler ~ Stat
+//DECLARE_STATS_GROUP(TEXT("ROSBridgeMsg"), STATGROUP_ROSBridge, STATCAT_Advanced);
+
+//DECLARE_CYCLE_STAT(TEXT("Publish"), STAT_Publish, STATGROUP_ROSBridge);
+
 class UROSBRIDGE_API FROSBridgeMsg 
 {
 
@@ -52,6 +57,7 @@ public:
 
     static FORCEINLINE FString Publish(const FString& InMessageTopic, TSharedPtr<FROSBridgeMsg> Message)
 	{
+        ///SCOPE_CYCLE_COUNTER(STAT_Publish);
         return TEXT("{\"op\": \"publish\", \"topic\": \"") + InMessageTopic +
                TEXT("\", \"msg\": ") + Message->ToYamlString() +
                TEXT("}";)

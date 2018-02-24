@@ -92,14 +92,6 @@ namespace sensor_msgs
 		virtual TSharedPtr<FJsonObject> ToJsonObject() const override 
 		{
 			TSharedPtr<FJsonObject> Object = MakeShareable<FJsonObject>(new FJsonObject());
-
-			TArray<TSharedPtr<FJsonValue>> DataArray;
-			for (auto &datum : Data)
-			{
-				TSharedPtr<FJsonValue> Ptr = MakeShareable(new FJsonValueNumber(datum));
-				DataArray.Add(Ptr);
-			}
-
 			Object->SetObjectField(TEXT("header"), Header.ToJsonObject());
 			Object->SetStringField(TEXT("format"), Format);
 			Object->SetStringField(TEXT("data"), *(FBase64::Encode(Data)));

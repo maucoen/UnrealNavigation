@@ -7323,5 +7323,6 @@ SOURCES += \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/BuggyHud.cpp" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/BuggyWheelFront.cpp" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/BuggyWheelRear.cpp" \
+	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/SixWheeler.cpp" \
  
 

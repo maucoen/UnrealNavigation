@@ -196,12 +196,12 @@ namespace sensor_msgs
 				FieldsPtrArray.Add(Ptr);
 			}
 
-			TArray<TSharedPtr<FJsonValue>> DataArray;
-			for (auto &datum : Data)
-			{
-				TSharedPtr<FJsonValue> Ptr = MakeShareable(new FJsonValueNumber(datum));
-				DataArray.Add(Ptr);
-			}
+			// TArray<TSharedPtr<FJsonValue>> DataArray;
+			// for (auto &datum : Data)
+			// {
+			// 	TSharedPtr<FJsonValue> Ptr = MakeShareable(new FJsonValueNumber(datum));
+			// 	DataArray.Add(Ptr);
+			// }
 
 			Object->SetObjectField(TEXT("header"), Header.ToJsonObject());
 			Object->SetNumberField(TEXT("height"), Height);

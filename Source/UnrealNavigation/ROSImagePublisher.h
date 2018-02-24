@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "Camera/CameraActor.h"
 #include "ROSBridgeHandler.h"
 #include "sensor_msgs/CompressedImage.h"
 #include "sensor_msgs/Image.h"
@@ -11,14 +11,6 @@
 #include "AsyncWork.h"
 #include "ROSImagePublisher.generated.h"
 
-
-// UENUM(BlueprintType)		//"BlueprintType" is essential to include
-// enum class EImageTypeEnum : uint8
-// {
-//         RGBD 	UMETA(DisplayName="RGBD"),
-//         MONO 	UMETA(DisplayName="Monocular"),
-// 		STEREO	UMETA(DisplayName="Stereo")
-// };
 
 UENUM(BlueprintType)
 namespace EImagingType
@@ -32,18 +24,13 @@ namespace EImagingType
 }
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class UNREALNAVIGATION_API UROSImagePublisher : public UActorComponent
+class UNREALNAVIGATION_API AROSImagePublisher : public ACameraActor
 {
 	GENERATED_BODY()
 
-	// UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Enum)
-	// EImageTypeEnum Imaging;
-
-
-
 public:	
 	// Sets default values for this component's properties
-	UROSImagePublisher();
+	AROSImagePublisher(const FObjectInitializer& ObjectInitializer);
 
 protected:
 	// Called when the game starts
@@ -52,6 +39,8 @@ protected:
 	virtual void EndPlay(const EEndPlayReason::Type Reason);
 
 	void EnqueueImageTask();
+
+	void StopPublish();
 		
 	//UGTCaptureComponent* GTCapturer;
 
@@ -60,7 +49,7 @@ protected:
 	struct FTimerHandle GameStartTimer;
 
 	class std_msgs::Header ROSHeader;
-	APawn* CastedPawn;
+	
 	TQueue<FGTCaptureTask, EQueueMode::Spsc> PendingTasksROS;
 	//TQueue<FVector, EQueueMode::Spsc> PendingTasks;
 
@@ -74,10 +63,11 @@ protected:
 
 public:	
 	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void Tick(float DeltaTime) override;
 
-    UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-    AActor* Owner;
+
+	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+	AActor* CastedPawny;
 
 	// Add a smart pointer to ROSBridgeHandler
     TSharedPtr<FROSBridgeHandler> Handler;
@@ -88,9 +78,6 @@ public:
     UPROPERTY(EditAnywhere, Category = "ROS Publisher")
     uint32 Port = 9090;
 
-	// UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-    // FString Topic = TEXT("/camera/image_raw");
-
     FString Type = TEXT("sensor_msgs/Image"); 
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
@@ -100,7 +87,7 @@ public:
     float Frequency = 1.0f;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-    uint32 MaxImages = 50;
+	bool bSaveToDisk = false;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bIsCompressed = false;
@@ -134,8 +121,8 @@ protected:
 	FString Topic;
 	bool bIsCompressed;
 	
-	// HARD Settings, check unrealcv.ini before starting up
-	uint32 height = 400;
+	// HARD Settings, check unrealcv.ini, orbslam yamls before starting up
+	uint32 height = 200;
     uint32 width = 400;
     uint32 step = width*3;
     FString encoding = TEXT("rgb8");
@@ -151,8 +138,12 @@ protected:
                 Header,
                 format,
                 ImgData
-            ));			
-			if (Handler.IsValid()) Handler->PublishMsg(Topic, CompressedData);
+            ));				
+			if (Handler.IsValid())
+			{
+				Handler->PublishMsg(Topic, CompressedData);
+				UE_LOG(LogTemp, Warning, TEXT("Handler published"));
+			} 		
 		}
 		else
 		{
@@ -166,11 +157,15 @@ protected:
                 step,
                 ImgData
             ));
-			if (Handler.IsValid()) Handler->PublishMsg(Topic, ImageData);
+			if (Handler.IsValid())
+			{
+				Handler->PublishMsg(Topic, ImageData);
+				UE_LOG(LogTemp, Warning, TEXT("Handler published"));
+			} 
 		}
 	}
  
-	// This next section of code needs to be here
+	// Stats for profiling the thread
 	FORCEINLINE TStatId GetStatId() const
 	{
 		RETURN_QUICK_DECLARE_CYCLE_STAT(FSendToROS, STATGROUP_ThreadPoolAsyncTasks);

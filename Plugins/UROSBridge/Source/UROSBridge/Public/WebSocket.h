@@ -11,6 +11,8 @@
 #include <netinet/in.h>
 #endif
 
+//DECLARE_STATS_GROUP(TEXT("Websocket"), STATGROUP_Websocket, STATCAT_Advanced);
+
 class FWebSocket
 {
 

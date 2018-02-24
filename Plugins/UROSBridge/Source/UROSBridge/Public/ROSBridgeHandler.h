@@ -15,6 +15,8 @@
 
 #include "WebSocket.h"
 
+// DECLARE_STATS_GROUP(TEXT("ROSBridge"), STATGROUP_ROSBridge, STATCAT_Advanced);
+
 class UROSBRIDGE_API FROSBridgeHandler 
 {
 

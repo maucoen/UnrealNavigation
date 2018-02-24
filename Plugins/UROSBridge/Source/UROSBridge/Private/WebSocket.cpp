@@ -5,6 +5,10 @@
 #include "HTML5NetworkingPrivate.h"
 #include "IPAddress.h"
 
+//For UE4 Profiler ~ Stat
+//DECLARE_CYCLE_STAT(TEXT("Send"), STAT_Send, STATGROUP_Websocket);
+
+
 #if PLATFORM_HTML5
 #include <errno.h>
 #include <sys/types.h>
@@ -202,6 +206,7 @@ bool FWebSocket::SendText(uint8* Data, uint32 Size)
 
 bool FWebSocket::Send(const FString &StringData)
 {
+	//SCOPE_CYCLE_COUNTER(STAT_Send);
 #if UE_BUILD_DEBUG
     UE_LOG(LogROS, Log, TEXT("[WebSocket::Send] Output Message: %s"), *StringData);
 #endif
@@ -292,6 +297,8 @@ FString FWebSocket::LocalEndPoint(bool bAppendPort)
 void FWebSocket::Tick()
 {
 	HandlePacket();
+
+	//UE_LOG(LogTemp, Warning, TEXT("Websocket ticked"));
 }
 
 void FWebSocket::HandlePacket()
@@ -301,6 +308,8 @@ void FWebSocket::HandlePacket()
 	lws_service(Context, 0);
 	if (!IsServerSide)
 		lws_callback_on_writable_all_protocol(Context, &Protocols[0]);
+			//UE_LOG(LogTemp, Warning, TEXT("handled lws packet"));
+
 
 #else // PLATFORM_HTML5
 
