@@ -7,6 +7,9 @@
 #include "Networking.h"
 #include "Json.h"
 
+//For UE4 Profiler ~ Stat
+//DECLARE_CYCLE_STAT(TEXT("PublishMsg"), STAT_PublishMsg, STATGROUP_ROSBridge);
+
 void FROSBridgeHandler::OnConnection()
 {
     UE_LOG(LogROS, Log, TEXT("[%s] Websocket server connected."), *FString(__FUNCTION__));
@@ -416,6 +419,8 @@ void FROSBridgeHandler::PublishServiceResponse(FString InService, FString InId,
 
 void FROSBridgeHandler::PublishMsg(FString InTopic, TSharedPtr<FROSBridgeMsg> InMsg)
 {
+    //SCOPE_CYCLE_COUNTER(STAT_PublishMsg);
+
 	if (!Client.IsValid()) return;
 	if (!bIsClientConnected) return;
 

@@ -3,6 +3,7 @@
 #include "ROSBridgeMsg.h"
 #include "std_msgs/Header.h"
 #include "Base64.h"
+#include "UnrealString.h"
 
 namespace sensor_msgs
 {
@@ -151,14 +152,6 @@ namespace sensor_msgs
 		virtual TSharedPtr<FJsonObject> ToJsonObject() const override 
 		{
 			TSharedPtr<FJsonObject> Object = MakeShareable<FJsonObject>(new FJsonObject());
-
-			TArray<TSharedPtr<FJsonValue>> DataArray;
-			for (auto &datum : Data)
-			{
-				TSharedPtr<FJsonValue> Ptr = MakeShareable(new FJsonValueNumber(datum));
-				DataArray.Add(Ptr);
-			}
-
 			Object->SetObjectField(TEXT("header"), Header.ToJsonObject());
 			Object->SetNumberField(TEXT("height"), Height);
 			Object->SetNumberField(TEXT("width"), Width);
@@ -175,6 +168,9 @@ namespace sensor_msgs
 			FString OutputString;
 			TSharedRef< TJsonWriter<> > Writer = TJsonWriterFactory<>::Create(&OutputString);
 			FJsonSerializer::Serialize(ToJsonObject().ToSharedRef(), Writer);
+
+			//FString FData = BytesToString(&Data[0],Width*Height*3);
+			//OutputString = OutputString + FData;
 			return OutputString;
 		}
 	};

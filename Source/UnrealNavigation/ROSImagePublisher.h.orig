@@ -50,6 +50,11 @@ protected:
 
 	class std_msgs::Header ROSHeader;
 	
+<<<<<<< HEAD
+	
+	
+=======
+>>>>>>> bf87700648e3bf8ae585cd68aadb86dd1417c8b4
 	TQueue<FGTCaptureTask, EQueueMode::Spsc> PendingTasksROS;
 	//TQueue<FVector, EQueueMode::Spsc> PendingTasks;
 
@@ -70,7 +75,7 @@ public:
 	AActor* CastedPawny;
 
 	// Add a smart pointer to ROSBridgeHandler
-    TSharedPtr<FROSBridgeHandler> Handler;
+    TArray<TSharedPtr<FROSBridgeHandler>> Handlers;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
     FString IPAddress = TEXT("127.0.1.1");
@@ -85,6 +90,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
     float Frequency = 1.0f;
+
+	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+	bool bSaveToDisk = false;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bSaveToDisk = false;
