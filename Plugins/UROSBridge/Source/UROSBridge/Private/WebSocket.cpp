@@ -292,6 +292,8 @@ FString FWebSocket::LocalEndPoint(bool bAppendPort)
 void FWebSocket::Tick()
 {
 	HandlePacket();
+
+	//UE_LOG(LogTemp, Warning, TEXT("Websocket ticked"));
 }
 
 void FWebSocket::HandlePacket()
@@ -301,6 +303,8 @@ void FWebSocket::HandlePacket()
 	lws_service(Context, 0);
 	if (!IsServerSide)
 		lws_callback_on_writable_all_protocol(Context, &Protocols[0]);
+			//UE_LOG(LogTemp, Warning, TEXT("handled lws packet"));
+
 
 #else // PLATFORM_HTML5
 

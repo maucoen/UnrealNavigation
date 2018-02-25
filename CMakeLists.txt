@@ -4,8 +4,8 @@
 cmake_minimum_required (VERSION 2.6)
 project (UE4)
 
-set(CMAKE_CXX_COMPILER "/usr/bin/clang++-3.8")
-set(CMAKE_C_COMPILER "/usr/bin/clang-3.8")
+set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
+set(CMAKE_C_COMPILER "/usr/bin/clang")
 set(UE4_ROOT_PATH /home/mau/EPIC/UE416)
 set(GAME_PROJECT_FILE "/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject")
 set(BUILD cd "${UE4_ROOT_PATH}" && bash "${UE4_ROOT_PATH}/Engine/Build/BatchFiles/Linux/Build.sh")
@@ -7336,6 +7336,7 @@ set(SOURCE_FILES
 	"${GAME_ROOT_PATH}/Source/UnrealNavigation/BuggySource/BuggyHud.cpp"
 	"${GAME_ROOT_PATH}/Source/UnrealNavigation/BuggySource/BuggyWheelFront.cpp"
 	"${GAME_ROOT_PATH}/Source/UnrealNavigation/BuggySource/BuggyWheelRear.cpp"
+	"${GAME_ROOT_PATH}/Source/UnrealNavigation/BuggySource/SixWheeler.cpp"
  )
 
 set(HEADER_FILES 
@@ -16869,6 +16870,7 @@ set(HEADER_FILES
 	"${GAME_ROOT_PATH}/Source/UnrealNavigation/BuggySource/BuggyHud.h"
 	"${GAME_ROOT_PATH}/Source/UnrealNavigation/BuggySource/BuggyWheelFront.h"
 	"${GAME_ROOT_PATH}/Source/UnrealNavigation/BuggySource/BuggyWheelRear.h"
+	"${GAME_ROOT_PATH}/Source/UnrealNavigation/BuggySource/SixWheeler.h"
  )
 
 set(CONFIG_FILES 

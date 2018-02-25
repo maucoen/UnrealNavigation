@@ -92,7 +92,7 @@ public:
 	void MoveForward(float Val);
 
 	/** Setup the strings used on the hud */
-	void SetupInCarHUD();
+	//void SetupInCarHUD();
 
 	/** Update the physics material used by the vehicle mesh */
 	void UpdatePhysicsMaterial();
@@ -106,7 +106,7 @@ public:
 	/** Switch between cameras */
 	void OnToggleCamera();
 	/** Handle reset VR device */
-	void OnResetVR();
+	//void OnResetVR();
 
 	static const FName LookUpBinding;
 	static const FName LookRightBinding;
@@ -118,10 +118,10 @@ private:
 	 *
 	 * @param	bState true will enable in car view and set visibility of various
 	 */
-	void EnableIncarView( const bool bState );
+	//void EnableIncarView( const bool bState );
 
 	/** Update the gear and speed strings */
-	void UpdateHUDStrings();
+	//void UpdateHUDStrings();
 
 	/* Are we on a 'slippery' surface */
 	bool bIsLowFriction;

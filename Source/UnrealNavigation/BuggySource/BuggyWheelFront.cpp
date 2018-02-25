@@ -19,6 +19,6 @@ UBuggyWheelFront::UBuggyWheelFront()
 	SuspensionDampingRatio = 1.05f;
 
 	// Find the tire object and set the data for it
-	static ConstructorHelpers::FObjectFinder<UTireConfig> TireData(TEXT("/Game/Buggy/Vehicle/WheelData/Vehicle_FrontTireConfig.Vehicle_FrontTireConfig"));
+	static ConstructorHelpers::FObjectFinder<UTireConfig> TireData(TEXT("/Game/Vehicles/Buggy/Vehicle/WheelData/Vehicle_FrontTireConfig.Vehicle_FrontTireConfig"));
 	TireConfig = TireData.Object;
 }

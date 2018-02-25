@@ -33,18 +33,18 @@ const FName ABuggy::EngineAudioRPM("RPM");
 ABuggy::ABuggy()
 {
 	// Car mesh
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Buggy/Vehicle/Vehicle_SkelMesh.Vehicle_SkelMesh"));
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Vehicles/Buggy/Vehicle/Vehicle_SkelMesh.Vehicle_SkelMesh"));
 	GetMesh()->SetSkeletalMesh(CarMesh.Object);
 	
-	static ConstructorHelpers::FClassFinder<UObject> AnimBPClass(TEXT("/Game/Buggy/Vehicle/VehicleAnimationBlueprint"));
+	static ConstructorHelpers::FClassFinder<UObject> AnimBPClass(TEXT("/Game/Vehicles/Buggy/Vehicle/VehicleAnimationBlueprint"));
 	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
 	GetMesh()->SetAnimInstanceClass(AnimBPClass.Class);
 
 	// Setup friction materials
-	static ConstructorHelpers::FObjectFinder<UPhysicalMaterial> SlipperyMat(TEXT("/Game/Buggy/PhysicsMaterials/Slippery.Slippery"));
+	static ConstructorHelpers::FObjectFinder<UPhysicalMaterial> SlipperyMat(TEXT("/Game/Vehicles/Buggy/PhysicsMaterials/Slippery.Slippery"));
 	SlipperyMaterial = SlipperyMat.Object;
 		
-	static ConstructorHelpers::FObjectFinder<UPhysicalMaterial> NonSlipperyMat(TEXT("/Game/Buggy/PhysicsMaterials/NonSlippery.NonSlippery"));
+	static ConstructorHelpers::FObjectFinder<UPhysicalMaterial> NonSlipperyMat(TEXT("/Game/Vehicles/Buggy/PhysicsMaterials/NonSlippery.NonSlippery"));
 	NonSlipperyMaterial = NonSlipperyMat.Object;
 
 	UWheeledVehicleMovementComponent4W* Vehicle4W = CastChecked<UWheeledVehicleMovementComponent4W>(GetVehicleMovement());
@@ -132,11 +132,11 @@ ABuggy::ABuggy()
 	Camera->bUsePawnControlRotation = false;
 	Camera->FieldOfView = 90.f;
 
-	// Create In-Car camera component 
-	InternalCameraOrigin = FVector(-34.0f, -10.0f, 50.0f);
-	InternalCameraBase = CreateDefaultSubobject<USceneComponent>(TEXT("InternalCameraBase"));
-	InternalCameraBase->SetRelativeLocation(InternalCameraOrigin);
-	InternalCameraBase->SetupAttachment(GetMesh());
+	// // Create In-Car camera component 
+	// InternalCameraOrigin = FVector(-34.0f, -10.0f, 50.0f);
+	// InternalCameraBase = CreateDefaultSubobject<USceneComponent>(TEXT("InternalCameraBase"));
+	// InternalCameraBase->SetRelativeLocation(InternalCameraOrigin);
+	// InternalCameraBase->SetupAttachment(GetMesh());
 
 	// InternalCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("InternalCamera"));
 	// InternalCamera->bUsePawnControlRotation = false;
@@ -144,25 +144,25 @@ ABuggy::ABuggy()
 	// InternalCamera->SetupAttachment(InternalCameraBase);
 
 	// In car HUD
-	// Create text render component for in car speed display
-	InCarSpeed = CreateDefaultSubobject<UTextRenderComponent>(TEXT("IncarSpeed"));
-	InCarSpeed->SetRelativeScale3D(FVector(0.1f, 0.1f, 0.1f));
-	InCarSpeed->SetRelativeLocation(FVector(35.0f, -6.0f, 20.0f));
-	InCarSpeed->SetRelativeRotation(FRotator(0.0f, 180.0f, 0.0f));
-	InCarSpeed->SetupAttachment(GetMesh());
+	// // Create text render component for in car speed display
+	// InCarSpeed = CreateDefaultSubobject<UTextRenderComponent>(TEXT("IncarSpeed"));
+	// InCarSpeed->SetRelativeScale3D(FVector(0.1f, 0.1f, 0.1f));
+	// InCarSpeed->SetRelativeLocation(FVector(35.0f, -6.0f, 20.0f));
+	// InCarSpeed->SetRelativeRotation(FRotator(0.0f, 180.0f, 0.0f));
+	// InCarSpeed->SetupAttachment(GetMesh());
 
-	// Create text render component for in car gear display
-	InCarGear = CreateDefaultSubobject<UTextRenderComponent>(TEXT("IncarGear"));
-	InCarGear->SetRelativeScale3D(FVector(0.1f, 0.1f, 0.1f));
-	InCarGear->SetRelativeLocation(FVector(35.0f, 5.0f, 20.0f));
-	InCarGear->SetRelativeRotation(FRotator(0.0f, 180.0f, 0.0f));
-	InCarGear->SetupAttachment(GetMesh());
+	// // Create text render component for in car gear display
+	// InCarGear = CreateDefaultSubobject<UTextRenderComponent>(TEXT("IncarGear"));
+	// InCarGear->SetRelativeScale3D(FVector(0.1f, 0.1f, 0.1f));
+	// InCarGear->SetRelativeLocation(FVector(35.0f, 5.0f, 20.0f));
+	// InCarGear->SetRelativeRotation(FRotator(0.0f, 180.0f, 0.0f));
+	// InCarGear->SetupAttachment(GetMesh());
 	
-	// Setup the audio component and allocate it a sound cue
-	static ConstructorHelpers::FObjectFinder<USoundCue> SoundCue(TEXT("/Game/Buggy/Sound/Engine_Loop_Cue.Engine_Loop_Cue"));
-	EngineSoundComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("EngineSound"));
-	EngineSoundComponent->SetSound(SoundCue.Object);
-	EngineSoundComponent->SetupAttachment(GetMesh());
+	// // Setup the audio component and allocate it a sound cue
+	// static ConstructorHelpers::FObjectFinder<USoundCue> SoundCue(TEXT("/Game/Buggy/Sound/Engine_Loop_Cue.Engine_Loop_Cue"));
+	// EngineSoundComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("EngineSound"));
+	// EngineSoundComponent->SetSound(SoundCue.Object);
+	// EngineSoundComponent->SetupAttachment(GetMesh());
 
 	// Colors for the in-car gear display. One for normal one for reverse
 	GearDisplayReverseColor = FColor(255, 0, 0, 255);
@@ -190,7 +190,7 @@ void ABuggy::SetupPlayerInputComponent(class UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAction("Handbrake", IE_Released, this, &ABuggy::OnHandbrakeReleased);
 	PlayerInputComponent->BindAction("SwitchCamera", IE_Pressed, this, &ABuggy::OnToggleCamera);
 
-	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &ABuggy::OnResetVR); 
+	//PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &ABuggy::OnResetVR); 
 }
 
 void ABuggy::MoveForward(float Val)
@@ -215,11 +215,11 @@ void ABuggy::OnHandbrakeReleased()
 
 void ABuggy::OnToggleCamera()
 {
-	EnableIncarView(!bInCarCameraActive);
+	//EnableIncarView(!bInCarCameraActive);
 }
 
-void ABuggy::EnableIncarView(const bool bState)
-{
+//void ABuggy::EnableIncarView(const bool bState)
+//{
 	// if (bState != bInCarCameraActive)
 	// {
 	// 	bInCarCameraActive = bState;
@@ -239,7 +239,7 @@ void ABuggy::EnableIncarView(const bool bState)
 	// 	InCarSpeed->SetVisibility(bInCarCameraActive);
 	// 	InCarGear->SetVisibility(bInCarCameraActive);
 	// }
-}
+//}
 
 void ABuggy::Tick(float Delta)
 {
@@ -247,115 +247,115 @@ void ABuggy::Tick(float Delta)
 
 	if (GetMesh()->GetPhysicsLinearVelocity().Size() >= 100)
 	{
-		GetMesh()->SetPhysicsLinearVelocity(GetMesh()->GetPhysicsLinearVelocity()*0.95);
+		GetMesh()->SetPhysicsLinearVelocity(GetMesh()->GetPhysicsLinearVelocity()*0.98);
 	}
 
 	// Setup the flag to say we are in reverse gear
-	bInReverseGear = GetVehicleMovement()->GetCurrentGear() < 0;
+	//bInReverseGear = GetVehicleMovement()->GetCurrentGear() < 0;
 	
 	// Update phsyics material
 	UpdatePhysicsMaterial();
 
-	// Update the strings used in the hud (incar and onscreen)
-	UpdateHUDStrings();
+// 	// Update the strings used in the hud (incar and onscreen)
+// 	UpdateHUDStrings();
 
-	// Set the string in the incar hud
-	SetupInCarHUD();
+// 	// Set the string in the incar hud
+// 	SetupInCarHUD();
 
-	bool bHMDActive = false;
-#if HMD_MODULE_INCLUDED
-	if ((GEngine->XRSystem.IsValid() == true ) && ( (GEngine->XRSystem->IsHeadTrackingAllowed() == true) || (GEngine->IsStereoscopic3D() == true)))
-	{
-		bHMDActive = true;
-	}
-#endif // HMD_MODULE_INCLUDED
-	if( bHMDActive == false )
-	{
-	// 	if ( (InputComponent) && (bInCarCameraActive == true ))
-	// 	{
-	// 		FRotator HeadRotation = InternalCamera->RelativeRotation;
+// 	bool bHMDActive = false;
+// #if HMD_MODULE_INCLUDED
+// 	if ((GEngine->XRSystem.IsValid() == true ) && ( (GEngine->XRSystem->IsHeadTrackingAllowed() == true) || (GEngine->IsStereoscopic3D() == true)))
+// 	{
+// 		bHMDActive = true;
+// 	}
+// #endif // HMD_MODULE_INCLUDED
+// 	if( bHMDActive == false )
+// 	{
+// 	// 	if ( (InputComponent) && (bInCarCameraActive == true ))
+// 	// 	{
+// 	// 		FRotator HeadRotation = InternalCamera->RelativeRotation;
 	// 		HeadRotation.Pitch += InputComponent->GetAxisValue(LookUpBinding);
 	// 		HeadRotation.Yaw += InputComponent->GetAxisValue(LookRightBinding);
 	// 		InternalCamera->RelativeRotation = HeadRotation;
 	// 	}
-	}	
+	//}	
 
-	// Pass the engine RPM to the sound component
-	float RPMToAudioScale = 2500.0f / GetVehicleMovement()->GetEngineMaxRotationSpeed();
-	EngineSoundComponent->SetFloatParameter(EngineAudioRPM, GetVehicleMovement()->GetEngineRotationSpeed()*RPMToAudioScale);
+	// // Pass the engine RPM to the sound component
+	// float RPMToAudioScale = 2500.0f / GetVehicleMovement()->GetEngineMaxRotationSpeed();
+	// EngineSoundComponent->SetFloatParameter(EngineAudioRPM, GetVehicleMovement()->GetEngineRotationSpeed()*RPMToAudioScale);
 }
 
 void ABuggy::BeginPlay()
 {
 	Super::BeginPlay();
 
-	bool bWantInCar = false;
-	// First disable both speed/gear displays 
-	bInCarCameraActive = false;
-	InCarSpeed->SetVisibility(bInCarCameraActive);
-	InCarGear->SetVisibility(bInCarCameraActive);
+	// bool bWantInCar = false;
+	// // First disable both speed/gear displays 
+	// bInCarCameraActive = false;
+	// InCarSpeed->SetVisibility(bInCarCameraActive);
+	// InCarGear->SetVisibility(bInCarCameraActive);
 
-	// Enable in car view if HMD is attached
-#if HMD_MODULE_INCLUDED
-	bWantInCar = UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled();
-#endif // HMD_MODULE_INCLUDED
+// 	// Enable in car view if HMD is attached
+// #if HMD_MODULE_INCLUDED
+// 	bWantInCar = UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled();
+// #endif // HMD_MODULE_INCLUDED
 
-	EnableIncarView(bWantInCar);
-	// Start an engine sound playing
-	EngineSoundComponent->Play();
-}
+// 	EnableIncarView(bWantInCar);
+// 	// Start an engine sound playing
+// 	EngineSoundComponent->Play();
+//}
 
-void ABuggy::OnResetVR()
-{
-#if HMD_MODULE_INCLUDED
-	// if (GEngine->XRSystem.IsValid())
-	// {
-	// 	GEngine->XRSystem->ResetOrientationAndPosition();
-	// 	InternalCamera->SetRelativeLocation(InternalCameraOrigin);
-	// 	GetController()->SetControlRotation(FRotator());
-	// }
-#endif // HMD_MODULE_INCLUDED
-}
+// void ABuggy::OnResetVR()
+// {
+// #if HMD_MODULE_INCLUDED
+// 	// if (GEngine->XRSystem.IsValid())
+// 	// {
+// 	// 	GEngine->XRSystem->ResetOrientationAndPosition();
+// 	// 	InternalCamera->SetRelativeLocation(InternalCameraOrigin);
+// 	// 	GetController()->SetControlRotation(FRotator());
+// 	// }
+// #endif // HMD_MODULE_INCLUDED
+// }
 
-void ABuggy::UpdateHUDStrings()
-{
-	float KPH = FMath::Abs(GetVehicleMovement()->GetForwardSpeed()) * 0.036f;
-	int32 KPH_int = FMath::FloorToInt(KPH);
-	int32 Gear = GetVehicleMovement()->GetCurrentGear();
+// void ABuggy::UpdateHUDStrings()
+// {
+// 	float KPH = FMath::Abs(GetVehicleMovement()->GetForwardSpeed()) * 0.036f;
+// 	int32 KPH_int = FMath::FloorToInt(KPH);
+// 	int32 Gear = GetVehicleMovement()->GetCurrentGear();
 
-	// Using FText because this is display text that should be localizable
-	SpeedDisplayString = FText::Format(LOCTEXT("SpeedFormat", "{0} km/h"), FText::AsNumber(KPH_int));
+// 	// Using FText because this is display text that should be localizable
+// 	SpeedDisplayString = FText::Format(LOCTEXT("SpeedFormat", "{0} km/h"), FText::AsNumber(KPH_int));
 
 
-	if (bInReverseGear == true)
-	{
-		GearDisplayString = FText(LOCTEXT("ReverseGear", "R"));
-	}
-	else
-	{
-		GearDisplayString = (Gear == 0) ? LOCTEXT("N", "N") : FText::AsNumber(Gear);
-	}
+// 	if (bInReverseGear == true)
+// 	{
+// 		GearDisplayString = FText(LOCTEXT("ReverseGear", "R"));
+// 	}
+// 	else
+// 	{
+// 		GearDisplayString = (Gear == 0) ? LOCTEXT("N", "N") : FText::AsNumber(Gear);
+// 	}
 
-}
+// }
 
-void ABuggy::SetupInCarHUD()
-{
-	APlayerController* PlayerController = Cast<APlayerController>(GetController());
-	if ((PlayerController != nullptr) && (InCarSpeed != nullptr) && (InCarGear != nullptr))
-	{
-		// Setup the text render component strings
-		InCarSpeed->SetText(SpeedDisplayString);
-		InCarGear->SetText(GearDisplayString);
+// void ABuggy::SetupInCarHUD()
+// {
+// 	APlayerController* PlayerController = Cast<APlayerController>(GetController());
+// 	if ((PlayerController != nullptr) && (InCarSpeed != nullptr) && (InCarGear != nullptr))
+// 	{
+// 		// Setup the text render component strings
+// 		InCarSpeed->SetText(SpeedDisplayString);
+// 		InCarGear->SetText(GearDisplayString);
 		
-		if (bInReverseGear == false)
-		{
-			InCarGear->SetTextRenderColor(GearDisplayColor);
-		}
-		else
-		{
-			InCarGear->SetTextRenderColor(GearDisplayReverseColor);
-		}
-	}
+// 		if (bInReverseGear == false)
+// 		{
+// 			InCarGear->SetTextRenderColor(GearDisplayColor);
+// 		}
+// 		else
+// 		{
+// 			InCarGear->SetTextRenderColor(GearDisplayReverseColor);
+// 		}
+// 	}
 }
 
 void ABuggy::UpdatePhysicsMaterial()

@@ -183,7 +183,7 @@ UGTCaptureComponent* UGTCaptureComponent::Create(APawn* InPawn, TArray<FString> 
 
 	// This snippet is from Engine/Source/Runtime/Engine/Private/Components/SceneComponent.cpp, AttachTo
 	FAttachmentTransformRules AttachmentRules(EAttachmentRule::KeepRelative, false);
-	ConvertAttachLocation(EAttachLocation::KeepRelativeOffset, AttachmentRules.LocationRule, AttachmentRules.RotationRule, AttachmentRules.ScaleRule);
+	//ConvertAttachLocation(EAttachLocation::KeepRelativeOffset, AttachmentRules.LocationRule, AttachmentRules.RotationRule, AttachmentRules.ScaleRule);
 	GTCapturer->AttachToComponent(InPawn->GetRootComponent(), AttachmentRules);
 	// GTCapturer->AddToRoot();
 	GTCapturer->RegisterComponentWithWorld(World);
@@ -346,7 +346,8 @@ TArray<uint8> UGTCaptureComponent::CaptureNpyUint8(FString Mode, int32 Channels)
 	const FRotator PawnViewRotation = Pawn->GetViewRotation();
 	if (!PawnViewRotation.Equals(CaptureComponent->GetComponentRotation()))
 	{
-		CaptureComponent->SetWorldRotation(PawnViewRotation);
+		//CaptureComponent->SetWorldRotation(PawnViewRotation+FRotator(0,90,0));
+		//CaptureComponent->AddRelativeRotation(FRotator(0,30,0));
 	}
 
 	UTextureRenderTarget2D* RenderTarget = CaptureComponent->TextureTarget;
