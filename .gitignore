@@ -75,3 +75,7 @@ DerivedDataCache/*
 /Intermediate
 Intermediate
 /Intermediate/*
+
+# Core Dump and other stuff
+.ogv
+core
