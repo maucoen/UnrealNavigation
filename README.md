@@ -10,9 +10,10 @@ Unreal Navigation currently depends on the UROSBridge, UCoordConv and UnrealCV p
 
 ## Current Progress
 
-A few demonstrations of ORB-SLAM operating on an Unreal Engine simulation have been performed in uncommon environments.
+A few demonstrations of ORB-SLAM operating on a real-time Unreal Engine simulation have been performed in uncommon environments.
 
-Here is an asteroid field:
+Here is an asteroid field (10x speed):
+
 ![Asteroid ORBSLAM](https://github.com/maucoen/UnrealNavigation/blob/Navigation/WebContent/asteroidslam.gif "Asteroid field ORB SLAM")
 
 
