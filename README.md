@@ -14,11 +14,6 @@ A few demonstrations of ORB-SLAM operating on a real-time Unreal Engine simulati
 
 Here is an asteroid field (10x speed):
 
-<<<<<<< HEAD
-=======
-Here is an asteroid field:
-
->>>>>>> 6f0a2971b8d57c3a32299c1b57c6da7374698351
 ![Asteroid ORBSLAM](https://github.com/maucoen/UnrealNavigation/blob/Navigation/WebContent/asteroidslam.gif "Asteroid field ORB SLAM")
 
 
