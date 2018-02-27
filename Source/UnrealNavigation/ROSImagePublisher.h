@@ -40,13 +40,14 @@ protected:
 
 	void EnqueueImageTask();
 
-	void StopPublish();
-		
+	void TogglePublish();
+	bool bIsPublishing = false;
+
 	//UGTCaptureComponent* GTCapturer;
 
 	TArray<UGTCaptureComponent*> GTCapturers;
 
-	struct FTimerHandle GameStartTimer;
+	struct FTimerHandle PublishTimer;
 
 	class std_msgs::Header ROSHeader;
 	
@@ -64,7 +65,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	AActor* CastedPawny;
@@ -142,7 +142,6 @@ protected:
 			if (Handler.IsValid())
 			{
 				Handler->PublishMsg(Topic, CompressedData);
-				UE_LOG(LogTemp, Warning, TEXT("Handler published"));
 			} 		
 		}
 		else
@@ -160,7 +159,7 @@ protected:
 			if (Handler.IsValid())
 			{
 				Handler->PublishMsg(Topic, ImageData);
-				UE_LOG(LogTemp, Warning, TEXT("Handler published"));
+				//UE_LOG(LogTemp, Warning, TEXT("Handler published"));
 			} 
 		}
 	}

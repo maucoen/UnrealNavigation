@@ -28,7 +28,7 @@ void AROSImagePublisher::BeginPlay()
 		InputComponent = NewObject<UInputComponent>(this);
 		if (InputComponent)
 		{
-			InputComponent->BindKey(EKeys::K, EInputEvent::IE_Pressed, this, &AROSImagePublisher::StopPublish);
+			InputComponent->BindKey(EKeys::K, EInputEvent::IE_Pressed, this, &AROSImagePublisher::TogglePublish);
 			EnableInput(Controller);
 		}
 	}
@@ -86,10 +86,7 @@ void AROSImagePublisher::BeginPlay()
 
     ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("0"));
 
-    float Period = 1.0 / Frequency;
 
-    GetWorldTimerManager().SetTimer(GameStartTimer, this, 
-	&AROSImagePublisher::EnqueueImageTask, Period, true, Delay);
 }
 
 // Called when game ends or actor deleted
@@ -105,7 +102,6 @@ void AROSImagePublisher::EndPlay(const EEndPlayReason::Type Reason)
 // Called every frame
 void AROSImagePublisher::Tick(float DeltaTime)
 {
-	//Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
     Super::Tick(DeltaTime);
 
     while (!PendingTasksROS.IsEmpty())
@@ -123,7 +119,7 @@ void AROSImagePublisher::Tick(float DeltaTime)
 		}  
         PendingTasksROS.Dequeue(Task);
 
-        FVector eye = FVector(0,50,00);
+        FVector eye = FVector(0,500,00);
         
         for (int i=0; i < Modes.Num(); i++)
         {
@@ -184,9 +180,27 @@ void AROSImagePublisher::EnqueueImageTask()
 	PendingTasksROS.Enqueue(GTCaptureTask);
 }
 
-void AROSImagePublisher::StopPublish()
+void AROSImagePublisher::TogglePublish()
 {
-    GetWorld()->GetTimerManager().ClearTimer(GameStartTimer);
-    UE_LOG(LogTemp, Warning, TEXT("stopped image pub"));
-    PendingTasksROS.Empty();
+    if (!bIsPublishing)
+    {
+        float Period = 1.0 / Frequency;
+
+        GetWorldTimerManager().SetTimer(PublishTimer, this, 
+	    &AROSImagePublisher::EnqueueImageTask, Period, true, 0.5f);
+
+        if (GEngine){ GEngine->AddOnScreenDebugMessage(
+            -1, 2.0f, FColor::Green, TEXT("starting image publishing"), true, FVector2D(2,2)); }
+
+    }
+    else
+    {
+        GetWorld()->GetTimerManager().ClearTimer(PublishTimer);
+        PendingTasksROS.Empty();
+
+        if (GEngine){ GEngine->AddOnScreenDebugMessage(
+            -1, 2.0f, FColor::Red, TEXT("stopped image publishing"), true, FVector2D(2,2)); }
+    }
+
+    bIsPublishing = !bIsPublishing;
 }
