@@ -13,7 +13,7 @@ Unreal Navigation currently depends on the UROSBridge, UCoordConv and UnrealCV p
 A few demonstrations of ORB-SLAM operating on an Unreal Engine simulation have been performed in uncommon environments.
 
 Here is an asteroid field:
-![alt text](https://github.com/maucoen/UnrealNavigation/WebContent/asteroidslam.gif "Asteroid field ORB SLAM")
+![Asteroid ORBSLAM](https://github.com/maucoen/UnrealNavigation/blob/Navigation/WebContent/asteroidslam.gif "Asteroid field ORB SLAM")
 
 
 
