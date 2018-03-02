@@ -159,7 +159,7 @@ namespace sensor_msgs
 			Object->SetNumberField(TEXT("is_bigendian"), bIsBigEndian);
 			Object->SetNumberField(TEXT("step"), Step);
 			Object->SetStringField(TEXT("data"), *(FBase64::Encode(Data)));
-
+			//Object->SetStringField(TEXT("data"), TEXT(""));
 			return Object;
 		}
 
@@ -169,9 +169,55 @@ namespace sensor_msgs
 			TSharedRef< TJsonWriter<> > Writer = TJsonWriterFactory<>::Create(&OutputString);
 			FJsonSerializer::Serialize(ToJsonObject().ToSharedRef(), Writer);
 
-			//FString FData = BytesToString(&Data[0],Width*Height*3);
-			//OutputString = OutputString + FData;
 			return OutputString;
 		}
 	};
 } // namespace sensor_msgs
+
+
+
+			//OutputString.RemoveAt(OutputString.Len()-4,2,true);
+			//OutputString.RemoveAt(OutputString.Len()-3,1,true);
+			//UE_LOG(LogTemp, Warning, TEXT("OutS: %s"), *OutputString);
+
+
+			// if (OutputString.RemoveFromEnd(TEXT("\""),ESearchCase::IgnoreCase))
+			//  {
+			// 	 UE_LOG(LogTemp, Warning, TEXT("removed quote!")); 
+			//  }
+
+			 
+			//  //OutputString.RemoveAt(OutputString.Len()-3,1,true);
+
+			// //FString FData = BytesToString(&Data[0],Width*Height*3);
+			// FString FData = FStringOutputDevice::FromBlob(&Data[0],Width*Height*3);
+
+			// FData.InsertAt(0,TEXT("["));
+			// FData.InsertAt(0,TEXT("\""));
+			
+			// FData.Append(TEXT("]"));
+			// FData.Append(TEXT("\""));
+			
+			// UE_LOG(LogTemp, Warning, TEXT("Data: %s"), *FData);
+
+			// // UE_LOG(LogTemp, Warning, TEXT("Data:"));
+
+			// for (uint8 Datum : Data)
+			// {
+			// 	UE_LOG(LogTemp, Warning, TEXT("%i"), Datum);
+			// }
+
+
+			//FData.InsertAt(FData.Len(),TEXT("\\"));
+
+			//FString FData = 
+			//OutputString = OutputString  + FData + TEXT("\"") + TEXT("}");
+			//FData.TrimStartAndEndInline();
+			//FData += TEXT("\"");
+			//FData.TrimStartAndEndInline();
+			//OutputString.InsertAt(OutputString.Len()-3,FData);
+
+			// if (OutputString.RemoveFromEnd(TEXT("}"),ESearchCase::IgnoreCase))
+			// {
+			//  	 UE_LOG(LogTemp, Warning, TEXT("removed brace!")); 
+			// }
