@@ -9,7 +9,7 @@ CONFIG -= qt
 
 TARGET = UE4 
 
-unrealRootPath=/home/mau/EPIC/UE416
+unrealRootPath=/home/mau/EPIC/UnrealEngine
 UnrealNavigationRootPath=/home/mau/EPIC/Projects/UnrealNavigation
 
 gameProjectFile=/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject
@@ -76,12 +76,6 @@ DsymExporter-Linux-DebugGame.commands = $$build DsymExporter Linux DebugGame  $$
 DsymExporter-Linux-Shipping.commands = $$build DsymExporter Linux Shipping  $$args
 DsymExporter-Linux-Test.commands = $$build DsymExporter Linux Test  $$args
 DsymExporter.commands = $$build DsymExporter Linux Development  $$args
-
-ShaderCacheTool-Linux-Debug.commands = $$build ShaderCacheTool Linux Debug  $$args
-ShaderCacheTool-Linux-DebugGame.commands = $$build ShaderCacheTool Linux DebugGame  $$args
-ShaderCacheTool-Linux-Shipping.commands = $$build ShaderCacheTool Linux Shipping  $$args
-ShaderCacheTool-Linux-Test.commands = $$build ShaderCacheTool Linux Test  $$args
-ShaderCacheTool.commands = $$build ShaderCacheTool Linux Development  $$args
 
 UE4EditorServices-Linux-Debug.commands = $$build UE4EditorServices Linux Debug  $$args
 UE4EditorServices-Linux-DebugGame.commands = $$build UE4EditorServices Linux DebugGame  $$args
@@ -243,11 +237,6 @@ QMAKE_EXTRA_TARGETS += \
 	DsymExporter-Linux-Shipping \
 	DsymExporter-Linux-Test \
 	DsymExporter \
-	ShaderCacheTool-Linux-Debug \
-	ShaderCacheTool-Linux-DebugGame \
-	ShaderCacheTool-Linux-Shipping \
-	ShaderCacheTool-Linux-Test \
-	ShaderCacheTool \
 	UE4EditorServices-Linux-Debug \
 	UE4EditorServices-Linux-DebugGame \
 	UE4EditorServices-Linux-Shipping \

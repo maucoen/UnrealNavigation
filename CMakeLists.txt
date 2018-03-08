@@ -6,7 +6,7 @@ project (UE4)
 
 set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
 set(CMAKE_C_COMPILER "/usr/bin/clang")
-set(UE4_ROOT_PATH /home/mau/EPIC/UE416)
+set(UE4_ROOT_PATH /home/mau/EPIC/UnrealEngine)
 set(GAME_PROJECT_FILE "/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject")
 set(BUILD cd "${UE4_ROOT_PATH}" && bash "${UE4_ROOT_PATH}/Engine/Build/BatchFiles/Linux/Build.sh")
 set(GAME_ROOT_PATH "/home/mau/EPIC/Projects/UnrealNavigation")
@@ -2648,7 +2648,6 @@ set(SOURCE_FILES
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/IOS/UnrealLaunchDaemon/Private/IOS/IOSLaunchDaemonView.cpp"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/DsymExporter/Private/DsymExporterApp.cpp"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/DsymExporter/Private/Mac/DsymExporterMainMac.cpp"
-	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/ShaderCacheTool/Private/ShaderCacheTool.cpp"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/UE4EditorServices/Private/Linux/UE4EditorServicesMain.cpp"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/UE4EditorServices/Private/Mac/UE4EditorServicesAppDelegate.cpp"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/UE4EditorServices/Private/Mac/UE4EditorServicesMain.cpp"
@@ -10589,7 +10588,6 @@ set(HEADER_FILES
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/IOS/UnrealLaunchDaemon/Private/UnrealLaunchDaemonApp.h"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/IOS/UnrealLaunchDaemon/Private/IOS/IOSLaunchDaemonView.h"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/DsymExporter/Public/DsymExporterApp.h"
-	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/ShaderCacheTool/Private/ShaderCacheTool.h"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/UE4EditorServices/Private/Mac/UE4EditorServicesAppDelegate.h"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/UnrealAtoS/Public/UnrealAtoSApp.h"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/MinidumpDiagnostics/Public/MinidumpDiagnosticsApp.h"
@@ -17104,8 +17102,6 @@ set(CONFIG_FILES
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/IOS/UnrealLaunchDaemon/UnrealLaunchDaemon.Target.cs"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/DsymExporter/DsymExporter.Build.cs"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/DsymExporter/DsymExporter.Target.cs"
-	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/ShaderCacheTool/ShaderCacheTool.Build.cs"
-	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/ShaderCacheTool/ShaderCacheTool.Target.cs"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/UE4EditorServices/UE4EditorServices.Build.cs"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/UE4EditorServices/UE4EditorServices.Target.cs"
 	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/UnrealAtoS/UnrealAtoS.Build.cs"
@@ -20110,57 +20106,6 @@ include_directories(
 	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/DsymExporter/Inc/ProfilerService"
 	"${UE4_ROOT_PATH}/Engine/Source/Developer/ProfilerService"
 	"${UE4_ROOT_PATH}/Engine/Source"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Launch/Private"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Launch/Public"
-	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/ShaderCacheTool/Inc/ShaderCacheTool"
-	"${UE4_ROOT_PATH}/Engine/Source/Programs/Mac/ShaderCacheTool"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Internationalization"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Async"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Concurrency"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Containers"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Delegates"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/GenericPlatform"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/HAL"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Logging"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Math"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Misc"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Modules"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Modules/Boilerplate"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/ProfilingDebugging"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Serialization"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Serialization/Csv"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Stats"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Templates"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/UObject"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core/Public/Linux"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Core"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/ApplicationCore/Public"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/ApplicationCore/Public/GenericPlatform"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/ApplicationCore/Public/HAL"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/ApplicationCore/Public/Linux"
-	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/ShaderCacheTool/Inc/ApplicationCore"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/ApplicationCore"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/RHI/Public"
-	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/ShaderCacheTool/Inc/RHI"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/RHI"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Projects/Public"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Projects/Public/Interfaces"
-	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/ShaderCacheTool/Inc/Projects"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Projects"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Json/Public"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Json/Public/Dom"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Json/Public/Policies"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Json/Public/Serialization"
-	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/ShaderCacheTool/Inc/Json"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Json"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/ShaderCore/Public"
-	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/ShaderCacheTool/Inc/ShaderCore"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/ShaderCore"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/RenderCore/Public"
-	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/ShaderCacheTool/Inc/RenderCore"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/RenderCore"
-	"${UE4_ROOT_PATH}/Engine/Source"
 	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Launch/Public"
 	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Launch/Private"
 	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/UE4EditorServices/Inc/UE4EditorServices"
@@ -21203,6 +21148,16 @@ include_directories(
 	"${UE4_ROOT_PATH}/Engine/Source/Editor/SwarmInterface/Public"
 	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/UnrealLightmass/Inc/SwarmInterface"
 	"${UE4_ROOT_PATH}/Engine/Source/Editor/SwarmInterface"
+	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Sockets/Public"
+	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/UnrealLightmass/Inc/Sockets"
+	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Sockets"
+	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking/Public"
+	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking/Public/Common"
+	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking/Public/Interfaces"
+	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking/Public/Interfaces/IPv4"
+	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking/Public/Interfaces/Steam"
+	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/UnrealLightmass/Inc/Networking"
+	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking"
 	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Projects/Public"
 	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Projects/Public/Interfaces"
 	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/UnrealLightmass/Inc/Projects"
@@ -21222,16 +21177,6 @@ include_directories(
 	"${UE4_ROOT_PATH}/Engine/Source/Runtime/RHI/Public"
 	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/UnrealLightmass/Inc/RHI"
 	"${UE4_ROOT_PATH}/Engine/Source/Runtime/RHI"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking/Public"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking/Public/Common"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking/Public/Interfaces"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking/Public/Interfaces/IPv4"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking/Public/Interfaces/Steam"
-	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/UnrealLightmass/Inc/Networking"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Networking"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Sockets/Public"
-	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/UnrealLightmass/Inc/Sockets"
-	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Sockets"
 	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Messaging/Public"
 	"${UE4_ROOT_PATH}/Engine/Intermediate/Build/Linux/B4D820EA/UnrealLightmass/Inc/Messaging"
 	"${UE4_ROOT_PATH}/Engine/Source/Runtime/Messaging"
@@ -22426,7 +22371,6 @@ add_definitions(
 	-DCRASHREPORTCLIENT_API=
 	-DUNREALLAUNCHDAEMON_API=
 	-DDSYMEXPORTER_API=
-	-DSHADERCACHETOOL_API=
 	-DWITH_EDITORONLY_DATA=1
 	-DUE4EDITORSERVICES_API=
 	-DUNREALATOS_API=
@@ -22513,12 +22457,6 @@ add_custom_target(DsymExporter-Linux-DebugGame ${BUILD} DsymExporter Linux Debug
 add_custom_target(DsymExporter-Linux-Shipping ${BUILD} DsymExporter Linux Shipping  $(ARGS))
 add_custom_target(DsymExporter-Linux-Test ${BUILD} DsymExporter Linux Test  $(ARGS))
 add_custom_target(DsymExporter ${BUILD} DsymExporter Linux Development  $(ARGS) SOURCES ${SOURCE_FILES} ${HEADER_FILES} ${CONFIG_FILES})
-
-add_custom_target(ShaderCacheTool-Linux-Debug ${BUILD} ShaderCacheTool Linux Debug  $(ARGS))
-add_custom_target(ShaderCacheTool-Linux-DebugGame ${BUILD} ShaderCacheTool Linux DebugGame  $(ARGS))
-add_custom_target(ShaderCacheTool-Linux-Shipping ${BUILD} ShaderCacheTool Linux Shipping  $(ARGS))
-add_custom_target(ShaderCacheTool-Linux-Test ${BUILD} ShaderCacheTool Linux Test  $(ARGS))
-add_custom_target(ShaderCacheTool ${BUILD} ShaderCacheTool Linux Development  $(ARGS) SOURCES ${SOURCE_FILES} ${HEADER_FILES} ${CONFIG_FILES})
 
 add_custom_target(UE4EditorServices-Linux-Debug ${BUILD} UE4EditorServices Linux Debug  $(ARGS))
 add_custom_target(UE4EditorServices-Linux-DebugGame ${BUILD} UE4EditorServices Linux DebugGame  $(ARGS))

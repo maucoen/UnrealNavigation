@@ -2635,7 +2635,6 @@ SOURCES += \
 	"$$unrealRootPath/Engine/Source/Programs/IOS/UnrealLaunchDaemon/Private/IOS/IOSLaunchDaemonView.cpp" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/DsymExporter/Private/DsymExporterApp.cpp" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/DsymExporter/Private/Mac/DsymExporterMainMac.cpp" \
-	"$$unrealRootPath/Engine/Source/Programs/Mac/ShaderCacheTool/Private/ShaderCacheTool.cpp" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/UE4EditorServices/Private/Linux/UE4EditorServicesMain.cpp" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/UE4EditorServices/Private/Mac/UE4EditorServicesAppDelegate.cpp" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/UE4EditorServices/Private/Mac/UE4EditorServicesMain.cpp" \

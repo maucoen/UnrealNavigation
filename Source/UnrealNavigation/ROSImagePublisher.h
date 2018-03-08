@@ -35,7 +35,7 @@ public:
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
-
+	void SetupImager();
 	virtual void EndPlay(const EEndPlayReason::Type Reason);
 
 	void EnqueueImageTask();
@@ -43,16 +43,13 @@ protected:
 	void TogglePublish();
 	bool bIsPublishing = false;
 
-	//UGTCaptureComponent* GTCapturer;
-
 	TArray<UGTCaptureComponent*> GTCapturers;
-
 	struct FTimerHandle PublishTimer;
 
 	class std_msgs::Header ROSHeader;
 	
-	TQueue<FGTCaptureTask, EQueueMode::Spsc> PendingTasksROS;
-	//TQueue<FVector, EQueueMode::Spsc> PendingTasks;
+	//TQueue<FGTCaptureTask, EQueueMode::Spsc> PendingTasksROS;
+	TQueue<uint64, EQueueMode::Spsc> LastFrame;
 
 	uint32 channels = 3;
 	uint32 Count = 0;
@@ -87,10 +84,14 @@ public:
     float Frequency = 1.0f;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+    FVector StereoBaselineCm = {0,500,0};
+
+	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bSaveToDisk = false;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bIsCompressed = false;
+
 
 };
 

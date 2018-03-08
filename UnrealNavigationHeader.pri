@@ -3248,7 +3248,6 @@ HEADERS += \
 	"$$unrealRootPath/Engine/Source/Programs/IOS/UnrealLaunchDaemon/Private/UnrealLaunchDaemonApp.h" \
 	"$$unrealRootPath/Engine/Source/Programs/IOS/UnrealLaunchDaemon/Private/IOS/IOSLaunchDaemonView.h" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/DsymExporter/Public/DsymExporterApp.h" \
-	"$$unrealRootPath/Engine/Source/Programs/Mac/ShaderCacheTool/Private/ShaderCacheTool.h" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/UE4EditorServices/Private/Mac/UE4EditorServicesAppDelegate.h" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/UnrealAtoS/Public/UnrealAtoSApp.h" \
 	"$$unrealRootPath/Engine/Source/Programs/MinidumpDiagnostics/Public/MinidumpDiagnosticsApp.h" \

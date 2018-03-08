@@ -229,8 +229,6 @@ OTHER_FILES += \
 	"$$unrealRootPath/Engine/Source/Programs/IOS/UnrealLaunchDaemon/UnrealLaunchDaemon.Target.cs" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/DsymExporter/DsymExporter.Build.cs" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/DsymExporter/DsymExporter.Target.cs" \
-	"$$unrealRootPath/Engine/Source/Programs/Mac/ShaderCacheTool/ShaderCacheTool.Build.cs" \
-	"$$unrealRootPath/Engine/Source/Programs/Mac/ShaderCacheTool/ShaderCacheTool.Target.cs" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/UE4EditorServices/UE4EditorServices.Build.cs" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/UE4EditorServices/UE4EditorServices.Target.cs" \
 	"$$unrealRootPath/Engine/Source/Programs/Mac/UnrealAtoS/UnrealAtoS.Build.cs" \

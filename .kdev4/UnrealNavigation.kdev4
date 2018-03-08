@@ -2,7 +2,7 @@
 CurrentConfiguration=BuildConfig0
 
 [CustomBuildSystem][BuildConfig0]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BuildMeFirst
 
 [CustomBuildSystem][BuildConfig0][ToolBuild]
@@ -27,7 +27,7 @@ Executable=bash
 Type=1
 
 [CustomBuildSystem][BuildConfig1]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Client-Linux-Debug
 
 [CustomBuildSystem][BuildConfig1][ToolBuild]
@@ -52,7 +52,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig2]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Client-Linux-DebugGame
 
 [CustomBuildSystem][BuildConfig2][ToolBuild]
@@ -77,7 +77,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig3]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Client-Linux-Shipping
 
 [CustomBuildSystem][BuildConfig3][ToolBuild]
@@ -102,7 +102,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig4]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Client-Linux-Test
 
 [CustomBuildSystem][BuildConfig4][ToolBuild]
@@ -127,7 +127,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig5]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Client
 
 [CustomBuildSystem][BuildConfig5][ToolBuild]
@@ -152,7 +152,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig6]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Editor-Linux-Debug
 
 [CustomBuildSystem][BuildConfig6][ToolBuild]
@@ -177,7 +177,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig7]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Editor-Linux-DebugGame
 
 [CustomBuildSystem][BuildConfig7][ToolBuild]
@@ -202,7 +202,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig8]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Editor-Linux-Shipping
 
 [CustomBuildSystem][BuildConfig8][ToolBuild]
@@ -227,7 +227,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig9]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Editor-Linux-Test
 
 [CustomBuildSystem][BuildConfig9][ToolBuild]
@@ -252,7 +252,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig10]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Editor
 
 [CustomBuildSystem][BuildConfig10][ToolBuild]
@@ -277,7 +277,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig11]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Game-Linux-Debug
 
 [CustomBuildSystem][BuildConfig11][ToolBuild]
@@ -302,7 +302,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig12]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Game-Linux-DebugGame
 
 [CustomBuildSystem][BuildConfig12][ToolBuild]
@@ -327,7 +327,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig13]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Game-Linux-Shipping
 
 [CustomBuildSystem][BuildConfig13][ToolBuild]
@@ -352,7 +352,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig14]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Game-Linux-Test
 
 [CustomBuildSystem][BuildConfig14][ToolBuild]
@@ -377,7 +377,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig15]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Game
 
 [CustomBuildSystem][BuildConfig15][ToolBuild]
@@ -402,7 +402,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig16]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Server-Linux-Debug
 
 [CustomBuildSystem][BuildConfig16][ToolBuild]
@@ -427,7 +427,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig17]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Server-Linux-DebugGame
 
 [CustomBuildSystem][BuildConfig17][ToolBuild]
@@ -452,7 +452,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig18]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Server-Linux-Shipping
 
 [CustomBuildSystem][BuildConfig18][ToolBuild]
@@ -477,7 +477,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig19]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Server-Linux-Test
 
 [CustomBuildSystem][BuildConfig19][ToolBuild]
@@ -502,7 +502,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig20]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4Server
 
 [CustomBuildSystem][BuildConfig20][ToolBuild]
@@ -527,7 +527,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig21]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BlankProgram-Linux-Debug
 
 [CustomBuildSystem][BuildConfig21][ToolBuild]
@@ -552,7 +552,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig22]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BlankProgram-Linux-DebugGame
 
 [CustomBuildSystem][BuildConfig22][ToolBuild]
@@ -577,7 +577,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig23]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BlankProgram-Linux-Shipping
 
 [CustomBuildSystem][BuildConfig23][ToolBuild]
@@ -602,7 +602,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig24]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BlankProgram-Linux-Test
 
 [CustomBuildSystem][BuildConfig24][ToolBuild]
@@ -627,7 +627,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig25]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BlankProgram
 
 [CustomBuildSystem][BuildConfig25][ToolBuild]
@@ -652,7 +652,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig26]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BuildPatchTool-Linux-Debug
 
 [CustomBuildSystem][BuildConfig26][ToolBuild]
@@ -677,7 +677,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig27]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BuildPatchTool-Linux-DebugGame
 
 [CustomBuildSystem][BuildConfig27][ToolBuild]
@@ -702,7 +702,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig28]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BuildPatchTool-Linux-Shipping
 
 [CustomBuildSystem][BuildConfig28][ToolBuild]
@@ -727,7 +727,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig29]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BuildPatchTool-Linux-Test
 
 [CustomBuildSystem][BuildConfig29][ToolBuild]
@@ -752,7 +752,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig30]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BuildPatchTool
 
 [CustomBuildSystem][BuildConfig30][ToolBuild]
@@ -777,7 +777,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig31]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=CrashReportClient-Linux-Debug
 
 [CustomBuildSystem][BuildConfig31][ToolBuild]
@@ -802,7 +802,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig32]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=CrashReportClient-Linux-DebugGame
 
 [CustomBuildSystem][BuildConfig32][ToolBuild]
@@ -827,7 +827,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig33]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=CrashReportClient-Linux-Shipping
 
 [CustomBuildSystem][BuildConfig33][ToolBuild]
@@ -852,7 +852,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig34]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=CrashReportClient-Linux-Test
 
 [CustomBuildSystem][BuildConfig34][ToolBuild]
@@ -877,7 +877,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig35]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=CrashReportClient
 
 [CustomBuildSystem][BuildConfig35][ToolBuild]
@@ -902,7 +902,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig36]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealLaunchDaemon-Linux-Debug
 
 [CustomBuildSystem][BuildConfig36][ToolBuild]
@@ -927,7 +927,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig37]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealLaunchDaemon-Linux-DebugGame
 
 [CustomBuildSystem][BuildConfig37][ToolBuild]
@@ -952,7 +952,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig38]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealLaunchDaemon-Linux-Shipping
 
 [CustomBuildSystem][BuildConfig38][ToolBuild]
@@ -977,7 +977,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig39]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealLaunchDaemon-Linux-Test
 
 [CustomBuildSystem][BuildConfig39][ToolBuild]
@@ -1002,7 +1002,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig40]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealLaunchDaemon
 
 [CustomBuildSystem][BuildConfig40][ToolBuild]
@@ -1027,7 +1027,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig41]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=DsymExporter-Linux-Debug
 
 [CustomBuildSystem][BuildConfig41][ToolBuild]
@@ -1052,7 +1052,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig42]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=DsymExporter-Linux-DebugGame
 
 [CustomBuildSystem][BuildConfig42][ToolBuild]
@@ -1077,7 +1077,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig43]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=DsymExporter-Linux-Shipping
 
 [CustomBuildSystem][BuildConfig43][ToolBuild]
@@ -1102,7 +1102,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig44]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=DsymExporter-Linux-Test
 
 [CustomBuildSystem][BuildConfig44][ToolBuild]
@@ -1127,7 +1127,7 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig45]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=DsymExporter
 
 [CustomBuildSystem][BuildConfig45][ToolBuild]
@@ -1152,2499 +1152,2374 @@ Executable=bash
 Type=3
 
 [CustomBuildSystem][BuildConfig46]
-BuildDir=file:///home/mau/EPIC/UE416
-Title=ShaderCacheTool-Linux-Debug
-
-[CustomBuildSystem][BuildConfig46][ToolBuild]
-Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCacheTool Linux Debug
-Enabled=true
-Environment=
-Executable=bash
-Type=0
-
-[CustomBuildSystem][BuildConfig46][ToolConfigure]
-Arguments=./GenerateProjectFiles.sh  ShaderCacheTool Linux Debug
-Enabled=true
-Environment=
-Executable=bash
-Type=1
-
-[CustomBuildSystem][BuildConfig46][ToolClean]
-Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCacheTool Linux Debug -clean
-Enabled=true
-Environment=
-Executable=bash
-Type=3
-
-[CustomBuildSystem][BuildConfig47]
-BuildDir=file:///home/mau/EPIC/UE416
-Title=ShaderCacheTool-Linux-DebugGame
-
-[CustomBuildSystem][BuildConfig47][ToolBuild]
-Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCacheTool Linux DebugGame
-Enabled=true
-Environment=
-Executable=bash
-Type=0
-
-[CustomBuildSystem][BuildConfig47][ToolConfigure]
-Arguments=./GenerateProjectFiles.sh  ShaderCacheTool Linux DebugGame
-Enabled=true
-Environment=
-Executable=bash
-Type=1
-
-[CustomBuildSystem][BuildConfig47][ToolClean]
-Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCacheTool Linux DebugGame -clean
-Enabled=true
-Environment=
-Executable=bash
-Type=3
-
-[CustomBuildSystem][BuildConfig48]
-BuildDir=file:///home/mau/EPIC/UE416
-Title=ShaderCacheTool-Linux-Shipping
-
-[CustomBuildSystem][BuildConfig48][ToolBuild]
-Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCacheTool Linux Shipping
-Enabled=true
-Environment=
-Executable=bash
-Type=0
-
-[CustomBuildSystem][BuildConfig48][ToolConfigure]
-Arguments=./GenerateProjectFiles.sh  ShaderCacheTool Linux Shipping
-Enabled=true
-Environment=
-Executable=bash
-Type=1
-
-[CustomBuildSystem][BuildConfig48][ToolClean]
-Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCacheTool Linux Shipping -clean
-Enabled=true
-Environment=
-Executable=bash
-Type=3
-
-[CustomBuildSystem][BuildConfig49]
-BuildDir=file:///home/mau/EPIC/UE416
-Title=ShaderCacheTool-Linux-Test
-
-[CustomBuildSystem][BuildConfig49][ToolBuild]
-Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCacheTool Linux Test
-Enabled=true
-Environment=
-Executable=bash
-Type=0
-
-[CustomBuildSystem][BuildConfig49][ToolConfigure]
-Arguments=./GenerateProjectFiles.sh  ShaderCacheTool Linux Test
-Enabled=true
-Environment=
-Executable=bash
-Type=1
-
-[CustomBuildSystem][BuildConfig49][ToolClean]
-Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCacheTool Linux Test -clean
-Enabled=true
-Environment=
-Executable=bash
-Type=3
-
-[CustomBuildSystem][BuildConfig50]
-BuildDir=file:///home/mau/EPIC/UE416
-Title=ShaderCacheTool
-
-[CustomBuildSystem][BuildConfig50][ToolBuild]
-Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCacheTool Linux Development
-Enabled=true
-Environment=
-Executable=bash
-Type=0
-
-[CustomBuildSystem][BuildConfig50][ToolConfigure]
-Arguments=./GenerateProjectFiles.sh  ShaderCacheTool Linux Development
-Enabled=true
-Environment=
-Executable=bash
-Type=1
-
-[CustomBuildSystem][BuildConfig50][ToolClean]
-Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCacheTool Linux Development -clean
-Enabled=true
-Environment=
-Executable=bash
-Type=3
-
-[CustomBuildSystem][BuildConfig51]
-BuildDir=file:///home/mau/EPIC/UE416
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4EditorServices-Linux-Debug
 
-[CustomBuildSystem][BuildConfig51][ToolBuild]
+[CustomBuildSystem][BuildConfig46][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UE4EditorServices Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig51][ToolConfigure]
+[CustomBuildSystem][BuildConfig46][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UE4EditorServices Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig51][ToolClean]
+[CustomBuildSystem][BuildConfig46][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UE4EditorServices Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig52]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig47]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4EditorServices-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig52][ToolBuild]
+[CustomBuildSystem][BuildConfig47][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UE4EditorServices Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig52][ToolConfigure]
+[CustomBuildSystem][BuildConfig47][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UE4EditorServices Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig52][ToolClean]
+[CustomBuildSystem][BuildConfig47][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UE4EditorServices Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig53]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig48]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4EditorServices-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig53][ToolBuild]
+[CustomBuildSystem][BuildConfig48][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UE4EditorServices Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig53][ToolConfigure]
+[CustomBuildSystem][BuildConfig48][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UE4EditorServices Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig53][ToolClean]
+[CustomBuildSystem][BuildConfig48][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UE4EditorServices Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig54]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig49]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4EditorServices-Linux-Test
 
-[CustomBuildSystem][BuildConfig54][ToolBuild]
+[CustomBuildSystem][BuildConfig49][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UE4EditorServices Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig54][ToolConfigure]
+[CustomBuildSystem][BuildConfig49][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UE4EditorServices Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig54][ToolClean]
+[CustomBuildSystem][BuildConfig49][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UE4EditorServices Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig55]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig50]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UE4EditorServices
 
-[CustomBuildSystem][BuildConfig55][ToolBuild]
+[CustomBuildSystem][BuildConfig50][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UE4EditorServices Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig55][ToolConfigure]
+[CustomBuildSystem][BuildConfig50][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UE4EditorServices Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig55][ToolClean]
+[CustomBuildSystem][BuildConfig50][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UE4EditorServices Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig56]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig51]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealAtoS-Linux-Debug
 
-[CustomBuildSystem][BuildConfig56][ToolBuild]
+[CustomBuildSystem][BuildConfig51][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealAtoS Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig56][ToolConfigure]
+[CustomBuildSystem][BuildConfig51][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealAtoS Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig56][ToolClean]
+[CustomBuildSystem][BuildConfig51][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealAtoS Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig57]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig52]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealAtoS-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig57][ToolBuild]
+[CustomBuildSystem][BuildConfig52][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealAtoS Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig57][ToolConfigure]
+[CustomBuildSystem][BuildConfig52][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealAtoS Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig57][ToolClean]
+[CustomBuildSystem][BuildConfig52][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealAtoS Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig58]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig53]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealAtoS-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig58][ToolBuild]
+[CustomBuildSystem][BuildConfig53][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealAtoS Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig58][ToolConfigure]
+[CustomBuildSystem][BuildConfig53][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealAtoS Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig58][ToolClean]
+[CustomBuildSystem][BuildConfig53][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealAtoS Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig59]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig54]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealAtoS-Linux-Test
 
-[CustomBuildSystem][BuildConfig59][ToolBuild]
+[CustomBuildSystem][BuildConfig54][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealAtoS Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig59][ToolConfigure]
+[CustomBuildSystem][BuildConfig54][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealAtoS Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig59][ToolClean]
+[CustomBuildSystem][BuildConfig54][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealAtoS Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig60]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig55]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealAtoS
 
-[CustomBuildSystem][BuildConfig60][ToolBuild]
+[CustomBuildSystem][BuildConfig55][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealAtoS Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig60][ToolConfigure]
+[CustomBuildSystem][BuildConfig55][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealAtoS Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig60][ToolClean]
+[CustomBuildSystem][BuildConfig55][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealAtoS Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig61]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig56]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=MayaLiveLinkPlugin-Linux-Debug
 
-[CustomBuildSystem][BuildConfig61][ToolBuild]
+[CustomBuildSystem][BuildConfig56][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MayaLiveLinkPlugin Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig61][ToolConfigure]
+[CustomBuildSystem][BuildConfig56][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  MayaLiveLinkPlugin Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig61][ToolClean]
+[CustomBuildSystem][BuildConfig56][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MayaLiveLinkPlugin Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig62]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig57]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=MayaLiveLinkPlugin-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig62][ToolBuild]
+[CustomBuildSystem][BuildConfig57][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MayaLiveLinkPlugin Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig62][ToolConfigure]
+[CustomBuildSystem][BuildConfig57][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  MayaLiveLinkPlugin Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig62][ToolClean]
+[CustomBuildSystem][BuildConfig57][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MayaLiveLinkPlugin Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig63]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig58]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=MayaLiveLinkPlugin-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig63][ToolBuild]
+[CustomBuildSystem][BuildConfig58][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MayaLiveLinkPlugin Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig63][ToolConfigure]
+[CustomBuildSystem][BuildConfig58][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  MayaLiveLinkPlugin Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig63][ToolClean]
+[CustomBuildSystem][BuildConfig58][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MayaLiveLinkPlugin Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig64]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig59]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=MayaLiveLinkPlugin-Linux-Test
 
-[CustomBuildSystem][BuildConfig64][ToolBuild]
+[CustomBuildSystem][BuildConfig59][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MayaLiveLinkPlugin Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig64][ToolConfigure]
+[CustomBuildSystem][BuildConfig59][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  MayaLiveLinkPlugin Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig64][ToolClean]
+[CustomBuildSystem][BuildConfig59][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MayaLiveLinkPlugin Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig65]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig60]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=MayaLiveLinkPlugin
 
-[CustomBuildSystem][BuildConfig65][ToolBuild]
+[CustomBuildSystem][BuildConfig60][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MayaLiveLinkPlugin Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig65][ToolConfigure]
+[CustomBuildSystem][BuildConfig60][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  MayaLiveLinkPlugin Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig65][ToolClean]
+[CustomBuildSystem][BuildConfig60][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MayaLiveLinkPlugin Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig66]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig61]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=MinidumpDiagnostics-Linux-Debug
 
-[CustomBuildSystem][BuildConfig66][ToolBuild]
+[CustomBuildSystem][BuildConfig61][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MinidumpDiagnostics Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig66][ToolConfigure]
+[CustomBuildSystem][BuildConfig61][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  MinidumpDiagnostics Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig66][ToolClean]
+[CustomBuildSystem][BuildConfig61][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MinidumpDiagnostics Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig67]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig62]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=MinidumpDiagnostics-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig67][ToolBuild]
+[CustomBuildSystem][BuildConfig62][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MinidumpDiagnostics Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig67][ToolConfigure]
+[CustomBuildSystem][BuildConfig62][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  MinidumpDiagnostics Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig67][ToolClean]
+[CustomBuildSystem][BuildConfig62][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MinidumpDiagnostics Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig68]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig63]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=MinidumpDiagnostics-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig68][ToolBuild]
+[CustomBuildSystem][BuildConfig63][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MinidumpDiagnostics Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig68][ToolConfigure]
+[CustomBuildSystem][BuildConfig63][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  MinidumpDiagnostics Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig68][ToolClean]
+[CustomBuildSystem][BuildConfig63][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MinidumpDiagnostics Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig69]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig64]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=MinidumpDiagnostics-Linux-Test
 
-[CustomBuildSystem][BuildConfig69][ToolBuild]
+[CustomBuildSystem][BuildConfig64][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MinidumpDiagnostics Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig69][ToolConfigure]
+[CustomBuildSystem][BuildConfig64][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  MinidumpDiagnostics Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig69][ToolClean]
+[CustomBuildSystem][BuildConfig64][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MinidumpDiagnostics Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig70]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig65]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=MinidumpDiagnostics
 
-[CustomBuildSystem][BuildConfig70][ToolBuild]
+[CustomBuildSystem][BuildConfig65][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MinidumpDiagnostics Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig70][ToolConfigure]
+[CustomBuildSystem][BuildConfig65][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  MinidumpDiagnostics Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig70][ToolClean]
+[CustomBuildSystem][BuildConfig65][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  MinidumpDiagnostics Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig71]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig66]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=ShaderCompileWorker-Linux-Debug
 
-[CustomBuildSystem][BuildConfig71][ToolBuild]
+[CustomBuildSystem][BuildConfig66][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCompileWorker Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig71][ToolConfigure]
+[CustomBuildSystem][BuildConfig66][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  ShaderCompileWorker Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig71][ToolClean]
+[CustomBuildSystem][BuildConfig66][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCompileWorker Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig72]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig67]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=ShaderCompileWorker-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig72][ToolBuild]
+[CustomBuildSystem][BuildConfig67][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCompileWorker Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig72][ToolConfigure]
+[CustomBuildSystem][BuildConfig67][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  ShaderCompileWorker Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig72][ToolClean]
+[CustomBuildSystem][BuildConfig67][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCompileWorker Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig73]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig68]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=ShaderCompileWorker-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig73][ToolBuild]
+[CustomBuildSystem][BuildConfig68][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCompileWorker Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig73][ToolConfigure]
+[CustomBuildSystem][BuildConfig68][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  ShaderCompileWorker Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig73][ToolClean]
+[CustomBuildSystem][BuildConfig68][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCompileWorker Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig74]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig69]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=ShaderCompileWorker-Linux-Test
 
-[CustomBuildSystem][BuildConfig74][ToolBuild]
+[CustomBuildSystem][BuildConfig69][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCompileWorker Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig74][ToolConfigure]
+[CustomBuildSystem][BuildConfig69][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  ShaderCompileWorker Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig74][ToolClean]
+[CustomBuildSystem][BuildConfig69][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCompileWorker Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig75]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig70]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=ShaderCompileWorker
 
-[CustomBuildSystem][BuildConfig75][ToolBuild]
+[CustomBuildSystem][BuildConfig70][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCompileWorker Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig75][ToolConfigure]
+[CustomBuildSystem][BuildConfig70][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  ShaderCompileWorker Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig75][ToolClean]
+[CustomBuildSystem][BuildConfig70][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  ShaderCompileWorker Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig76]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig71]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=SlateViewer-Linux-Debug
 
-[CustomBuildSystem][BuildConfig76][ToolBuild]
+[CustomBuildSystem][BuildConfig71][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SlateViewer Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig76][ToolConfigure]
+[CustomBuildSystem][BuildConfig71][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  SlateViewer Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig76][ToolClean]
+[CustomBuildSystem][BuildConfig71][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SlateViewer Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig77]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig72]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=SlateViewer-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig77][ToolBuild]
+[CustomBuildSystem][BuildConfig72][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SlateViewer Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig77][ToolConfigure]
+[CustomBuildSystem][BuildConfig72][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  SlateViewer Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig77][ToolClean]
+[CustomBuildSystem][BuildConfig72][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SlateViewer Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig78]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig73]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=SlateViewer-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig78][ToolBuild]
+[CustomBuildSystem][BuildConfig73][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SlateViewer Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig78][ToolConfigure]
+[CustomBuildSystem][BuildConfig73][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  SlateViewer Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig78][ToolClean]
+[CustomBuildSystem][BuildConfig73][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SlateViewer Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig79]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig74]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=SlateViewer-Linux-Test
 
-[CustomBuildSystem][BuildConfig79][ToolBuild]
+[CustomBuildSystem][BuildConfig74][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SlateViewer Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig79][ToolConfigure]
+[CustomBuildSystem][BuildConfig74][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  SlateViewer Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig79][ToolClean]
+[CustomBuildSystem][BuildConfig74][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SlateViewer Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig80]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig75]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=SlateViewer
 
-[CustomBuildSystem][BuildConfig80][ToolBuild]
+[CustomBuildSystem][BuildConfig75][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SlateViewer Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig80][ToolConfigure]
+[CustomBuildSystem][BuildConfig75][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  SlateViewer Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig80][ToolClean]
+[CustomBuildSystem][BuildConfig75][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SlateViewer Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig81]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig76]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=SymbolDebugger-Linux-Debug
 
-[CustomBuildSystem][BuildConfig81][ToolBuild]
+[CustomBuildSystem][BuildConfig76][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SymbolDebugger Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig81][ToolConfigure]
+[CustomBuildSystem][BuildConfig76][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  SymbolDebugger Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig81][ToolClean]
+[CustomBuildSystem][BuildConfig76][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SymbolDebugger Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig82]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig77]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=SymbolDebugger-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig82][ToolBuild]
+[CustomBuildSystem][BuildConfig77][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SymbolDebugger Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig82][ToolConfigure]
+[CustomBuildSystem][BuildConfig77][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  SymbolDebugger Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig82][ToolClean]
+[CustomBuildSystem][BuildConfig77][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SymbolDebugger Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig83]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig78]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=SymbolDebugger-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig83][ToolBuild]
+[CustomBuildSystem][BuildConfig78][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SymbolDebugger Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig83][ToolConfigure]
+[CustomBuildSystem][BuildConfig78][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  SymbolDebugger Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig83][ToolClean]
+[CustomBuildSystem][BuildConfig78][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SymbolDebugger Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig84]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig79]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=SymbolDebugger-Linux-Test
 
-[CustomBuildSystem][BuildConfig84][ToolBuild]
+[CustomBuildSystem][BuildConfig79][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SymbolDebugger Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig84][ToolConfigure]
+[CustomBuildSystem][BuildConfig79][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  SymbolDebugger Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig84][ToolClean]
+[CustomBuildSystem][BuildConfig79][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SymbolDebugger Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig85]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig80]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=SymbolDebugger
 
-[CustomBuildSystem][BuildConfig85][ToolBuild]
+[CustomBuildSystem][BuildConfig80][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SymbolDebugger Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig85][ToolConfigure]
+[CustomBuildSystem][BuildConfig80][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  SymbolDebugger Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig85][ToolClean]
+[CustomBuildSystem][BuildConfig80][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  SymbolDebugger Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig86]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig81]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=TestPAL-Linux-Debug
 
-[CustomBuildSystem][BuildConfig86][ToolBuild]
+[CustomBuildSystem][BuildConfig81][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  TestPAL Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig86][ToolConfigure]
+[CustomBuildSystem][BuildConfig81][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  TestPAL Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig86][ToolClean]
+[CustomBuildSystem][BuildConfig81][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  TestPAL Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig87]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig82]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=TestPAL-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig87][ToolBuild]
+[CustomBuildSystem][BuildConfig82][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  TestPAL Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig87][ToolConfigure]
+[CustomBuildSystem][BuildConfig82][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  TestPAL Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig87][ToolClean]
+[CustomBuildSystem][BuildConfig82][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  TestPAL Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig88]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig83]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=TestPAL-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig88][ToolBuild]
+[CustomBuildSystem][BuildConfig83][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  TestPAL Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig88][ToolConfigure]
+[CustomBuildSystem][BuildConfig83][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  TestPAL Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig88][ToolClean]
+[CustomBuildSystem][BuildConfig83][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  TestPAL Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig89]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig84]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=TestPAL-Linux-Test
 
-[CustomBuildSystem][BuildConfig89][ToolBuild]
+[CustomBuildSystem][BuildConfig84][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  TestPAL Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig89][ToolConfigure]
+[CustomBuildSystem][BuildConfig84][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  TestPAL Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig89][ToolClean]
+[CustomBuildSystem][BuildConfig84][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  TestPAL Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig90]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig85]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=TestPAL
 
-[CustomBuildSystem][BuildConfig90][ToolBuild]
+[CustomBuildSystem][BuildConfig85][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  TestPAL Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig90][ToolConfigure]
+[CustomBuildSystem][BuildConfig85][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  TestPAL Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig90][ToolClean]
+[CustomBuildSystem][BuildConfig85][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  TestPAL Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig91]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig86]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealCEFSubProcess-Linux-Debug
 
-[CustomBuildSystem][BuildConfig91][ToolBuild]
+[CustomBuildSystem][BuildConfig86][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealCEFSubProcess Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig91][ToolConfigure]
+[CustomBuildSystem][BuildConfig86][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealCEFSubProcess Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig91][ToolClean]
+[CustomBuildSystem][BuildConfig86][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealCEFSubProcess Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig92]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig87]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealCEFSubProcess-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig92][ToolBuild]
+[CustomBuildSystem][BuildConfig87][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealCEFSubProcess Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig92][ToolConfigure]
+[CustomBuildSystem][BuildConfig87][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealCEFSubProcess Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig92][ToolClean]
+[CustomBuildSystem][BuildConfig87][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealCEFSubProcess Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig93]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig88]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealCEFSubProcess-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig93][ToolBuild]
+[CustomBuildSystem][BuildConfig88][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealCEFSubProcess Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig93][ToolConfigure]
+[CustomBuildSystem][BuildConfig88][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealCEFSubProcess Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig93][ToolClean]
+[CustomBuildSystem][BuildConfig88][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealCEFSubProcess Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig94]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig89]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealCEFSubProcess-Linux-Test
 
-[CustomBuildSystem][BuildConfig94][ToolBuild]
+[CustomBuildSystem][BuildConfig89][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealCEFSubProcess Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig94][ToolConfigure]
+[CustomBuildSystem][BuildConfig89][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealCEFSubProcess Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig94][ToolClean]
+[CustomBuildSystem][BuildConfig89][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealCEFSubProcess Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig95]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig90]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealCEFSubProcess
 
-[CustomBuildSystem][BuildConfig95][ToolBuild]
+[CustomBuildSystem][BuildConfig90][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealCEFSubProcess Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig95][ToolConfigure]
+[CustomBuildSystem][BuildConfig90][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealCEFSubProcess Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig95][ToolClean]
+[CustomBuildSystem][BuildConfig90][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealCEFSubProcess Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig96]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig91]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealFileServer-Linux-Debug
 
-[CustomBuildSystem][BuildConfig96][ToolBuild]
+[CustomBuildSystem][BuildConfig91][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFileServer Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig96][ToolConfigure]
+[CustomBuildSystem][BuildConfig91][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealFileServer Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig96][ToolClean]
+[CustomBuildSystem][BuildConfig91][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFileServer Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig97]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig92]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealFileServer-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig97][ToolBuild]
+[CustomBuildSystem][BuildConfig92][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFileServer Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig97][ToolConfigure]
+[CustomBuildSystem][BuildConfig92][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealFileServer Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig97][ToolClean]
+[CustomBuildSystem][BuildConfig92][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFileServer Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig98]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig93]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealFileServer-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig98][ToolBuild]
+[CustomBuildSystem][BuildConfig93][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFileServer Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig98][ToolConfigure]
+[CustomBuildSystem][BuildConfig93][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealFileServer Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig98][ToolClean]
+[CustomBuildSystem][BuildConfig93][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFileServer Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig99]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig94]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealFileServer-Linux-Test
 
-[CustomBuildSystem][BuildConfig99][ToolBuild]
+[CustomBuildSystem][BuildConfig94][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFileServer Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig99][ToolConfigure]
+[CustomBuildSystem][BuildConfig94][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealFileServer Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig99][ToolClean]
+[CustomBuildSystem][BuildConfig94][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFileServer Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig100]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig95]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealFileServer
 
-[CustomBuildSystem][BuildConfig100][ToolBuild]
+[CustomBuildSystem][BuildConfig95][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFileServer Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig100][ToolConfigure]
+[CustomBuildSystem][BuildConfig95][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealFileServer Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig100][ToolClean]
+[CustomBuildSystem][BuildConfig95][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFileServer Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig101]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig96]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealFrontend-Linux-Debug
 
-[CustomBuildSystem][BuildConfig101][ToolBuild]
+[CustomBuildSystem][BuildConfig96][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFrontend Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig101][ToolConfigure]
+[CustomBuildSystem][BuildConfig96][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealFrontend Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig101][ToolClean]
+[CustomBuildSystem][BuildConfig96][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFrontend Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig102]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig97]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealFrontend-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig102][ToolBuild]
+[CustomBuildSystem][BuildConfig97][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFrontend Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig102][ToolConfigure]
+[CustomBuildSystem][BuildConfig97][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealFrontend Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig102][ToolClean]
+[CustomBuildSystem][BuildConfig97][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFrontend Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig103]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig98]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealFrontend-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig103][ToolBuild]
+[CustomBuildSystem][BuildConfig98][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFrontend Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig103][ToolConfigure]
+[CustomBuildSystem][BuildConfig98][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealFrontend Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig103][ToolClean]
+[CustomBuildSystem][BuildConfig98][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFrontend Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig104]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig99]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealFrontend-Linux-Test
 
-[CustomBuildSystem][BuildConfig104][ToolBuild]
+[CustomBuildSystem][BuildConfig99][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFrontend Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig104][ToolConfigure]
+[CustomBuildSystem][BuildConfig99][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealFrontend Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig104][ToolClean]
+[CustomBuildSystem][BuildConfig99][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFrontend Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig105]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig100]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealFrontend
 
-[CustomBuildSystem][BuildConfig105][ToolBuild]
+[CustomBuildSystem][BuildConfig100][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFrontend Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig105][ToolConfigure]
+[CustomBuildSystem][BuildConfig100][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealFrontend Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig105][ToolClean]
+[CustomBuildSystem][BuildConfig100][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealFrontend Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig106]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig101]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealHeaderTool-Linux-Debug
 
-[CustomBuildSystem][BuildConfig106][ToolBuild]
+[CustomBuildSystem][BuildConfig101][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealHeaderTool Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig106][ToolConfigure]
+[CustomBuildSystem][BuildConfig101][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealHeaderTool Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig106][ToolClean]
+[CustomBuildSystem][BuildConfig101][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealHeaderTool Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig107]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig102]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealHeaderTool-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig107][ToolBuild]
+[CustomBuildSystem][BuildConfig102][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealHeaderTool Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig107][ToolConfigure]
+[CustomBuildSystem][BuildConfig102][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealHeaderTool Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig107][ToolClean]
+[CustomBuildSystem][BuildConfig102][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealHeaderTool Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig108]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig103]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealHeaderTool-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig108][ToolBuild]
+[CustomBuildSystem][BuildConfig103][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealHeaderTool Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig108][ToolConfigure]
+[CustomBuildSystem][BuildConfig103][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealHeaderTool Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig108][ToolClean]
+[CustomBuildSystem][BuildConfig103][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealHeaderTool Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig109]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig104]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealHeaderTool-Linux-Test
 
-[CustomBuildSystem][BuildConfig109][ToolBuild]
+[CustomBuildSystem][BuildConfig104][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealHeaderTool Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig109][ToolConfigure]
+[CustomBuildSystem][BuildConfig104][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealHeaderTool Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig109][ToolClean]
+[CustomBuildSystem][BuildConfig104][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealHeaderTool Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig110]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig105]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealHeaderTool
 
-[CustomBuildSystem][BuildConfig110][ToolBuild]
+[CustomBuildSystem][BuildConfig105][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealHeaderTool Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig110][ToolConfigure]
+[CustomBuildSystem][BuildConfig105][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealHeaderTool Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig110][ToolClean]
+[CustomBuildSystem][BuildConfig105][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealHeaderTool Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig111]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig106]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealLightmass-Linux-Debug
 
-[CustomBuildSystem][BuildConfig111][ToolBuild]
+[CustomBuildSystem][BuildConfig106][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealLightmass Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig111][ToolConfigure]
+[CustomBuildSystem][BuildConfig106][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealLightmass Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig111][ToolClean]
+[CustomBuildSystem][BuildConfig106][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealLightmass Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig112]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig107]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealLightmass-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig112][ToolBuild]
+[CustomBuildSystem][BuildConfig107][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealLightmass Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig112][ToolConfigure]
+[CustomBuildSystem][BuildConfig107][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealLightmass Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig112][ToolClean]
+[CustomBuildSystem][BuildConfig107][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealLightmass Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig113]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig108]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealLightmass-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig113][ToolBuild]
+[CustomBuildSystem][BuildConfig108][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealLightmass Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig113][ToolConfigure]
+[CustomBuildSystem][BuildConfig108][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealLightmass Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig113][ToolClean]
+[CustomBuildSystem][BuildConfig108][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealLightmass Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig114]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig109]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealLightmass-Linux-Test
 
-[CustomBuildSystem][BuildConfig114][ToolBuild]
+[CustomBuildSystem][BuildConfig109][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealLightmass Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig114][ToolConfigure]
+[CustomBuildSystem][BuildConfig109][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealLightmass Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig114][ToolClean]
+[CustomBuildSystem][BuildConfig109][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealLightmass Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig115]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig110]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealLightmass
 
-[CustomBuildSystem][BuildConfig115][ToolBuild]
+[CustomBuildSystem][BuildConfig110][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealLightmass Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig115][ToolConfigure]
+[CustomBuildSystem][BuildConfig110][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealLightmass Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig115][ToolClean]
+[CustomBuildSystem][BuildConfig110][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealLightmass Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig116]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig111]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealPak-Linux-Debug
 
-[CustomBuildSystem][BuildConfig116][ToolBuild]
+[CustomBuildSystem][BuildConfig111][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealPak Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig116][ToolConfigure]
+[CustomBuildSystem][BuildConfig111][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealPak Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig116][ToolClean]
+[CustomBuildSystem][BuildConfig111][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealPak Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig117]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig112]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealPak-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig117][ToolBuild]
+[CustomBuildSystem][BuildConfig112][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealPak Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig117][ToolConfigure]
+[CustomBuildSystem][BuildConfig112][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealPak Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig117][ToolClean]
+[CustomBuildSystem][BuildConfig112][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealPak Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig118]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig113]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealPak-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig118][ToolBuild]
+[CustomBuildSystem][BuildConfig113][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealPak Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig118][ToolConfigure]
+[CustomBuildSystem][BuildConfig113][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealPak Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig118][ToolClean]
+[CustomBuildSystem][BuildConfig113][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealPak Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig119]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig114]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealPak-Linux-Test
 
-[CustomBuildSystem][BuildConfig119][ToolBuild]
+[CustomBuildSystem][BuildConfig114][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealPak Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig119][ToolConfigure]
+[CustomBuildSystem][BuildConfig114][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealPak Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig119][ToolClean]
+[CustomBuildSystem][BuildConfig114][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealPak Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig120]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig115]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealPak
 
-[CustomBuildSystem][BuildConfig120][ToolBuild]
+[CustomBuildSystem][BuildConfig115][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealPak Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig120][ToolConfigure]
+[CustomBuildSystem][BuildConfig115][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealPak Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig120][ToolClean]
+[CustomBuildSystem][BuildConfig115][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealPak Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig121]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig116]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealVersionSelector-Linux-Debug
 
-[CustomBuildSystem][BuildConfig121][ToolBuild]
+[CustomBuildSystem][BuildConfig116][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealVersionSelector Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig121][ToolConfigure]
+[CustomBuildSystem][BuildConfig116][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealVersionSelector Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig121][ToolClean]
+[CustomBuildSystem][BuildConfig116][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealVersionSelector Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig122]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig117]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealVersionSelector-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig122][ToolBuild]
+[CustomBuildSystem][BuildConfig117][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealVersionSelector Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig122][ToolConfigure]
+[CustomBuildSystem][BuildConfig117][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealVersionSelector Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig122][ToolClean]
+[CustomBuildSystem][BuildConfig117][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealVersionSelector Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig123]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig118]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealVersionSelector-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig123][ToolBuild]
+[CustomBuildSystem][BuildConfig118][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealVersionSelector Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig123][ToolConfigure]
+[CustomBuildSystem][BuildConfig118][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealVersionSelector Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig123][ToolClean]
+[CustomBuildSystem][BuildConfig118][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealVersionSelector Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig124]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig119]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealVersionSelector-Linux-Test
 
-[CustomBuildSystem][BuildConfig124][ToolBuild]
+[CustomBuildSystem][BuildConfig119][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealVersionSelector Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig124][ToolConfigure]
+[CustomBuildSystem][BuildConfig119][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealVersionSelector Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig124][ToolClean]
+[CustomBuildSystem][BuildConfig119][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealVersionSelector Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig125]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig120]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealVersionSelector
 
-[CustomBuildSystem][BuildConfig125][ToolBuild]
+[CustomBuildSystem][BuildConfig120][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealVersionSelector Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig125][ToolConfigure]
+[CustomBuildSystem][BuildConfig120][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealVersionSelector Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig125][ToolClean]
+[CustomBuildSystem][BuildConfig120][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealVersionSelector Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig126]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig121]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealWatchdog-Linux-Debug
 
-[CustomBuildSystem][BuildConfig126][ToolBuild]
+[CustomBuildSystem][BuildConfig121][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealWatchdog Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig126][ToolConfigure]
+[CustomBuildSystem][BuildConfig121][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealWatchdog Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig126][ToolClean]
+[CustomBuildSystem][BuildConfig121][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealWatchdog Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig127]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig122]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealWatchdog-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig127][ToolBuild]
+[CustomBuildSystem][BuildConfig122][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealWatchdog Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig127][ToolConfigure]
+[CustomBuildSystem][BuildConfig122][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealWatchdog Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig127][ToolClean]
+[CustomBuildSystem][BuildConfig122][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealWatchdog Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig128]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig123]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealWatchdog-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig128][ToolBuild]
+[CustomBuildSystem][BuildConfig123][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealWatchdog Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig128][ToolConfigure]
+[CustomBuildSystem][BuildConfig123][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealWatchdog Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig128][ToolClean]
+[CustomBuildSystem][BuildConfig123][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealWatchdog Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig129]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig124]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealWatchdog-Linux-Test
 
-[CustomBuildSystem][BuildConfig129][ToolBuild]
+[CustomBuildSystem][BuildConfig124][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealWatchdog Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig129][ToolConfigure]
+[CustomBuildSystem][BuildConfig124][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealWatchdog Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig129][ToolClean]
+[CustomBuildSystem][BuildConfig124][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealWatchdog Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig130]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig125]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealWatchdog
 
-[CustomBuildSystem][BuildConfig130][ToolBuild]
+[CustomBuildSystem][BuildConfig125][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealWatchdog Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig130][ToolConfigure]
+[CustomBuildSystem][BuildConfig125][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  UnrealWatchdog Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig130][ToolClean]
+[CustomBuildSystem][BuildConfig125][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  UnrealWatchdog Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig131]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig126]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BootstrapPackagedGame-Linux-Debug
 
-[CustomBuildSystem][BuildConfig131][ToolBuild]
+[CustomBuildSystem][BuildConfig126][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  BootstrapPackagedGame Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig131][ToolConfigure]
+[CustomBuildSystem][BuildConfig126][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  BootstrapPackagedGame Linux Debug
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig131][ToolClean]
+[CustomBuildSystem][BuildConfig126][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  BootstrapPackagedGame Linux Debug -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig132]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig127]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BootstrapPackagedGame-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig132][ToolBuild]
+[CustomBuildSystem][BuildConfig127][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  BootstrapPackagedGame Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig132][ToolConfigure]
+[CustomBuildSystem][BuildConfig127][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  BootstrapPackagedGame Linux DebugGame
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig132][ToolClean]
+[CustomBuildSystem][BuildConfig127][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  BootstrapPackagedGame Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig133]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig128]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BootstrapPackagedGame-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig133][ToolBuild]
+[CustomBuildSystem][BuildConfig128][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  BootstrapPackagedGame Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig133][ToolConfigure]
+[CustomBuildSystem][BuildConfig128][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  BootstrapPackagedGame Linux Shipping
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig133][ToolClean]
+[CustomBuildSystem][BuildConfig128][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  BootstrapPackagedGame Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig134]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig129]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BootstrapPackagedGame-Linux-Test
 
-[CustomBuildSystem][BuildConfig134][ToolBuild]
+[CustomBuildSystem][BuildConfig129][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  BootstrapPackagedGame Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig134][ToolConfigure]
+[CustomBuildSystem][BuildConfig129][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  BootstrapPackagedGame Linux Test
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig134][ToolClean]
+[CustomBuildSystem][BuildConfig129][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  BootstrapPackagedGame Linux Test -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig135]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig130]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=BootstrapPackagedGame
 
-[CustomBuildSystem][BuildConfig135][ToolBuild]
+[CustomBuildSystem][BuildConfig130][ToolBuild]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  BootstrapPackagedGame Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=0
 
-[CustomBuildSystem][BuildConfig135][ToolConfigure]
+[CustomBuildSystem][BuildConfig130][ToolConfigure]
 Arguments=./GenerateProjectFiles.sh  BootstrapPackagedGame Linux Development
 Enabled=true
 Environment=
 Executable=bash
 Type=1
 
-[CustomBuildSystem][BuildConfig135][ToolClean]
+[CustomBuildSystem][BuildConfig130][ToolClean]
 Arguments=Engine/Build/BatchFiles/Linux/Build.sh  BootstrapPackagedGame Linux Development -clean
 Enabled=true
 Environment=
 Executable=bash
 Type=3
 
-[CustomBuildSystem][BuildConfig136]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig131]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealNavigation-Linux-Debug
 
-[CustomBuildSystem][BuildConfig136][ToolBuild]
+[CustomBuildSystem][BuildConfig131][ToolBuild]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigation Linux Debug
 Enabled=true
 Environment=
 Executable=mono
 Type=0
 
-[CustomBuildSystem][BuildConfig136][ToolConfigure]
+[CustomBuildSystem][BuildConfig131][ToolConfigure]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" -game -engine  UnrealNavigation Linux Debug
 Enabled=true
 Environment=
 Executable=mono
 Type=1
 
-[CustomBuildSystem][BuildConfig136][ToolClean]
+[CustomBuildSystem][BuildConfig131][ToolClean]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigation Linux Debug -clean
 Enabled=true
 Environment=
 Executable=mono
 Type=3
 
-[CustomBuildSystem][BuildConfig137]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig132]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealNavigation-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig137][ToolBuild]
+[CustomBuildSystem][BuildConfig132][ToolBuild]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigation Linux DebugGame
 Enabled=true
 Environment=
 Executable=mono
 Type=0
 
-[CustomBuildSystem][BuildConfig137][ToolConfigure]
+[CustomBuildSystem][BuildConfig132][ToolConfigure]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" -game -engine  UnrealNavigation Linux DebugGame
 Enabled=true
 Environment=
 Executable=mono
 Type=1
 
-[CustomBuildSystem][BuildConfig137][ToolClean]
+[CustomBuildSystem][BuildConfig132][ToolClean]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigation Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=mono
 Type=3
 
-[CustomBuildSystem][BuildConfig138]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig133]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealNavigation-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig138][ToolBuild]
+[CustomBuildSystem][BuildConfig133][ToolBuild]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigation Linux Shipping
 Enabled=true
 Environment=
 Executable=mono
 Type=0
 
-[CustomBuildSystem][BuildConfig138][ToolConfigure]
+[CustomBuildSystem][BuildConfig133][ToolConfigure]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" -game -engine  UnrealNavigation Linux Shipping
 Enabled=true
 Environment=
 Executable=mono
 Type=1
 
-[CustomBuildSystem][BuildConfig138][ToolClean]
+[CustomBuildSystem][BuildConfig133][ToolClean]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigation Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=mono
 Type=3
 
-[CustomBuildSystem][BuildConfig139]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig134]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealNavigation-Linux-Test
 
-[CustomBuildSystem][BuildConfig139][ToolBuild]
+[CustomBuildSystem][BuildConfig134][ToolBuild]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigation Linux Test
 Enabled=true
 Environment=
 Executable=mono
 Type=0
 
-[CustomBuildSystem][BuildConfig139][ToolConfigure]
+[CustomBuildSystem][BuildConfig134][ToolConfigure]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" -game -engine  UnrealNavigation Linux Test
 Enabled=true
 Environment=
 Executable=mono
 Type=1
 
-[CustomBuildSystem][BuildConfig139][ToolClean]
+[CustomBuildSystem][BuildConfig134][ToolClean]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigation Linux Test -clean
 Enabled=true
 Environment=
 Executable=mono
 Type=3
 
-[CustomBuildSystem][BuildConfig140]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig135]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealNavigation
 
-[CustomBuildSystem][BuildConfig140][ToolBuild]
+[CustomBuildSystem][BuildConfig135][ToolBuild]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigation Linux Development
 Enabled=true
 Environment=
 Executable=mono
 Type=0
 
-[CustomBuildSystem][BuildConfig140][ToolConfigure]
+[CustomBuildSystem][BuildConfig135][ToolConfigure]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" -game -engine  UnrealNavigation Linux Development
 Enabled=true
 Environment=
 Executable=mono
 Type=1
 
-[CustomBuildSystem][BuildConfig140][ToolClean]
+[CustomBuildSystem][BuildConfig135][ToolClean]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigation Linux Development -clean
 Enabled=true
 Environment=
 Executable=mono
 Type=3
 
-[CustomBuildSystem][BuildConfig141]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig136]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealNavigationEditor-Linux-Debug
 
-[CustomBuildSystem][BuildConfig141][ToolBuild]
+[CustomBuildSystem][BuildConfig136][ToolBuild]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigationEditor Linux Debug
 Enabled=true
 Environment=
 Executable=mono
 Type=0
 
-[CustomBuildSystem][BuildConfig141][ToolConfigure]
+[CustomBuildSystem][BuildConfig136][ToolConfigure]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" -game -engine  UnrealNavigationEditor Linux Debug
 Enabled=true
 Environment=
 Executable=mono
 Type=1
 
-[CustomBuildSystem][BuildConfig141][ToolClean]
+[CustomBuildSystem][BuildConfig136][ToolClean]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigationEditor Linux Debug -clean
 Enabled=true
 Environment=
 Executable=mono
 Type=3
 
-[CustomBuildSystem][BuildConfig142]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig137]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealNavigationEditor-Linux-DebugGame
 
-[CustomBuildSystem][BuildConfig142][ToolBuild]
+[CustomBuildSystem][BuildConfig137][ToolBuild]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigationEditor Linux DebugGame
 Enabled=true
 Environment=
 Executable=mono
 Type=0
 
-[CustomBuildSystem][BuildConfig142][ToolConfigure]
+[CustomBuildSystem][BuildConfig137][ToolConfigure]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" -game -engine  UnrealNavigationEditor Linux DebugGame
 Enabled=true
 Environment=
 Executable=mono
 Type=1
 
-[CustomBuildSystem][BuildConfig142][ToolClean]
+[CustomBuildSystem][BuildConfig137][ToolClean]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigationEditor Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=mono
 Type=3
 
-[CustomBuildSystem][BuildConfig143]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig138]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealNavigationEditor-Linux-Shipping
 
-[CustomBuildSystem][BuildConfig143][ToolBuild]
+[CustomBuildSystem][BuildConfig138][ToolBuild]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigationEditor Linux Shipping
 Enabled=true
 Environment=
 Executable=mono
 Type=0
 
-[CustomBuildSystem][BuildConfig143][ToolConfigure]
+[CustomBuildSystem][BuildConfig138][ToolConfigure]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" -game -engine  UnrealNavigationEditor Linux Shipping
 Enabled=true
 Environment=
 Executable=mono
 Type=1
 
-[CustomBuildSystem][BuildConfig143][ToolClean]
+[CustomBuildSystem][BuildConfig138][ToolClean]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigationEditor Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=mono
 Type=3
 
-[CustomBuildSystem][BuildConfig144]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig139]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealNavigationEditor-Linux-Test
 
-[CustomBuildSystem][BuildConfig144][ToolBuild]
+[CustomBuildSystem][BuildConfig139][ToolBuild]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigationEditor Linux Test
 Enabled=true
 Environment=
 Executable=mono
 Type=0
 
-[CustomBuildSystem][BuildConfig144][ToolConfigure]
+[CustomBuildSystem][BuildConfig139][ToolConfigure]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" -game -engine  UnrealNavigationEditor Linux Test
 Enabled=true
 Environment=
 Executable=mono
 Type=1
 
-[CustomBuildSystem][BuildConfig144][ToolClean]
+[CustomBuildSystem][BuildConfig139][ToolClean]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigationEditor Linux Test -clean
 Enabled=true
 Environment=
 Executable=mono
 Type=3
 
-[CustomBuildSystem][BuildConfig145]
-BuildDir=file:///home/mau/EPIC/UE416
+[CustomBuildSystem][BuildConfig140]
+BuildDir=file:///home/mau/EPIC/UnrealEngine
 Title=UnrealNavigationEditor
 
-[CustomBuildSystem][BuildConfig145][ToolBuild]
+[CustomBuildSystem][BuildConfig140][ToolBuild]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigationEditor Linux Development
 Enabled=true
 Environment=
 Executable=mono
 Type=0
 
-[CustomBuildSystem][BuildConfig145][ToolConfigure]
+[CustomBuildSystem][BuildConfig140][ToolConfigure]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" -game -engine  UnrealNavigationEditor Linux Development
 Enabled=true
 Environment=
 Executable=mono
 Type=1
 
-[CustomBuildSystem][BuildConfig145][ToolClean]
+[CustomBuildSystem][BuildConfig140][ToolClean]
 Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/mau/EPIC/Projects/UnrealNavigation/UnrealNavigation.uproject" UnrealNavigationEditor Linux Development -clean
 Enabled=true
 Environment=

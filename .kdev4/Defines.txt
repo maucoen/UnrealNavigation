@@ -604,8 +604,6 @@ ORIGINAL_FILE_NAME="libUnrealLaunchDaemon-UnrealLaunchDaemon.a" \
 UNREALLAUNCHDAEMON_API \
 ORIGINAL_FILE_NAME="libDsymExporter-DsymExporter.a" \
 DSYMEXPORTER_API \
-ORIGINAL_FILE_NAME="libShaderCacheTool-ShaderCacheTool.a" \
-SHADERCACHETOOL_API \
 WITH_EDITORONLY_DATA=0 \
 ORIGINAL_FILE_NAME="libUE4EditorServices-UE4EditorServices.a" \
 UE4EDITORSERVICES_API \
