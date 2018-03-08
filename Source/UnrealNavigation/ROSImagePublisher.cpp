@@ -2,6 +2,8 @@
 
 #include "ROSImagePublisher.h"
 #include "TimerManager.h"
+#include "geometry_msgs/Transform.h"
+#include "geometry_msgs/TransformStamped.h"
 #include "CaptureManager.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/InputComponent.h"
@@ -127,6 +129,24 @@ void AROSImagePublisher::Tick(float DeltaTime)
                     UE_LOG(LogTemp, Warning, TEXT("NULL Capture! No image sent"));
                 }
             }
+
+            FTransform TF = GTCapturers[0]->GetComponentTransform();
+
+	        FVector tr = TF.GetTranslation();
+	        FQuat qt = TF.GetRotation();
+
+            // Construct geometry::msg transfrom
+	        // geometry::msgs Vector3, Quaternion already have
+	        // overloaded constructors from FVector
+            TSharedPtr<geometry_msgs::TransformStamped> FTransform = MakeShareable(
+                new geometry_msgs::TransformStamped(
+                    ROSHeader, 
+                    FString::FromInt(Count), 
+                    geometry_msgs::Transform(tr, qt)));
+
+            // Send msg to ROS
+            Handler->PublishMsg(Topics.Last(), FTransform);
+            Count++;
         }
         else {break; }
     }
@@ -170,7 +190,10 @@ void AROSImagePublisher::SetupImager()
         }
     }
 
-    Handler = MakeShareable<FROSBridgeHandler>(new FROSBridgeHandler(IPAddress, Port));
+    
+
+    Handler = MakeShareable<FROSBridgeHandler>(
+        new FROSBridgeHandler(IPAddress, Port));
 
     // Set websocket server address to default
     for (int i = 0; i < Modes.Num(); i++)
@@ -179,6 +202,12 @@ void AROSImagePublisher::SetupImager()
             MakeShareable<FROSBridgePublisher>(
                 new FROSBridgePublisher(Topics[i], Type)));
     }
+
+    Topics.Add(TEXT("CameraTransform"));
+    Handler->AddPublisher(
+            MakeShareable<FROSBridgePublisher>(
+                new FROSBridgePublisher(Topics.Last(), TEXT("geometry_msgs/TransformStamped"))));
+
 
     Handler->Connect();
     UE_LOG(LogTemp, Warning, TEXT("handler on"));
@@ -226,3 +255,250 @@ void AROSImagePublisher::TogglePublish()
 
     bIsPublishing = !bIsPublishing;
 }
+
+
+
+// /**
+// Attach a GTCaptureComponent to a pawn
+//  */
+// UGTCaptureComponent* UGTCaptureComponent::Create(APawn* InPawn, TArray<FString> Modes)
+// {
+// 	UWorld* World = FUE4CVServer::Get().GetGameWorld();
+// 	UGTCaptureComponent* GTCapturer = NewObject<UGTCaptureComponent>();
+
+// 	GTCapturer->bIsActive = true;
+// 	// check(GTCapturer->IsComponentTickEnabled() == true);
+// 	GTCapturer->Pawn = InPawn; // This GTCapturer should depend on the Pawn and be released together with the Pawn.
+
+// 	// This snippet is from Engine/Source/Runtime/Engine/Private/Components/SceneComponent.cpp, AttachTo
+// 	FAttachmentTransformRules AttachmentRules(EAttachmentRule::KeepRelative, false);
+// 	//ConvertAttachLocation(EAttachLocation::KeepRelativeOffset, AttachmentRules.LocationRule, AttachmentRules.RotationRule, AttachmentRules.ScaleRule);
+// 	GTCapturer->AttachToComponent(InPawn->GetRootComponent(), AttachmentRules);
+// 	// GTCapturer->AddToRoot();
+// 	GTCapturer->RegisterComponentWithWorld(World);
+// 	GTCapturer->SetTickableWhenPaused(true);
+
+// 	for (FString Mode : Modes)
+// 	{
+// 		// DEPRECATED_FORGAME(4.6, "CaptureComponent2D should not be accessed directly, please use GetCaptureComponent2D() function instead. CaptureComponent2D will soon be private and your code will not compile.")
+// 		USceneCaptureComponent2D* CaptureComponent = NewObject<USceneCaptureComponent2D>();
+// 		CaptureComponent->bIsActive = false; // Disable it by default for performance consideration
+// 		GTCapturer->CaptureComponents.Add(Mode, CaptureComponent);
+
+// 		// CaptureComponent needs to be attached to somewhere immediately, otherwise it will be gc-ed
+
+// 		CaptureComponent->AttachToComponent(GTCapturer, AttachmentRules);
+// 		InitCaptureComponent(CaptureComponent);
+
+// 		UE_LOG(LogUnrealCV, Warning, TEXT("mode is %s"), *Mode);
+
+// 		UMaterial* Material = GetMaterial(Mode);
+// 		if (Mode == "lit") // For rendered images
+// 		{
+// 			//UE_LOG(LogUnrealCV, Warning, TEXT("inside mode lit"));
+// 			// FViewMode::Lit(CaptureComponent->ShowFlags);
+// 			CaptureComponent->TextureTarget->TargetGamma = GEngine->GetDisplayGamma();
+// 			// float DisplayGamma = SceneViewport->GetDisplayGamma();
+// 		}
+// 		else if (Mode == "default")
+// 		{
+// 			continue;
+// 		}
+// 		else // for ground truth
+// 		{
+// 			CaptureComponent->TextureTarget->TargetGamma = 1;
+// 			if (Mode == "object_mask") // For object mask
+// 			{
+// 				// FViewMode::Lit(CaptureComponent->ShowFlags);
+// 				FViewMode::VertexColor(CaptureComponent->ShowFlags);
+// 			}
+// 			else if (Mode == "wireframe") // For object mask
+// 			{
+// 				FViewMode::Wireframe(CaptureComponent->ShowFlags);
+// 			}
+// 			else //depth requires post processing
+// 			{
+// 				check(Material);
+// 				// GEngine->GetDisplayGamma(), the default gamma is 2.2
+// 				// CaptureComponent->TextureTarget->TargetGamma = 2.2;
+// 				FViewMode::PostProcess(CaptureComponent->ShowFlags);
+
+// 				CaptureComponent->PostProcessSettings.AddBlendable(Material, 1);
+// 				// Instead of switching post-process materials, we create several SceneCaptureComponent, so that we can capture different GT within the same frame.
+// 			}
+// 		}
+// 	}
+// 	return GTCapturer;
+// }
+
+// TArray<uint8> UGTCaptureComponent::CaptureNpyUint8(FString Mode, int32 Channels)
+// {
+// 	// Flush location and rotation
+// 	check(CaptureComponents.Num() != 0);
+// 	USceneCaptureComponent2D* CaptureComponent = CaptureComponents.FindRef(Mode);
+
+// 	TArray<uint8> NpyData;
+// 	if (CaptureComponent == nullptr) {
+//     UE_LOG(LogUnrealCV, Error, TEXT("Component for mode %s not found. Returning empty array."), *Mode);
+//     return NpyData;
+//   }
+
+// 	// Attach this to something, for example, a real camera
+// 	const FRotator PawnViewRotation = Pawn->GetViewRotation();
+// 	if (!PawnViewRotation.Equals(CaptureComponent->GetComponentRotation()))
+// 	{
+// 		//CaptureComponent->SetWorldRotation(PawnViewRotation+FRotator(0,90,0));
+// 		//CaptureComponent->AddRelativeRotation(FRotator(0,30,0));
+// 	}
+
+// 	UTextureRenderTarget2D* RenderTarget = CaptureComponent->TextureTarget;
+// 	int32 Width = RenderTarget->SizeX, Height = RenderTarget->SizeY;
+// 	TArray<FColor> ImageData;
+// 	FTextureRenderTargetResource* RenderTargetResource;
+// 	ImageData.AddUninitialized(Width * Height);
+// 	RenderTargetResource = RenderTarget->GameThread_GetRenderTargetResource();
+// 	FReadSurfaceDataFlags ReadSurfaceDataFlags;
+// 	ReadSurfaceDataFlags.SetLinearToGamma(false); // This is super important to disable this!
+// 	// Instead of using this flag, we will set the gamma to the correct value directly
+// 	RenderTargetResource->ReadPixels(ImageData, ReadSurfaceDataFlags);
+
+// 	//UE_LOG(LogTemp, Warning, TEXT("Image data before serialize is %d, %d, %d, %d"),ImageData[1001].R,ImageData[1001].G,ImageData[1001].B,ImageData[1001].A);
+// 	// Check the byte order of data
+// 	// Compress image data to npy array
+// 	// Generate a header for the numpy array
+// 	NpyData = NpySerialization(ImageData, Width, Height, Channels);
+
+// 	return NpyData;
+// }
+
+// TArray<uint8> UGTCaptureComponent::NpySerialization(TArray<FColor> ImageData, int32 Width, int32 Height, int32 Channel)
+// {
+// 	uint8 *TypePointer = nullptr; // Only used for determing the type
+// 	//UE_LOG(LogTemp, Warning, TEXT("INSIDE NPySerialization"));
+// 	std::vector<int> Shape;
+// 	Shape.push_back(Height);
+// 	Shape.push_back(Width);
+// 	if (Channel != 1) Shape.push_back(Channel);
+
+// 	// std::vector<char> NpyHeader;// = cnpy::create_npy_header(TypePointer, Shape);
+
+// 	// Append the actual data
+// 	// FIXME: A slow implementation to convert TArray<FFloat16Color> to binary.
+// 	/* A small size test
+// 	std::vector<char> NpyData;
+// 	for (int i = 0; i < 3 * 3 * 3; i++)
+// 	{
+// 		NpyData.push_back(i);
+// 	}
+// 	*/
+// 	// std::vector<char> NpyData;
+// 	std::vector<uint8> Uint8Data;
+// 	Uint8Data.reserve(ImageData.Num() * Channel);
+// 	//UE_LOG(LogTemp, Warning, TEXT("Image data in serialize is %d, %d, %d, %d"),ImageData[101].R,ImageData[101].G,ImageData[101].B,ImageData[101].A);
+// 	for (int i = 0; i < ImageData.Num(); i++)
+// 	{
+// 		if (Channel == 1)
+// 		{
+// 			uint8 v = ImageData[i].R;
+// 			Uint8Data.push_back(ImageData[i].R);
+// 		}
+// 		else if (Channel == 3)
+// 		{
+// 			Uint8Data.push_back(ImageData[i].R);
+// 			Uint8Data.push_back(ImageData[i].G);
+// 			Uint8Data.push_back(ImageData[i].B);
+// 		}
+// 		else if (Channel == 4)
+// 		{
+// 			Uint8Data.push_back(ImageData[i].R);
+// 			Uint8Data.push_back(ImageData[i].G);
+// 			Uint8Data.push_back(ImageData[i].B);
+// 			Uint8Data.push_back(ImageData[i].A);
+// 		}
+// 	}
+// 	//UE_LOG(LogTemp, Warning, TEXT("Uint8Data %d, %d, %d, %d"),Uint8Data[401],Uint8Data[402],Uint8Data[403],Uint8Data[404]);	
+// 	check(Uint8Data.size() == Width * Height * Channel);
+// 	// Convert to binary array
+// 	const unsigned char* bytes = reinterpret_cast<const unsigned char*>(&Uint8Data[0]);
+
+// 	// https://stackoverflow.com/questions/22629728/what-is-the-difference-between-char-and-unsigned-char
+// 	// https://stackoverflow.com/questions/11022099/convert-float-vector-to-byte-vector-and-back
+// 	std::vector<unsigned char> NpyData(bytes, bytes + sizeof(uint8) * Uint8Data.size());
+
+// 	//NpyHeader.insert(NpyHeader.end(), NpyData.begin(), NpyData.end());
+// 	// NpyHeader.insert(NpyData.begin(), NpyData.end());
+
+// 	// FIXME: Find a more efficient implementation
+// 	TArray<uint8> BinaryData;
+// 	for (char Element : NpyData)
+// 	{
+// 		BinaryData.Add(Element);
+// 	}
+// 	return BinaryData;
+// }
+
+// void InitCaptureComponent(USceneCaptureComponent2D* CaptureComponent)
+// {
+// 	UWorld* World = FUE4CVServer::Get().GetGameWorld();
+// 	// Can not use ESceneCaptureSource::SCS_SceneColorHDR, this option will disable post-processing
+// 	CaptureComponent->CaptureSource = ESceneCaptureSource::SCS_FinalColorLDR;
+
+// 	CaptureComponent->TextureTarget = NewObject<UTextureRenderTarget2D>();
+// 	FServerConfig& Config = FUE4CVServer::Get().Config;
+// 	CaptureComponent->TextureTarget->InitAutoFormat(Config.Width, Config.Height);
+// 	CaptureComponent->FOVAngle = Config.FOV;
+
+// 	/*
+// 	UGameViewportClient* GameViewportClient = World->GetGameViewport();
+// 	CaptureComponent->TextureTarget->InitAutoFormat(GameViewportClient->Viewport->GetSizeXY().X,  GameViewportClient->Viewport->GetSizeXY().Y); // TODO: Update this later
+// 	*/
+
+// 	CaptureComponent->RegisterComponentWithWorld(World); // What happened for this?
+// 	// CaptureComponent->AddToRoot(); This is not necessary since it has been attached to the Pawn.
+
+// }
+
+// UMaterial* UGTCaptureComponent::GetMaterial(FString InModeName = TEXT(""))
+// {
+// 	// Load material for visualization
+// 	static TMap<FString, FString>* MaterialPathMap = nullptr;
+// 	if (MaterialPathMap == nullptr)
+// 	{
+// 		MaterialPathMap = new TMap<FString, FString>();
+// 		MaterialPathMap->Add(TEXT("depth"), TEXT("Material'/UnrealCV/SceneDepthWorldUnits.SceneDepthWorldUnits'"));
+//     	MaterialPathMap->Add(TEXT("plane_depth"), TEXT("Material'/UnrealCV/ScenePlaneDepthWorldUnits.ScenePlaneDepthWorldUnits'"));
+// 		MaterialPathMap->Add(TEXT("vis_depth"), TEXT("Material'/UnrealCV/SceneDepth.SceneDepth'"));
+// 		MaterialPathMap->Add(TEXT("debug"), TEXT("Material'/UnrealCV/debug.debug'"));
+// 		// MaterialPathMap->Add(TEXT("object_mask"), TEXT("Material'/UnrealCV/VertexColorMaterial.VertexColorMaterial'"));
+// 		MaterialPathMap->Add(TEXT("normal"), TEXT("Material'/UnrealCV/WorldNormal.WorldNormal'"));
+
+// 		FString OpaqueMaterialName = "Material'/UnrealCV/OpaqueMaterial.OpaqueMaterial'";
+// 		MaterialPathMap->Add(TEXT("opaque"), OpaqueMaterialName);
+// 	}
+
+// 	static TMap<FString, UMaterial*>* StaticMaterialMap = nullptr;
+// 	if (StaticMaterialMap == nullptr)
+// 	{
+// 		StaticMaterialMap = new TMap<FString, UMaterial*>();
+// 		for (auto& Elem : *MaterialPathMap)
+// 		{
+// 			FString ModeName = Elem.Key;
+// 			FString MaterialPath = Elem.Value;
+// 			ConstructorHelpers::FObjectFinder<UMaterial> Material(*MaterialPath); // ConsturctorHelpers is only available for UObject.
+
+// 			if (Material.Object != NULL)
+// 			{
+// 				StaticMaterialMap->Add(ModeName, (UMaterial*)Material.Object);
+// 			}
+// 		}
+// 	}
+
+// 	UMaterial* Material = StaticMaterialMap->FindRef(InModeName);
+// 	if (Material == nullptr)
+// 	{
+// 		UE_LOG(LogUnrealCV, Warning, TEXT("Can not recognize visualization mode %s"), *InModeName);
+// 	}
+// 	else UE_LOG(LogUnrealCV, Warning, TEXT("Returning %s"), *InModeName);
+	
+// 	return Material;
+// }
