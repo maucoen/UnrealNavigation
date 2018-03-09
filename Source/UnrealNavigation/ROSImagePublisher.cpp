@@ -138,12 +138,31 @@ void AROSImagePublisher::Tick(float DeltaTime)
 	        FVector tr = TF.GetTranslation();
 	        FQuat qt = TF.GetRotation();
 
-            FRotator rot = FRotator(qt);
+            
+            // Question on rotation vs transformation... Affects the order - we want a transformation
+            // Translation and rotation should transform from body to global (what qt is)
+            // We want a transformation from camera to global
+            // T_{c->g} = T_{c->b} * T_{b->g}
+            // Convention for quaternion multiplication is from: https://wiki.unrealengine.com/UE4_Transform_Calculus_-_Part_2
+            // Convetion is q3 = q2*q1;
+            FQuat T_cb = FQuat(0,0,90)*FQuat(90,0,0); // 90 roll then 90 yaw from camera to body
 
-            rot = rot + FRotator(0,0,90);
-            rot = rot + FRotator(90,0,0);
+            qt = qt*T_bc; // qt is body to global, after this line it is camera to global
 
-            qt = FQuat(rot);
+            // To test a simple example: - should have forward along the y axis
+            qt = qt*FQuat(0,0,-90);
+            
+            // If rotations are negated due to the left handed system:
+            qt = qt*FQuat(0,0,90);
+            // FQuat T_cb = FQuat(0,0,-90)*FQuat(-90,0,0);
+
+            
+            // FRotator rot = FRotator(qt);
+
+            // rot = rot + FRotator(0,0,90);
+            // rot = rot + FRotator(90,0,0);
+
+            // qt = FQuat(rot);
 
             FTransform TF2 = FCoordConvStatics::UToROS(FTransform(qt,tr));
 
