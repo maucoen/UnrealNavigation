@@ -144,19 +144,35 @@ void AROSImagePublisher::Tick(float DeltaTime)
             // We want a transformation from camera to global
             // T_{c->g} = T_{c->b} * T_{b->g}
             // Convention for quaternion multiplication is from: https://wiki.unrealengine.com/UE4_Transform_Calculus_-_Part_2
-            // Convetion is q3 = q2*q1;
+            // Convetion is q3 = q2*q1; FOR TRANSFORMATIONS
             FQuat T_cb = FQuat(0,0,90)*FQuat(90,0,0); // 90 roll then 90 yaw from camera to body
 
-            qt = qt*T_bc; // qt is body to global, after this line it is camera to global
+            qt = qt*T_cb; // qt is body to global, after this line it is camera to global
+            // Transformation is 
+            // v_g = q_bg v_b q_bg^c (q^c is the quaternion conjugate)
+            // so 
+            // v_g = q_bg q_cb v_c q_cb^c q_bg^c
+            // Hence q_cg = q_bg q_cb
 
             // To test a simple example: - should have forward along the y axis
-            qt = qt*FQuat(0,0,-90);
+            // qt = qt*FQuat(0,0,-90);
             
+
             // If rotations are negated due to the left handed system:
-            qt = qt*FQuat(0,0,90);
+            // qt = qt*FQuat(0,0,90);
             // FQuat T_cb = FQuat(0,0,-90)*FQuat(-90,0,0);
 
-            
+            /*
+            // With Rotation matrices
+            FRotationMatrix T_bg = FRotationMatrix(FRotator(qt));
+            //or 
+            // FRotationMatrix T_bg = FRotationMatrix(qt);
+            FRotationMatrix T_cb = FRotationMatrix(FRotator(0,0,90))*FRotationMatrix(FRotator(0,0,90));
+
+            qt = FQuat(T_bg*T_cb); // Body to camera, then body to global
+            */
+
+
             // FRotator rot = FRotator(qt);
 
             // rot = rot + FRotator(0,0,90);
