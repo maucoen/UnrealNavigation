@@ -7,17 +7,7 @@ We are using the Unreal Engine 4.18, source-built in Linux, as simulation enviro
 ### UE4 Dependencies
 This branch currently depends on the [UROSBridge], [UCoordConv] (provided by RobCoG ) and [UnrealCV] plugins.
 
-
-## Current Progress
-
-A few demonstrations of [ORB-SLAM2] operating on a real-time Unreal Engine simulation have been performed in uncommon environments.
-
-Here is an asteroid field (10x speed):
-
-![Asteroid ORBSLAM](https://github.com/maucoen/UnrealNavigation/blob/Navigation/WebContent/asteroidslam.gif "Asteroid field ORB SLAM")
-
 ### How to Use
-
 Please download all plugins to your UE project. Additionally, install ROS and ORB-SLAM2 in your system.
 
 In the UE Editor, attach the ROSImagePublisher actor to your specific camera sensor actor. It will inherit rotation and location for its attachment, and will act as your camera sensor to ROS. 
@@ -27,18 +17,24 @@ The ROSImagePublisher has settings for Mono, RGBD, or Stereo camera, accesible f
 Before starting to publish to ROS, run the ROSBridge nodes (as detailed in [UROSBridge]) and the ORB-SLAM2 node for your camera settings (as detailed in ORB-SLAM2 ROS nodes examples). Yaml files to match the current commit are in: `./Config/` in this repo. 
 
 
-## Work in Progress
-Integration with Voxblox to form a physical representation of the map.
+## Current Progress
+A few demonstrations of [ORB-SLAM2] operating on a real-time Unreal Engine simulation have been performed in uncommon environments.
 
-Below is a demo of current progress towards Voxblox mapping. Pointcloud visualization is complete in RViz.
+Here is an asteroid field (10x speed):
+
+![Asteroid ORBSLAM](https://github.com/maucoen/UnrealNavigation/blob/Navigation/WebContent/asteroidslam.gif "Asteroid field ORB SLAM")
+
+
+For the mapping functionality, we are integrating with [Voxblox] to form a physical representation of the map.
+
+Below is a demo of current progress towards [Voxblox] mapping. Pointcloud visualization is complete in RViz.
 
 ![Asteroid PCL2](https://github.com/maucoen/UnrealNavigation/blob/Navigation/WebContent/asteroidpcl.gif "Asteroid field PCL2")
 
 
-Integration with Maplab + ROVIO to have a unified pipeline up to mapping.
-Refactor scene capture solution away from UnrealCV plugin.
 
 ### Next Up
+Refactor scene capture solution away from UnrealCV plugin.
 Output a path planning solution (OMPL and ASTRO) from the online generated map.  
 
 
@@ -47,3 +43,4 @@ Output a path planning solution (OMPL and ASTRO) from the online generated map.
 [RobCoG]: https://github.com/robcog-iai
 [UnrealCV]: https://github.com/unrealcv/unrealcv
 [ORB-SLAM2]: https://github.com/raulmur/ORB_SLAM2
+[Voxblox]: https://github.com/ethz-asl/voxblox
