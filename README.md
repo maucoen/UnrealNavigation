@@ -29,6 +29,12 @@ Before starting to publish to ROS, run the ROSBridge nodes (as detailed in [UROS
 
 ## Work in Progress
 Integration with Voxblox to form a physical representation of the map.
+
+Below is a demo of current progress towards Voxblox mapping. Pointcloud visualization is complete in RViz.
+
+![Asteroid PCL2](https://github.com/maucoen/UnrealNavigation/blob/Navigation/WebContent/asteroidpcl.gif "Asteroid field PCL2")
+
+
 Integration with Maplab + ROVIO to have a unified pipeline up to mapping.
 Refactor scene capture solution away from UnrealCV plugin.
 

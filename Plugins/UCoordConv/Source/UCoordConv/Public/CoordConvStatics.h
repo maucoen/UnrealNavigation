@@ -29,8 +29,8 @@ struct FCoordConvStatics
 	static FORCEINLINE FQuat UToROS(const FQuat& InQuat)
 	{
 		// todo
-		//return FQuat(- InQuat.X, InQuat.Y, InQuat.Z, - InQuat.W);
-		return InQuat;
+		return FQuat(-InQuat.X, InQuat.Y, -InQuat.Z, InQuat.W);
+		//return InQuat;
 	}
 	
 	// FVector by value
@@ -39,25 +39,25 @@ struct FCoordConvStatics
 		return FVector(InVector.X * 0.01f, - InVector.Y * 0.01f, InVector.Z * 0.01f);
 	}
 	
-	// FTransform by reference
-	static FORCEINLINE void UToROS(FTransform& OutTransform)
-	{
-		OutTransform.SetRotation(UToROS(OutTransform.GetRotation()));
-		OutTransform.SetLocation(UToROS(OutTransform.GetLocation()));		
-	}
+	// // FTransform by reference
+	// static FORCEINLINE void UToROS(FTransform& OutTransform)
+	// {
+	// 	OutTransform.SetRotation(UToROS(OutTransform.GetRotation()));
+	// 	OutTransform.SetLocation(UToROS(OutTransform.GetLocation()));		
+	// }
 	
-	// FQuat by reference
-	static FORCEINLINE void UToROS(FQuat& OutQuat)
-	{
-		OutQuat.X *= -1;
-		OutQuat.W *= -1;
-	}
+	// // FQuat by reference
+	// static FORCEINLINE void UToROS(FQuat& OutQuat)
+	// {
+	// 	OutQuat.X *= -1;
+	// 	OutQuat.W *= -1;
+	// }
 
-	// FVector by reference
-	static FORCEINLINE void UToROS(FVector& OutVector)
-	{
-		OutVector.Y *= -1;
-	}
+	// // FVector by reference
+	// static FORCEINLINE void UToROS(FVector& OutVector)
+	// {
+	// 	OutVector.Y *= -0.01f;
+	// }
 	
 	/**
 	* Convert
@@ -127,38 +127,40 @@ struct FCoordConvStatics
 	static FORCEINLINE FQuat UToROSCamera(const FQuat& InQuat)
 	{
 		// todo
-		return FQuat(-InQuat.X, InQuat.Y, InQuat.Z, -InQuat.W);
+		return FQuat(-InQuat.Y, InQuat.Z, -InQuat.X, InQuat.W);
+		//return FQuat(-InQuat.Z, -InQuat.X, InQuat.Y, InQuat.W);
 	}
 
 	// FVector by value
 	static FORCEINLINE FVector UToROSCamera(const FVector& InVector)
 	{
 		// todo
-		return FVector(InVector.X * 0.01f, -InVector.Y * 0.01f, InVector.Z * 0.01f);
+		return FVector(InVector.Y * 0.01f, -InVector.Z * 0.01f, InVector.X * 0.01f);
+		//return FVector(InVector.Z * 0.01f, InVector.X * 0.01f, -InVector.Y * 0.01f);
 	}
 
-	// FTransform by reference
-	static FORCEINLINE void UToROSCamera(FTransform& OutTransform)
-	{
-		// todo
-		OutTransform.SetRotation(UToROSCamera(OutTransform.GetRotation()));
-		OutTransform.SetLocation(UToROSCamera(OutTransform.GetLocation()));
-	}
+	// // FTransform by reference
+	// static FORCEINLINE void UToROSCamera(FTransform& OutTransform)
+	// {
+	// 	// todo
+	// 	OutTransform.SetRotation(UToROSCamera(OutTransform.GetRotation()));
+	// 	OutTransform.SetLocation(UToROSCamera(OutTransform.GetLocation()));
+	// }
 
-	// FQuat by reference
-	static FORCEINLINE void UToROSCamera(FQuat& OutQuat)
-	{
-		// todo
-		OutQuat.X *= -1;
-		OutQuat.W *= -1;
-	}
+	// // FQuat by reference
+	// static FORCEINLINE void UToROSCamera(FQuat& OutQuat)
+	// {
+	// 	// todo
+	// 	OutQuat.X *= -1;
+	// 	OutQuat.W *= -1;
+	// }
 
-	// FVector by reference
-	static FORCEINLINE void UToROSCamera(FVector& OutVector)
-	{
-		// todo
-		OutVector.Y *= -1;
-	}
+	// // FVector by reference
+	// static FORCEINLINE void UToROSCamera(FVector& OutVector)
+	// {
+	// 	// todo
+	// 	OutVector.Y *= -1;
+	// }
 
 	/**
 	* Convert

@@ -132,71 +132,18 @@ void AROSImagePublisher::Tick(float DeltaTime)
                 }
             }
 
-            FTransform TF = 
-                GTCapturers[0]->GetComponentTransform();
-
-	        FVector tr = TF.GetTranslation();
-	        FQuat qt = TF.GetRotation();
-
-            
-            // Question on rotation vs transformation... Affects the order - we want a transformation
-            // Translation and rotation should transform from body to global (what qt is)
-            // We want a transformation from camera to global
-            // T_{c->g} = T_{c->b} * T_{b->g}
-            // Convention for quaternion multiplication is from: https://wiki.unrealengine.com/UE4_Transform_Calculus_-_Part_2
-            // Convetion is q3 = q2*q1; FOR TRANSFORMATIONS
-            FQuat T_cb = FQuat(0,0,90)*FQuat(90,0,0); // 90 roll then 90 yaw from camera to body
-
-            qt = qt*T_cb; // qt is body to global, after this line it is camera to global
-            // Transformation is 
-            // v_g = q_bg v_b q_bg^c (q^c is the quaternion conjugate)
-            // so 
-            // v_g = q_bg q_cb v_c q_cb^c q_bg^c
-            // Hence q_cg = q_bg q_cb
-
-            // To test a simple example: - should have forward along the y axis
-            // qt = qt*FQuat(0,0,-90);
-            
-
-            // If rotations are negated due to the left handed system:
-            // qt = qt*FQuat(0,0,90);
-            // FQuat T_cb = FQuat(0,0,-90)*FQuat(-90,0,0);
-
-            /*
-            // With Rotation matrices
-            FRotationMatrix T_bg = FRotationMatrix(FRotator(qt));
-            //or 
-            // FRotationMatrix T_bg = FRotationMatrix(qt);
-            FRotationMatrix T_cb = FRotationMatrix(FRotator(0,0,90))*FRotationMatrix(FRotator(0,0,90));
-
-            qt = FQuat(T_bg*T_cb); // Body to camera, then body to global
-            */
-
-
-            // FRotator rot = FRotator(qt);
-
-            // rot = rot + FRotator(0,0,90);
-            // rot = rot + FRotator(90,0,0);
-
-            // qt = FQuat(rot);
-
-            FTransform TF2 = FCoordConvStatics::UToROS(FTransform(qt,tr));
-
-	        FVector tr2 = TF2.GetTranslation();
-	        FQuat qt2 = TF2.GetRotation();
-            // Construct geometry::msg transfrom
-	        // geometry::msgs Vector3, Quaternion already have
-	        // overloaded constructors from FVector
+            FTransform TF = FCoordConvStatics::UToROS(
+                GTCapturers[0]->GetComponentTransform());
+            // static_transform_publisher 0.5 0 0 -1.5708 0 -1.5708 body Cam_optical  CORRECT FOR ROS OPTICALS
 
             std_msgs::Header ROSHeader1 = std_msgs::Header(Count, FROSTime(), TEXT("world"));
             TSharedPtr<geometry_msgs::TransformStamped> FTransform = MakeShareable(
                 new geometry_msgs::TransformStamped(
                     ROSHeader1, 
-                    TEXT("Cam"), 
-                    geometry_msgs::Transform(tr2, qt2)));
+                    TEXT("body"), 
+                    geometry_msgs::Transform(TF.GetTranslation(), TF.GetRotation())));
 
-            // Send msg to ROS
-
+            // Send tf to ROS
             TSharedPtr<tf2_msgs::TFMessage> SendTF = MakeShareable(
                 new tf2_msgs::TFMessage());
 
@@ -269,7 +216,7 @@ void AROSImagePublisher::SetupImager()
     Handler->Connect();
     UE_LOG(LogTemp, Warning, TEXT("handler on"));
 
-    ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("Cam"));
+    ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("Cam_optical"));
 }
 
 void AROSImagePublisher::EnqueueImageTask()
