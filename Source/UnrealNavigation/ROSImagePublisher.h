@@ -122,7 +122,7 @@ protected:
 	FString Topic;
 	bool bIsCompressed;
 	
-	// HARD Settings, check unrealcv.ini, orbslam yamls before starting up
+	// HARD Settings, check unrealcv.ini,(UnrealEngine/Engine/Binaries/Linux/unrealcv.ini) orbslam yamls before starting up
 	uint32 height = 200;
     uint32 width = 400;
     uint32 step = width*3;
