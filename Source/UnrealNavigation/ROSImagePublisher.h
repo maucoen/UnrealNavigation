@@ -59,7 +59,14 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	TEnumAsByte<EImagingType::Type > ImagingType;
 
+	FTransform GoToState;
+
 public:	
+
+	void SetNewState(FTransform InState)
+	{
+		GoToState = InState;
+	}
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -68,6 +75,8 @@ public:
 
 	// Add a smart pointer to ROSBridgeHandler
     TSharedPtr<FROSBridgeHandler> Handler;
+
+	TSharedPtr<class FROSPoseSubscriber> PoseSubscriber;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
     FString IPAddress = TEXT("127.0.1.1");
