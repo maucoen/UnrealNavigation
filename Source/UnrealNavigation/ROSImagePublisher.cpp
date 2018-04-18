@@ -78,23 +78,20 @@ void AROSImagePublisher::Tick(float DeltaTime)
     // if the magnitude of the vector is bigger than eps
     //move 1 step positive
     //otherwise don't
-    FVector Location = GetAttachParentActor()->GetActorLocation();
+    // FVector Location = GetAttachParentActor()->GetActorLocation();
 
-    //auto pose = StaticCastSharedPtr<FROSPoseSubscriber>(PoseSubscriber);
-    //get state from callback
-    FVector UnitVector = PoseSubscriber->Point - Location;
+    // //auto pose = StaticCastSharedPtr<FROSPoseSubscriber>(PoseSubscriber);
+    // //get state from callback
+    // FVector UnitVector = PoseSubscriber->Getpoint() - Location;
 
-    float length;
-    UnitVector.ToDirectionAndLength(UnitVector, length); //out params
+    // //UE_LOG(LogTemp,Warning, TEXT("fetched point %s"),*PoseSubscriber->point.ToString());
+    // //UE_LOG(LogTemp,Warning, TEXT("current %s"),*Location.ToString());
 
-    if (length > 0.1)
-    {
-        UE_LOG(LogTemp, Warning, TEXT("should move"));
+    // float length;
+    // UnitVector.ToDirectionAndLength(UnitVector, length); //out params
 
-        GetAttachParentActor()->AddActorWorldOffset(UnitVector);
-    }
+    GetAttachParentActor()->SetActorLocation(PoseSubscriber->Getpoint());
     
-    //UE_LOG(LogTemp, Warning, TEXT("tick"));
     while (!LastFrame.IsEmpty())
     {
         UE_LOG(LogTemp, Warning, TEXT("non empty"));

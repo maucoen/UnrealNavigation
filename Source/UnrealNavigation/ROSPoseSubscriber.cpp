@@ -2,6 +2,7 @@
 #include "ROSPoseSubscriber.h"
 #include "geometry_msgs/PoseStamped.h"
 #include "ROSImagePublisher.h"
+#include "CoordConvStatics.h"
 
 
 FROSPoseSubscriber::FROSPoseSubscriber(
@@ -29,20 +30,13 @@ void FROSPoseSubscriber::Callback(TSharedPtr<FROSBridgeMsg> Msg)
 	TSharedPtr<geometry_msgs::PoseStamped> Pose = StaticCastSharedPtr<geometry_msgs::PoseStamped>(Msg);
 	// downcast to subclass using StaticCastSharedPtr function
 
-	// UE_LOG(LogTemp, Log, TEXT("[%s] Message received by %s!"),
-	// 	*FString(__FUNCTION__), *Owner->GetName());//, *Pose->GetLinear());
-	// // do something with the message
-
     // Get messages out into an fvector
     geometry_msgs::Point NewPoint = Pose->GetPose().GetPosition();
 
-    //UE_LOG(LogTemp,Warning, TEXT("got point %s"),*State.GetTranslation().ToString());
-
-    NewPoint.SetVector(Point); //out param
-
-    Point = {(float)NewPoint.GetX(), (float)NewPoint.GetY(), (float)NewPoint.GetZ()};
-
-    UE_LOG(LogTemp,Warning, TEXT("got point %s"),*Point.ToString());
+    FVector newpoint = NewPoint.GetVector();
+    point = FCoordConvStatics::ROSToU(newpoint);
+    
+    UE_LOG(LogTemp,Warning, TEXT("got point %s"),*point.ToString());
 
     // //constructs and sets transform based on identity quat, Setpoint and scale 1
     // State = FTransform();

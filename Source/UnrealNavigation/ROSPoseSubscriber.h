@@ -18,10 +18,11 @@ public:
 
 	FTransform GetState();
 	FTransform State = FTransform();
-	FVector Point;
+	
+	FVector Getpoint() {return point;};
 
 private:
 
-
+	FVector point = {-525.0, 870.0, 730.0};
 
 };
