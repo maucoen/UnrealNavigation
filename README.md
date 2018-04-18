@@ -32,6 +32,12 @@ Below is a demo of current progress towards [Voxblox] mapping. Pointcloud visual
 ![Asteroid PCL2](https://github.com/maucoen/UnrealNavigation/blob/Navigation/WebContent/asteroidpcl.gif "Asteroid field PCL2")
 
 
+Below is a demo of the full autonomous navigation system working at a basic level. The ESDF map from Voxblox can be seen, as well as the planner's trajectory and the Orion capsule following the trajectory in real-time in the simulation. 
+
+
+![Full Loop Draft](https://github.com/maucoen/UnrealNavigation/blob/Navigation/WebContent/fullLoopDraft.gif "Full Loop Draft") 
+
+
 
 ### Next Up
 Refactor scene capture solution away from UnrealCV plugin.
