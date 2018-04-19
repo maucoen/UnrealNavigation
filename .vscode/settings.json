@@ -1,6 +1,14 @@
 {
-    "files.associations": {
-        "array": "cpp",
-        "slist": "cpp"
-    }
+	"typescript.tsc.autoDetect": "off",
+	"files.exclude": {
+		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/.git": true,
+		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/.kdev4": true,
+		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/.vscode": true,
+		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/Content": true,
+		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/DerivedDataCache": true,
+		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/Intermediate": true,
+		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/Saved": true,
+		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation": true,
+		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/WebContent": true
+	}
 }

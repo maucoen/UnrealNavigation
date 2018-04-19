@@ -1,0 +1,1090 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"taskName": "UnrealNavigation Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Mac",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Mac",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Mac",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Mac",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Mac",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Mac",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Mac Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Mac",
+				"Shipping",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Mac Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Mac",
+				"Shipping",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Mac Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Mac",
+				"Test",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Mac Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Mac",
+				"Test",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation IOS Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"IOS",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation IOS Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"IOS",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation IOS DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"IOS",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation IOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"IOS",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation IOS Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"IOS",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation IOS Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"IOS",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation IOS Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"IOS",
+				"Shipping",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation IOS Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"IOS",
+				"Shipping",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation IOS Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"IOS",
+				"Test",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation IOS Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"IOS",
+				"Test",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation HTML5 Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"HTML5",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation HTML5 Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"HTML5",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation HTML5 DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"HTML5",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation HTML5 DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"HTML5",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation HTML5 Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"HTML5",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation HTML5 Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"HTML5",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation HTML5 Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"HTML5",
+				"Shipping",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation HTML5 Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"HTML5",
+				"Shipping",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation HTML5 Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"HTML5",
+				"Test",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation HTML5 Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"HTML5",
+				"Test",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Linux Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Linux",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Linux Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Linux",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Linux DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Linux",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Linux DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Linux",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Linux Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Linux",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Linux Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Linux",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Linux Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Linux",
+				"Shipping",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Linux Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Linux",
+				"Shipping",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Linux Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Linux",
+				"Test",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation Linux Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"Linux",
+				"Test",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation TVOS Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"TVOS",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation TVOS Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"TVOS",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation TVOS DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"TVOS",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation TVOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"TVOS",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation TVOS Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"TVOS",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation TVOS Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"TVOS",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation TVOS Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"TVOS",
+				"Shipping",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation TVOS Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"TVOS",
+				"Shipping",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation TVOS Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"TVOS",
+				"Test",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigation TVOS Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigation",
+				"TVOS",
+				"Test",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Linux Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Linux",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Linux Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Linux",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Linux DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Linux",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Linux DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Linux",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Linux Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Linux",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Linux Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Linux",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Mac",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Mac",
+				"Debug",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Mac",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Mac",
+				"DebugGame",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Mac",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		},
+		{
+			"taskName": "UnrealNavigationEditor Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+			"args": [
+				"UnrealNavigationEditor",
+				"Mac",
+				"Development",
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/home/amme1/Development/UnrealEngine"
+			}
+		}
+	]
+}

@@ -1,0 +1,90 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "UnrealNavigation (Debug)",
+			"request": "launch",
+			"preLaunchTask": "UnrealNavigation Linux Debug Build",
+			"program": "/home/amme1/Development/Unreal_Projects/UnrealNavigation/Binaries/Linux/UnrealNavigation-Linux-Debug",
+			"args": [
+			],
+			"cwd": "/home/amme1/Development/UnrealEngine",
+			"type": "lldb"
+		},
+		{
+			"name": "UnrealNavigation (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "UnrealNavigation Linux DebugGame Build",
+			"program": "/home/amme1/Development/Unreal_Projects/UnrealNavigation/Binaries/Linux/UnrealNavigation-Linux-DebugGame",
+			"args": [
+			],
+			"cwd": "/home/amme1/Development/UnrealEngine",
+			"type": "lldb"
+		},
+		{
+			"name": "UnrealNavigation (Development)",
+			"request": "launch",
+			"preLaunchTask": "UnrealNavigation Linux Development Build",
+			"program": "/home/amme1/Development/Unreal_Projects/UnrealNavigation/Binaries/Linux/UnrealNavigation",
+			"args": [
+			],
+			"cwd": "/home/amme1/Development/UnrealEngine",
+			"type": "lldb"
+		},
+		{
+			"name": "UnrealNavigation (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "UnrealNavigation Linux Shipping Build",
+			"program": "/home/amme1/Development/Unreal_Projects/UnrealNavigation/Binaries/Linux/UnrealNavigation-Linux-Shipping",
+			"args": [
+			],
+			"cwd": "/home/amme1/Development/UnrealEngine",
+			"type": "lldb"
+		},
+		{
+			"name": "UnrealNavigation (Test)",
+			"request": "launch",
+			"preLaunchTask": "UnrealNavigation Linux Test Build",
+			"program": "/home/amme1/Development/Unreal_Projects/UnrealNavigation/Binaries/Linux/UnrealNavigation-Linux-Test",
+			"args": [
+			],
+			"cwd": "/home/amme1/Development/UnrealEngine",
+			"type": "lldb"
+		},
+		{
+			"name": "UnrealNavigationEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "UnrealNavigationEditor Linux Debug Build",
+			"program": "/home/amme1/Development/UnrealEngine/Engine/Binaries/Linux/UE4Editor-Linux-Debug",
+			"args": [
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-debug"
+			],
+			"cwd": "/home/amme1/Development/UnrealEngine",
+			"type": "lldb"
+		},
+		{
+			"name": "UnrealNavigationEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "UnrealNavigationEditor Linux DebugGame Build",
+			"program": "/home/amme1/Development/UnrealEngine/Engine/Binaries/Linux/UE4Editor",
+			"args": [
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject",
+				"-debug"
+			],
+			"cwd": "/home/amme1/Development/UnrealEngine",
+			"type": "lldb"
+		},
+		{
+			"name": "UnrealNavigationEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "UnrealNavigationEditor Linux Development Build",
+			"program": "/home/amme1/Development/UnrealEngine/Engine/Binaries/Linux/UE4Editor",
+			"args": [
+				"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation.uproject"
+			],
+			"cwd": "/home/amme1/Development/UnrealEngine",
+			"type": "lldb"
+		}
+	]
+}
