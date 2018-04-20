@@ -1,6 +1,7 @@
 {
 	"typescript.tsc.autoDetect": "off",
 	"files.exclude": {
+<<<<<<< HEAD
 		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/.git": true,
 		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/.kdev4": true,
 		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/.vscode": true,
@@ -10,5 +11,29 @@
 		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/Saved": true,
 		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/UnrealNavigation": true,
 		"/home/amme1/Development/Unreal_Projects/UnrealNavigation/WebContent": true
+=======
+		"/home/amme2/Development/UnrealProjects/UnrealNavigation/.git": true,
+		"/home/amme2/Development/UnrealProjects/UnrealNavigation/.kdev4": true,
+		"/home/amme2/Development/UnrealProjects/UnrealNavigation/.vscode": true,
+		"/home/amme2/Development/UnrealProjects/UnrealNavigation/Content": true,
+		"/home/amme2/Development/UnrealProjects/UnrealNavigation/DerivedDataCache": true,
+		"/home/amme2/Development/UnrealProjects/UnrealNavigation/Intermediate": true,
+		"/home/amme2/Development/UnrealProjects/UnrealNavigation/Saved": true,
+		"/home/amme2/Development/UnrealProjects/UnrealNavigation/UnrealNavigation": true
+	},
+	"files.associations": {
+		"__functional_base": "cpp",
+		"__functional_base_03": "cpp",
+		"__tree": "cpp",
+		"__tuple": "cpp",
+		"chrono": "cpp",
+		"functional": "cpp",
+		"limits": "cpp",
+		"memory": "cpp",
+		"ratio": "cpp",
+		"tuple": "cpp",
+		"type_traits": "cpp",
+		"utility": "cpp"
+>>>>>>> 4f25a9d66df243c1f7aefe979958c1d944a9b34d
 	}
 }

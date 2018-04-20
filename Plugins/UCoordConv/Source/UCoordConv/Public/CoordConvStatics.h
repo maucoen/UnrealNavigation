@@ -83,7 +83,7 @@ struct FCoordConvStatics
 	// FVector by value
 	static FORCEINLINE FVector ROSToU(const FVector& InVector)
 	{
-		return FVector(InVector.X * 0.01f, -InVector.Y * 0.01f, InVector.Z * 0.01f);
+		return FVector(InVector.X * 100, -InVector.Y * 100, InVector.Z * 100);
 	}
 
 	// FTransform by reference
@@ -100,11 +100,11 @@ struct FCoordConvStatics
 		OutQuat.W *= -1;
 	}
 
-	// FVector by reference
-	static FORCEINLINE void ROSToU(FVector& OutVector)
-	{
-		OutVector.Y *= -1;
-	}
+	// // FVector by reference
+	// static FORCEINLINE void ROSToU(FVector& OutVector)
+	// {
+	// 	OutVector.Y *= -1;
+	// }
 
 
 	/** 

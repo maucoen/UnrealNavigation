@@ -59,7 +59,14 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	TEnumAsByte<EImagingType::Type > ImagingType;
 
+	FTransform GoToState;
+
 public:	
+
+	void SetNewState(FTransform InState)
+	{
+		GoToState = InState;
+	}
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -68,6 +75,8 @@ public:
 
 	// Add a smart pointer to ROSBridgeHandler
     TSharedPtr<FROSBridgeHandler> Handler;
+
+	TSharedPtr<class FROSPoseSubscriber> PoseSubscriber;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
     FString IPAddress = TEXT("127.0.1.1");
@@ -122,7 +131,7 @@ protected:
 	FString Topic;
 	bool bIsCompressed;
 	
-	// HARD Settings, check unrealcv.ini, orbslam yamls before starting up
+	// HARD Settings, check unrealcv.ini,(UnrealEngine/Engine/Binaries/Linux/unrealcv.ini) orbslam yamls before starting up
 	uint32 height = 200;
     uint32 width = 400;
     uint32 step = width*3;
