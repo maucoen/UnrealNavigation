@@ -82,3 +82,11 @@ core
 
 .mp4
 /.metadata/
+
+# Data
+*.bag
+
+# vscode
+.vscode
+*.code-workspace
+
