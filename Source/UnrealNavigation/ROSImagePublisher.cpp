@@ -4,6 +4,8 @@
 #include "TimerManager.h"
 #include "geometry_msgs/Transform.h"
 #include "geometry_msgs/TransformStamped.h"
+#include "ROSPoseSubscriber.h"
+
 #include "CoordConvStatics.h"
 #include "tf2_msgs/TFMessage.h"
 #include "CaptureManager.h"
@@ -47,6 +49,12 @@ void AROSImagePublisher::BeginPlay()
 
     //handles imaging types and ROS connection
     SetupImager();
+
+    GoToState = GetActorTransform();
+    StartingBodyState =  FCoordConvStatics::UToROS(GetActorTransform());
+
+    //TODO
+    // Set actor velocity to 0
 }
 
 // Called when game ends or actor deleted
@@ -64,7 +72,27 @@ void AROSImagePublisher::EndPlay(const EEndPlayReason::Type Reason)
 void AROSImagePublisher::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-    //UE_LOG(LogTemp, Warning, TEXT("tick"));
+
+    if(Handler.IsValid()) Handler->Process();
+
+    //create a vector between current location and setpoint
+    // if the magnitude of the vector is bigger than eps
+    //move 1 step positive
+    //otherwise don't
+    // FVector Location = GetAttachParentActor()->GetActorLocation();
+
+    // //auto pose = StaticCastSharedPtr<FROSPoseSubscriber>(PoseSubscriber);
+    // //get state from callback
+    // FVector UnitVector = PoseSubscriber->Getpoint() - Location;
+
+    // //UE_LOG(LogTemp,Warning, TEXT("fetched point %s"),*PoseSubscriber->point.ToString());
+    // //UE_LOG(LogTemp,Warning, TEXT("current %s"),*Location.ToString());
+
+    // float length;
+    // UnitVector.ToDirectionAndLength(UnitVector, length); //out params
+
+    GetAttachParentActor()->SetActorLocation(PoseSubscriber->Getpoint());
+    
     while (!LastFrame.IsEmpty())
     {
         UE_LOG(LogTemp, Warning, TEXT("non empty"));
@@ -143,11 +171,19 @@ void AROSImagePublisher::Tick(float DeltaTime)
                     TEXT("body"), 
                     geometry_msgs::Transform(TF.GetTranslation(), TF.GetRotation())));
 
+            std_msgs::Header ROSHeader2 = std_msgs::Header(Count, FROSTime(), TEXT("world"));
+            TSharedPtr<geometry_msgs::TransformStamped> FTransform_starting = MakeShareable(
+                new geometry_msgs::TransformStamped(
+                    ROSHeader2, 
+                    TEXT("starting_body"), 
+                    geometry_msgs::Transform(StartingBodyState.GetTranslation(), StartingBodyState.GetRotation())));
+
             // Send tf to ROS
             TSharedPtr<tf2_msgs::TFMessage> SendTF = MakeShareable(
                 new tf2_msgs::TFMessage());
 
             SendTF->AddTransform(*FTransform);
+            SendTF->AddTransform(*FTransform_starting);
 
             Handler->PublishMsg("/tf", SendTF);
             Count++;
@@ -160,6 +196,8 @@ void AROSImagePublisher::SetupImager()
 {
 
     auto CastedPawn = Cast<APawn, AActor>(GetAttachParentActor());
+
+
     // Setup Correct types of capture Mode and ORBSLAM ROS Topic
     switch (ImagingType)
     {
@@ -194,8 +232,6 @@ void AROSImagePublisher::SetupImager()
         }
     }
 
-    
-
     Handler = MakeShareable<FROSBridgeHandler>(
         new FROSBridgeHandler(IPAddress, Port));
 
@@ -212,11 +248,19 @@ void AROSImagePublisher::SetupImager()
             MakeShareable<FROSBridgePublisher>(
                 new FROSBridgePublisher("tf", "tf2_msgs/TFMessage")));
 
+    ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("Cam_optical"));
 
+    // initialize pointer to access it during ticks.
+    PoseSubscriber = MakeShareable<FROSPoseSubscriber>(
+         new FROSPoseSubscriber("geometry_msgs/PoseStamped", "/setpoint"));
+
+    Handler->AddSubscriber(PoseSubscriber);
+	 	
+   	UE_LOG(LogTemp, Warning, TEXT("Added subscriber for control messges"));
+       
     Handler->Connect();
     UE_LOG(LogTemp, Warning, TEXT("handler on"));
 
-    ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("Cam_optical"));
 }
 
 void AROSImagePublisher::EnqueueImageTask()

@@ -9522,6 +9522,7 @@ HEADERS += \
 	"$$UnrealNavigationRootPath/Plugins/UnrealCV/Source/UnrealCV/Public/ViewMode.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/MarsDTMLevel.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/ROSImagePublisher.h" \
+	"$$UnrealNavigationRootPath/Source/UnrealNavigation/ROSPoseSubscriber.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/UnrealNavigation.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/UnrealNavigationGameModeBase.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/Buggy.h" \
