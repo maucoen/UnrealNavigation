@@ -20,7 +20,7 @@ Camera.height: 200
 
 # Camera frames per second 
 # set to align with unreal 
-Camera.fps: 10
+Camera.fps: 2.2
 
 # stereo baseline times fx
 # check for point cloud - get from camera info pub 

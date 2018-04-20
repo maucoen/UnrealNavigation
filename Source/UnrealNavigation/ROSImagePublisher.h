@@ -60,6 +60,7 @@ protected:
 	TEnumAsByte<EImagingType::Type > ImagingType;
 
 	FTransform GoToState;
+	FTransform StartingBodyState;
 
 public:	
 
