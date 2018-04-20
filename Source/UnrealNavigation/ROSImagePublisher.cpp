@@ -90,8 +90,9 @@ void AROSImagePublisher::Tick(float DeltaTime)
 
     // float length;
     // UnitVector.ToDirectionAndLength(UnitVector, length); //out params
-
-    GetAttachParentActor()->SetActorLocation(PoseSubscriber->Getpoint());
+    if (activatePoseSubscriber){
+        GetAttachParentActor()->SetActorLocation(PoseSubscriber->Getpoint());
+    }
     
     while (!LastFrame.IsEmpty())
     {

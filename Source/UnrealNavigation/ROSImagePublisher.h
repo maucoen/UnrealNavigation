@@ -102,6 +102,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bIsCompressed = false;
 
+	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+	bool activatePoseSubscriber = false;
+
 
 };
 
