@@ -38,6 +38,17 @@ struct FCoordConvStatics
 	{
 		return FVector(InVector.X * 0.01f, - InVector.Y * 0.01f, InVector.Z * 0.01f);
 	}
+
+	static FORCEINLINE FTransform ScaleToROS(const FTransform& InTransform)
+	{
+		return FTransform(InTransform.GetRotation(), ScaleToROS(InTransform.GetLocation()));
+	}
+	
+	// FVector by value
+	static FORCEINLINE FVector ScaleToROS(const FVector& InVector)
+	{
+		return FVector(InVector.X * 0.01f, InVector.Y * 0.01f, InVector.Z * 0.01f);
+	}
 	
 	// // FTransform by reference
 	// static FORCEINLINE void UToROS(FTransform& OutTransform)

@@ -7,13 +7,8 @@
 # Camera calibration and distortion parameters (OpenCV) 
 Camera.fx: 200.0
 Camera.fy: 200.0
-<<<<<<< HEAD
-Camera.cx: 199.5
-Camera.cy: 99.5
-=======
 Camera.cx: 200.7695
 Camera.cy: 100.0737
->>>>>>> cb7f62ae8a6f4c3f71ded763aa5f26c7a82e15b3
 
 Camera.k1: 0.0
 Camera.k2: 0.0
@@ -23,18 +18,13 @@ Camera.p2: 0.0
 Camera.width: 400
 Camera.height: 200
 
-# Camera frames per second 
-<<<<<<< HEAD
-Camera.fps: 2.0
 
 # stereo baseline times fx
-=======
 # set to align with unreal 
 Camera.fps: 2.2
 
 # stereo baseline times fx
 # check for point cloud - get from camera info pub 
->>>>>>> cb7f62ae8a6f4c3f71ded763aa5f26c7a82e15b3
 Camera.bf: 100.0
 
 # Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
