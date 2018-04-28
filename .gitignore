@@ -90,3 +90,14 @@ core
 .vscode
 *.code-workspace
 
+# Unreal project
+*.uproject
+*.workspace
+*.pri
+
+# Data
+FrameTrajectory*
+KeyFrame*
+
+# Binaires
+Plugins/UnrealCV/Binaries/*
