@@ -51,7 +51,11 @@ void AROSImagePublisher::BeginPlay()
     SetupImager();
 
     GoToState = GetActorTransform();
+    // use this as a scaler if necisary 
+    // StartingBodyState =  FCoordConvStatics::ScaleToROS(GetActorTransform());
     StartingBodyState =  FCoordConvStatics::UToROS(GetActorTransform());
+    // StartingBodyState =  GetActorTransform();
+
 
     //TODO
     // Set actor velocity to 0
