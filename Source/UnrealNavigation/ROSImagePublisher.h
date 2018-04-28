@@ -60,6 +60,7 @@ protected:
 	TEnumAsByte<EImagingType::Type > ImagingType;
 
 	FTransform GoToState;
+	FTransform StartingBodyState;
 
 public:	
 
@@ -100,6 +101,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bIsCompressed = false;
+
+	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+	bool activatePoseSubscriber = false;
 
 
 };

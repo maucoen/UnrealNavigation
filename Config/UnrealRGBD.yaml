@@ -5,10 +5,10 @@
 #--------------------------------------------------------------------------------------------
 
 # Camera calibration and distortion parameters (OpenCV) 
-Camera.fx: 400.1320
-Camera.fy: 400.9286
-Camera.cx: 200.7695
-Camera.cy: 100.0737
+Camera.fx: 200.0
+Camera.fy: 200.0
+Camera.cx: 200.0
+Camera.cy: 100.0
 
 Camera.k1: 0
 Camera.k2: 0
@@ -19,7 +19,7 @@ Camera.width: 400
 Camera.height: 200
 
 # Camera frames per second 
-Camera.fps: 15
+Camera.fps: 2
 
 # IR projector baseline times fx (aprox.)
 Camera.bf: 0.0

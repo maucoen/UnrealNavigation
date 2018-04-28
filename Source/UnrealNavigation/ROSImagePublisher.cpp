@@ -51,6 +51,11 @@ void AROSImagePublisher::BeginPlay()
     SetupImager();
 
     GoToState = GetActorTransform();
+    // use this as a scaler if necisary 
+    // StartingBodyState =  FCoordConvStatics::ScaleToROS(GetActorTransform());
+    StartingBodyState =  FCoordConvStatics::UToROS(GetActorTransform());
+    // StartingBodyState =  GetActorTransform();
+
 
     //TODO
     // Set actor velocity to 0
@@ -89,8 +94,9 @@ void AROSImagePublisher::Tick(float DeltaTime)
 
     // float length;
     // UnitVector.ToDirectionAndLength(UnitVector, length); //out params
-
-    GetAttachParentActor()->SetActorLocation(PoseSubscriber->Getpoint());
+    if (activatePoseSubscriber){
+        GetAttachParentActor()->SetActorLocation(PoseSubscriber->Getpoint());
+    }
     
     while (!LastFrame.IsEmpty())
     {
@@ -170,11 +176,19 @@ void AROSImagePublisher::Tick(float DeltaTime)
                     TEXT("body"), 
                     geometry_msgs::Transform(TF.GetTranslation(), TF.GetRotation())));
 
+            std_msgs::Header ROSHeader2 = std_msgs::Header(Count, FROSTime(), TEXT("world"));
+            TSharedPtr<geometry_msgs::TransformStamped> FTransform_starting = MakeShareable(
+                new geometry_msgs::TransformStamped(
+                    ROSHeader2, 
+                    TEXT("starting_body"), 
+                    geometry_msgs::Transform(StartingBodyState.GetTranslation(), StartingBodyState.GetRotation())));
+
             // Send tf to ROS
             TSharedPtr<tf2_msgs::TFMessage> SendTF = MakeShareable(
                 new tf2_msgs::TFMessage());
 
             SendTF->AddTransform(*FTransform);
+            SendTF->AddTransform(*FTransform_starting);
 
             Handler->PublishMsg("/tf", SendTF);
             Count++;
@@ -239,7 +253,8 @@ void AROSImagePublisher::SetupImager()
             MakeShareable<FROSBridgePublisher>(
                 new FROSBridgePublisher("tf", "tf2_msgs/TFMessage")));
 
-    ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("Cam_optical"));
+    ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("cam_optical"));
+    // ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("starting_cam"));
 
     // initialize pointer to access it during ticks.
     PoseSubscriber = MakeShareable<FROSPoseSubscriber>(
