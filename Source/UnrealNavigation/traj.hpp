@@ -53,6 +53,7 @@ namespace polytraj
 class Traj
 {
 public:
+  Traj();// Empty
   Traj(uint32_t n_seg, double *t_transition, uint32_t n_coeff, POLYTRAJ_FLOAT *coeffs); // constructor from arrays
   ~Traj() {};
 

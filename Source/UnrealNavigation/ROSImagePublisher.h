@@ -9,7 +9,13 @@
 #include "sensor_msgs/Image.h"
 #include "GTCaptureComponent.h"
 #include "AsyncWork.h"
+#include "px4_msgs/PolyTraj.h"
+
+#include "poly.hpp"
+#include "traj.hpp"
 #include "ROSImagePublisher.generated.h"
+
+
 
 
 UENUM(BlueprintType)
@@ -62,6 +68,9 @@ protected:
 	FTransform GoToState;
 	FTransform StartingBodyState;
 
+	polytraj::Traj Trajectory;
+	double start_time;
+
 public:	
 
 	void SetNewState(FTransform InState)
@@ -103,7 +112,7 @@ public:
 	bool bIsCompressed = false;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-	bool activatePoseSubscriber = false;
+	bool bActivatePoseSubscriber = false;
 
 
 };

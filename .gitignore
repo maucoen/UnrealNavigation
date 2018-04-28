@@ -94,6 +94,7 @@ core
 *.uproject
 *.workspace
 *.pri
+UnrealNav*
 
 # Data
 FrameTrajectory*

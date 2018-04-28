@@ -58,7 +58,7 @@ void AROSImagePublisher::BeginPlay()
 
 
     //TODO
-    // Set actor velocity to 0
+    
 }
 
 // Called when game ends or actor deleted
@@ -94,7 +94,7 @@ void AROSImagePublisher::Tick(float DeltaTime)
 
     // float length;
     // UnitVector.ToDirectionAndLength(UnitVector, length); //out params
-    if (activatePoseSubscriber){
+    if (bActivatePoseSubscriber){
         GetAttachParentActor()->SetActorLocation(PoseSubscriber->Getpoint());
     }
     
