@@ -7,6 +7,8 @@
 #include "ROSBridgeHandler.h"
 #include "sensor_msgs/CompressedImage.h"
 #include "sensor_msgs/Image.h"
+#include "px4_msgs/PolyTraj.h"
+
 #include "GTCaptureComponent.h"
 #include "AsyncWork.h"
 #include "ROSImagePublisher.generated.h"
@@ -43,6 +45,11 @@ protected:
 	void TogglePublish();
 	bool bIsPublishing = false;
 
+	void ToggleNavigation();
+	bool bIsNavigating = false;
+	float StartTime = 0.0f;
+	float ElapsedTime = 0.0f;
+
 	TArray<UGTCaptureComponent*> GTCapturers;
 	struct FTimerHandle PublishTimer;
 
@@ -78,6 +85,7 @@ public:
     TSharedPtr<FROSBridgeHandler> Handler;
 
 	TSharedPtr<class FROSPoseSubscriber> PoseSubscriber;
+	TSharedPtr<class FPolyTrajSubscriber> PolyTrajSubscriber;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
     FString IPAddress = TEXT("127.0.1.1");
@@ -103,7 +111,7 @@ public:
 	bool bIsCompressed = false;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-	bool activatePoseSubscriber = false;
+	bool bIsPoseSubbscriberActive = false;
 
 
 };

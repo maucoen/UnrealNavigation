@@ -47,12 +47,17 @@
 
 #include "polytraj_var_size.h"
 
+#include "CoreMinimal.h"
+
 namespace polytraj
 {
 
 class Traj
 {
 public:
+  Traj();
+
+  Traj(uint16 n_seg, TArray<float> t_trans, uint8 n_coeff, TArray<float> coeffs); // constructor from arrays
   Traj(uint32_t n_seg, double *t_transition, uint32_t n_coeff, POLYTRAJ_FLOAT *coeffs); // constructor from arrays
   ~Traj() {};
 

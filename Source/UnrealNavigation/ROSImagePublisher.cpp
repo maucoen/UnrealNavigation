@@ -5,6 +5,7 @@
 #include "geometry_msgs/Transform.h"
 #include "geometry_msgs/TransformStamped.h"
 #include "ROSPoseSubscriber.h"
+#include "PolyTrajSubscriber.h"
 
 #include "CoordConvStatics.h"
 #include "tf2_msgs/TFMessage.h"
@@ -34,6 +35,8 @@ void AROSImagePublisher::BeginPlay()
         if (InputComponent)
         {
             InputComponent->BindKey(EKeys::K, EInputEvent::IE_Pressed, this, &AROSImagePublisher::TogglePublish);
+            InputComponent->BindKey(EKeys::L, EInputEvent::IE_Pressed, this, &AROSImagePublisher::ToggleNavigation);
+            
             EnableInput(Controller);
         }
     }
@@ -56,9 +59,6 @@ void AROSImagePublisher::BeginPlay()
     StartingBodyState =  FCoordConvStatics::UToROS(GetActorTransform());
     // StartingBodyState =  GetActorTransform();
 
-
-    //TODO
-    // Set actor velocity to 0
 }
 
 // Called when game ends or actor deleted
@@ -91,12 +91,21 @@ void AROSImagePublisher::Tick(float DeltaTime)
 
     // //UE_LOG(LogTemp,Warning, TEXT("fetched point %s"),*PoseSubscriber->point.ToString());
     // //UE_LOG(LogTemp,Warning, TEXT("current %s"),*Location.ToString());
-
     // float length;
     // UnitVector.ToDirectionAndLength(UnitVector, length); //out params
-    if (activatePoseSubscriber){
-        GetAttachParentActor()->SetActorLocation(PoseSubscriber->Getpoint());
+    // if (bIsPoseSubbscriberActive){
+    //     GetAttachParentActor()->SetActorLocation(PoseSubscriber->Getpoint());
+    // }
+
+    //TODO;
+    // new location is namespace::EVALTRAJ(Trajectory,0)
+
+    if (bIsNavigating && (StartTime > 0.0f))
+    {
+        ElapsedTime = ElapsedTime + DeltaTime;
+        GetAttachParentActor()->SetActorLocation(PolyTrajSubscriber->GetNewLocation(ElapsedTime));  
     }
+
     
     while (!LastFrame.IsEmpty())
     {
@@ -261,6 +270,11 @@ void AROSImagePublisher::SetupImager()
          new FROSPoseSubscriber("geometry_msgs/PoseStamped", "/setpoint"));
 
     Handler->AddSubscriber(PoseSubscriber);
+
+    PolyTrajSubscriber = MakeShareable<FPolyTrajSubscriber>(
+         new FPolyTrajSubscriber("px4_msgs/PolyTraj", "/trajectory"));
+
+    Handler->AddSubscriber(PolyTrajSubscriber);
 	 	
    	UE_LOG(LogTemp, Warning, TEXT("Added subscriber for control messges"));
        
@@ -275,7 +289,6 @@ void AROSImagePublisher::EnqueueImageTask()
     // FAsyncRecord* AsyncRecord = FAsyncRecord::Create();
     // FGTCaptureTask GTCaptureTask = FGTCaptureTask(Modes[0], InFilename, GFrameCounter, AsyncRecord);
     // PendingTasksROS.Enqueue(GTCaptureTask);
-
     LastFrame.Enqueue(GFrameCounter);
 }
 
@@ -299,7 +312,6 @@ void AROSImagePublisher::TogglePublish()
         GetWorld()->GetTimerManager().ClearTimer(PublishTimer);
         
         LastFrame.Empty();
-
         if (GEngine)
         {
             GEngine->AddOnScreenDebugMessage(
@@ -308,6 +320,49 @@ void AROSImagePublisher::TogglePublish()
     }
 
     bIsPublishing = !bIsPublishing;
+}
+
+void AROSImagePublisher::ToggleNavigation()
+{
+    if (!bIsNavigating)
+    {
+  
+        if (!PolyTrajSubscriber->bHasTraj)        {
+            if (GEngine)
+            {
+                GEngine->AddOnScreenDebugMessage(
+                    -1, 2.0f, FColor::Yellow, TEXT("trajectory empty!"), true, FVector2D(2, 2));
+            }
+            bIsNavigating = false; 
+            return;
+        }
+      
+        StartTime = UGameplayStatics::GetRealTimeSeconds(GetWorld());
+        ElapsedTime = StartTime;
+
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(
+                -1, 2.0f, FColor::Green, TEXT("starting navigation"), true, FVector2D(2, 2));
+        }
+    }
+    else
+    {
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(
+                -1, 2.0f, FColor::Red, TEXT("stopping navigation"), true, FVector2D(2, 2));
+        }
+    }
+
+    bIsNavigating = !bIsNavigating;
+}
+
+
+
+void PopulateTrajectory()
+{
+
 }
 
 

@@ -4301,6 +4301,7 @@
 /home/mau/EPIC/UnrealEngine/Engine/Source/UROSBridge/Public
 /home/mau/EPIC/Projects/UnrealNavigation/Plugins/UROSBridge/Source
 /home/mau/EPIC/Projects/UnrealNavigation/Plugins/UROSBridge/Source/UROSBridge/Public
+/home/mau/EPIC/Projects/UnrealNavigation/Plugins/UROSBridge/Source/UROSBridge/Public/TFmessageStamped
 /home/mau/EPIC/Projects/UnrealNavigation/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs
 /home/mau/EPIC/Projects/UnrealNavigation/Plugins/UROSBridge/Source/UROSBridge/Public/nav_msgs
 /home/mau/EPIC/Projects/UnrealNavigation/Plugins/UROSBridge/Source/UROSBridge/Public/rosgraph_msgs

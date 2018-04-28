@@ -1,4 +1,3 @@
-    
 #include "ROSPoseSubscriber.h"
 #include "geometry_msgs/PoseStamped.h"
 #include "ROSImagePublisher.h"
@@ -16,7 +15,7 @@ FROSPoseSubscriber::FROSPoseSubscriber(
 TSharedPtr<FROSBridgeMsg> FROSPoseSubscriber::ParseMessage
 (TSharedPtr<FJsonObject> JsonObject) const
 {
-    UE_LOG(LogTemp, Warning, TEXT("Inside Parse Message for Controller Subscriber"));
+   // UE_LOG(LogTemp, Warning, TEXT("Inside Parse Message for Controller Subscriber"));
 	TSharedPtr<geometry_msgs::PoseStamped> Pose =
 		MakeShareable<geometry_msgs::PoseStamped>(new geometry_msgs::PoseStamped());
 	Pose->FromJson(JsonObject);
@@ -36,7 +35,7 @@ void FROSPoseSubscriber::Callback(TSharedPtr<FROSBridgeMsg> Msg)
     FVector newpoint = NewPoint.GetVector();
     point = FCoordConvStatics::ROSToU(newpoint);
     
-    UE_LOG(LogTemp,Warning, TEXT("got point %s"),*point.ToString());
+    //UE_LOG(LogTemp,Warning, TEXT("got point %s"),*point.ToString());
 
     // //constructs and sets transform based on identity quat, Setpoint and scale 1
     // State = FTransform();

@@ -7315,10 +7315,14 @@ SOURCES += \
 	"$$UnrealNavigationRootPath/Plugins/UnrealCV/Source/UnrealCV/Private/Commands/PluginHandler.cpp" \
 	"$$UnrealNavigationRootPath/Plugins/UnrealCV/Source/UnrealCV/Private/libs/cnpy.cpp" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/MarsDTMLevel.cpp" \
+	"$$UnrealNavigationRootPath/Source/UnrealNavigation/PolyTrajSubscriber.cpp" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/ROSImagePublisher.cpp" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/ROSPoseSubscriber.cpp" \
+	"$$UnrealNavigationRootPath/Source/UnrealNavigation/ROSTransformPublisher.cpp" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/UnrealNavigation.cpp" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/UnrealNavigationGameModeBase.cpp" \
+	"$$UnrealNavigationRootPath/Source/UnrealNavigation/poly.cpp" \
+	"$$UnrealNavigationRootPath/Source/UnrealNavigation/traj.cpp" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/Buggy.cpp" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/BuggyHud.cpp" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/BuggyWheelFront.cpp" \

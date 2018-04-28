@@ -2429,6 +2429,7 @@ INCLUDEPATH += \
 	/home/mau/EPIC/UnrealEngine/Engine/Source/UROSBridge/Public \
 	Plugins/UROSBridge/Source \
 	Plugins/UROSBridge/Source/UROSBridge/Public \
+	Plugins/UROSBridge/Source/UROSBridge/Public/TFmessageStamped \
 	Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs \
 	Plugins/UROSBridge/Source/UROSBridge/Public/nav_msgs \
 	Plugins/UROSBridge/Source/UROSBridge/Public/rosgraph_msgs \

@@ -9441,6 +9441,7 @@ HEADERS += \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/UROSBridge.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/WebSocket.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/WebSocketServer.h" \
+	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/TFmessageStamped/TFmessageStamp.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/Accel.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/AccelStamped.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/AccelWithCovariance.h" \
@@ -9450,6 +9451,7 @@ HEADERS += \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/Point.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/Point32.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/PointStamped.h" \
+	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/PolyTraj.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/Polygon.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/PolygonStamped.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/Pose.h" \
@@ -9521,10 +9523,13 @@ HEADERS += \
 	"$$UnrealNavigationRootPath/Plugins/UnrealCV/Source/UnrealCV/Public/UnrealCVPrivate.h" \
 	"$$UnrealNavigationRootPath/Plugins/UnrealCV/Source/UnrealCV/Public/ViewMode.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/MarsDTMLevel.h" \
+	"$$UnrealNavigationRootPath/Source/UnrealNavigation/PolyTrajSubscriber.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/ROSImagePublisher.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/ROSPoseSubscriber.h" \
+	"$$UnrealNavigationRootPath/Source/UnrealNavigation/ROSTransformPublisher.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/UnrealNavigation.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/UnrealNavigationGameModeBase.h" \
+	"$$UnrealNavigationRootPath/Source/UnrealNavigation/polytraj_var_size.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/Buggy.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/BuggyHud.h" \
 	"$$UnrealNavigationRootPath/Source/UnrealNavigation/BuggySource/BuggyWheelFront.h" \

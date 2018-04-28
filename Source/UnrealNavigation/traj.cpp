@@ -46,6 +46,25 @@
 namespace polytraj
 {
 
+Traj::Traj(){}
+
+Traj::Traj(uint16 n_seg, TArray<float> t_transition,  uint8 n_coeff, TArray<float> coeffs)
+{
+  n_coeff_ = n_coeff;
+
+  t_transition_.reserve(n_seg);
+  polys_.reserve(n_seg);
+
+  for (int i = 0; i < n_seg; i++) {
+    t_transition_.push_back(t_transition[i]);
+    //POLYTRAJ_FLOAT coeffF = coeffs[i * n_coeff_];
+    polys_.push_back(Poly(n_coeff_, &coeffs[i * n_coeff_]));
+    // check continuity of trajectories with Poly CanJoin method?
+  }
+
+  seg_idx_ = 0;
+}
+
 Traj::Traj(uint32_t n_seg, double *t_transition, uint32_t n_coeff, POLYTRAJ_FLOAT *coeffs)
 {
   assert(t_transition);
