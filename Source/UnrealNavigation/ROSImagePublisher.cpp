@@ -249,7 +249,8 @@ void AROSImagePublisher::SetupImager()
             MakeShareable<FROSBridgePublisher>(
                 new FROSBridgePublisher("tf", "tf2_msgs/TFMessage")));
 
-    ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("Cam_optical"));
+    ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("cam_optical"));
+    // ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("starting_cam"));
 
     // initialize pointer to access it during ticks.
     PoseSubscriber = MakeShareable<FROSPoseSubscriber>(
