@@ -16,10 +16,10 @@ TSharedPtr<FROSBridgeMsg> FPolyTrajSubscriber::ParseMessage
 (TSharedPtr<FJsonObject> JsonObject) const
 {
     UE_LOG(LogTemp, Warning, TEXT("Inside Parse Message for PolyTraj Subscriber"));
-	TSharedPtr<px4_msgs::PolyTraj> Traj =
+	TSharedPtr<px4_msgs::PolyTraj> TrajMsg =
 		MakeShareable<px4_msgs::PolyTraj>(new px4_msgs::PolyTraj());
-	Traj->FromJson(JsonObject);
-	return StaticCastSharedPtr<FROSBridgeMsg>(Traj);
+	TrajMsg->FromJson(JsonObject);
+	return StaticCastSharedPtr<FROSBridgeMsg>(TrajMsg);
 }
 
 void FPolyTrajSubscriber::Callback(TSharedPtr<FROSBridgeMsg> Msg)
@@ -51,9 +51,11 @@ void FPolyTrajSubscriber::Callback(TSharedPtr<FROSBridgeMsg> Msg)
 FVector FPolyTrajSubscriber::GetNewLocation(float InElapsedTime)
 {
     FVector EvaluatedLocation = FVector(
-        _x_traj.EvalTraj(InElapsedTime, 0),
-        -_y_traj.EvalTraj(InElapsedTime, 0),
-        _z_traj.EvalTraj(InElapsedTime, 0));
+        _x_traj.EvalTraj(InElapsedTime, 0)*100.0,
+        -_y_traj.EvalTraj(InElapsedTime, 0)*100.0,
+        _z_traj.EvalTraj(InElapsedTime, 0)*100.0);
+
+    UE_LOG(LogTemp, Warning, TEXT("FVector location is: (%f, %f, %f)"),_x_traj.EvalTraj(InElapsedTime, 0),_y_traj.EvalTraj(InElapsedTime, 0),_z_traj.EvalTraj(InElapsedTime, 0));
 
     return EvaluatedLocation;
 }

@@ -103,6 +103,7 @@ void AROSImagePublisher::Tick(float DeltaTime)
     if (bIsNavigating && (StartTime > 0.0f))
     {
         ElapsedTime = ElapsedTime + DeltaTime;
+        UE_LOG(LogTemp, Warning, TEXT("NAVIGATING TICK"));
         GetAttachParentActor()->SetActorLocation(PolyTrajSubscriber->GetNewLocation(ElapsedTime));  
     }
 
@@ -204,6 +205,33 @@ void AROSImagePublisher::Tick(float DeltaTime)
         }
         else {break; }
     }
+    // FTransform TF = FCoordConvStatics::UToROS(
+    // GTCapturers[0]->GetComponentTransform());
+    // // static_transform_publisher 0.5 0 0 -1.5708 0 -1.5708 body Cam_optical  CORRECT FOR ROS OPTICALS
+
+    // std_msgs::Header ROSHeader1 = std_msgs::Header(Count, FROSTime(), TEXT("world"));
+    // TSharedPtr<geometry_msgs::TransformStamped> FTransform = MakeShareable(
+    //     new geometry_msgs::TransformStamped(
+    //         ROSHeader1, 
+    //         TEXT("body"), 
+    //         geometry_msgs::Transform(TF.GetTranslation(), TF.GetRotation())));
+
+    // std_msgs::Header ROSHeader2 = std_msgs::Header(Count, FROSTime(), TEXT("world"));
+    // TSharedPtr<geometry_msgs::TransformStamped> FTransform_starting = MakeShareable(
+    //     new geometry_msgs::TransformStamped(
+    //         ROSHeader2, 
+    //         TEXT("starting_body"), 
+    //         geometry_msgs::Transform(StartingBodyState.GetTranslation(), StartingBodyState.GetRotation())));
+
+    // // Send tf to ROS
+    // TSharedPtr<tf2_msgs::TFMessage> SendTF = MakeShareable(
+    //     new tf2_msgs::TFMessage());
+
+    // SendTF->AddTransform(*FTransform);
+    // SendTF->AddTransform(*FTransform_starting);
+
+    // Handler->PublishMsg("/tf", SendTF);
+    // Count++;
 }
 
 void AROSImagePublisher::SetupImager()
