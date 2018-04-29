@@ -23,6 +23,8 @@ public:
     
     FVector GetNewLocation(float InElapsedTime);
 
+	void ResetReplanTimeOffset();
+
     bool bHasTraj = false;
 
 private:
@@ -33,5 +35,9 @@ private:
 	polytraj::Traj _y_traj;
 	polytraj::Traj _z_traj;
 	polytraj::Traj _yaw_traj;
+
+	float TMax;
+	float ReplanTimeReset;
+	float LatestTime;
 
 };

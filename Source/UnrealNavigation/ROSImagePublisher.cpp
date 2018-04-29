@@ -109,7 +109,7 @@ void AROSImagePublisher::Tick(float DeltaTime)
     {
         ElapsedTime = ElapsedTime + DeltaTime;
         UE_LOG(LogTemp, Warning, TEXT("NAVIGATING TICK"));
-        GetAttachParentActor()->SetActorLocation(PolyTrajSubscriber->GetNewLocation(ElapsedTime));  
+        GetAttachParentActor()->SetActorLocation(PolyTrajSubscriber->GetNewLocation(ElapsedTime - StartTime));  
     }
 
     
@@ -378,6 +378,7 @@ void AROSImagePublisher::ToggleNavigation()
       
         StartTime = UGameplayStatics::GetRealTimeSeconds(GetWorld());
         ElapsedTime = StartTime;
+        // Set replan time delta to zero
 
         if (GEngine)
         {

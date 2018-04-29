@@ -40,9 +40,15 @@ void FPolyTrajSubscriber::Callback(TSharedPtr<FROSBridgeMsg> Msg)
     _yaw_traj = polytraj::Traj(Traj.n_segs, Traj.t_trans,
                     Traj.n_yaw_coeffs, Traj.yaw_coeffs);
 
-   
+    
+    // Update maximum time
+    TMax = Traj.t_trans[Traj.n_segs-1];
+
     UE_LOG(LogTemp,Warning, TEXT("got new traj"));
     bHasTraj = true;
+
+    // Update replan time buffer - so trajectory is reset to zero at the new traj start
+    ReplanTimeReset = LatestTime;
  
 	return;
 }
@@ -50,6 +56,18 @@ void FPolyTrajSubscriber::Callback(TSharedPtr<FROSBridgeMsg> Msg)
 
 FVector FPolyTrajSubscriber::GetNewLocation(float InElapsedTime)
 {
+    // Record latest time
+    LatestTime = InElapsedTime;
+
+    // Adjust for replanning buffer
+    InElapsedTime = InElapsedTime - ReplanTimeReset;
+
+    // Fix to maximum if it exceeds the maximum
+    if (InElapsedTime > TMax){
+        InElapsedTime = TMax;
+        UE_LOG(LogTemp, Warning, TEXT("EXCEEDED MAXIMUM TIME: %f, stopping at final location"),TMax);
+    }
+    
     FVector EvaluatedLocation = FVector(
         _x_traj.EvalTraj(InElapsedTime, 0)*100.0,
         -_y_traj.EvalTraj(InElapsedTime, 0)*100.0,
@@ -58,4 +76,10 @@ FVector FPolyTrajSubscriber::GetNewLocation(float InElapsedTime)
     UE_LOG(LogTemp, Warning, TEXT("FVector location is: (%f, %f, %f)"),_x_traj.EvalTraj(InElapsedTime, 0),_y_traj.EvalTraj(InElapsedTime, 0),_z_traj.EvalTraj(InElapsedTime, 0));
 
     return EvaluatedLocation;
+    
+
+}
+
+void FPolyTrajSubscriber::ResetReplanTimeOffset(){
+    ReplanTimeReset = 0.0;
 }
