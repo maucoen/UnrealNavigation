@@ -49,6 +49,8 @@ protected:
 	bool bIsNavigating = false;
 	float StartTime = 0.0f;
 	float ElapsedTime = 0.0f;
+	
+	void PublishGoal();
 
 	TArray<UGTCaptureComponent*> GTCapturers;
 	struct FTimerHandle PublishTimer;

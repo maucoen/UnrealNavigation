@@ -3,6 +3,10 @@
 #include "ROSImagePublisher.h"
 #include "TimerManager.h"
 #include "geometry_msgs/Transform.h"
+#include "geometry_msgs/PoseStamped.h"
+#include "geometry_msgs/Pose.h"
+#include "geometry_msgs/Point.h"
+#include "geometry_msgs/Quaternion.h"
 #include "geometry_msgs/TransformStamped.h"
 #include "ROSPoseSubscriber.h"
 #include "PolyTrajSubscriber.h"
@@ -36,7 +40,8 @@ void AROSImagePublisher::BeginPlay()
         {
             InputComponent->BindKey(EKeys::K, EInputEvent::IE_Pressed, this, &AROSImagePublisher::TogglePublish);
             InputComponent->BindKey(EKeys::L, EInputEvent::IE_Pressed, this, &AROSImagePublisher::ToggleNavigation);
-            
+            InputComponent->BindKey(EKeys::O, EInputEvent::IE_Pressed, this, &AROSImagePublisher::PublishGoal);
+           
             EnableInput(Controller);
         }
     }
@@ -306,6 +311,12 @@ void AROSImagePublisher::SetupImager()
 	 	
    	UE_LOG(LogTemp, Warning, TEXT("Added subscriber for control messges"));
        
+    Topics.Add(TEXT("CameraTransform"));
+    Handler->AddPublisher(
+            MakeShareable<FROSBridgePublisher>(
+                new FROSBridgePublisher("/goal_unreal","geometry_msgs/PoseStamped")));
+
+
     Handler->Connect();
     UE_LOG(LogTemp, Warning, TEXT("handler on"));
 
@@ -386,14 +397,36 @@ void AROSImagePublisher::ToggleNavigation()
     bIsNavigating = !bIsNavigating;
 }
 
-
-
-void PopulateTrajectory()
+void AROSImagePublisher::PublishGoal()
 {
+    std_msgs::Header ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("world"));
+    
+    
+    
+    geometry_msgs::Point Inposition = FCoordConvStatics::UToROS(
+                                        FVector(
+                                            FMath::RandRange(-4000,4000),
+                                            FMath::RandRange(-4000,4000),
+                                            FMath::RandRange(-4000,4000)));
+    geometry_msgs::Quaternion InOrientation = FQuat();
 
+    
+    
+    TSharedPtr<geometry_msgs::PoseStamped> GoalUnreal = MakeShareable(
+        new geometry_msgs::PoseStamped(
+            ROSHeader, 
+            geometry_msgs::Pose(
+                Inposition, 
+                InOrientation)));
+
+    Handler->PublishMsg("/goal_unreal", GoalUnreal);
+
+    if (GEngine)
+    {
+        GEngine->AddOnScreenDebugMessage(
+            -1, 2.0f, FColor::Yellow, TEXT("publishing goal!"), true, FVector2D(2, 2));
+    }
 }
-
-
 
 // /**
 // Attach a GTCaptureComponent to a pawn
