@@ -40,8 +40,7 @@ Below is a demo of the full autonomous navigation system working at a basic leve
 
 
 ### Next Up
-Refactor scene capture solution away from UnrealCV plugin.
-Output a path planning solution (OMPL and ASTRO) from the online generated map.  
+Currently creating VR controls to manipulate the ROS system from within a VR headset while in the Unreal Simulation. 
 
 
 [UROSBridge]: https://github.com/robcog-iai/UROSBridge
