@@ -23,7 +23,7 @@ public:
     
     FVector GetNewLocation(float InElapsedTime);
 
-    bool bHasTraj = false;
+	bool DoWeHaveTraj(){ return bHasTraj;};
 
 private:
 
@@ -33,5 +33,10 @@ private:
 	polytraj::Traj _y_traj;
 	polytraj::Traj _z_traj;
 	polytraj::Traj _yaw_traj;
+
+	UPROPERTY()
+    class USplineComponent* Spline;
+
+	bool bHasTraj = false;
 
 };

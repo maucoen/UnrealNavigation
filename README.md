@@ -35,7 +35,7 @@ Below is a demo of current progress towards [Voxblox] mapping. Pointcloud visual
 Below is a demo of the full autonomous navigation system working at a basic level. The ESDF map from Voxblox can be seen, as well as the planner's trajectory and the Orion capsule following the trajectory in real-time in the simulation. 
 
 
-![Full Loop Draft](https://github.com/maucoen/UnrealNavigation/blob/Navigation/WebContent/fullLoopDraft.gif "Full Loop Draft") 
+![Full Loop ](https://github.com/maucoen/UnrealNavigation/blob/Navigation/WebContent/fullLoop.gif "Full Loop") 
 
 
 

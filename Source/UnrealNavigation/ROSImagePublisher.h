@@ -42,8 +42,8 @@ protected:
 
 	void EnqueueImageTask();
 
-	void TogglePublish();
-	bool bIsPublishing = false;
+	void ToggleImaging();
+	bool bIsImaging = false;
 
 	void ToggleNavigation();
 	bool bIsNavigating = false;
@@ -51,6 +51,7 @@ protected:
 	float ElapsedTime = 0.0f;
 	
 	void PublishGoal();
+	
 
 	TArray<UGTCaptureComponent*> GTCapturers;
 	struct FTimerHandle PublishTimer;
@@ -115,6 +116,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bIsPoseSubbscriberActive = false;
 
+	UPROPERTY(EditAnywhere)
+    class USplineComponent* Spline;
+
+	UPROPERTY(EditAnywhere)
+    class USplineMeshComponent* SplineMesh;
 
 };
 

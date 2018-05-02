@@ -10,6 +10,8 @@
 #include "geometry_msgs/TransformStamped.h"
 #include "ROSPoseSubscriber.h"
 #include "PolyTrajSubscriber.h"
+#include "Components/SplineComponent.h"
+#include "Components/SplineMeshComponent.h"
 
 #include "CoordConvStatics.h"
 #include "tf2_msgs/TFMessage.h"
@@ -24,7 +26,25 @@ AROSImagePublisher::AROSImagePublisher(const FObjectInitializer &ObjectInitializ
     // off to improve performance if you don't need them.
     PrimaryActorTick.bCanEverTick = true;
 
-    // All socket and timers defined in .h, editable in editor.
+    
+    Spline = NewObject<USplineComponent>();
+    Spline->SetDrawDebug(true);
+
+    //initial location
+    Spline->AddSplinePoint(
+            FVector(-525.0, 870.0, 730.0),
+            ESplineCoordinateSpace::World,
+            true
+        );
+
+    SplineMesh = NewObject<USplineMeshComponent>();
+
+    auto SplineSMesh = Cast<UStaticMeshComponent>(SplineMesh);
+    //SplineSMesh->SetStaticMesh("/Game/CubeUnreal");
+
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> Spl(TEXT("/Game/CubeUnreal"));
+	SplineSMesh->SetStaticMesh(Spl.Object);
+    
 }
 
 // Called when the game starts
@@ -38,7 +58,7 @@ void AROSImagePublisher::BeginPlay()
         InputComponent = NewObject<UInputComponent>(this);
         if (InputComponent)
         {
-            InputComponent->BindKey(EKeys::K, EInputEvent::IE_Pressed, this, &AROSImagePublisher::TogglePublish);
+            InputComponent->BindKey(EKeys::K, EInputEvent::IE_Pressed, this, &AROSImagePublisher::ToggleImaging);
             InputComponent->BindKey(EKeys::L, EInputEvent::IE_Pressed, this, &AROSImagePublisher::ToggleNavigation);
             InputComponent->BindKey(EKeys::O, EInputEvent::IE_Pressed, this, &AROSImagePublisher::PublishGoal);
            
@@ -331,9 +351,9 @@ void AROSImagePublisher::EnqueueImageTask()
     LastFrame.Enqueue(GFrameCounter);
 }
 
-void AROSImagePublisher::TogglePublish()
+void AROSImagePublisher::ToggleImaging()
 {
-    if (!bIsPublishing)
+    if (!bIsImaging)
     {
         float Period = 1.0 / Frequency;
 
@@ -343,7 +363,7 @@ void AROSImagePublisher::TogglePublish()
         if (GEngine)
         {
             GEngine->AddOnScreenDebugMessage(
-                -1, 2.0f, FColor::Green, TEXT("starting image publishing"), true, FVector2D(2, 2));
+                -1, 2.0f, FColor::Green, TEXT("starting imaging"), true, FVector2D(2, 2));
         }
     }
     else
@@ -354,11 +374,11 @@ void AROSImagePublisher::TogglePublish()
         if (GEngine)
         {
             GEngine->AddOnScreenDebugMessage(
-                -1, 2.0f, FColor::Red, TEXT("stopping image publishing"), true, FVector2D(2, 2));
+                -1, 2.0f, FColor::Red, TEXT("stopping imaging"), true, FVector2D(2, 2));
         }
     }
 
-    bIsPublishing = !bIsPublishing;
+    bIsImaging = !bIsImaging;
 }
 
 void AROSImagePublisher::ToggleNavigation()
@@ -366,7 +386,7 @@ void AROSImagePublisher::ToggleNavigation()
     if (!bIsNavigating)
     {
   
-        if (!PolyTrajSubscriber->bHasTraj)        {
+        if (!PolyTrajSubscriber->DoWeHaveTraj())        {
             if (GEngine)
             {
                 GEngine->AddOnScreenDebugMessage(
@@ -400,17 +420,50 @@ void AROSImagePublisher::ToggleNavigation()
 void AROSImagePublisher::PublishGoal()
 {
     std_msgs::Header ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("world"));
-    
-    
-    
     geometry_msgs::Point Inposition = FCoordConvStatics::UToROS(
                                         FVector(
                                             FMath::RandRange(-4000,4000),
                                             FMath::RandRange(-4000,4000),
                                             FMath::RandRange(-4000,4000)));
     geometry_msgs::Quaternion InOrientation = FQuat();
-
     
+    FVector point = FVector(
+        FMath::RandRange(-2200,2200),
+        FMath::RandRange(-2200,2200),
+        FMath::RandRange(-2200,2200)
+    );
+
+    Spline->AddSplinePoint(
+        point,
+        ESplineCoordinateSpace::World,
+        true
+    );
+
+    TArray<FVector> loc;
+    loc.SetNum(2);
+    TArray<FVector> tang;
+    tang.SetNum(2);
+    for(int i = 0; i<=0;i++)
+    {
+        Spline->GetLocalLocationAndTangentAtSplinePoint(
+            Spline->GetNumberOfSplinePoints()-1+i,
+            loc[i],
+            tang[i]
+        );
+    }
+
+    SplineMesh->SetStartAndEnd(
+        loc[0],
+        tang[0],
+        loc[1],
+        tang[1],
+        true
+    );
+
+    SplineMesh->UpdateMesh_Concurrent();
+
+    UE_LOG(LogTemp,Warning, TEXT("length %f"), Spline->GetSplineLength());
+
     
     TSharedPtr<geometry_msgs::PoseStamped> GoalUnreal = MakeShareable(
         new geometry_msgs::PoseStamped(
@@ -420,11 +473,10 @@ void AROSImagePublisher::PublishGoal()
                 InOrientation)));
 
     Handler->PublishMsg("/goal_unreal", GoalUnreal);
-
     if (GEngine)
     {
         GEngine->AddOnScreenDebugMessage(
-            -1, 2.0f, FColor::Yellow, TEXT("publishing goal!"), true, FVector2D(2, 2));
+            -1, 2.0f, FColor::Yellow, TEXT("publishing random goal!"), true, FVector2D(2, 2));
     }
 }
 
