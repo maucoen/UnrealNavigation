@@ -2432,6 +2432,7 @@ INCLUDEPATH += \
 	Plugins/UROSBridge/Source/UROSBridge/Public/TFmessageStamped \
 	Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs \
 	Plugins/UROSBridge/Source/UROSBridge/Public/nav_msgs \
+	Plugins/UROSBridge/Source/UROSBridge/Public/px4_msgs \
 	Plugins/UROSBridge/Source/UROSBridge/Public/rosgraph_msgs \
 	Plugins/UROSBridge/Source/UROSBridge/Public/rospy_tutorials \
 	Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs \

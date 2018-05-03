@@ -9451,7 +9451,6 @@ HEADERS += \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/Point.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/Point32.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/PointStamped.h" \
-	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/PolyTraj.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/Polygon.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/PolygonStamped.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/Pose.h" \
@@ -9473,6 +9472,7 @@ HEADERS += \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/Wrench.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs/WrenchStamped.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/nav_msgs/Odometry.h" \
+	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/px4_msgs/PolyTraj.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/rosgraph_msgs/Clock.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/rospy_tutorials/AddTwoInts.h" \
 	"$$UnrealNavigationRootPath/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs/ChannelFloat32.h" \

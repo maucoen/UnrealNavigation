@@ -1,7 +1,8 @@
     
 #include "PolyTrajSubscriber.h"
 #include "ROSImagePublisher.h"
-#include "Components/SplineComponent.h"
+
+#include "CoreMinimal.h"
 //#include "CoordConvStatics.h"
 
 
@@ -11,9 +12,6 @@ FPolyTrajSubscriber::FPolyTrajSubscriber(
 {
     UE_LOG(LogTemp, Warning, TEXT("Initialised FPolyTrajSubscriber"));
     //Owner = InOwner;
-
-    Spline = NewObject<USplineComponent>();
-    Spline->SetDrawDebug(true);
 }
 
 TSharedPtr<FROSBridgeMsg> FPolyTrajSubscriber::ParseMessage
@@ -28,10 +26,8 @@ TSharedPtr<FROSBridgeMsg> FPolyTrajSubscriber::ParseMessage
 
 void FPolyTrajSubscriber::Callback(TSharedPtr<FROSBridgeMsg> Msg)
 {
-    //UE_LOG(LogTemp,Warning, TEXT("inside polyraj callback"));
-
+    // downcast from FROSBridge to px4_msg::PolyTraj
 	TSharedPtr<px4_msgs::PolyTraj> Trajectory = StaticCastSharedPtr<px4_msgs::PolyTraj>(Msg);
-	// downcast to subclass using StaticCastSharedPtr function
 
     Traj = *Trajectory;
     _x_traj = polytraj::Traj(Traj.n_segs, Traj.t_trans,
@@ -43,38 +39,23 @@ void FPolyTrajSubscriber::Callback(TSharedPtr<FROSBridgeMsg> Msg)
     _yaw_traj = polytraj::Traj(Traj.n_segs, Traj.t_trans,
                     Traj.n_yaw_coeffs, Traj.yaw_coeffs);
 
-<<<<<<< HEAD
-    float tmax = 1.5f;
-    Spline->ClearSplinePoints();
-    for(float i = 0.0f; i<tmax; i++)
-    {
-        Spline->AddPoint(
-            FSplinePoint(
-                i,
-                FVector(
-                    _x_traj.EvalTraj(i*10, 0)*100.0,
-                    -_y_traj.EvalTraj(i*10, 0)*100.0,
-                    _z_traj.EvalTraj(i*10, 0)*100.0)
-            )
-        );
-        UE_LOG(LogTemp,Warning, TEXT("evaled %d"), i);
-    }
-     
-    UE_LOG(LogTemp,Warning, TEXT("got new traj"));
-    bHasTraj = true;
-
-=======
-    
     // Update maximum time
     TMax = Traj.t_trans[Traj.n_segs-1];
 
-    UE_LOG(LogTemp,Warning, TEXT("got new traj"));
-    bHasTraj = true;
+    if (TMax < 2.0f)
+    {
+       UE_LOG(LogTemp,Warning, TEXT("traj is short, won't navigate"));
+       bHasTraj = false; 
+    }
+    else
+    {
+        UE_LOG(LogTemp,Warning, TEXT("got new traj"));
+        bHasTraj = true;
+    }
 
     // Update replan time buffer - so trajectory is reset to zero at the new traj start
     ReplanTimeReset = LatestTime;
- 
->>>>>>> c812386a8044d8c680dc86318b7e7f719f243ce8
+
 	return;
 }
 
@@ -87,23 +68,23 @@ FVector FPolyTrajSubscriber::GetNewLocation(float InElapsedTime)
     InElapsedTime = InElapsedTime - ReplanTimeReset;
 
     // Fix to maximum if it exceeds the maximum
-    if (InElapsedTime > TMax){
+    if (InElapsedTime >= TMax)
+    {
         InElapsedTime = TMax;
         UE_LOG(LogTemp, Warning, TEXT("EXCEEDED MAXIMUM TIME: %f, stopping at final location"),TMax);
     }
-    
+
     FVector EvaluatedLocation = FVector(
         _x_traj.EvalTraj(InElapsedTime, 0)*100.0,
         -_y_traj.EvalTraj(InElapsedTime, 0)*100.0,
         _z_traj.EvalTraj(InElapsedTime, 0)*100.0);
 
-    UE_LOG(LogTemp, Warning, TEXT("FVector location is: (%f, %f, %f)"),_x_traj.EvalTraj(InElapsedTime, 0),_y_traj.EvalTraj(InElapsedTime, 0),_z_traj.EvalTraj(InElapsedTime, 0));
+    //UE_LOG(LogTemp, Warning, TEXT("Get new loc: %s"),*EvaluatedLocation.ToString());
 
     return EvaluatedLocation;
-    
-
 }
 
-void FPolyTrajSubscriber::ResetReplanTimeOffset(){
-    ReplanTimeReset = 0.0;
+void FPolyTrajSubscriber::ResetReplanTimeOffset()
+{
+    ReplanTimeReset = 0.0f;
 }

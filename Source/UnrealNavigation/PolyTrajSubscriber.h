@@ -23,32 +23,22 @@ public:
     
     FVector GetNewLocation(float InElapsedTime);
 
-<<<<<<< HEAD
+	float GetTMax(){ return TMax;};
+
 	bool DoWeHaveTraj(){ return bHasTraj;};
-=======
 	void ResetReplanTimeOffset();
 
-    bool bHasTraj = false;
->>>>>>> c812386a8044d8c680dc86318b7e7f719f243ce8
 
-private:
 
+protected:
 	px4_msgs::PolyTraj Traj;
-
     polytraj::Traj _x_traj;
 	polytraj::Traj _y_traj;
 	polytraj::Traj _z_traj;
 	polytraj::Traj _yaw_traj;
 
-<<<<<<< HEAD
-	UPROPERTY()
-    class USplineComponent* Spline;
-
 	bool bHasTraj = false;
-=======
-	float TMax;
-	float ReplanTimeReset;
-	float LatestTime;
->>>>>>> c812386a8044d8c680dc86318b7e7f719f243ce8
-
+	float TMax = 0.0f;
+	float ReplanTimeReset = 0.0f;
+	float LatestTime = 0.0f;
 };

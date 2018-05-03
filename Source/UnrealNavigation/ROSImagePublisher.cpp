@@ -3,18 +3,19 @@
 #include "ROSImagePublisher.h"
 #include "TimerManager.h"
 #include "geometry_msgs/Transform.h"
+#include "geometry_msgs/TransformStamped.h"
 #include "geometry_msgs/PoseStamped.h"
-#include "geometry_msgs/Pose.h"
+#include "std_msgs/UInt32.h"
 #include "geometry_msgs/Point.h"
 #include "geometry_msgs/Quaternion.h"
-#include "geometry_msgs/TransformStamped.h"
+#include "tf2_msgs/TFMessage.h"
 #include "ROSPoseSubscriber.h"
 #include "PolyTrajSubscriber.h"
 #include "Components/SplineComponent.h"
 #include "Components/SplineMeshComponent.h"
 
 #include "CoordConvStatics.h"
-#include "tf2_msgs/TFMessage.h"
+
 #include "CaptureManager.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/InputComponent.h"
@@ -27,24 +28,26 @@ AROSImagePublisher::AROSImagePublisher(const FObjectInitializer &ObjectInitializ
     PrimaryActorTick.bCanEverTick = true;
 
     
-    Spline = NewObject<USplineComponent>();
-    Spline->SetDrawDebug(true);
+    if (Spline != NULL) {Spline->UnregisterComponent();}
+    Spline = CreateDefaultSubobject<USplineComponent>(TEXT("Spline"));
+    //Spline->SetDrawDebug(true);
+
+    Spline->ClearSplinePoints();
 
     //initial location
-    Spline->AddSplinePoint(
-            FVector(-525.0, 870.0, 730.0),
-            ESplineCoordinateSpace::World,
-            true
-        );
+    // Spline->AddSplinePoint(
+    //         FVector(-525.0, 870.0, 730.0),
+    //         ESplineCoordinateSpace::World,
+    //         true
+    //     );
 
-    SplineMesh = NewObject<USplineMeshComponent>();
+    Spline->SetupAttachment(RootComponent);
+    RootComponent->SetMobility(EComponentMobility::Type::Static);
+    Spline->SetMobility(EComponentMobility::Type::Static);
+    this->SetActorEnableCollision(false);
 
-    auto SplineSMesh = Cast<UStaticMeshComponent>(SplineMesh);
-    //SplineSMesh->SetStaticMesh("/Game/CubeUnreal");
-
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> Spl(TEXT("/Game/CubeUnreal"));
-	SplineSMesh->SetStaticMesh(Spl.Object);
-    
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> Spl(TEXT("/Game/Dialog"));
+    StatMesh = Spl.Object;
 }
 
 // Called when the game starts
@@ -84,6 +87,15 @@ void AROSImagePublisher::BeginPlay()
     StartingBodyState =  FCoordConvStatics::UToROS(GetActorTransform());
     // StartingBodyState =  GetActorTransform();
 
+
+    if(GoalPawn == nullptr)
+    {
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(
+                -1, 10.0f, FColor::White, TEXT("Goal Pawn wasn't set in editor!"), true, FVector2D(2, 2));
+        }
+    }
 }
 
 // Called when game ends or actor deleted
@@ -95,6 +107,8 @@ void AROSImagePublisher::EndPlay(const EEndPlayReason::Type Reason)
         Handler->Disconnect();
 
     Super::EndPlay(Reason);
+
+    UnregisterAllComponents();
 }
 
 // Called every frame
@@ -103,42 +117,27 @@ void AROSImagePublisher::Tick(float DeltaTime)
     Super::Tick(DeltaTime);
 
     if(Handler.IsValid()) Handler->Process();
-
-    //create a vector between current location and setpoint
-    // if the magnitude of the vector is bigger than eps
-    //move 1 step positive
-    //otherwise don't
-    // FVector Location = GetAttachParentActor()->GetActorLocation();
-
-    // //auto pose = StaticCastSharedPtr<FROSPoseSubscriber>(PoseSubscriber);
-    // //get state from callback
-    // FVector UnitVector = PoseSubscriber->Getpoint() - Location;
-
-    // //UE_LOG(LogTemp,Warning, TEXT("fetched point %s"),*PoseSubscriber->point.ToString());
-    // //UE_LOG(LogTemp,Warning, TEXT("current %s"),*Location.ToString());
-    // float length;
-    // UnitVector.ToDirectionAndLength(UnitVector, length); //out params
-    // if (bIsPoseSubbscriberActive){
-    //     GetAttachParentActor()->SetActorLocation(PoseSubscriber->Getpoint());
-    // }
-
-    //TODO;
-    // new location is namespace::EVALTRAJ(Trajectory,0)
-
-    if (bIsNavigating && (StartTime > 0.0f))
+    
+    if (bIsNavigating)
     {
         ElapsedTime = ElapsedTime + DeltaTime;
-        UE_LOG(LogTemp, Warning, TEXT("NAVIGATING TICK"));
-        GetAttachParentActor()->SetActorLocation(PolyTrajSubscriber->GetNewLocation(ElapsedTime - StartTime));  
+
+        //elapsedDelta check performed in GetNewLocation
+        float ElapsedDelta = ElapsedTime - StartTime;
+        GetAttachParentActor()->SetActorLocation(
+            PolyTrajSubscriber->GetNewLocation(
+                ElapsedDelta));  
+
+        int NanoSecs = ElapsedDelta * 1000000;
+        TSharedPtr<std_msgs::UInt32> Elapsed = MakeShareable(
+            new std_msgs::UInt32(NanoSecs));
+        Handler->PublishMsg("/elapsed_time_unreal", Elapsed);
+
+        //UE_LOG(LogTemp, Warning, TEXT("nanosecs: %d"), NanoSecs);     
     }
 
-    
     while (!LastFrame.IsEmpty())
     {
-        UE_LOG(LogTemp, Warning, TEXT("non empty"));
-        //FGTCaptureTask Task;
-        //PendingTasksROS.Peek(Task);
-
         uint64 FrameToRender;
         LastFrame.Peek(FrameToRender);
         uint64 CurrentFrame = GFrameCounter;
@@ -149,7 +148,7 @@ void AROSImagePublisher::Tick(float DeltaTime)
         {
             LastFrame.Pop();
 
-            UE_LOG(LogTemp, Warning, TEXT("inside framer"));
+            //UE_LOG(LogTemp, Warning, TEXT("inside framer"));
             for (int i = 0; i < Modes.Num(); i++)
             {
                 if (i > 0 && (ImagingType == EImagingType::STEREO)) //stereo eye
@@ -167,7 +166,7 @@ void AROSImagePublisher::Tick(float DeltaTime)
                     else
                     {
                         ImgData = GTCapturers[i]->CaptureNpyUint8(Modes[i], channels);
-                        UE_LOG(LogTemp, Warning, TEXT("Capturing %s"), *Modes[i]);
+                        //UE_LOG(LogTemp, Warning, TEXT("Capturing %s"), *Modes[i]);
                     }
                     ROSHeader.SetSeq(Count);
                     ROSHeader.SetStamp(FROSTime());
@@ -318,28 +317,15 @@ void AROSImagePublisher::SetupImager()
     ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("cam_optical"));
     // ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("starting_cam"));
 
-    // initialize pointer to access it during ticks.
-    PoseSubscriber = MakeShareable<FROSPoseSubscriber>(
-         new FROSPoseSubscriber("geometry_msgs/PoseStamped", "/setpoint"));
-
-    Handler->AddSubscriber(PoseSubscriber);
-
     PolyTrajSubscriber = MakeShareable<FPolyTrajSubscriber>(
          new FPolyTrajSubscriber("px4_msgs/PolyTraj", "/trajectory"));
-
     Handler->AddSubscriber(PolyTrajSubscriber);
-	 	
-   	UE_LOG(LogTemp, Warning, TEXT("Added subscriber for control messges"));
        
-    Topics.Add(TEXT("CameraTransform"));
     Handler->AddPublisher(
             MakeShareable<FROSBridgePublisher>(
-                new FROSBridgePublisher("/goal_unreal","geometry_msgs/PoseStamped")));
-
+                new FROSBridgePublisher("/elapsed_time_unreal","std_msgs/Int32")));
 
     Handler->Connect();
-    UE_LOG(LogTemp, Warning, TEXT("handler on"));
-
 }
 
 void AROSImagePublisher::EnqueueImageTask()
@@ -358,7 +344,7 @@ void AROSImagePublisher::ToggleImaging()
         float Period = 1.0 / Frequency;
 
         GetWorldTimerManager().SetTimer(PublishTimer, this,
-                                        &AROSImagePublisher::EnqueueImageTask, Period, true, 0.5f);
+            &AROSImagePublisher::EnqueueImageTask, Period, true, 0.5f);
 
         if (GEngine)
         {
@@ -405,6 +391,9 @@ void AROSImagePublisher::ToggleNavigation()
             GEngine->AddOnScreenDebugMessage(
                 -1, 2.0f, FColor::Green, TEXT("starting navigation"), true, FVector2D(2, 2));
         }
+
+        PolyTrajSubscriber->ResetReplanTimeOffset();
+        this->CreateSplineMesh();
     }
     else
     {
@@ -421,64 +410,167 @@ void AROSImagePublisher::ToggleNavigation()
 void AROSImagePublisher::PublishGoal()
 {
     std_msgs::Header ROSHeader = std_msgs::Header(Count, FROSTime(), TEXT("world"));
-    geometry_msgs::Point Inposition = FCoordConvStatics::UToROS(
-                                        FVector(
-                                            FMath::RandRange(-4000,4000),
-                                            FMath::RandRange(-4000,4000),
-                                            FMath::RandRange(-4000,4000)));
     geometry_msgs::Quaternion InOrientation = FQuat();
-    
-    FVector point = FVector(
-        FMath::RandRange(-2200,2200),
-        FMath::RandRange(-2200,2200),
-        FMath::RandRange(-2200,2200)
-    );
+    geometry_msgs::Point Inposition = FVector();
 
-    Spline->AddSplinePoint(
-        point,
-        ESplineCoordinateSpace::World,
-        true
-    );
-
-    TArray<FVector> loc;
-    loc.SetNum(2);
-    TArray<FVector> tang;
-    tang.SetNum(2);
-    for(int i = 0; i<=0;i++)
+    if(GoalPawn == nullptr)
     {
-        Spline->GetLocalLocationAndTangentAtSplinePoint(
-            Spline->GetNumberOfSplinePoints()-1+i,
-            loc[i],
-            tang[i]
-        );
+         Inposition = FCoordConvStatics::UToROS(
+            FVector(
+                FMath::RandRange(-4000,4000),
+                FMath::RandRange(-4000,4000),
+                FMath::RandRange(-4000,4000)));
+
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(
+                -1, 2.0f, FColor::Yellow, TEXT("publishing random goal!"), true, FVector2D(2, 2));
+        }
+    }
+    else
+    {
+        Inposition = FCoordConvStatics::UToROS(
+            GoalPawn->GetActorLocation());
+
+        if (GEngine)
+        {   
+            GEngine->AddOnScreenDebugMessage(
+                -1, 2.0f, FColor::Yellow, TEXT("publishing viewport location as goal"), true, FVector2D(2, 2));
+        }
     }
 
-    SplineMesh->SetStartAndEnd(
-        loc[0],
-        tang[0],
-        loc[1],
-        tang[1],
-        true
-    );
-
-    SplineMesh->UpdateMesh_Concurrent();
-
-    UE_LOG(LogTemp,Warning, TEXT("length %f"), Spline->GetSplineLength());
-
-    
     TSharedPtr<geometry_msgs::PoseStamped> GoalUnreal = MakeShareable(
         new geometry_msgs::PoseStamped(
             ROSHeader, 
             geometry_msgs::Pose(
                 Inposition, 
                 InOrientation)));
+}
 
-    Handler->PublishMsg("/goal_unreal", GoalUnreal);
-    if (GEngine)
+void AROSImagePublisher::CreateSplineMesh()
+{
+
+    if (!PolyTrajSubscriber->DoWeHaveTraj()) {return;}
+
+    //ELSE
+    Spline->ClearSplinePoints();
+
+    TArray<FVector> SplinePoints;
+    TArray<FVector> Tangents;
+
+    int TMax = PolyTrajSubscriber->GetTMax();
+    for (int i = 0; i <= TMax; i++)
     {
-        GEngine->AddOnScreenDebugMessage(
-            -1, 2.0f, FColor::Yellow, TEXT("publishing random goal!"), true, FVector2D(2, 2));
+        SplinePoints.Add(PolyTrajSubscriber->GetNewLocation(i));
+        Tangents.Add(FVector(0,0,0));  
+
+        // SplinePoints.Add(FVector(
+        // FMath::RandRange(-4400,4400),
+        // FMath::RandRange(-4400,4400),
+        // FMath::RandRange(-4400,4400)));
+
     }
+    UE_LOG(LogTemp,Warning, TEXT("added all points"));
+
+    Spline->SetSplinePoints(
+        SplinePoints,
+        ESplineCoordinateSpace::World,
+        true
+    );
+
+    for(int i = 0; i < TMax; i++)
+    {
+        UE_LOG(LogTemp,Warning, TEXT("about to check tangents: %d"), i);
+
+        Spline->GetLocalLocationAndTangentAtSplinePoint(
+            i,
+            SplinePoints[i],
+            Tangents[i]
+        );
+
+        UE_LOG(LogTemp,Warning, TEXT("loc %d, %s"), i, *SplinePoints[i].ToString());
+    }
+
+   for(int i = 0; i < TMax-1; i++)
+    {
+        auto splineMesh = NewObject<USplineMeshComponent>();
+        //splineMesh->AttachToComponent(RootComponent, FAttachmentTransformRules::FAttachmentTransformRules(EAttachmentRule::KeepRelative, true));
+        splineMesh->RegisterComponent();
+        splineMesh->RegisterComponentWithWorld(GetWorld());
+        splineMesh->CreationMethod = EComponentCreationMethod::UserConstructionScript;
+        splineMesh->SetMobility(EComponentMobility::Movable);
+        splineMesh->SetForwardAxis(ESplineMeshAxis::X);
+        splineMesh->SetStaticMesh(StatMesh);
+        splineMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+        splineMesh->SetVisibility(true);
+
+ 
+        UE_LOG(LogTemp,Warning, TEXT("adding meshes: %d"), i);
+        splineMesh->SetStartAndEnd(
+            SplinePoints[i],
+            Tangents[i],
+            SplinePoints[i+1],
+            Tangents[i+1],
+            true
+        );
+    }
+
+    // if (bMakePoint)
+    // {
+    //     FVector point = FVector(
+    //     FMath::RandRange(-2200,2200),
+    //     FMath::RandRange(-2200,2200),
+    //     FMath::RandRange(-2200,2200)
+    // );
+
+    // Spline->AddSplinePoint(
+    //     point,
+    //     ESplineCoordinateSpace::World,
+    //     true
+    // );
+    // }
+    
+
+    // int numPoints = Spline->GetNumberOfSplinePoints();
+    // if (numPoints < 2)
+    // {
+    //     UE_LOG(LogTemp, Display, TEXT("Spline has too few points"));
+    //     return;
+    // }
+
+    // auto splineMesh = NewObject<USplineMeshComponent>(this);
+    // splineMesh->AttachToComponent(RootComponent, FAttachmentTransformRules::FAttachmentTransformRules(EAttachmentRule::KeepRelative, true));
+    // splineMesh->RegisterComponent();
+    // splineMesh->RegisterComponentWithWorld(GetWorld());
+    // splineMesh->CreationMethod = EComponentCreationMethod::UserConstructionScript;
+    // splineMesh->SetMobility(EComponentMobility::Movable);
+    // splineMesh->SetForwardAxis(ESplineMeshAxis::X);
+    // splineMesh->SetStaticMesh(StatMesh);
+    // splineMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+    // splineMesh->SetVisibility(true);
+
+    // TArray<FVector> loc;
+    // loc.SetNum(2);
+    // TArray<FVector> tang;
+    // tang.SetNum(2);
+    // for(int i = 0; i<=1;i++)
+    // {
+    //     Spline->GetLocalLocationAndTangentAtSplinePoint(
+    //         Spline->GetNumberOfSplinePoints()-2+i,
+    //         loc[i],
+    //         tang[i]
+    //     );
+    //     UE_LOG(LogTemp,Warning, TEXT("loc %d, %s"), i, *loc[i].ToString());
+    // }
+
+    // splineMesh->SetStartAndEnd(
+    //     loc[0],
+    //     tang[0],
+    //     loc[1],
+    //     tang[1],
+    //     true
+    // );
+    // UE_LOG(LogTemp,Warning, TEXT("length %f"), Spline->GetSplineLength());
 }
 
 // /**

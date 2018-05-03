@@ -53,8 +53,8 @@ namespace std_msgs
 		virtual FString ToYamlString() const override 
 		{
 			FString OutputString;
-			FJsonObject Object;
-			Object.SetNumberField(TEXT("data"), Data);
+			const auto Object = ToJsonObject().ToSharedRef();
+			// Object.SetNumberField(TEXT("data"), Data);
 
 			TSharedRef< TJsonWriter<> > Writer = TJsonWriterFactory<>::Create(&OutputString);
 			FJsonSerializer::Serialize(Object, Writer);

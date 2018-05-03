@@ -2432,6 +2432,7 @@
 /home/mau/EPIC/UnrealEngine/Plugins/UROSBridge/Source/UROSBridge/Public/TFmessageStamped 
 /home/mau/EPIC/UnrealEngine/Plugins/UROSBridge/Source/UROSBridge/Public/geometry_msgs 
 /home/mau/EPIC/UnrealEngine/Plugins/UROSBridge/Source/UROSBridge/Public/nav_msgs 
+/home/mau/EPIC/UnrealEngine/Plugins/UROSBridge/Source/UROSBridge/Public/px4_msgs 
 /home/mau/EPIC/UnrealEngine/Plugins/UROSBridge/Source/UROSBridge/Public/rosgraph_msgs 
 /home/mau/EPIC/UnrealEngine/Plugins/UROSBridge/Source/UROSBridge/Public/rospy_tutorials 
 /home/mau/EPIC/UnrealEngine/Plugins/UROSBridge/Source/UROSBridge/Public/sensor_msgs 

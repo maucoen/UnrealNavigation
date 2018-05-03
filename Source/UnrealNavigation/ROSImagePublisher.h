@@ -55,6 +55,8 @@ protected:
 
 	TArray<UGTCaptureComponent*> GTCapturers;
 	struct FTimerHandle PublishTimer;
+	struct FTimerHandle TrajTimer;
+	void CreateSplineMesh();
 
 	class std_msgs::Header ROSHeader;
 	
@@ -86,8 +88,6 @@ public:
 
 	// Add a smart pointer to ROSBridgeHandler
     TSharedPtr<FROSBridgeHandler> Handler;
-
-	TSharedPtr<class FROSPoseSubscriber> PoseSubscriber;
 	TSharedPtr<class FPolyTrajSubscriber> PolyTrajSubscriber;
 
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
@@ -113,14 +113,16 @@ public:
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bIsCompressed = false;
 
-	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
-	bool bIsPoseSubbscriberActive = false;
-
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, Category = Mesh)
     class USplineComponent* Spline;
 
-	UPROPERTY(EditAnywhere)
-    class USplineMeshComponent* SplineMesh;
+	UPROPERTY(EditAnywhere, Category = Mesh)
+	class UStaticMesh* StatMesh;
+
+	UPROPERTY(EditAnywhere, Category = Goal)
+	class APawn* GoalPawn;
+
+	void CreateSplineMesh(bool bMakePoint);
 
 };
 
