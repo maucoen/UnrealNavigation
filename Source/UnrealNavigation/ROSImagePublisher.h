@@ -34,6 +34,8 @@ public:
 	// Sets default values for this component's properties
 	AROSImagePublisher(const FObjectInitializer& ObjectInitializer);
 
+	void CreateSplineMesh();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -56,7 +58,6 @@ protected:
 	TArray<UGTCaptureComponent*> GTCapturers;
 	struct FTimerHandle PublishTimer;
 	struct FTimerHandle TrajTimer;
-	void CreateSplineMesh();
 
 	class std_msgs::Header ROSHeader;
 	
@@ -113,8 +114,17 @@ public:
 	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
 	bool bIsCompressed = false;
 
+	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+	bool bCometGazingMode = false;
+
+	UPROPERTY(EditAnywhere, Category = "ROS Publisher")
+	class AStaticMeshActor* Comet;
+
 	UPROPERTY(EditAnywhere, Category = Mesh)
     class USplineComponent* Spline;
+	
+	UPROPERTY()
+	TArray<class USplineMeshComponent*> SplineMesh;
 
 	UPROPERTY(EditAnywhere, Category = Mesh)
 	class UStaticMesh* StatMesh;
@@ -122,7 +132,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = Goal)
 	class APawn* GoalPawn;
 
-	void CreateSplineMesh(bool bMakePoint);
+	
 
 };
 

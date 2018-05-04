@@ -7,11 +7,11 @@
 
 
 FPolyTrajSubscriber::FPolyTrajSubscriber(
-	const FString& InType, const FString& InTopic) :
+	const FString& InType, const FString& InTopic, AROSImagePublisher* InOwner) :
 	FROSBridgeSubscriber(InTopic, InType)
 {
     UE_LOG(LogTemp, Warning, TEXT("Initialised FPolyTrajSubscriber"));
-    //Owner = InOwner;
+    Owner = InOwner;
 }
 
 TSharedPtr<FROSBridgeMsg> FPolyTrajSubscriber::ParseMessage
@@ -53,6 +53,7 @@ void FPolyTrajSubscriber::Callback(TSharedPtr<FROSBridgeMsg> Msg)
         bHasTraj = true;
     }
 
+    Owner->CreateSplineMesh();
     // Update replan time buffer - so trajectory is reset to zero at the new traj start
     ReplanTimeReset = LatestTime;
 

@@ -15,7 +15,7 @@ class UNREALNAVIGATION_API FPolyTrajSubscriber : public FROSBridgeSubscriber
 {
 public:
 	//AROSImagePublisher* Owner;
-	FPolyTrajSubscriber(const FString& InType, const FString& InTopic);//, const AROSImagePublisher* InOwner);
+	FPolyTrajSubscriber(const FString& InType, const FString& InTopic, class AROSImagePublisher* InOwner);//, const AROSImagePublisher* InOwner);
 	TSharedPtr<FROSBridgeMsg> ParseMessage(TSharedPtr<FJsonObject> JsonObject) const override;
 	void Callback(TSharedPtr<FROSBridgeMsg> Msg) override;
 
@@ -28,14 +28,14 @@ public:
 	bool DoWeHaveTraj(){ return bHasTraj;};
 	void ResetReplanTimeOffset();
 
-
-
 protected:
 	px4_msgs::PolyTraj Traj;
     polytraj::Traj _x_traj;
 	polytraj::Traj _y_traj;
 	polytraj::Traj _z_traj;
 	polytraj::Traj _yaw_traj;
+
+	class AROSImagePublisher* Owner;
 
 	bool bHasTraj = false;
 	float TMax = 0.0f;
