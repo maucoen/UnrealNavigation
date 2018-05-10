@@ -26,7 +26,7 @@ public:
 	float GetTMax(){ return TMax;};
 
 	bool DoWeHaveTraj(){ return bHasTraj;};
-	void ResetReplanTimeOffset();
+	// void ResetReplanTimeOffset();
 
 protected:
 	px4_msgs::PolyTraj Traj;

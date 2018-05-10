@@ -54,6 +54,7 @@ void FPolyTrajSubscriber::Callback(TSharedPtr<FROSBridgeMsg> Msg)
     }
 
     Owner->CreateSplineMesh();
+    Owner->ResetElapsedTime();
     // Update replan time buffer - so trajectory is reset to zero at the new traj start
     ReplanTimeReset = LatestTime;
 
@@ -62,11 +63,11 @@ void FPolyTrajSubscriber::Callback(TSharedPtr<FROSBridgeMsg> Msg)
 
 FVector FPolyTrajSubscriber::GetNewLocation(float InElapsedTime)
 {
-    // Record latest time
-    LatestTime = InElapsedTime;
+    // // Record latest time
+    // LatestTime = InElapsedTime;
 
-    // Adjust for replanning buffer
-    InElapsedTime = InElapsedTime - ReplanTimeReset;
+    // // Adjust for replanning buffer
+    // InElapsedTime = InElapsedTime - ReplanTimeReset;
 
     // Fix to maximum if it exceeds the maximum
     if (InElapsedTime >= TMax)
@@ -85,7 +86,7 @@ FVector FPolyTrajSubscriber::GetNewLocation(float InElapsedTime)
     return EvaluatedLocation;
 }
 
-void FPolyTrajSubscriber::ResetReplanTimeOffset()
-{
-    ReplanTimeReset = 0.0f;
-}
+// void FPolyTrajSubscriber::ResetReplanTimeOffset()
+// {
+//     ReplanTimeReset = 0.0f;
+// }

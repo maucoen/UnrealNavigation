@@ -355,8 +355,8 @@ void AROSImagePublisher::ToggleNavigation()
             return;
         }
       
-        StartTime = UGameplayStatics::GetRealTimeSeconds(GetWorld());
-        ElapsedTime = StartTime;
+        // StartTime = UGameplayStatics::GetRealTimeSeconds(GetWorld());
+        // ElapsedTime = StartTime;
         // Set replan time delta to zero
 
         if (GEngine)
@@ -365,7 +365,6 @@ void AROSImagePublisher::ToggleNavigation()
                 -1, 2.0f, FColor::Green, TEXT("starting navigation"), true, FVector2D(2, 2));
         }
 
-        PolyTrajSubscriber->ResetReplanTimeOffset();
     }
     else
     {

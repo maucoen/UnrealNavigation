@@ -81,6 +81,8 @@ public:
 	{
 		GoToState = InState;
 	}
+
+	void ResetElapsedTime(){ElapsedTime = 0.0;};
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
