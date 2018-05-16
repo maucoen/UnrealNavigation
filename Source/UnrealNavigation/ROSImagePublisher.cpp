@@ -270,6 +270,19 @@ void AROSImagePublisher::SetupImager()
             Topics.Add(TEXT("/camera/right/image_raw"));
             break;
         }
+        case EImagingType::RGBDWITHMASK:
+        {
+            Modes.Add(TEXT("lit"));
+            Modes.Add(TEXT("vis_depth"));
+            Modes.Add(TEXT("object_mask"));
+            GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
+            GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
+            GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
+            Topics.Add(TEXT("/camera/rgb/image_raw"));
+            Topics.Add(TEXT("/camera/depth_registered/image_raw"));
+            Topics.Add(TEXT("/camera/image_mask"));
+            break;
+        }
     }
 
     Handler = MakeShareable<FROSBridgeHandler>(

@@ -22,6 +22,7 @@ namespace EImagingType
 		MONO	UMETA(DisplayName = "Monocular"),
 		RGBD	UMETA(DisplayName = "RGBD"),
 		STEREO 	UMETA(DisplayName = "Stereo"),
+		RGBDWITHMASK 	UMETA(DisplayName = "RGBD_MASK"),
 	};
 }
 
@@ -173,8 +174,13 @@ protected:
     uint8 isbigendian = 0;
 	FString format = TEXT("png");
 
+	
+
 	void DoWork() 
 	{
+		if (Topic == "/camera/depth_registered/image_raw"){
+			encoding = TEXT("rgb8");
+		}
 		if (bIsCompressed)
 		{
 			TSharedPtr<sensor_msgs::CompressedImage> CompressedData =
