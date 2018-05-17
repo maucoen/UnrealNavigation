@@ -181,10 +181,10 @@ protected:
 	{
 		if (Topic == "/camera/depth_registered/image_raw" )
 		{
-			encoding = TEXT("mono8");
-			step = width;
-			// encoding = TEXT("mono16");
-			// step = width*4;
+			// encoding = TEXT("bgra8");
+			// step = width;
+			encoding = TEXT("32FC1");
+			step = width*4;
 		}
 		else if (Topic == "/camera/image_mask")
 		{

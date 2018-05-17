@@ -135,7 +135,7 @@ UMaterial* UGTCaptureComponent::GetMaterial(FString InModeName = TEXT(""))
     	MaterialPathMap->Add(TEXT("plane_depth"), TEXT("Material'/UnrealCV/ScenePlaneDepthWorldUnits.ScenePlaneDepthWorldUnits'"));
 		MaterialPathMap->Add(TEXT("vis_depth"), TEXT("Material'/UnrealCV/SceneDepth.SceneDepth'"));
 		MaterialPathMap->Add(TEXT("debug"), TEXT("Material'/UnrealCV/debug.debug'"));
-		// MaterialPathMap->Add(TEXT("object_mask"), TEXT("Material'/UnrealCV/VertexColorMaterial.VertexColorMaterial'"));
+		MaterialPathMap->Add(TEXT("object_mask"), TEXT("Material'/UnrealCV/VertexColorMaterial.VertexColorMaterial'"));
 		MaterialPathMap->Add(TEXT("normal"), TEXT("Material'/UnrealCV/WorldNormal.WorldNormal'"));
 
 		FString OpaqueMaterialName = "Material'/UnrealCV/OpaqueMaterial.OpaqueMaterial'";
@@ -386,7 +386,7 @@ TArray<uint8> UGTCaptureComponent::CaptureNpyFloat16(FString Mode, int32 Channel
 	const FRotator PawnViewRotation = Pawn->GetViewRotation();
 	if (!PawnViewRotation.Equals(CaptureComponent->GetComponentRotation()))
 	{
-		CaptureComponent->SetWorldRotation(PawnViewRotation);
+		// CaptureComponent->SetWorldRotation(PawnViewRotation);
 	}
 
 	UTextureRenderTarget2D* RenderTarget = CaptureComponent->TextureTarget;
@@ -395,8 +395,10 @@ TArray<uint8> UGTCaptureComponent::CaptureNpyFloat16(FString Mode, int32 Channel
 	FTextureRenderTargetResource* RenderTargetResource;
 	ImageData.AddUninitialized(Width * Height);
 	RenderTargetResource = RenderTarget->GameThread_GetRenderTargetResource();
-	RenderTargetResource->ReadFloat16Pixels(ImageData);
-
+	// FReadSurfaceDataFlags ReadSurfaceDataFlags;
+	// ReadSurfaceDataFlags.SetLinearToGamma(false); // This is super important to disable this!
+	RenderTargetResource->ReadFloat16Pixels(ImageData);//, ReadSurfaceDataFlags);
+	
 	// Check the byte order of data
 	// Compress image data to npy array
 	// Generate a header for the numpy array
@@ -480,7 +482,7 @@ TArray<uint8> UGTCaptureComponent::NpySerialization(TArray<FFloat16Color> ImageD
 	Shape.push_back(Width);
 	if (Channel != 1) Shape.push_back(Channel);
 
-	std::vector<char> NpyHeader = cnpy::create_npy_header(TypePointer, Shape);
+	// std::vector<char> NpyHeader = cnpy::create_npy_header(TypePointer, Shape);
 
 	// Append the actual data
 	// FIXME: A slow implementation to convert TArray<FFloat16Color> to binary.
@@ -498,7 +500,7 @@ TArray<uint8> UGTCaptureComponent::NpySerialization(TArray<FFloat16Color> ImageD
 	{
 		if (Channel == 1)
 		{
-			const float Value = ImageData[i].R;
+			const float Value = ImageData[i].R*100.0;
 			FloatData.push_back(Value);
 		}
 		if (Channel == 3)
@@ -516,11 +518,11 @@ TArray<uint8> UGTCaptureComponent::NpySerialization(TArray<FFloat16Color> ImageD
 	// https://stackoverflow.com/questions/11022099/convert-float-vector-to-byte-vector-and-back
 	std::vector<unsigned char> NpyData(bytes, bytes + sizeof(float) * FloatData.size());
 
-	NpyHeader.insert(NpyHeader.end(), NpyData.begin(), NpyData.end());
+	// NpyHeader.insert(NpyHeader.end(), NpyData.begin(), NpyData.end());
 
 	// FIXME: Find a more efficient implementation
 	TArray<uint8> BinaryData;
-	for (char Element : NpyHeader)
+	for (char Element : NpyData)
 	{
 		BinaryData.Add(Element);
 	}

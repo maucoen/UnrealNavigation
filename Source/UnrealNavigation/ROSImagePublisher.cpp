@@ -166,13 +166,13 @@ void AROSImagePublisher::Tick(float DeltaTime)
                     }
                     else
                     {
-                        if ((ImagingType == EImagingType::RGBD && i > 0) || (ImagingType == EImagingType::RGBDWITHMASK && i > 0) )
+                        if ((ImagingType == EImagingType::RGBD && i > 0) || (ImagingType == EImagingType::RGBDWITHMASK && i == 1) )
                         {
                             // Single Channel
-                            ImgData = GTCapturers[i]->CaptureNpyUint8(Modes[i], 1);    
-                            // ImgData = GTCapturers[i]->CaptureNpyFloat16(Modes[i], 1); 
+                            // ImgData = GTCapturers[i]->CaptureNpyUint8(Modes[i], 4);    
+                            ImgData = GTCapturers[i]->CaptureNpyFloat16(Modes[i], 1); 
                         }
-                        else if ((ImagingType == EImagingType::STEREOWITHMASK && i > 1))
+                        else if ((ImagingType == EImagingType::STEREOWITHMASK && i > 1) || (ImagingType == EImagingType::RGBDWITHMASK && i > 1))
                         {
                             // Single Channel
                             ImgData = GTCapturers[i]->CaptureNpyUint8(Modes[i], 1);    
