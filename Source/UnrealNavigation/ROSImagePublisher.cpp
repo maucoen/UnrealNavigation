@@ -152,7 +152,7 @@ void AROSImagePublisher::Tick(float DeltaTime)
             //UE_LOG(LogTemp, Warning, TEXT("inside framer"));
             for (int i = 0; i < Modes.Num(); i++)
             {
-                if (i > 0 && (ImagingType == EImagingType::STEREO)) //stereo eye
+                if (i == 1 && (ImagingType == EImagingType::STEREO || ImagingType == EImagingType::STEREOWITHMASK)) //stereo eye
                 {
                     GTCapturers[i]->SetRelativeLocation(StereoBaselineCm);
                 }
@@ -166,7 +166,22 @@ void AROSImagePublisher::Tick(float DeltaTime)
                     }
                     else
                     {
-                        ImgData = GTCapturers[i]->CaptureNpyUint8(Modes[i], channels);
+                        if ((ImagingType == EImagingType::RGBD && i > 0) || (ImagingType == EImagingType::RGBDWITHMASK && i > 0) )
+                        {
+                            // Single Channel
+                            ImgData = GTCapturers[i]->CaptureNpyUint8(Modes[i], 1);    
+                            // ImgData = GTCapturers[i]->CaptureNpyFloat16(Modes[i], 1); 
+                        }
+                        else if ((ImagingType == EImagingType::STEREOWITHMASK && i > 1))
+                        {
+                            // Single Channel
+                            ImgData = GTCapturers[i]->CaptureNpyUint8(Modes[i], 1);    
+                        }
+                        else
+                        {
+                            ImgData = GTCapturers[i]->CaptureNpyUint8(Modes[i], channels);
+                        }
+                        
                         //UE_LOG(LogTemp, Warning, TEXT("Capturing %s"), *Modes[i]);
                     }
                     ROSHeader.SetSeq(Count);
@@ -280,6 +295,19 @@ void AROSImagePublisher::SetupImager()
             GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
             Topics.Add(TEXT("/camera/rgb/image_raw"));
             Topics.Add(TEXT("/camera/depth_registered/image_raw"));
+            Topics.Add(TEXT("/camera/image_mask"));
+            break;
+        }
+        case EImagingType::STEREOWITHMASK:
+        {
+            Modes.Add(TEXT("lit"));
+            Modes.Add(TEXT("lit"));
+            Modes.Add(TEXT("object_mask"));
+            GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
+            GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
+            GTCapturers.Add(UGTCaptureComponent::Create(CastedPawn, Modes));
+            Topics.Add(TEXT("/camera/left/image_raw"));
+            Topics.Add(TEXT("/camera/right/image_raw"));
             Topics.Add(TEXT("/camera/image_mask"));
             break;
         }

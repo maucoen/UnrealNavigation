@@ -22,7 +22,8 @@ namespace EImagingType
 		MONO	UMETA(DisplayName = "Monocular"),
 		RGBD	UMETA(DisplayName = "RGBD"),
 		STEREO 	UMETA(DisplayName = "Stereo"),
-		RGBDWITHMASK 	UMETA(DisplayName = "RGBD_MASK"),
+		RGBDWITHMASK 	UMETA(DisplayName = "RGBD_withMask"),
+		STEREOWITHMASK 	UMETA(DisplayName = "Stereo_withMask"),
 	};
 }
 
@@ -178,9 +179,25 @@ protected:
 
 	void DoWork() 
 	{
-		if (Topic == "/camera/depth_registered/image_raw"){
-			encoding = TEXT("rgb8");
+		if (Topic == "/camera/depth_registered/image_raw" )
+		{
+			encoding = TEXT("mono8");
+			step = width;
+			// encoding = TEXT("mono16");
+			// step = width*4;
 		}
+		else if (Topic == "/camera/image_mask")
+		{
+			encoding = TEXT("mono8");
+			step = width;
+		}
+		else
+		{
+			encoding = TEXT("rgb8");
+			step = width*3;
+		}
+
+
 		if (bIsCompressed)
 		{
 			TSharedPtr<sensor_msgs::CompressedImage> CompressedData =

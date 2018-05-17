@@ -24,8 +24,8 @@ public:
 
 	static FROSTime Now() 
 	{
-		FDateTime NowDateTime = FDateTime::UtcNow(); 
-        uint32 Secs = (uint32)NowDateTime.ToUnixTimestamp();// - 36000;
+		FDateTime NowDateTime = FDateTime::Now(); 
+        uint32 Secs = (uint32)NowDateTime.ToUnixTimestamp() - 36000;
         uint32 NSecs = (uint32)NowDateTime.GetMillisecond() * 1000000;
         return FROSTime(Secs, NSecs);
 	}
